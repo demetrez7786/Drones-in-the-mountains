@@ -13870,6 +13870,15 @@ news_event = {
 		trigger = { NOT = { TAG = MDR } }
 	}
 }
+news_event = { #tessa programmed
+	id = news.427
+	title = news.427.t
+	desc = news.427.d
 
+	is_triggered_only = yes
+	option = {
+		name = news.427.a
+	}
+}
 
 

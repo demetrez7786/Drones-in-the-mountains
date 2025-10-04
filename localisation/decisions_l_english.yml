@@ -140,6 +140,11 @@
  MDR_improve_working_conditions:0 "Improve Working Conditions"
  MDR_announce_military_achievements:0 "Announce Military Achievements"
  MDR_invest_into_propaganda:0 "Invest in Propaganda"
+
+ MDR_programming_tessa:0 "Programming Tessa"
+ MDR_programming_tessa_desc:0 "description \n\n\ §7Progress: [?progress|.01%%+]"
+
+ MDR_elections_desc: "description tba \n\n§LInfluences:§!\n §7Cyn/Absolute Solver: [?absSolverPopularity|.1%%+] \n §RCousins Coalition: [?cousinsPopularity|.1%%+] \n §YN/V/J: [?njvPopularity|.1%%+] \n §CKhan: [?khanPopularity|.1%%+]"
  
  RES_sabotage_category:0 "Sabotage"
  RES_sabotage_military_base:0 "Sabotage Military Base"

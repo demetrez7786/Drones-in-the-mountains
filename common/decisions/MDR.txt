@@ -4965,3 +4965,452 @@ MDR_power_balance_power_balance_uzi_and_doll_decisions = {
 		}
 	}
 }	
+MDR_programming_tessa = {
+	MDR_passive_work = {
+		days_mission_timeout = 7
+		is_good = yes
+		days_re_enable = 0
+		allowed = {
+			has_completed_focus = MDR_program_tessa
+		}
+		activation = {
+			has_completed_focus = MDR_program_tessa
+		}
+		visible = {
+			AND = {
+				has_completed_focus = MDR_program_tessa
+				NOT = {
+					has_country_flag = MDR_tessa_is_programed
+				}
+			}
+		}
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			add_to_variable = {
+				value = 0.03
+				var = progress
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = progress
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_tessa_is_programed
+				news_event = news.427
+			}
+		}
+	}
+	MDR_work_on_the_program = {
+		cost = 15
+		days_remove = 15
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = progress
+				value = 5
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = progress
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = progress
+					value = 100
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = progress
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_tessa_is_programed
+				news_event = news.427
+			}
+		}
+	}
+	MDR_gather_some_drones_to_work = {
+		cost = 50
+		days_remove = 30
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = progress
+				value = 15
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = progress
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = progress
+					value = 100
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = progress
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_tessa_is_programed
+				news_event = news.427
+			}
+		}
+	}
+	MDR_total_brain_reconstruction = {
+		cost = 100
+		days_remove = 60
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = progress
+				value = 30
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = progress
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = progress
+					value = 100
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = progress
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_tessa_is_programed
+				news_event = news.427
+			}
+		}
+	}
+}
+MDR_elections = {
+	MDR_promote_unity = {
+		cost = 15
+		days_remove = 15
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = absSolverPopularity
+				value = 5
+				tooltip = minorPlatPopularity
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = absSolverPopularity
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = absSolverPopularity
+					value = 100
+				}
+			}
+		}
+	}
+	MDR_ukrainian_propaganda = {
+		cost = 50
+		days_remove = 30
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = absSolverPopularity
+				value = 15
+				tooltip = mediumPlatPopularity
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = absSolverPopularity
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = absSolverPopularity
+					value = 100
+				}
+			}
+		}
+	}
+	MDR_ukraine_forever = {
+		cost = 100
+		days_remove = 60
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = absSolverPopularity
+				value = 30
+				tooltip = majorPlatPopularity
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = absSolverPopularity
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = absSolverPopularity
+					value = 100
+				}
+			}
+		}
+	}
+	MDR_organize_strikes = {
+		cost = 15
+		days_remove = 15
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = cousinsPopularity
+				value = 5
+				tooltip = minorACPopularity
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = cousinsPopularity
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = cousinsPopularity
+					value = 100
+				}
+			}
+		}
+	}
+	MDR_spread_some_wealth = {
+		cost = 50
+		days_remove = 30
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = cousinsPopularity
+				value = 15
+				tooltip = mediumACPopularity
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = cousinsPopularity
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = cousinsPopularity
+					value = 100
+				}
+			}
+		}
+	}
+	MDR_nation_wide_unions = {
+		cost = 100
+		days_remove = 60
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = cousinsPopularity
+				value = 30
+				tooltip = majorACPopularity
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = cousinsPopularity
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = cousinsPopularity
+					value = 100
+				}
+			}
+		}
+	}
+	MDR_fund_corporations = {
+		cost = 15
+		days_remove = 15
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = njvPopularity
+				value = 5
+				tooltip = minorACapPopularity
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = njvPopularity
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = njvPopularity
+					value = 100
+				}
+			}
+		}
+	}
+	MDR_chain_businesses = {
+		cost = 50
+		days_remove = 30
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = njvPopularity
+				value = 15
+				tooltip = mediumACapPopularity
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = njvPopularity
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = njvPopularity
+					value = 100
+				}
+			}
+		}
+	}
+	MDR_corporate_conglomerates = {
+		cost = 100
+		days_remove = 60
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = njvPopularity
+				value = 30
+				tooltip = majorACapPopularity
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = njvPopularity
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = njvPopularity
+					value = 100
+				}
+			}
+		}
+	}
+	MDR_local_elections = {
+		cost = 15
+		days_remove = 15
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = khanPopularity
+				value = 5
+				tooltip = minorLibPopularity
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = khanPopularity
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = khanPopularity
+					value = 100
+				}
+			}
+		}
+	}
+	MDR_regional_elections = {
+		cost = 50
+		days_remove = 30
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = khanPopularity
+				value = 15
+				tooltip = mediumLibPopularity
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = khanPopularity
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = khanPopularity
+					value = 100
+				}
+			}
+		}
+	}
+	MDR_strong_leaders = {
+		cost = 100
+		days_remove = 60
+		days_re_enable = 90
+		remove_effect = {
+			add_to_variable = {
+				var = khanPopularity
+				value = 30
+				tooltip = majorLibPopularity
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = khanPopularity
+						value = 100
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = khanPopularity
+					value = 100
+				}
+			}
+		}
+	}
+
+}

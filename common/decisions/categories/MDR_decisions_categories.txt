@@ -154,3 +154,29 @@ MDR_power_balance_power_balance_uzi_and_doll_decisions = {
 		has_completed_focus = MDR_cyn_won
 	}
 }
+MDR_programming_tessa = {
+	priority = 9999
+	allowed = {
+		original_tag = MDR
+	}
+	visible = {
+		AND = {
+			has_completed_focus = MDR_program_tessa
+			NOT = {
+				has_country_flag = MDR_tessa_is_programed
+			}
+		}
+	}
+}
+MDR_elections = {
+	priority = 9999
+	allowed = {
+		original_tag = MDR
+	}
+	visible = {
+		NOT = {
+			has_completed_focus = MDR_elections
+		}
+		has_completed_focus = MDR_winter_massacre
+	}
+}

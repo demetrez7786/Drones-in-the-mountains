@@ -44,6 +44,24 @@ focus_tree = {
             add_stability = -0.05
 			country_event = { id = drones.1 }
 			news_event = { id = news.410 }
+			MDR = {
+            	set_variable = {
+            	    var = absSolverPopularity
+            	    value = 40
+            	}
+            	set_variable = {
+            	    var = cousinsPopularity
+            	    value = 25
+            	}
+            	set_variable = {
+            	    var = njvPopularity
+            	    value = 20
+            	}
+            	set_variable = {
+            	    var = khanPopularity
+            	    value = 15
+            	}
+            }
 		}
 	}
 
@@ -2167,6 +2185,7 @@ focus_tree = {
 				idea = MDR_programming_tessa_idea
 				days = 140
 			}
+			unlock_decision_category_tooltip = MDR_programming_tessa
 			country_event = { id = drones.27 days = 141 }
 		}
 	}
