@@ -1,0 +1,371 @@
+add_namespace = transcaucasian
+
+# issues
+country_event = {
+	id = transcaucasian.1
+	title = transcaucasian.1.t
+	desc = transcaucasian.1.d
+	picture = GFX_report_event_RES_issues
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = transcaucasian.1.a
+		add_dynamic_modifier = { modifier = RES_gangsters_problems }
+		add_to_variable = { RES_gp_consumer_goods_factor = 0.15 }
+		add_to_variable = { RES_gp_stability_factor = -0.15 }
+		add_dynamic_modifier = { modifier = RES_curropted_police }
+		add_to_variable = { RES_co_consumer_goods_factor = 0.3 }
+		add_to_variable = { RES_co_stability_factor = -0.15 }
+		add_to_variable = { RES_co_army_attack_factor = -0.05 }
+		add_to_variable = { RES_co_army_defence_factor = -0.05 }
+		add_to_variable = { RES_co_political_power_gain = 0.1 }
+		add_dynamic_modifier = { modifier = RES_transcaucasian_economy }
+		add_to_variable = { RES_te_consumer_goods_factor = 0.3 }
+		add_to_variable = { RES_te_production_speed_buildings_factor = -0.1 }
+		add_to_variable = { RES_te_stability_factor = -0.1 }
+		add_to_variable = { RES_te_industrial_capacity_factory = -0.1 }
+		add_to_variable = { RES_te_industrial_capacity_dockyard = -0.1 }
+		add_dynamic_modifier = { modifier = RES_drones_question_idea }
+		add_to_variable = { RES_dq_stability_factor = -0.15 }
+		add_to_variable = { RES_dq_political_power_factor = -0.1 }
+		add_to_variable = { RES_dq_fascism_drift = 0.01 }
+		add_dynamic_modifier = { modifier = RES_transcaucasian_military }
+		add_to_variable = { RES_tm_army_attack_factor = -0.15 }
+		add_to_variable = { RES_tm_army_defence_factor = -0.15 }
+		add_to_variable = { RES_tm_army_speed_factor = -0.15 }
+		add_to_variable = { RES_tm_army_org_factor = -0.3 }
+		add_to_variable = { RES_tm_army_org_regain = -0.2 }
+		add_to_variable = { RES_tm_training_time_factor = 0.2 }
+		add_to_variable = { RES_tm_war_support_factor = -0.2 }
+	}
+}
+
+# drones question
+country_event = {
+	id = transcaucasian.2
+	title = transcaucasian.2.t
+	desc = transcaucasian.2.d
+	picture = GFX_report_event_RES_drones_question
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = transcaucasian.2.a
+		add_to_variable = { RES_dq_stability_factor = 0.03 }
+		add_to_variable = { RES_dq_political_power_factor = 0.03 }
+		country_event = { id = transcaucasian.3 }
+	}
+	
+	option = {
+		name = transcaucasian.2.b
+		add_popularity = {
+		    ideology = democratic
+			popularity = -0.15
+		}
+        add_stability = -0.15		
+	}
+}
+
+# drones question right to be in politics
+country_event = {
+	id = transcaucasian.3
+	title = transcaucasian.3.t
+	desc = transcaucasian.3.d
+	picture = GFX_report_event_RES_drones_question
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = transcaucasian.3.a
+		add_to_variable = { RES_dq_stability_factor = 0.03 }
+		add_to_variable = { RES_dq_political_power_factor = 0.03 }
+		country_event = { id = transcaucasian.4 }
+	}
+	
+	option = {
+		name = transcaucasian.3.b
+		add_popularity = {
+		    ideology = democratic
+			popularity = -0.1
+		}
+        add_stability = -0.1		
+	}
+}
+
+# drones question right to have freedom of speech
+country_event = {
+	id = transcaucasian.4
+	title = transcaucasian.4.t
+	desc = transcaucasian.4.d
+	picture = GFX_report_event_RES_drones_question
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = transcaucasian.4.a
+		add_to_variable = { RES_dq_stability_factor = 0.03 }
+		add_to_variable = { RES_dq_political_power_factor = 0.03 }
+		country_event = { id = transcaucasian.5 }
+	}
+	
+	option = {
+		name = transcaucasian.4.b
+		add_popularity = {
+		    ideology = democratic
+			popularity = -0.05
+		}
+        add_stability = -0.05	
+	}
+}
+
+# drones question judged like a real human
+country_event = {
+	id = transcaucasian.5
+	title = transcaucasian.5.t
+	desc = transcaucasian.5.d
+	picture = GFX_report_event_RES_drones_question
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = transcaucasian.5.a
+		add_to_variable = { RES_dq_stability_factor = 0.03 }
+		add_to_variable = { RES_dq_political_power_factor = 0.03 }
+		add_to_variable = { RES_dq_fascism_drift = -0.01 }
+		country_event = { id = transcaucasian.6 }
+	}
+	
+	option = {
+		name = transcaucasian.5.b
+		add_popularity = {
+		    ideology = democratic
+			popularity = -0.01
+		}
+        add_stability = -0.01	
+	}
+}
+
+# drones question integrate drones into socity
+country_event = {
+	id = transcaucasian.6
+	title = transcaucasian.6.t
+	desc = transcaucasian.6.d
+	picture = GFX_report_event_RES_drones_question
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = transcaucasian.6.a
+		remove_dynamic_modifier = { modifier = RES_drones_question_idea }
+	}
+	
+	option = {
+		name = transcaucasian.6.b
+		add_popularity = {
+		    ideology = democratic
+			popularity = -0.01
+		}
+        add_stability = -0.01	
+	}
+}
+
+# separatists_protest
+country_event = {
+	id = transcaucasian.7
+	title = transcaucasian.7.t
+	desc = transcaucasian.7.d
+	picture = GFX_report_event_RES_separatists
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = transcaucasian.7.a
+		add_ideas = RES_separatists_protest
+	}
+}
+
+# separatists question
+country_event = {
+	id = transcaucasian.8
+	title = transcaucasian.8.t
+	desc = transcaucasian.8.d
+	picture = GFX_report_event_RES_separatists
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = transcaucasian.8.a
+		remove_ideas = RES_separatists_protest
+		add_stability = -0.25
+		add_popularity = {
+		    ideology = democratic
+			popularity = -0.25
+		}	
+	}
+	
+	option = {
+		name = transcaucasian.8.b
+		hidden_effect = {
+		    country_event = { id = transcaucasian.9  hours = 3 }
+		}	
+	}
+}
+
+# separatists question autonomy
+country_event = {
+	id = transcaucasian.9
+	title = transcaucasian.9.t
+	desc = transcaucasian.9.d
+	picture = GFX_report_event_RES_separatists
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = transcaucasian.9.a
+		add_stability = -0.2
+		add_popularity = {
+		    ideology = democratic
+			popularity = -0.2
+		}	
+	}
+	
+	option = {
+		name = transcaucasian.9.b
+		hidden_effect = {
+		    country_event = { id = transcaucasian.10  hours = 1 }
+		}	
+	}
+}
+
+# separatists question equal rights
+country_event = {
+	id = transcaucasian.10
+	title = transcaucasian.10.t
+	desc = transcaucasian.10.d
+	picture = GFX_report_event_RES_separatists
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = transcaucasian.10.a
+		add_stability = -0.15
+		add_popularity = {
+		    ideology = democratic
+			popularity = -0.15
+		}	
+	}
+	
+	option = {
+		name = transcaucasian.10.b
+		hidden_effect = {
+		    country_event = { id = transcaucasian.11  hours = 1 }
+		}	
+	}
+}
+
+# separatists question invstemnts in abkhazia
+country_event = {
+	id = transcaucasian.11
+	title = transcaucasian.11.t
+	desc = transcaucasian.11.d
+	picture = GFX_report_event_RES_separatists
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = transcaucasian.11.a
+		add_stability = -0.1
+		add_popularity = {
+		    ideology = democratic
+			popularity = -0.1
+		}	
+	}
+	
+	option = {
+		name = transcaucasian.11.b
+		remove_ideas = RES_separatists_protest
+	}
+}
+
+# investigation finished
+country_event = {
+	id = transcaucasian.12
+	title = transcaucasian.12.t
+	desc = transcaucasian.12.d
+	picture = GFX_report_event_RES_police
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = transcaucasian.12.a
+		add_to_variable = { RES_co_consumer_goods_factor = -0.1 }
+		add_to_variable = { RES_co_stability_factor = 0.1 }
+		add_to_variable = { RES_co_political_power_gain = -0.1 }
+	}
+}
+
+# elections
+country_event = {
+	id = transcaucasian.13
+	title = transcaucasian.13.t
+	desc = transcaucasian.13.d
+	picture = report_event_MDR_elections
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = transcaucasian.13.a
+		set_country_flag = elections_happened
+	}
+	
+	option = {
+		name = transcaucasian.13.b
+		retire_character = RES_tessa
+		add_country_leader_role = {
+		character = RES_noe_zhordania
+		promote_leader = yes		
+		    country_leader = {
+			    expire = "5022.8.30.1"
+			    ideology = conservatism
+			    traits = {
+				   reformist_menshevik
+			   }
+	        }
+		}	
+		set_country_flag = elections_happened
+	}
+	
+	option = {
+		name = transcaucasian.13.g
+		retire_character = RES_tessa
+		add_country_leader_role = {
+		character = RES_hovhannes_ajaznuni
+		promote_leader = yes		
+		    country_leader = {
+			    expire = "5022.8.30.1"
+			    ideology = socialism
+			    traits = {
+			   }
+	        }
+		}
+		set_country_flag = elections_happened
+	}
+	
+	option = {
+		name = transcaucasian.13.c
+		retire_character = RES_tessa
+		add_country_leader_role = {
+		character = RES_fatali_khan_khoyski
+		promote_leader = yes		
+		    country_leader = {
+			    expire = "5022.8.30.1"
+			    ideology = populism
+			    traits = {
+				    modernist_and_reformer
+			   }
+	        }
+		}
+		set_country_flag = elections_happened
+	}
+}

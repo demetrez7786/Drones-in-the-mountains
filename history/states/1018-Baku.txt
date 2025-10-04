@@ -1,0 +1,28 @@
+state={
+	id=1018
+	name="STATE_1018"
+	provinces={
+		1536 4458 4545 7495 7661 
+	}
+	
+	history={
+		owner = MDR
+		victory_points = {
+			7661 10 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 3
+		}
+		add_core_of = MDR
+		add_core_of = AZR
+		add_core_of = RES
+
+	}
+	
+	manpower=1881049
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

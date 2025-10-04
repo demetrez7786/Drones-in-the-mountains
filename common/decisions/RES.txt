@@ -1,0 +1,486 @@
+RES_sabotage_category = {
+
+	RES_sabotage_military_base = {
+
+		icon = GFX_decision_res_sabotage
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = RES
+		}
+		
+		fire_only_once = no
+		days_re_enable = 45
+
+		available = {
+			has_country_flag = RES_sabotages
+		} 
+
+		visible = { 
+			has_country_flag = RES_sabotages
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    add_manpower = -25
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = -15
+			}
+			MDR = {
+			    add_manpower = -55
+				add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = -45
+			    }
+				add_war_support = -0.01
+			}	
+		}
+	}
+	
+	RES_sabotage_infastructure_in_abkhazia = {
+
+		icon = GFX_decision_res_sabotage
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = RES
+		}
+		
+		fire_only_once = no
+		days_re_enable = 45
+
+		available = {
+			has_country_flag = RES_sabotages
+			NOT = {
+			has_full_control_of_state = 826
+			}
+		} 
+
+		visible = { 
+			has_country_flag = RES_sabotages
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    add_manpower = -15
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = -15
+			}
+			damage_building = {
+                type = infrastructure
+                state = 826
+                damage = 1
+            }
+		}
+	}
+	
+	RES_sabotage_factories_in_abkhazia = {
+
+		icon = GFX_decision_res_sabotage
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = RES
+		}
+		
+		fire_only_once = no
+		days_re_enable = 45
+
+		available = {
+			has_country_flag = RES_sabotages
+			NOT = {
+			has_full_control_of_state = 826
+			}
+		} 
+
+		visible = { 
+			has_country_flag = RES_sabotages
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    add_manpower = -15
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = -15
+			}
+			damage_building = {
+                type = arms_factory
+                state = 826
+                damage = 1
+            }
+			damage_building = {
+                type = industrial_complex
+                state = 826
+                damage = 1
+            }
+		}
+	}
+	
+	RES_sabotage_infastructure_in_georgia = {
+
+		icon = GFX_decision_res_sabotage
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = RES
+		}
+		
+		fire_only_once = no
+		days_re_enable = 45
+
+		available = {
+			has_country_flag = RES_sabotages
+			NOT = {
+			has_full_control_of_state = 231
+			}
+		} 
+
+		visible = { 
+			has_country_flag = RES_sabotages
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    add_manpower = -15
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = -15
+			}
+			damage_building = {
+                type = infrastructure
+                state = 231
+                damage = 1
+            }
+		}
+	}
+	
+	RES_sabotage_factories_in_georgia = {
+
+		icon = GFX_decision_res_sabotage
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = RES
+		}
+		
+		fire_only_once = no
+		days_re_enable = 45
+
+		available = {
+			has_country_flag = RES_sabotages
+			NOT = {
+			has_full_control_of_state = 231
+			}
+		} 
+
+		visible = { 
+			has_country_flag = RES_sabotages
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    add_manpower = -15
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = -15
+			}
+			damage_building = {
+                type = arms_factory
+                state = 231
+                damage = 1
+            }
+			damage_building = {
+                type = industrial_complex
+                state = 231
+                damage = 1
+            }
+		}
+	}
+	
+	RES_sabotage_infastructure_in_armenia = {
+
+		icon = GFX_decision_res_sabotage
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = RES
+		}
+		
+		fire_only_once = no
+		days_re_enable = 45
+
+		available = {
+			has_country_flag = RES_sabotages
+			NOT = {
+			has_full_control_of_state = 230
+			}
+		} 
+
+		visible = { 
+			has_country_flag = RES_sabotages
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    add_manpower = -15
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = -15
+			}
+			damage_building = {
+                type = infrastructure
+                state = 230
+                damage = 1
+            }
+		}
+	}
+	
+	RES_sabotage_factories_in_armenia = {
+
+		icon = GFX_decision_res_sabotage
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = RES
+		}
+		
+		fire_only_once = no
+		days_re_enable = 45
+
+		available = {
+			has_country_flag = RES_sabotages
+			NOT = {
+			has_full_control_of_state = 230
+			}
+		} 
+
+		visible = { 
+			has_country_flag = RES_sabotages
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    add_manpower = -15
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = -15
+			}
+			damage_building = {
+                type = arms_factory
+                state = 230
+                damage = 1
+            }
+			damage_building = {
+                type = industrial_complex
+                state = 230
+                damage = 1
+            }
+		}
+	}
+	
+	RES_sabotage_infastructure_in_azerbaijan = {
+
+		icon = GFX_decision_res_sabotage
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = RES
+		}
+		
+		fire_only_once = no
+		days_re_enable = 45
+
+		available = {
+			has_country_flag = RES_sabotages
+			NOT = {
+			has_full_control_of_state = 229
+			}
+		} 
+
+		visible = { 
+			has_country_flag = RES_sabotages
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    add_manpower = -15
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = -15
+			}
+			damage_building = {
+                type = infrastructure
+                state = 229
+                damage = 1
+            }
+		}
+	}
+	
+	RES_sabotage_factories_in_azerbaijan = {
+
+		icon = GFX_decision_res_sabotage
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = RES
+		}
+		
+		fire_only_once = no
+		days_re_enable = 45
+
+		available = {
+			has_country_flag = RES_sabotages
+			NOT = {
+			has_full_control_of_state = 229
+			}
+		} 
+
+		visible = { 
+			has_country_flag = RES_sabotages
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    add_manpower = -15
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = -15
+			}
+			damage_building = {
+                type = arms_factory
+                state = 229
+                damage = 1
+            }
+			damage_building = {
+                type = industrial_complex
+                state = 229
+                damage = 1
+            }
+		}
+	}
+}	
+
+RES_monthly_guns_category = {
+
+    RES_monthly_weapon_supplies = {
+		icon = GFX_decision_generic_motorized
+		allowed = {
+			original_tag = RES
+		}
+		
+		available = {
+			NOT = {
+			MDR = {
+			    exists = yes
+			}	
+			}
+		}
+		
+		selectable_mission = no
+		
+		activation = {
+			always = no
+		}
+		
+		days_mission_timeout = 30
+		fire_only_once = no
+		is_good = yes
+		
+		timeout_effect = {
+			activate_mission = RES_monthly_weapon_supplies
+			random_list = {
+                10 = {
+			        add_equipment_to_stockpile = { 
+				        type = infantry_equipment_1 
+				        amount = 250
+			        } 	
+                }
+                10 = {
+			        add_equipment_to_stockpile = { 
+				        type = infantry_equipment_1 
+				        amount = 350
+			        } 
+                }
+            }
+		}
+		
+		complete_effect = {
+
+		}
+	}
+}
+
+RES_struck_gangsters_category = {
+
+    RES_strike_gangsters = {
+
+		icon = GFX_decision_generic_police_action
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = RES
+		}
+		
+		fire_only_once = no
+		days_re_enable = 45
+
+		available = {
+			has_country_flag = player_knows_the_issues
+			has_completed_focus = RES_hunt_down_gangsters
+			has_completed_focus = RES_sieze_gangsters_property
+		} 
+
+		visible = { 
+			has_country_flag = player_knows_the_issues
+		}
+
+		cost = 45
+
+		complete_effect = {
+		    remove_dynamic_modifier = { modifier = RES_gangsters_problems }
+		}
+	}
+
+}

@@ -1,0 +1,135 @@
+MDR_power_balance_bop = {
+	initial_value = 0
+	left_side = MDR_power_balance_bop_absolute_solver
+	right_side = MDR_power_balance_bop_cyn
+	decision_category = MDR_power_balance_power_balance_decisions
+
+	range = { #Balanced Range, neither Councils nor Cantons
+		id = MDR_power_balance_bop_balanced 
+		min = -0.25
+		max = 0.25
+		modifier = {
+		}
+	}
+
+	side = {
+		id = MDR_power_balance_bop_cyn
+		icon = GFX_bop_MDR_cyn_side
+		range = {
+			id = MDR_power_balance_bop_fully_cyn
+			min = 0.75
+			max = 1
+			modifier = {
+				political_advisor_cost_factor = 1
+				stability_factor = 0.35
+				consumer_goods_factor = -0.35
+			}
+		}
+		
+		range = {
+			id = MDR_power_balance_bop_very_cyn
+			min = 0.25
+			max = 0.75
+			modifier = {
+				political_advisor_cost_factor = 0.75
+				stability_factor = 0.15
+				consumer_goods_factor = -0.15
+			}
+		}
+	}
+
+	side = {
+		id = MDR_power_balance_bop_absolute_solver
+		icon = GFX_bop_MDR_as_side
+		range = {
+			id = MDR_power_balance_bop_fully_absolute_solver
+			min = -1
+			max = -0.75
+			modifier = {
+				war_support_factor = 0.35 
+				army_org_factor = 0.35		
+				army_attack_factor = 0.35
+			}
+		}
+
+		range = {
+			id = MDR_power_balance_bop_very_absolute_solver
+			min = -0.75
+			max = -0.25
+			modifier = {
+				war_support_factor = 0.15 
+				army_org_factor = 0.15
+				army_attack_factor = 0.15
+			}
+		}
+	}
+} 
+
+MDR_power_balance_doll_and_uzi_bop = {
+	initial_value = 0
+	left_side = MDR_power_balance_bop_doll
+	right_side = MDR_power_balance_bop_uzi
+	decision_category = MDR_power_balance_power_balance_uzi_and_doll_decisions
+
+	range = { #Balanced Range, neither Councils nor Cantons
+		id = MDR_power_balance_bop_balanced 
+		min = -0.25
+		max = 0.25
+		modifier = {
+		}
+	}
+
+	side = {
+		id = MDR_power_balance_bop_uzi
+		icon = GFX_bop_SWI_centralization_canton_side
+		range = {
+			id = MDR_power_balance_bop_fully_uzi
+			min = 0.75
+			max = 1
+			modifier = {
+				war_support_factor = 0.3
+				army_attack_factor = 0.3
+				research_speed_factor = 0.3
+			}
+		}
+		
+		range = {
+			id = MDR_power_balance_bop_very_uzi
+			min = 0.25
+			max = 0.75
+			modifier = {
+				war_support_factor = 0.15
+				army_attack_factor = 0.15
+				research_speed_factor = 0.15
+			}
+		}
+	}
+
+	side = {
+		id = MDR_power_balance_bop_doll
+		icon = GFX_bop_SWI_centralization_council_side
+		range = {
+			id = MDR_power_balance_bop_fully_doll
+			min = -1
+			max = -0.75
+			modifier = {
+				stability_factor = 0.3
+				communism_drift = 0.1
+				production_speed_buildings_factor = 0.3
+				political_power_factor = 0.1
+			}
+		}
+
+		range = {
+			id = MDR_power_balance_bop_very_doll
+			min = -0.75
+			max = -0.25
+			modifier = {
+				stability_factor = 0.15
+				communism_drift = 0.01
+				production_speed_buildings_factor = 0.15
+				political_power_factor = 0.01
+			}
+		}
+	}
+} 

@@ -1,0 +1,427 @@
+focus_tree = {
+	id = resistance_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 30
+			tag = RES
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 4000 }
+
+    focus = {
+		id = RES_uprising
+		icon = GFX_RES_uprising
+		x = 10
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MDR = { 
+				exists = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 200
+			add_war_support = 0.35
+			declare_war_on = {
+				target = MDR
+				type = annex_everything
+			}
+			load_oob = MDM_uprising
+			add_timed_idea = {
+				idea = RES_element_of_suprise
+				days = 25
+			}
+			add_ideas = RES_fight_for_humanity
+			MDR = {
+			    add_ideas = RES_unexpected_uprising
+			}	
+			hidden_effect = {
+			    news_event = { id = news.422 }
+			}
+		}
+	}
+
+	focus = {
+		id = RES_call_for_volunteers
+		icon = GFX_RES_call_volunteers
+		x = 7
+		y = 1
+		prerequisite = { focus = RES_uprising }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MDR = { 
+				exists = yes
+			}
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = RES_sabotages
+		icon = GFX_RES_sabotages
+		x = 10
+		y = 1
+		prerequisite = { focus = RES_uprising }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MDR = { 
+				exists = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    set_country_flag = RES_sabotages
+		}
+	}
+
+	focus = {
+		id = RES_hearts_and_minds
+		icon = GFX_goal_unknown
+		x = 13
+		y = 1
+		prerequisite = { focus = RES_uprising }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MDR = { 
+				exists = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = RES_smear_campaigns
+		icon = GFX_RES_smear_campaign
+		x = 11
+		y = 2
+		prerequisite = { focus = RES_hearts_and_minds }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MDR = { 
+				exists = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    MDR = {
+				add_timed_idea = {
+				idea = RES_smear_campaign_idea
+				days = 60
+			    }
+			}
+		}
+	}
+
+	focus = {
+		id = RES_songs_of_the_resistance
+		icon = GFX_RES_song_of_the_resistance
+		x = 13
+		y = 2
+		prerequisite = { focus = RES_hearts_and_minds }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MDR = { 
+				exists = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 50
+			add_war_support = 0.15
+			add_stability = 0.15
+		}
+	}
+
+	focus = {
+		id = RES_ask_for_guns
+		icon = GFX_RES_ask_for_guns
+		x = 15
+		y = 2
+		prerequisite = { focus = RES_hearts_and_minds }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MDR = { 
+				exists = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			activate_mission = RES_monthly_weapon_supplies
+		}
+	}
+
+	focus = {
+		id = RES_german_caucasian_legions
+		icon = GFX_RES_volunteers_from_germany
+		x = 5
+		y = 2
+		prerequisite = { focus = RES_call_for_volunteers }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MDR = { 
+				exists = yes
+			}
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_manpower = 90000
+			add_opinion_modifier = { target = GER modifier = huge_increase }
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = RES_volunteers_from_the_ussr
+		icon = GFX_RES_communist_volunteers
+		x = 9
+		y = 2
+		prerequisite = { focus = RES_call_for_volunteers }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MDR = { 
+				exists = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_manpower = 36000
+			add_opinion_modifier = { target = SOV modifier = huge_increase }
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = RES_volunteers_from_france
+		icon = GFX_RES_volunteers_from_france
+		x = 7
+		y = 2
+		prerequisite = { focus = RES_call_for_volunteers }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MDR = { 
+				exists = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_manpower = 16000
+			add_opinion_modifier = { target = FRA modifier = huge_increase }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = RES_victory
+		icon = GFX_RES_victory
+		x = 6
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MDR = { 
+				exists = no
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 150
+			add_stability = 0.15
+			add_war_support = 0.15
+			add_popularity = {
+			    ideology = democratic
+				popularity = 0.15
+			}	
+			set_cosmetic_tag = TRA_RES
+			news_event = { id = news.423 }
+			load_focus_tree = transcaucasian_focus
+		}
+	}
+}	

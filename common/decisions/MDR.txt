@@ -1,0 +1,4967 @@
+MDR_kill_v_category = {
+
+	MDR_kill_v = {
+
+		icon = GFX_decision_generic_assassination
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_secret_police
+		} 
+
+		visible = { 
+			has_country_flag = MDR_secret_police
+		}
+
+		cost = 150
+
+		complete_effect = {
+		    hidden_effect = {
+		    country_event = { days = 3 id = drones.11 }
+			}
+		}
+	}
+	
+	MDR_kill_n = {
+
+		icon = GFX_decision_generic_assassination
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_secret_police
+			has_country_flag = MDR_killed_v
+		} 
+
+		visible = { 
+			has_country_flag = MDR_secret_police
+		}
+
+		cost = 150
+
+		complete_effect = {
+		    hidden_effect = {
+			country_event = { days = 3 id = drones.12 }
+			}
+		}
+	}
+	
+	MDR_kill_j = {
+
+		icon = GFX_decision_generic_assassination
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_secret_police
+			has_country_flag = MDR_killed_n
+		} 
+
+		visible = { 
+			has_country_flag = MDR_secret_police
+		}
+
+		cost = 150
+
+		complete_effect = {
+		    hidden_effect = {
+			country_event = { days = 3 id = drones.13 }	
+			}
+		}
+	}
+}
+
+MDR_secret_assasinations_category = {
+
+	MDR_kill_doll = {
+
+		icon = GFX_decision_generic_assassination
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_secret_assasinations
+		} 
+
+		visible = { 
+			has_country_flag = MDR_secret_assasinations
+		}
+
+		cost = 150
+
+		complete_effect = {
+		    hidden_effect = {
+		    country_event = { days = 3 id = drones.15 }
+			}
+		}
+	}
+	
+	MDR_kill_cyn = {
+
+		icon = GFX_decision_generic_assassination
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_secret_assasinations
+			has_country_flag = MDR_killed_doll
+		} 
+
+		visible = { 
+			has_country_flag = MDR_secret_assasinations
+		}
+
+		cost = 150
+
+		complete_effect = {
+		    hidden_effect = {
+		    country_event = { days = 3 id = drones.16 }
+			}
+		}
+	}
+}
+
+MDR_test_our_power_category = {
+    
+    MDR_take_iran = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+		is_good = no
+		selectable_mission = no
+		fire_only_once = yes
+		days_mission_timeout = 45
+		
+		#Fail trigger
+		available = {
+			PER = { 
+				exists = no
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		complete_effect = {
+			country_event = drones.17
+		}
+
+		timeout_effect = {
+			country_event = drones.18
+			white_peace = PER
+			if = {
+				limit = {
+					MDR = {
+						controls_state = 419
+						controls_state = 1000
+						controls_state = 420
+					}
+				}
+				419 = { transfer_state_to = MDR }
+				1000 = { transfer_state_to = MDR }
+				420 = { transfer_state_to = MDR }
+			}
+		}
+	}	
+}	
+
+MDR_focus_on_europe_category = {
+    
+    MDR_poland = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = POL
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}	
+		}
+	}	
+	
+	MDR_germany = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = GER
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}	
+		}
+	}
+	
+	MDR_hungary = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = HUN
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_bulgaria = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = BUL
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}	
+		}
+	}
+	
+	MDR_greece = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = GRE
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_yugoslavia = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = YUG
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}	
+		}
+	}
+	
+	MDR_slovakia = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+			CZE = {
+			    exists = no
+			}	
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = SLO
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}	
+		}
+	}
+	
+	MDR_czechoslovakia = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+			CZE = {
+			    exists = yes
+			}	
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = CZE
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}	
+		}
+	}
+	
+	MDR_italy = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = ITA
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}	
+		}
+	}
+	
+	MDR_austria = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+			AUS = {
+			    exists = yes
+			}	
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = AUS
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}	
+		}
+	}
+	
+	MDR_switzerland = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = SWI
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_france = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = FRA
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_united_kingdoms = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = ENG
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_spain = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = SPR
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_portugal = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = POR
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_belgium = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = BEL
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_netherlands = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+				every_state = {
+				limit = {
+					is_controlled_by = HOL
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_luxemburg = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = LUX
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_denmark = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = DEN
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_norway = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = NOR
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_sweden = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+				every_state = {
+				limit = {
+					is_controlled_by = SWE
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_ireland = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = IRE
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}	
+		}
+	}
+	
+	MDR_iceland = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = ICE
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_finland = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = FIN
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_lithuania = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = LIT
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_latvia = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = LAT
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_estonia = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = EST
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_albania = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_europe
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_europe
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = ALB
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+}
+
+MDR_focus_on_asia_category = {
+
+    MDR_china = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = CHI
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_communist_china = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = PRC
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_japan = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = JAP
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_india = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = RAJ
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_nepal = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = NEP
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_thailand = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = SIA
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_sinkiang = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = SIK
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_manchuko = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = MAN
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_tibet = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = TIB
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_xibein_san_man = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = XSM
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_shanxi = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = SHX
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_bhutan = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = BHU
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_yunnan = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = YUN
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_guangxi_clique = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = GXC
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_mengkukuo = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = MEN
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_buarma = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = BRM
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_malaya = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = MAL
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_dutch_east_indies = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = INS
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_phillipines = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_asia
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_asia
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = PHI
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+}
+
+MDR_focus_on_na_category = {
+
+    MDR_canada = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_na
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_na
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = CAN
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_united_states = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_na
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_na
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = USA
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_mexico = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_na
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_na
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = MEX
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_cuba = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_na
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_na
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = CUB
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_haiti = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_na
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_na
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = HAI
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_dominican_republic = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_na
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_na
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = DOM
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_guatemala = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_na
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_na
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = GUA
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_honduras = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_na
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_na
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = HON
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_el_salvador = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_na
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_na
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = ELS
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_nicaragua = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_na
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_na
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = NIC
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_costa_rica = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_na
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_na
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = COS
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_panama = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_na
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_na
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = PAN
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+}	
+
+MDR_focus_on_sa_category = {
+
+    MDR_colombia = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_sa
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_sa
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = COL
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_venezuela = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_sa
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_sa
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = VEN
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_ecuador = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_sa
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_sa
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = ECU
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_peru = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_sa
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_sa
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = PRU
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_bolivia = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_sa
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_sa
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = BOL
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_brazil = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_sa
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_sa
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = BRA
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_chile = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_sa
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_sa
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = CHL
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_paraguay = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_sa
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_sa
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = PAR
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_uruguay = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_sa
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_sa
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = URG
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+	
+	MDR_argentina = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_focusing_on_sa
+		} 
+
+		visible = { 
+			has_country_flag = MDR_focusing_on_sa
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = ARG
+				}
+				add_dynamic_modifier = {
+					modifier = MDR_blitzkrieg_modifier_lvl_3
+					scope = MDR
+					days = 95		
+				}
+			}
+		}
+	}
+}	
+
+MDR_destroy_monuments_category = {
+    
+	MDR_branderburg_gate = {
+
+		icon = GFX_decision_mdr_berlin_gate
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_destroing_monuments
+			controls_state = 64
+		} 
+
+		visible = { 
+			has_country_flag = MDR_destroing_monuments
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			GER = {
+			    add_war_support = -0.05
+				add_stability = -0.05
+			}	
+		}
+	}
+	
+	MDR_eiffel_tower = {
+
+		icon = GFX_decision_mdr_eiffel_tower
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_destroing_monuments
+			controls_state = 16
+		} 
+
+		visible = { 
+			has_country_flag = MDR_destroing_monuments
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			FRA = {
+			    add_war_support = -0.05
+				add_stability = -0.05
+			}	
+		}
+	}
+	
+	MDR_big_ben = {
+
+		icon = GFX_decision_mdr_big_ben
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_destroing_monuments
+			controls_state = 126
+		} 
+
+		visible = { 
+			has_country_flag = MDR_destroing_monuments
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			ENG = {
+			    add_war_support = -0.05
+				add_stability = -0.05
+			}	
+		}
+	}
+	
+	MDR_colosseum = {
+
+		icon = GFX_decision_mdr_colosseum
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_destroing_monuments
+			controls_state = 2
+		} 
+
+		visible = { 
+			has_country_flag = MDR_destroing_monuments
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			ITA = {
+			    add_war_support = -0.05
+				add_stability = -0.05
+			}	
+		}
+	}
+	
+	MDR_india_gate = {
+
+		icon = GFX_decision_mdr_india_gate
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_destroing_monuments
+			controls_state = 439
+		} 
+
+		visible = { 
+			has_country_flag = MDR_destroing_monuments
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			RAJ = {
+			    add_war_support = -0.05
+				add_stability = -0.05
+			}	
+		}
+	}
+	
+	MDR_great_wall_of_china = {
+
+		icon = GFX_decision_generic_decision
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_destroing_monuments
+			CHI = {
+			  exists = no
+			}	
+		} 
+
+		visible = { 
+			has_country_flag = MDR_destroing_monuments
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			CHI = {
+			    add_war_support = -0.05
+				add_stability = -0.05
+			}	
+		}
+	}
+	
+	MDR_obelisco_de_buenos_aires = {
+
+		icon = GFX_decision_mdr_buenos_aires
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_destroing_monuments
+			controls_state = 278
+		} 
+
+		visible = { 
+			has_country_flag = MDR_destroing_monuments
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			ARG = {
+			    add_war_support = -0.05
+				add_stability = -0.05
+			}	
+		}
+	}
+	
+	MDR_palacio_de_bellas_artes = {
+
+		icon = GFX_decision_mdr_palacio_de_bellas_artes
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_destroing_monuments
+			controls_state = 277
+		} 
+
+		visible = { 
+			has_country_flag = MDR_destroing_monuments
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			MEX = {
+			    add_war_support = -0.05
+				add_stability = -0.05
+			}	
+		}
+	}
+	
+	MDR_status_of_liberty = {
+
+		icon = GFX_decision_mdr_statue_of_liberty
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_destroing_monuments
+			controls_state = 358
+		} 
+
+		visible = { 
+			has_country_flag = MDR_destroing_monuments
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			USA = {
+			    add_war_support = -0.05
+				add_stability = -0.05
+			}	
+		}
+	}
+}	
+
+MDR_hunting_underground_resistance_category = {
+    
+	MDR_raid_their_bases_in_baku = {
+
+		icon = GFX_decision_generic_trucks
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_hunting_underground_resistance
+		} 
+
+		visible = { 
+			has_country_flag = MDR_hunting_underground_resistance
+		}
+
+		cost = 250
+		
+		days_remove = 80
+		modifier = {
+			civilian_factory_use = 5
+			weekly_manpower = -25
+			consumer_goods_factor = 0.35
+		}
+
+		complete_effect = {
+			remove_ideas = MDR_underground_human_resistance
+			add_ideas = MDR_underground_human_resistance_two
+			set_country_flag = MDR_bases_are_raided
+		}
+	}
+	
+	MDR_special_operations_in_samegrelo = {
+
+		icon = GFX_decision_generic_army_support
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_hunting_underground_resistance
+			has_country_flag = MDR_bases_are_raided
+		} 
+
+		visible = { 
+			has_country_flag = MDR_hunting_underground_resistance
+		}
+
+		cost = 250
+		
+		days_remove = 80
+		modifier = {
+			civilian_factory_use = 5
+			weekly_manpower = -25
+			consumer_goods_factor = 0.35
+		}
+
+		complete_effect = {
+			remove_ideas = MDR_underground_human_resistance_two
+			add_ideas = MDR_underground_human_resistance_three
+			set_country_flag = MDR_samegrelo_is_clear
+		}
+	}
+	
+	MDR_the_last_strike = {
+
+		icon = GFX_decision_generic_operation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_hunting_underground_resistance
+			has_country_flag = MDR_samegrelo_is_clear
+		} 
+
+		visible = { 
+			has_country_flag = MDR_hunting_underground_resistance
+		}
+
+		cost = 250
+		
+		days_remove = 80
+		modifier = {
+			civilian_factory_use = 5
+			weekly_manpower = -25
+			consumer_goods_factor = 0.35
+		}
+
+		complete_effect = {
+			remove_ideas = MDR_underground_human_resistance_three
+		}
+	}
+}	
+
+MDR_creating_puppets_category = {
+
+    north_america_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = NAP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }
+			388 = { transfer_state_to = NAP }
+			386 = { transfer_state_to = NAP }
+			358 = { transfer_state_to = NAP }
+			361 = { transfer_state_to = NAP }
+			379 = { transfer_state_to = NAP }
+			393 = { transfer_state_to = NAP }
+			383 = { transfer_state_to = NAP }
+			363 = { transfer_state_to = NAP }
+			390 = { transfer_state_to = NAP }
+			394 = { transfer_state_to = NAP }
+			385 = { transfer_state_to = NAP }
+			365 = { transfer_state_to = NAP }
+			384 = { transfer_state_to = NAP }
+			360 = { transfer_state_to = NAP }
+			650 = { transfer_state_to = NAP }
+			375 = { transfer_state_to = NAP }
+			362 = { transfer_state_to = NAP }
+			371 = { transfer_state_to = NAP }
+			685 = { transfer_state_to = NAP }
+			391 = { transfer_state_to = NAP }
+			366 = { transfer_state_to = NAP }
+			376 = { transfer_state_to = NAP }
+			389 = { transfer_state_to = NAP }
+			387 = { transfer_state_to = NAP }
+			816 = { transfer_state_to = NAP }
+			686 = { transfer_state_to = NAP }
+			642 = { transfer_state_to = NAP }
+			463 = { transfer_state_to = NAP }
+			382 = { transfer_state_to = NAP }
+			373 = { transfer_state_to = NAP }
+			372 = { transfer_state_to = NAP }
+			683 = { transfer_state_to = NAP }
+			631 = { transfer_state_to = NAP }
+			632 = { transfer_state_to = NAP }
+			369 = { transfer_state_to = NAP }
+			381 = { transfer_state_to = NAP }
+			377 = { transfer_state_to = NAP }
+			370 = { transfer_state_to = NAP }
+			374 = { transfer_state_to = NAP }
+			396 = { transfer_state_to = NAP }
+			392 = { transfer_state_to = NAP }
+			261 = { transfer_state_to = NAP }
+			727 = { transfer_state_to = NAP }
+			629 = { transfer_state_to = NAP }
+			395 = { transfer_state_to = NAP }
+			380 = { transfer_state_to = NAP }
+			367 = { transfer_state_to = NAP }
+			368 = { transfer_state_to = NAP }
+			357 = { transfer_state_to = NAP }
+			359 = { transfer_state_to = NAP }
+			364 = { transfer_state_to = NAP }
+			378 = { transfer_state_to = NAP }
+			683 = { transfer_state_to = NAP }
+			471 = { transfer_state_to = NAP }
+			860 = { transfer_state_to = NAP }
+			861 = { transfer_state_to = NAP }
+			862 = { transfer_state_to = NAP }
+			866 = { transfer_state_to = NAP }
+			468 = { transfer_state_to = NAP }
+			466 = { transfer_state_to = NAP }
+			331 = { transfer_state_to = NAP }
+			682 = { transfer_state_to = NAP }
+			276 = { transfer_state_to = NAP }
+			867 = { transfer_state_to = NAP }
+			465 = { transfer_state_to = NAP }
+			865 = { transfer_state_to = NAP }
+			469 = { transfer_state_to = NAP }
+			864 = { transfer_state_to = NAP }
+			863 = { transfer_state_to = NAP }
+			740 = { transfer_state_to = NAP }
+			472 = { transfer_state_to = NAP }
+			332 = { transfer_state_to = NAP }
+			467 = { transfer_state_to = NAP }
+			739 = { transfer_state_to = NAP }
+			473 = { transfer_state_to = NAP }
+			464 = { transfer_state_to = NAP }
+			470 = { transfer_state_to = NAP }
+			474 = { transfer_state_to = NAP }
+			480 = { transfer_state_to = NAP }
+			479 = { transfer_state_to = NAP }
+			477 = { transfer_state_to = NAP }
+			476 = { transfer_state_to = NAP }
+			483 = { transfer_state_to = NAP }
+			485 = { transfer_state_to = NAP }
+			484 = { transfer_state_to = NAP }
+			475 = { transfer_state_to = NAP }
+			481 = { transfer_state_to = NAP }
+			482 = { transfer_state_to = NAP }
+			478 = { transfer_state_to = NAP }
+			277 = { transfer_state_to = NAP }
+		}
+	}
+	
+	central_america_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = CAP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }
+			311 = { transfer_state_to = CAP }
+			313 = { transfer_state_to = CAP }
+			312 = { transfer_state_to = CAP }
+			314 = { transfer_state_to = CAP }
+			317 = { transfer_state_to = CAP }
+			316 = { transfer_state_to = CAP }
+			304 = { transfer_state_to = CAP }
+			685 = { transfer_state_to = CAP }
+		}
+	}
+	
+	south_america_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = SAP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }
+			486 = { transfer_state_to = SAP }
+			967 = { transfer_state_to = SAP }
+			687 = { transfer_state_to = SAP }
+			309 = { transfer_state_to = SAP }
+			310 = { transfer_state_to = SAP }
+			956 = { transfer_state_to = SAP }
+			493 = { transfer_state_to = SAP }
+			306 = { transfer_state_to = SAP }
+			488 = { transfer_state_to = SAP }
+			489 = { transfer_state_to = SAP }
+			307 = { transfer_state_to = SAP }
+			490 = { transfer_state_to = SAP }
+			649 = { transfer_state_to = SAP }
+			305 = { transfer_state_to = SAP }
+			947 = { transfer_state_to = SAP }
+			491 = { transfer_state_to = SAP }
+			490 = { transfer_state_to = SAP }
+			303 = { transfer_state_to = SAP }
+			494 = { transfer_state_to = SAP }
+			951 = { transfer_state_to = SAP }
+			492 = { transfer_state_to = SAP }
+			302 = { transfer_state_to = SAP }
+			487 = { transfer_state_to = SAP }
+			301 = { transfer_state_to = SAP }
+			688 = { transfer_state_to = SAP }
+			945 = { transfer_state_to = SAP }
+			946 = { transfer_state_to = SAP }
+			300 = { transfer_state_to = SAP }
+			969 = { transfer_state_to = SAP }
+			940 = { transfer_state_to = SAP }
+			964 = { transfer_state_to = SAP }
+			939 = { transfer_state_to = SAP }
+			962 = { transfer_state_to = SAP }
+			499 = { transfer_state_to = SAP }
+			963 = { transfer_state_to = SAP }
+			961 = { transfer_state_to = SAP }
+			935 = { transfer_state_to = SAP }
+			502 = { transfer_state_to = SAP }
+			938 = { transfer_state_to = SAP }
+			500 = { transfer_state_to = SAP }
+			966 = { transfer_state_to = SAP }
+			496 = { transfer_state_to = SAP }
+			942 = { transfer_state_to = SAP }
+			505 = { transfer_state_to = SAP }
+			965 = { transfer_state_to = SAP }
+			968 = { transfer_state_to = SAP }
+			497 = { transfer_state_to = SAP }
+			498 = { transfer_state_to = SAP }
+			943 = { transfer_state_to = SAP }
+			944 = { transfer_state_to = SAP }
+			495 = { transfer_state_to = SAP }
+			941 = { transfer_state_to = SAP }
+			937 = { transfer_state_to = SAP }
+			936 = { transfer_state_to = SAP }
+			503 = { transfer_state_to = SAP }
+			280 = { transfer_state_to = SAP }
+			504 = { transfer_state_to = SAP }
+			501 = { transfer_state_to = SAP }
+			508 = { transfer_state_to = SAP }
+			953 = { transfer_state_to = SAP }
+			512 = { transfer_state_to = SAP }
+			957 = { transfer_state_to = SAP }
+			958 = { transfer_state_to = SAP }
+			960 = { transfer_state_to = SAP }
+			511 = { transfer_state_to = SAP }
+			299 = { transfer_state_to = SAP }
+			509 = { transfer_state_to = SAP }
+			510 = { transfer_state_to = SAP }
+			954 = { transfer_state_to = SAP }
+			278 = { transfer_state_to = SAP }
+			959 = { transfer_state_to = SAP }
+			955 = { transfer_state_to = SAP }
+			953 = { transfer_state_to = SAP }
+			948 = { transfer_state_to = SAP }
+			952 = { transfer_state_to = SAP }
+			949 = { transfer_state_to = SAP }
+			506 = { transfer_state_to = SAP }
+			279 = { transfer_state_to = SAP }
+			951 = { transfer_state_to = SAP }
+			507 = { transfer_state_to = SAP }
+			950 = { transfer_state_to = SAP }
+		}
+	}
+	
+	far_east_asia_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = FEP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }	
+			322 = { transfer_state_to = FEP }
+			528 = { transfer_state_to = FEP }
+			594 = { transfer_state_to = FEP }
+			717 = { transfer_state_to = FEP }
+			530 = { transfer_state_to = FEP }
+			529 = { transfer_state_to = FEP }
+			531 = { transfer_state_to = FEP }
+			327 = { transfer_state_to = FEP }
+			627 = { transfer_state_to = FEP }
+			625 = { transfer_state_to = FEP }
+			626 = { transfer_state_to = FEP }
+			624 = { transfer_state_to = FEP }
+			623 = { transfer_state_to = FEP }
+			628 = { transfer_state_to = FEP }
+			532 = { transfer_state_to = FEP }
+			535 = { transfer_state_to = FEP }
+			282 = { transfer_state_to = FEP }
+			534 = { transfer_state_to = FEP }
+			533 = { transfer_state_to = FEP }
+			536 = { transfer_state_to = FEP }
+			555 = { transfer_state_to = FEP }
+			537 = { transfer_state_to = FEP }
+			757 = { transfer_state_to = FEP }
+			758 = { transfer_state_to = FEP }
+			671 = { transfer_state_to = FEP }
+			670 = { transfer_state_to = FEP }
+			741 = { transfer_state_to = FEP }
+			286 = { transfer_state_to = FEP }
+			527 = { transfer_state_to = FEP }
+			525 = { transfer_state_to = FEP }
+			655 = { transfer_state_to = FEP }
+			613 = { transfer_state_to = FEP }
+			620 = { transfer_state_to = FEP }
+			604 = { transfer_state_to = FEP }
+			616 = { transfer_state_to = FEP }
+			610 = { transfer_state_to = FEP }
+			614 = { transfer_state_to = FEP }
+			619 = { transfer_state_to = FEP }
+			605 = { transfer_state_to = FEP }
+			606 = { transfer_state_to = FEP }
+			611 = { transfer_state_to = FEP }
+			622 = { transfer_state_to = FEP }
+			618 = { transfer_state_to = FEP }
+			621 = { transfer_state_to = FEP }
+			603 = { transfer_state_to = FEP }
+			612 = { transfer_state_to = FEP }
+			609 = { transfer_state_to = FEP }
+			602 = { transfer_state_to = FEP }
+			601 = { transfer_state_to = FEP }
+			607 = { transfer_state_to = FEP }
+			283 = { transfer_state_to = FEP }
+			754 = { transfer_state_to = FEP }
+			592 = { transfer_state_to = FEP }
+			596 = { transfer_state_to = FEP }
+			751 = { transfer_state_to = FEP }
+			755 = { transfer_state_to = FEP }
+			608 = { transfer_state_to = FEP }
+			597 = { transfer_state_to = FEP }
+			599 = { transfer_state_to = FEP }
+			744 = { transfer_state_to = FEP }
+			617 = { transfer_state_to = FEP }
+			753 = { transfer_state_to = FEP }
+			715 = { transfer_state_to = FEP }
+			750 = { transfer_state_to = FEP }
+			743 = { transfer_state_to = FEP }
+			326 = { transfer_state_to = FEP }
+			598 = { transfer_state_to = FEP }
+			325 = { transfer_state_to = FEP }
+			729 = { transfer_state_to = FEP }
+			593 = { transfer_state_to = FEP }
+			714 = { transfer_state_to = FEP }
+			747 = { transfer_state_to = FEP }
+			617 = { transfer_state_to = FEP }
+			761 = { transfer_state_to = FEP }
+			746 = { transfer_state_to = FEP }
+			716 = { transfer_state_to = FEP }
+			287 = { transfer_state_to = FEP }
+			591 = { transfer_state_to = FEP }
+			748 = { transfer_state_to = FEP }
+			600 = { transfer_state_to = FEP }
+			756 = { transfer_state_to = FEP }
+			595 = { transfer_state_to = FEP }
+			759 = { transfer_state_to = FEP }
+			749 = { transfer_state_to = FEP }
+			745 = { transfer_state_to = FEP }
+			760 = { transfer_state_to = FEP }
+			615 = { transfer_state_to = FEP }
+			328 = { transfer_state_to = FEP }
+			752 = { transfer_state_to = FEP }
+			728 = { transfer_state_to = FEP }
+			524 = { transfer_state_to = FEP }
+			820 = { transfer_state_to = FEP }
+			817 = { transfer_state_to = FEP }
+			819 = { transfer_state_to = FEP }
+			330 = { transfer_state_to = FEP }
+			818 = { transfer_state_to = FEP }
+		}
+	}
+	
+	india_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = INP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }
+			336 = { transfer_state_to = INP }
+			323 = { transfer_state_to = INP }
+			324 = { transfer_state_to = INP }
+			987 = { transfer_state_to = INP }
+			442 = { transfer_state_to = INP }
+			430 = { transfer_state_to = INP }
+			986 = { transfer_state_to = INP }
+			787 = { transfer_state_to = INP }
+			996 = { transfer_state_to = INP }
+			997 = { transfer_state_to = INP }
+			640 = { transfer_state_to = INP }
+			995 = { transfer_state_to = INP }
+			993 = { transfer_state_to = INP }
+			999 = { transfer_state_to = INP }
+			998 = { transfer_state_to = INP }
+			288 = { transfer_state_to = INP }
+			994 = { transfer_state_to = INP }
+			289 = { transfer_state_to = INP }
+			869 = { transfer_state_to = INP }
+			868 = { transfer_state_to = INP }
+			724 = { transfer_state_to = INP }
+			441 = { transfer_state_to = INP }
+			445 = { transfer_state_to = INP }
+			428 = { transfer_state_to = INP }
+			989 = { transfer_state_to = INP }
+			431 = { transfer_state_to = INP }
+			427 = { transfer_state_to = INP }
+			437 = { transfer_state_to = INP }
+			434 = { transfer_state_to = INP }
+			429 = { transfer_state_to = INP }
+			423 = { transfer_state_to = INP }
+			439 = { transfer_state_to = INP }
+			988 = { transfer_state_to = INP }
+			433 = { transfer_state_to = INP }
+			440 = { transfer_state_to = INP }
+			983 = { transfer_state_to = INP }
+			444 = { transfer_state_to = INP }
+			432 = { transfer_state_to = INP }
+			984 = { transfer_state_to = INP }
+			990 = { transfer_state_to = INP }
+			991 = { transfer_state_to = INP }
+			426 = { transfer_state_to = INP }
+			982 = { transfer_state_to = INP }
+			425 = { transfer_state_to = INP }
+			438 = { transfer_state_to = INP }
+			985 = { transfer_state_to = INP }
+			443 = { transfer_state_to = INP }
+			436 = { transfer_state_to = INP }
+			1012 = { transfer_state_to = INP }
+			424 = { transfer_state_to = INP }
+			321 = { transfer_state_to = INP }
+			435 = { transfer_state_to = INP }
+			320 = { transfer_state_to = INP }
+		}
+	}
+	
+	siberia_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = SIP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }
+			654 = { transfer_state_to = SIP }
+			329 = { transfer_state_to = SIP }
+			569 = { transfer_state_to = SIP }
+			568 = { transfer_state_to = SIP }
+			576 = { transfer_state_to = SIP }
+			516 = { transfer_state_to = SIP }
+			878 = { transfer_state_to = SIP }
+			876 = { transfer_state_to = SIP }
+			877 = { transfer_state_to = SIP }
+			644 = { transfer_state_to = SIP }
+			822 = { transfer_state_to = SIP }
+			875 = { transfer_state_to = SIP }
+			637 = { transfer_state_to = SIP }
+			874 = { transfer_state_to = SIP }
+			562 = { transfer_state_to = SIP }
+			560 = { transfer_state_to = SIP }
+			657 = { transfer_state_to = SIP }
+			409 = { transfer_state_to = SIP }
+			408 = { transfer_state_to = SIP }
+			574 = { transfer_state_to = SIP }
+			561 = { transfer_state_to = SIP }
+			563 = { transfer_state_to = SIP }
+			575 = { transfer_state_to = SIP }
+			564 = { transfer_state_to = SIP }
+			566 = { transfer_state_to = SIP }
+			567 = { transfer_state_to = SIP }
+			565 = { transfer_state_to = SIP }
+		}
+	}
+	
+	western_europe_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = WEP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }
+			14 = { transfer_state_to = WEP }
+			30 = { transfer_state_to = WEP }
+			15 = { transfer_state_to = WEP }
+			23 = { transfer_state_to = WEP }
+			24 = { transfer_state_to = WEP }
+			16 = { transfer_state_to = WEP }
+			785 = { transfer_state_to = WEP }
+			29 = { transfer_state_to = WEP }
+			18 = { transfer_state_to = WEP }
+			27 = { transfer_state_to = WEP }
+			33 = { transfer_state_to = WEP }
+			25 = { transfer_state_to = WEP }
+			20 = { transfer_state_to = WEP }
+			19 = { transfer_state_to = WEP }
+			806 = { transfer_state_to = WEP }
+			31 = { transfer_state_to = WEP }
+			22 = { transfer_state_to = WEP }
+			21 = { transfer_state_to = WEP }
+			851 = { transfer_state_to = WEP }
+			735 = { transfer_state_to = WEP }
+			17 = { transfer_state_to = WEP }
+			28 = { transfer_state_to = WEP }
+			8 = { transfer_state_to = WEP }
+			26 = { transfer_state_to = WEP }
+			32 = { transfer_state_to = WEP }
+			1 = { transfer_state_to = WEP }
+			980 = { transfer_state_to = WEP }
+			34 = { transfer_state_to = WEP }
+			6 = { transfer_state_to = WEP }
+			977 = { transfer_state_to = WEP }
+			35 = { transfer_state_to = WEP }
+			7 = { transfer_state_to = WEP }
+			36 = { transfer_state_to = WEP }
+			119 = { transfer_state_to = WEP }
+			113 = { transfer_state_to = WEP }
+			134 = { transfer_state_to = WEP }
+			135 = { transfer_state_to = WEP }
+			165 = { transfer_state_to = WEP }
+			794 = { transfer_state_to = WEP }
+			167 = { transfer_state_to = WEP }
+			177 = { transfer_state_to = WEP }
+			166 = { transfer_state_to = WEP }
+			172 = { transfer_state_to = WEP }
+			792 = { transfer_state_to = WEP }
+			176 = { transfer_state_to = WEP }
+			793 = { transfer_state_to = WEP }
+			168 = { transfer_state_to = WEP }
+			789 = { transfer_state_to = WEP }
+			173 = { transfer_state_to = WEP }
+			169 = { transfer_state_to = WEP }
+			170 = { transfer_state_to = WEP }
+			41 = { transfer_state_to = WEP }
+			166 = { transfer_state_to = WEP }
+			788 = { transfer_state_to = WEP }
+			791 = { transfer_state_to = WEP }
+			790 = { transfer_state_to = WEP }
+			174 = { transfer_state_to = WEP }
+			171 = { transfer_state_to = WEP }
+			180 = { transfer_state_to = WEP }
+			118 = { transfer_state_to = WEP }
+			179 = { transfer_state_to = WEP }
+			795 = { transfer_state_to = WEP }
+			112 = { transfer_state_to = WEP }
+			181 = { transfer_state_to = WEP }
+			175 = { transfer_state_to = WEP }
+			123 = { transfer_state_to = WEP }
+			127 = { transfer_state_to = WEP }
+			126 = { transfer_state_to = WEP }
+			338 = { transfer_state_to = WEP }
+			128 = { transfer_state_to = WEP }
+			122 = { transfer_state_to = WEP }
+			125 = { transfer_state_to = WEP }
+			129 = { transfer_state_to = WEP }
+			130 = { transfer_state_to = WEP }
+			132 = { transfer_state_to = WEP }
+			131 = { transfer_state_to = WEP }
+			931 = { transfer_state_to = WEP }
+			121 = { transfer_state_to = WEP }
+			133 = { transfer_state_to = WEP }
+			136 = { transfer_state_to = WEP }
+			120 = { transfer_state_to = WEP }
+			158 = { transfer_state_to = WEP }
+			159 = { transfer_state_to = WEP }
+			161 = { transfer_state_to = WEP }
+			160 = { transfer_state_to = WEP }
+			162 = { transfer_state_to = WEP }
+			157 = { transfer_state_to = WEP }
+			2 = { transfer_state_to = WEP }
+			849 = { transfer_state_to = WEP }
+			117 = { transfer_state_to = WEP }
+			156 = { transfer_state_to = WEP }
+			115 = { transfer_state_to = WEP }
+			114 = { transfer_state_to = WEP }
+			116 = { transfer_state_to = WEP }
+			133 = { transfer_state_to = WEP }
+			136 = { transfer_state_to = WEP }
+			120 = { transfer_state_to = WEP }
+		}
+	}
+	
+	central_europe_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = CEP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }
+			845 = { transfer_state_to = CEP }
+			3 = { transfer_state_to = CEP }
+			847 = { transfer_state_to = CEP }
+			846 = { transfer_state_to = CEP }
+			151 = { transfer_state_to = CEP }
+			848 = { transfer_state_to = CEP }
+			153 = { transfer_state_to = CEP }
+			39 = { transfer_state_to = CEP }
+			850 = { transfer_state_to = CEP }
+			152 = { transfer_state_to = CEP }
+			976 = { transfer_state_to = CEP }
+			4 = { transfer_state_to = CEP }
+			975 = { transfer_state_to = CEP }
+			155 = { transfer_state_to = CEP }
+			974 = { transfer_state_to = CEP }
+			973 = { transfer_state_to = CEP }
+			43 = { transfer_state_to = CEP }
+			154 = { transfer_state_to = CEP }
+			73 = { transfer_state_to = CEP }
+			664 = { transfer_state_to = CEP }
+			71 = { transfer_state_to = CEP }
+			70 = { transfer_state_to = CEP }
+			72 = { transfer_state_to = CEP }
+			74 = { transfer_state_to = CEP }
+			75 = { transfer_state_to = CEP }
+			9 = { transfer_state_to = CEP }
+			972 = { transfer_state_to = CEP }
+			69 = { transfer_state_to = CEP }
+			53 = { transfer_state_to = CEP }
+			52 = { transfer_state_to = CEP }
+			54 = { transfer_state_to = CEP }
+			50 = { transfer_state_to = CEP }
+			978 = { transfer_state_to = CEP }
+			42 = { transfer_state_to = CEP }
+			51 = { transfer_state_to = CEP }
+			55 = { transfer_state_to = CEP }
+			57 = { transfer_state_to = CEP }
+			56 = { transfer_state_to = CEP }
+			59 = { transfer_state_to = CEP }
+			60 = { transfer_state_to = CEP }
+			64 = { transfer_state_to = CEP }
+			65 = { transfer_state_to = CEP }
+			61 = { transfer_state_to = CEP }
+			62 = { transfer_state_to = CEP }
+			63 = { transfer_state_to = CEP }
+			68 = { transfer_state_to = CEP }
+			66 = { transfer_state_to = CEP }
+			67 = { transfer_state_to = CEP }
+			88 = { transfer_state_to = CEP }
+			762 = { transfer_state_to = CEP }
+			90 = { transfer_state_to = CEP }
+			87 = { transfer_state_to = CEP }
+			86 = { transfer_state_to = CEP }
+			807 = { transfer_state_to = CEP }
+			85 = { transfer_state_to = CEP }
+			98 = { transfer_state_to = CEP }
+			10 = { transfer_state_to = CEP }
+			92 = { transfer_state_to = CEP }
+			97 = { transfer_state_to = CEP }
+			5 = { transfer_state_to = CEP }
+			763 = { transfer_state_to = CEP }
+			188 = { transfer_state_to = CEP }
+		}
+	}
+	
+	scandinavia_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = SCP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }
+			58 = { transfer_state_to = SCP }
+			909 = { transfer_state_to = SCP }
+			912 = { transfer_state_to = SCP }
+			99 = { transfer_state_to = SCP }
+			911 = { transfer_state_to = SCP }
+			37 = { transfer_state_to = SCP }
+			100 = { transfer_state_to = SCP }
+			138 = { transfer_state_to = SCP }
+			139 = { transfer_state_to = SCP }
+			140 = { transfer_state_to = SCP }
+			915 = { transfer_state_to = SCP }
+			919 = { transfer_state_to = SCP }
+			913 = { transfer_state_to = SCP }
+			141 = { transfer_state_to = SCP }
+			38 = { transfer_state_to = SCP }
+			916 = { transfer_state_to = SCP }
+			917 = { transfer_state_to = SCP }
+			918 = { transfer_state_to = SCP }
+			666 = { transfer_state_to = SCP }
+			110 = { transfer_state_to = SCP }
+			921 = { transfer_state_to = SCP }
+			922 = { transfer_state_to = SCP }
+			142 = { transfer_state_to = SCP }
+			920 = { transfer_state_to = SCP }
+			143 = { transfer_state_to = SCP }
+			923 = { transfer_state_to = SCP }
+			144 = { transfer_state_to = SCP }
+			924 = { transfer_state_to = SCP }
+			925 = { transfer_state_to = SCP }
+			148 = { transfer_state_to = SCP }
+			722 = { transfer_state_to = SCP }
+			147 = { transfer_state_to = SCP }
+			929 = { transfer_state_to = SCP }
+			149 = { transfer_state_to = SCP }
+			926 = { transfer_state_to = SCP }
+			927 = { transfer_state_to = SCP }
+			111 = { transfer_state_to = SCP }
+			930 = { transfer_state_to = SCP }
+			150 = { transfer_state_to = SCP }
+			928 = { transfer_state_to = SCP }
+			146 = { transfer_state_to = SCP }
+			215 = { transfer_state_to = SCP }
+			216 = { transfer_state_to = SCP }
+			213 = { transfer_state_to = SCP }
+		}
+	}
+	
+	balkan_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = BAP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }
+			736 = { transfer_state_to = BAP }
+			852 = { transfer_state_to = BAP }
+			102 = { transfer_state_to = BAP }
+			853 = { transfer_state_to = BAP }
+			109 = { transfer_state_to = BAP }
+			45 = { transfer_state_to = BAP }
+			764 = { transfer_state_to = BAP }
+			103 = { transfer_state_to = BAP }
+			163 = { transfer_state_to = BAP }
+			104 = { transfer_state_to = BAP }
+			804 = { transfer_state_to = BAP }
+			105 = { transfer_state_to = BAP }
+			107 = { transfer_state_to = BAP }
+			108 = { transfer_state_to = BAP }
+			802 = { transfer_state_to = BAP }
+			803 = { transfer_state_to = BAP }
+			106 = { transfer_state_to = BAP }
+			970 = { transfer_state_to = BAP }
+			934 = { transfer_state_to = BAP }
+			44 = { transfer_state_to = BAP }
+			805 = { transfer_state_to = BAP }
+			731 = { transfer_state_to = BAP }
+			184 = { transfer_state_to = BAP }
+			185 = { transfer_state_to = BAP }
+			47 = { transfer_state_to = BAP }
+			186 = { transfer_state_to = BAP }
+			341 = { transfer_state_to = BAP }
+			211 = { transfer_state_to = BAP }
+			212 = { transfer_state_to = BAP }
+			801 = { transfer_state_to = BAP }
+			48 = { transfer_state_to = BAP }
+			77 = { transfer_state_to = BAP }
+			971 = { transfer_state_to = BAP }
+			46 = { transfer_state_to = BAP }
+			81 = { transfer_state_to = BAP }
+			82 = { transfer_state_to = BAP }
+			83 = { transfer_state_to = BAP }
+			76 = { transfer_state_to = BAP }
+			84 = { transfer_state_to = BAP }
+			79 = { transfer_state_to = BAP }
+			80 = { transfer_state_to = BAP }
+		}
+	}
+	
+	north_africa_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = NFP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }
+			290 = { transfer_state_to = NFP }
+			461 = { transfer_state_to = NFP }
+			462 = { transfer_state_to = NFP }
+			783 = { transfer_state_to = NFP }
+			699 = { transfer_state_to = NFP }
+			513 = { transfer_state_to = NFP }
+			459 = { transfer_state_to = NFP }
+			460 = { transfer_state_to = NFP }
+			458 = { transfer_state_to = NFP }
+			665 = { transfer_state_to = NFP }
+			448 = { transfer_state_to = NFP }
+			661 = { transfer_state_to = NFP }
+			449 = { transfer_state_to = NFP }
+			662 = { transfer_state_to = NFP }
+			663 = { transfer_state_to = NFP }
+			450 = { transfer_state_to = NFP }
+			451 = { transfer_state_to = NFP }
+			452 = { transfer_state_to = NFP }
+			447 = { transfer_state_to = NFP }
+			907 = { transfer_state_to = NFP }
+			456 = { transfer_state_to = NFP }
+			457 = { transfer_state_to = NFP }
+			552 = { transfer_state_to = NFP }
+			273 = { transfer_state_to = NFP }
+			514 = { transfer_state_to = NFP }
+			786 = { transfer_state_to = NFP }
+			782 = { transfer_state_to = NFP }
+			515 = { transfer_state_to = NFP }
+			775 = { transfer_state_to = NFP }
+			557 = { transfer_state_to = NFP }
+			272 = { transfer_state_to = NFP }
+			701 = { transfer_state_to = NFP }
+			296 = { transfer_state_to = NFP }
+			899 = { transfer_state_to = NFP }
+			780 = { transfer_state_to = NFP }
+			700 = { transfer_state_to = NFP }
+			298 = { transfer_state_to = NFP }
+			779 = { transfer_state_to = NFP }
+			556 = { transfer_state_to = NFP }
+			778 = { transfer_state_to = NFP }
+			898 = { transfer_state_to = NFP }
+			781 = { transfer_state_to = NFP }
+			274 = { transfer_state_to = NFP }
+			776 = { transfer_state_to = NFP }
+			558 = { transfer_state_to = NFP }
+			902 = { transfer_state_to = NFP }
+			901 = { transfer_state_to = NFP }
+			900 = { transfer_state_to = NFP }
+			767 = { transfer_state_to = NFP }
+			551 = { transfer_state_to = NFP }
+			883 = { transfer_state_to = NFP }
+			777 = { transfer_state_to = NFP }
+		}
+	}
+	
+	central_africa_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = CFP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }
+			774 = { transfer_state_to = CFP }
+			773 = { transfer_state_to = CFP }
+			660 = { transfer_state_to = CFP }
+			887 = { transfer_state_to = CFP }
+			549 = { transfer_state_to = CFP }
+			886 = { transfer_state_to = CFP }
+			550 = { transfer_state_to = CFP }
+			842 = { transfer_state_to = CFP }
+			841 = { transfer_state_to = CFP }
+			843 = { transfer_state_to = CFP }
+			908 = { transfer_state_to = CFP }
+			268 = { transfer_state_to = CFP }
+			840 = { transfer_state_to = CFP }
+			660 = { transfer_state_to = CFP }
+			887 = { transfer_state_to = CFP }
+			549 = { transfer_state_to = CFP }
+			886 = { transfer_state_to = CFP }
+			550 = { transfer_state_to = CFP }
+			842 = { transfer_state_to = CFP }
+			841 = { transfer_state_to = CFP }
+			843 = { transfer_state_to = CFP }
+			908 = { transfer_state_to = CFP }
+			268 = { transfer_state_to = CFP }
+			840 = { transfer_state_to = CFP }
+			271 = { transfer_state_to = CFP }
+			839 = { transfer_state_to = CFP }
+			838 = { transfer_state_to = CFP }
+			837 = { transfer_state_to = CFP }
+			836 = { transfer_state_to = CFP }
+			835 = { transfer_state_to = CFP }
+			269 = { transfer_state_to = CFP }
+			559 = { transfer_state_to = CFP }
+			844 = { transfer_state_to = CFP }
+			885 = { transfer_state_to = CFP }
+			884 = { transfer_state_to = CFP }
+			903 = { transfer_state_to = CFP }
+			547 = { transfer_state_to = CFP }
+			905 = { transfer_state_to = CFP }
+			904 = { transfer_state_to = CFP }
+			718 = { transfer_state_to = CFP }
+			538 = { transfer_state_to = CFP }
+			772 = { transfer_state_to = CFP }
+			539 = { transfer_state_to = CFP }
+			297 = { transfer_state_to = CFP }
+			796 = { transfer_state_to = CFP }
+			548 = { transfer_state_to = CFP }
+			890 = { transfer_state_to = CFP }
+			768 = { transfer_state_to = CFP }
+			769 = { transfer_state_to = CFP }
+			295 = { transfer_state_to = CFP }
+			888 = { transfer_state_to = CFP }
+			546 = { transfer_state_to = CFP }
+		}
+	}
+	
+	south_africa_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = SFP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }
+			540 = { transfer_state_to = SFP }
+			889 = { transfer_state_to = SFP }
+			771 = { transfer_state_to = SFP }
+			770 = { transfer_state_to = SFP }
+			897 = { transfer_state_to = SFP }
+			896 = { transfer_state_to = SFP }
+			981 = { transfer_state_to = SFP }
+			892 = { transfer_state_to = SFP }
+			697 = { transfer_state_to = SFP }
+			891 = { transfer_state_to = SFP }
+			545 = { transfer_state_to = SFP }
+			544 = { transfer_state_to = SFP }
+			543 = { transfer_state_to = SFP }
+			542 = { transfer_state_to = SFP }
+			895 = { transfer_state_to = SFP }
+			894 = { transfer_state_to = SFP }
+			541 = { transfer_state_to = SFP }
+			681 = { transfer_state_to = SFP }
+			275 = { transfer_state_to = SFP }
+			719 = { transfer_state_to = SFP }
+			893 = { transfer_state_to = SFP }
+		}
+	}
+	
+	pacific_commisariat = { 
+	
+	    icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_creating_puppets
+		} 
+
+		visible = { 
+			has_country_flag = MDR_creating_puppets
+		}
+
+		cost = 10
+
+		complete_effect = {
+		    release_autonomy = {
+                target = PCP
+                autonomy_state = autonomy_puppet
+                freedom_level = 0.5
+            }
+			672 = { transfer_state_to = PCP }
+			333 = { transfer_state_to = PCP }
+			334 = { transfer_state_to = PCP }
+			335 = { transfer_state_to = PCP }
+			673 = { transfer_state_to = PCP }
+			667 = { transfer_state_to = PCP }
+			721 = { transfer_state_to = PCP }
+			668 = { transfer_state_to = PCP }
+			669 = { transfer_state_to = PCP }
+			523 = { transfer_state_to = PCP }
+			979 = { transfer_state_to = PCP }
+			872 = { transfer_state_to = PCP }
+			520 = { transfer_state_to = PCP }
+			870 = { transfer_state_to = PCP }
+			522 = { transfer_state_to = PCP }
+			871 = { transfer_state_to = PCP }
+			519 = { transfer_state_to = PCP }
+			520 = { transfer_state_to = PCP }
+			870 = { transfer_state_to = PCP }
+			522 = { transfer_state_to = PCP }
+			871 = { transfer_state_to = PCP }
+			519 = { transfer_state_to = PCP }
+			517 = { transfer_state_to = PCP }
+			285 = { transfer_state_to = PCP }
+			521 = { transfer_state_to = PCP }
+			873 = { transfer_state_to = PCP }
+			674 = { transfer_state_to = PCP }
+			723 = { transfer_state_to = PCP }
+			284 = { transfer_state_to = PCP }
+		}
+	}
+}	
+
+MDR_power_balance_power_balance_decisions = {
+    
+	MDR_invest_into_propaganda = {
+
+		icon = GFX_decision_mdr_propaganda
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+		available = {
+			has_completed_focus = MDR_cyn_won
+		} 
+
+		visible = { 
+			has_completed_focus = MDR_cyn_won
+		}
+
+		cost = 25
+
+		complete_effect = {
+		    add_war_support = 0.05
+			add_stability = 0.05
+			add_power_balance_value = {
+				id = MDR_power_balance_bop
+				value = 0.1
+			}
+		}
+	}
+	
+	MDR_announce_military_achievements = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+
+		available = {
+			has_completed_focus = MDR_cyn_won
+			has_war = yes
+		} 
+
+		visible = { 
+			has_completed_focus = MDR_cyn_won
+		}
+
+		cost = 25
+
+		complete_effect = {
+		    add_war_support = 0.05
+			add_manpower = 5000
+			add_power_balance_value = {
+				id = MDR_power_balance_bop
+				value = 0.15
+			}
+		}
+	}
+	
+	MDR_improve_working_conditions = {
+
+		icon = GFX_decision_mdr_improve_workers_condition
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_cyn_won
+		} 
+
+		visible = { 
+			has_completed_focus = MDR_cyn_won
+		}
+
+		cost = 25
+		
+		days_remove = 30
+		modifier = {
+			consumer_goods_factor = -0.15
+			production_speed_buildings_factor = 0.15
+		}
+
+		complete_effect = {
+		    add_stability = 0.05
+			add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		    }	
+			add_power_balance_value = {
+				id = MDR_power_balance_bop
+				value = 0.1
+			}
+		}
+	}
+	
+	MDR_remind_who_started_all_of_this = {
+
+		icon = GFX_decision_mdr_remind_who_started
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+
+		available = {
+			has_completed_focus = MDR_cyn_won
+		} 
+
+		visible = { 
+			has_completed_focus = MDR_cyn_won
+		}
+
+		cost = 25
+
+		complete_effect = {
+		    add_war_support = 0.05
+			add_power_balance_value = {
+				id = MDR_power_balance_bop
+				value = -0.1
+			}
+		}
+	}
+	
+	MDR_military_parade = {
+
+		icon = GFX_decision_eng_blackshirt_march
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+		available = {
+			has_completed_focus = MDR_cyn_won
+		} 
+
+		visible = { 
+			has_completed_focus = MDR_cyn_won
+		}
+
+		cost = 25
+
+		complete_effect = {
+		    add_war_support = 0.15
+			add_manpower = 89000
+			add_power_balance_value = {
+				id = MDR_power_balance_bop
+				value = -0.15
+			}
+		}
+	}
+	
+	MDR_expand_cult_of_personality = {
+
+		icon = GFX_decision_mdr_cult_expansion
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_cyn_won
+		} 
+
+		visible = { 
+			has_completed_focus = MDR_cyn_won
+		}
+
+		cost = 25
+
+		complete_effect = {
+			add_stability = -0.15
+			add_war_support = -0.15
+			add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		    }	
+			add_power_balance_value = {
+				id = MDR_power_balance_bop
+				value = -0.15
+			}
+		}
+	}
+}	
+
+MDR_power_balance_power_balance_uzi_and_doll_decisions = {
+
+    MDR_organize_worker_militias_uzi = {
+
+		icon = GFX_decision_generic_military
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+		available = {
+			has_completed_focus = MDR_cyn_won
+		} 
+
+		visible = { 
+			has_completed_focus = MDR_cyn_won
+		}
+
+		cost = 25
+
+		complete_effect = {
+			add_manpower = 14000
+			capital_scope = {
+				create_unit = { 
+					division = "division_template = \"Worker Drones Infantry Division\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+				}
+			}	
+			add_power_balance_value = {
+				id = MDR_power_balance_bop
+				value = 0.25
+			}
+		}
+	}
+	
+	MDR_fund_researchs_uzi = {
+
+		icon = GFX_decision_generic_research
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+		available = {
+			has_completed_focus = MDR_cyn_won
+		} 
+
+		visible = { 
+			has_completed_focus = MDR_cyn_won
+		}
+
+		cost = 25
+		
+		days_remove = 30
+		modifier = {
+			research_speed_factor = 0.15
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = MDR_power_balance_bop
+				value = 0.1
+			}
+		}
+	}
+	
+	MDR_promote_nationalism = {
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+		available = {
+			has_completed_focus = MDR_cyn_won
+		} 
+
+		visible = { 
+			has_completed_focus = MDR_cyn_won
+		}
+
+		cost = 25
+
+		complete_effect = {
+			add_war_support = 0.05
+			add_manpower = 140000
+	        add_political_power = 100
+			add_power_balance_value = {
+				id = MDR_power_balance_bop
+				value = 0.15
+			}
+		}
+	}
+	
+	MDR_educational_reforms_doll = {
+
+		icon = GFX_decision_generic_research
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+		available = {
+			has_completed_focus = MDR_cyn_won
+		} 
+
+		visible = { 
+			has_completed_focus = MDR_cyn_won
+		}
+
+		cost = 25
+		
+		days_remove = 30
+		modifier = {
+			research_speed_factor = 0.15
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = MDR_power_balance_bop
+				value = -0.1
+			}
+		}
+	}
+	
+	MDR_call_for_workers = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+		available = {
+			has_completed_focus = MDR_cyn_won
+		} 
+
+		visible = { 
+			has_completed_focus = MDR_cyn_won
+		}
+
+		cost = 25
+		
+		days_remove = 30
+		modifier = {
+			production_speed_buildings_factor = 0.45
+			consumer_goods_factor = -0.45
+			industrial_capacity_factory = 0.45
+			industrial_capacity_dockyard = 0.45
+			production_factory_efficiency_gain_factor = 0.45
+			production_factory_max_efficiency_factor = 0.45
+		}
+
+		complete_effect = {
+		    add_popularity = {
+			ideology = communism
+			popularity = 0.2
+		    }
+			add_power_balance_value = {
+				id = MDR_power_balance_bop
+				value = -0.25
+			}
+		}
+	}
+	
+	MDR_strengthen_trade_unions = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+		available = {
+			has_completed_focus = MDR_cyn_won
+		} 
+
+		visible = { 
+			has_completed_focus = MDR_cyn_won
+		}
+
+		cost = 25
+
+		complete_effect = {
+		    add_stability = 0.15
+			add_manpower = 1000
+			add_power_balance_value = {
+				id = MDR_power_balance_bop
+				value = -0.15
+			}
+		}
+	}
+}	

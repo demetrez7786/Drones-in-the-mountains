@@ -1,0 +1,59 @@
+division_template = {
+	name = "Paramilitary brigade"
+	division_names_group = MDM_PGG_01
+
+	regiments = {
+		worker_drone = { x = 0 y = 0 }
+		worker_drone = { x = 0 y = 1 }
+        worker_drone = { x = 1 y = 0 }
+		worker_drone = { x = 1 y = 1 }
+        worker_drone = { x = 2 y = 0 }
+		worker_drone = { x = 2 y = 1 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11617
+		division_template = "Paramilitary brigade"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 11617
+		division_template = "Paramilitary brigade"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 11617
+		division_template = "Paramilitary brigade"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 11617
+		division_template = "Paramilitary brigade"
+		start_experience_factor = 0.15
+	}
+}	

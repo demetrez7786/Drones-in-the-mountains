@@ -1,0 +1,25 @@
+state={
+	id=1019
+	name="STATE_1019"
+	provinces={
+		4660 6642 6997 
+	}
+	
+	history={
+		owner = MDR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+		add_core_of = MDR
+		add_core_of = ARM
+		add_core_of = RES
+	}
+	
+	manpower=184969
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

@@ -1,0 +1,724 @@
+add_namespace = drones
+
+# Winter massacre
+country_event = {
+	id = drones.1
+	title = drones.1.t
+	desc = drones.1.d
+	picture = GFX_report_event_MDR_winter_massacre
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.1.a
+		231 = {
+		    add_manpower = -586
+		}
+		hidden_effect = {
+			country_event = { days = 4 id = drones.2 }
+			news_event = { days = 4 id = news.411 }
+		}
+        custom_effect_tooltip = 1_MDR_tt
+	}
+}
+
+# Humans protest
+country_event = {
+	id = drones.2
+	title = drones.2.t
+	desc = drones.2.d
+	picture = GFX_report_event_MDR_protests
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.2.a
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_political_power = -50
+		hidden_effect = {
+			country_event = { days = 2 id = drones.3 }
+		}
+	}
+	
+	option = {
+		name = drones.2.b
+		add_stability = -0.15
+		add_war_support = -0.15
+		add_political_power = -80
+		set_country_flag = humans_got_crackdowned
+		news_event = { id = news.412 }
+	}
+}
+
+# Tessa supports them
+country_event = {
+	id = drones.3
+	title = drones.3.t
+	desc = drones.3.d
+	picture = GFX_report_event_MDR_tessa_support_protest
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.3.a
+		add_stability = -0.15
+		add_war_support = -0.05
+		add_political_power = -50
+		set_country_flag = tessa_supported_the_protest
+		hidden_effect = {
+			country_event = { days = 5 id = drones.4 }
+		}
+	}
+	
+	option = {
+		name = drones.3.b
+		add_stability = -0.25
+		add_war_support = -0.15
+		add_political_power = -80
+		set_country_flag = humans_got_crackdowned
+		set_country_flag = tessa_supported_the_protest
+		news_event = { id = news.412 }
+	}
+}
+
+# Drones start supporting the protest
+country_event = {
+	id = drones.4
+	title = drones.4.t
+	desc = drones.4.d
+	picture = GFX_report_event_MDR_drones_support_protest
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.4.a
+		add_stability = -0.15
+		add_war_support = -0.15
+		add_political_power = -150
+		add_manpower = -1
+		hidden_effect = {
+			country_event = { days = 10 id = drones.5 }
+		}
+	}
+	
+	option = {
+		name = drones.4.b
+		add_stability = -0.35
+		add_war_support = -0.35
+		add_political_power = -200
+		set_country_flag = humans_got_crackdowned
+		news_event = { id = news.412 }
+	}
+}
+
+# Protesters break the police line
+country_event = {
+	id = drones.5
+	title = drones.5.t
+	desc = drones.5.d
+	picture = GFX_report_event_MDR_coup
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.5.a
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_political_power = -25
+		hidden_effect = {
+		    country_event = { hours = 2 id = drones.20 }
+		}	
+	}
+	
+	option = {
+		name = drones.5.b
+		add_stability = -0.15
+		add_war_support = -0.15
+		add_political_power = -100
+		231 = {
+		add_manpower = -243
+		}
+		hidden_effect = {
+			country_event = { days = 1 id = drones.19 }
+		}
+	}
+}
+
+# elections
+country_event = {
+	id = drones.6
+	title = drones.6.t
+	desc = drones.6.d
+	picture = GFX_report_event_MDR_elections
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.6.a
+		load_focus_tree = murder_drones_uzi_focus
+		hidden_effect = {
+			news_event = { days = 1 id = news.419 }
+		}
+	}
+	option = {
+		name = drones.6.b
+		custom_effect_tooltip = MDR_no_content_for_now_wait_for_the_next_update
+	}
+	option = {
+		name = drones.6.g
+		load_focus_tree = murder_drones_khan_focus
+		hidden_effect = {
+			news_event = { days = 1 id = news.425 }
+		}
+	}
+	option = {
+		name = drones.6.c
+		load_focus_tree = murder_drones_dd_focus
+		hidden_effect = {
+			news_event = { days = 1 id = news.421 }
+		}
+	}
+}
+
+# elections but AS is alive
+country_event = {
+	id = drones.7
+	title = drones.7.t
+	desc = drones.7.d
+	picture = GFX_report_event_MDR_elections
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.7.a
+		load_focus_tree = murder_drones_uzi_focus
+		hidden_effect = {
+			news_event = { days = 1 id = news.418 }
+		}
+	}
+	option = {
+		name = drones.7.b
+		load_focus_tree = murder_drones_khan_focus
+		hidden_effect = {
+			news_event = { days = 1 id = news.426 }
+		}
+	}
+	option = {
+		name = drones.7.g
+		load_focus_tree = murder_drones_dd_focus
+		hidden_effect = {
+			news_event = { days = 1 id = news.420 }
+		}
+	}
+	option = {
+		name = drones.7.e
+	}
+}
+
+# march from ankara to leningrand
+country_event = {
+	id = drones.8
+	title = drones.8.t
+	desc = drones.8.d
+	picture = GFX_report_event_MDR_march_from_ankara_to_moscow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.8.a
+		add_political_power = 50
+		add_war_support = 0.05
+		add_popularity = {
+		    ideology = fascism
+			popularity = 0.15
+		}	
+		add_power_balance_value = {
+			id = MDR_power_balance_bop
+			value = 0.1
+		}
+	}
+}
+
+# nuclear test was successful
+country_event = {
+	id = drones.9
+	title = drones.9.t
+	desc = drones.9.d
+	picture = GFX_report_event_MDR_nukes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.9.a
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = 0.1
+		add_popularity = {
+		    ideology = fascism
+			popularity = 0.15
+		}	
+		hidden_effect = {
+		    news_event = { id = news.415 }
+		}	
+	}
+}
+
+# militia is reorganized
+country_event = {
+	id = drones.10
+	title = drones.10.t
+	desc = drones.10.d
+	picture = GFX_report_event_MDR_drones_support_protest
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.10.a
+		add_to_variable = { MDR_ra_army_org_factor = 0.15 }
+	}
+}
+
+# v is killed
+country_event = {
+	id = drones.11
+	title = drones.11.t
+	desc = drones.11.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.11.a
+		add_political_power = 50
+		add_stability = -0.025
+	    add_war_support = 0.025
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.15
+		}	
+		add_manpower = -1
+		set_country_flag = MDR_killed_v
+	}
+}
+
+# n is killed
+country_event = {
+	id = drones.12
+	title = drones.12.t
+	desc = drones.12.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.12.a
+		add_political_power = 50
+		add_stability = -0.025
+	    add_war_support = 0.025
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.3
+		}	
+		add_manpower = -1
+		set_country_flag = MDR_killed_n
+	}
+}
+
+# j is killed
+country_event = {
+	id = drones.13
+	title = drones.13.t
+	desc = drones.13.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.13.a
+		add_political_power = 50
+		add_stability = -0.15
+	    add_war_support = 0.025
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.5
+		}	
+		add_manpower = -1
+		231 = {
+		    add_manpower = -5
+		}	
+	}
+}
+
+# parliamentary elections
+country_event = {
+	id = drones.14
+	title = drones.14.t
+	desc = drones.14.d
+	picture = GFX_report_event_MDR_elections
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.14.a
+		complete_national_focus = MDR_n_leads
+	}
+	
+	option = {
+		name = drones.14.b
+		complete_national_focus = MDR_v_leads
+	}
+	
+	option = {
+		name = drones.14.g
+		complete_national_focus = MDR_j_leads
+	}
+}
+
+# doll is killed
+country_event = {
+	id = drones.15
+	title = drones.15.t
+	desc = drones.15.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.15.a
+		add_political_power = 50
+		add_stability = -0.025
+	    add_war_support = 0.025
+		add_popularity = {
+			ideology = communism
+			popularity = -0.15
+		}	
+		add_manpower = -1
+		set_country_flag = MDR_killed_doll
+	}
+}
+
+# cyn is killed
+country_event = {
+	id = drones.16
+	title = drones.16.t
+	desc = drones.16.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.16.a
+		add_political_power = 50
+		add_stability = -0.025
+	    add_war_support = 0.025
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.15
+		}	
+		add_manpower = -1
+	}
+}
+
+# our operation went good
+country_event = {
+	id = drones.17
+	title = drones.17.t
+	desc = drones.17.d
+	picture = GFX_report_event_MDR_success
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.17.a
+		add_political_power = 150
+		add_stability = 0.15
+	    add_war_support = 0.15
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.15
+		}
+		complete_national_focus = MDR_success
+	}
+}
+
+# our operation failed
+country_event = {
+	id = drones.18
+	title = drones.18.t
+	desc = drones.18.d
+	picture = GFX_report_event_MDR_failure
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.18.a
+		add_political_power = -150
+		add_stability = -0.15
+	    add_war_support = -0.15
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.15
+		}
+		complete_national_focus = MDR_failure
+	}
+}
+
+# underground resistance uprised
+country_event = {
+	id = drones.19
+	title = drones.19.t
+	desc = drones.19.d
+	picture = GFX_report_event_MDR_coup
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.19.a
+		1017 = { transfer_state_to = RES }
+		1018 = { transfer_state_to = RES }
+		1019 = { transfer_state_to = RES }
+		remove_ideas = MDR_underground_human_resistance
+		set_country_flag = humans_uprised
+	}
+	
+	option = {
+		name = drones.19.b
+		1017 = { transfer_state_to = RES }
+		1018 = { transfer_state_to = RES }
+		1019 = { transfer_state_to = RES }
+		remove_ideas = MDR_underground_human_resistance
+		set_country_flag = humans_uprised
+		RES = { 
+			change_tag_from = ROOT 
+		}
+	}
+}
+
+# AS is killed
+country_event = {
+	id = drones.20
+	title = drones.20.t
+	desc = drones.20.d
+	picture = GFX_report_event_MDR_coup
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.20.a
+		add_stability = 0.15
+		add_war_support = 0.15
+		add_political_power = -100
+		add_manpower = -1
+		hidden_effect = {
+			country_event = { days = 5 id = drones.6 }
+		}
+		news_event = { id = news.413 }
+	}
+}
+
+# murder drones want to buy trabizon
+country_event = {
+	id = drones.21
+	title = drones.21.t
+	desc = drones.21.d
+	picture = GFX_report_event_MDR_coup
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.21.a
+		add_political_power = 150
+		add_equipment_to_stockpile = { 
+			type = infantry_equipment_0
+			amount = 15000
+		}
+		MDR = {
+		    add_political_power = -150
+			add_equipment_to_stockpile = { 
+			type = infantry_equipment_0
+			amount = -15000
+		    }
+		}
+		354 = { transfer_state_to = MDR }
+	}
+	
+	option = {
+		name = drones.21.b
+		hidden_effect = {
+		    MDR = {
+			    country_event = { id = drones.22 }
+			}
+		}	
+	}
+}
+
+# turkey refused to sell trabizon
+country_event = {
+	id = drones.22
+	title = drones.22.t
+	desc = drones.22.d
+	picture = GFX_report_event_MDR_coup
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.22.a
+		add_war_support = -0.05
+	}
+	
+	option = {
+		name = drones.22.b
+		declare_war_on = {
+		target = TUR
+		type = annex_everything
+		}
+	}
+}
+
+# murder drones want to buy north caucasus
+country_event = {
+	id = drones.23
+	title = drones.23.t
+	desc = drones.23.d
+	picture = GFX_report_event_MDR_coup
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.23.a
+		add_political_power = 350
+		add_equipment_to_stockpile = { 
+			type = infantry_equipment_0
+			amount = 15000
+		}
+		MDR = {
+		    add_political_power = -350
+			add_equipment_to_stockpile = { 
+			type = infantry_equipment_0
+			amount = -15000
+		    }
+		}
+		821 = { transfer_state_to = MDR }
+		232 = { transfer_state_to = MDR }
+		235 = { transfer_state_to = MDR }
+		828 = { transfer_state_to = MDR }
+		827 = { transfer_state_to = MDR }
+		233 = { transfer_state_to = MDR }
+		234 = { transfer_state_to = MDR }
+	}
+	
+	option = {
+		name = drones.23.b
+		hidden_effect = {
+		    MDR = {
+			    country_event = { id = drones.24 }
+			}
+		}	
+	}
+}
+
+# ussr refuses to sell their lands
+country_event = {
+	id = drones.24
+	title = drones.24.t
+	desc = drones.24.d
+	picture = GFX_report_event_MDR_coup
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.24.a
+		add_war_support = -0.05
+	}
+	
+	option = {
+		name = drones.24.b
+		declare_war_on = {
+		target = SOV
+		type = annex_everything
+		}
+	}
+}
+
+# north america landing
+country_event = {
+	id = drones.25
+	title = drones.25.t
+	desc = drones.25.d
+	picture = GFX_report_event_MDR_na
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.25.a
+		load_oob = MDM_landing_in_boston
+	}
+	
+	option = {
+		name = drones.25.b
+		load_oob = MDM_landing_in_canada
+	}
+	
+	option = {
+		name = drones.25.g
+		load_oob = MDM_landing_in_florida
+	}
+	
+	option = {
+		name = drones.25.c
+		load_oob = MDM_landing_in_mexico
+	}
+}
+
+# south america landing
+country_event = {
+	id = drones.26
+	title = drones.26.t
+	desc = drones.26.d
+	picture = GFX_report_event_MDR_sa
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.26.a
+		load_oob = MDM_landing_in_venezuela
+	}
+	
+	option = {
+		name = drones.26.b
+		load_oob = MDM_landing_in_sao_paulo
+	}
+	
+	option = {
+		name = drones.26.g
+		load_oob = MDM_landing_in_uruguay
+	}
+	
+	option = {
+		name = drones.26.c
+		load_oob = MDM_landing_in_bueros_aires
+	}
+}
+
+# programming has ended
+country_event = {
+	id = drones.27
+	title = drones.27.t
+	desc = drones.27.d
+	picture = GFX_report_event_MDR_sa
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.27.a
+		add_political_power = 150
+		add_war_support = 0.3
+		add_manpower = 1
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.15
+		}
+		set_country_flag = MDR_tessa_is_programed
+	}
+}

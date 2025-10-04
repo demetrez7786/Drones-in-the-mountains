@@ -1,0 +1,82 @@
+units = {
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7553
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 7553
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 5167
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 5167
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 5112
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 5112
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 10432
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 10432
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+}	

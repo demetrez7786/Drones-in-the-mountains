@@ -1,0 +1,1408 @@
+ideas = {
+	country = {
+
+		MDR_advanced_socity = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_advanced_society
+			
+			modifier = {
+				consumer_goods_factor = -0.35
+				army_defence_factor = 0.15
+				army_attack_factor = 0.15
+				industrial_capacity_factory = 0.25
+				industrial_capacity_dockyard = 0.25
+				production_speed_buildings_factor = 0.25
+				research_speed_factor = 0.4
+			}
+		}
+		
+		MDR_loyality_tests = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_loyality_test
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				weekly_manpower = -10
+			}
+		}
+		
+		MDR_propaganda_mechanism = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_propaganda_mechanism
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				fascism_drift = 0.2
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+				weekly_casualties_war_support = 0.001
+			}
+		}
+		
+		MDR_propaganda_mechanism_two = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_propaganda_mechanism
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				fascism_drift = 0.5
+				stability_weekly = 0.05
+				war_support_weekly = 0.05
+				weekly_casualties_war_support = 0.005
+			}
+		}
+		
+		MDR_big_sister_policy_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_big_sister_policy
+			
+			modifier = {
+			    political_power_factor = 0.05
+				consumer_goods_factor = 0.05
+				fascism_drift = 0.01
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				drift_defence_factor = 0.05
+			}
+		}
+		
+		MDR_big_sister_policy_idea_two = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_big_sister_policy
+			
+			modifier = {
+			    political_power_factor = 0.05
+				consumer_goods_factor = 0.1
+				fascism_drift = 0.01
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				drift_defence_factor = 0.1
+			}
+		}
+		
+		MDR_big_sister_policy_idea_three = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_big_sister_policy
+			
+			modifier = {
+			    political_power_factor = 0.1
+				consumer_goods_factor = 0.15
+				fascism_drift = 0.05
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				drift_defence_factor = 0.15
+			}
+		}
+		
+		MDR_advanced_weapons_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_experimental_guns
+			
+			modifier = {
+			    army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				army_speed_factor = 0.15
+				breakthrough_factor = 0.15
+			}
+		}
+		
+		MDR_disassembly_drones = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_disassembly_drones
+			
+			modifier = {
+			    special_forces_attack_factor = 2.0
+				special_forces_defence_factor = 2.0
+				land_night_attack = 0.8
+			}
+		}
+		
+		MDR_redeployment_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = unknown_idea
+			
+			modifier = {
+			    army_speed_factor = 0.65
+			}
+		}
+		
+		MDR_fortifications_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_fortify_the_borders
+			
+			modifier = {
+			    production_speed_coastal_bunker_factor = 0.95
+				production_speed_bunker_factor = 0.95
+			}
+		}
+		
+		MDR_war_cabinet_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_war_cabinet
+			
+			modifier = {
+			    army_attack_factor = 0.05
+				war_support_factor = 0.05
+				max_planning_factor = 0.05
+			}
+		}
+		
+		MDR_one_year_plan_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_one_year_plan
+			
+			modifier = {
+			    consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.25
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		MDR_russification_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_russificatiion
+			
+			modifier = {
+			    political_power_factor = -0.07
+				consumer_goods_factor = 0.07
+				war_support_weekly = 0.007
+				stability_weekly = 0.007
+				communism_drift = 0.01
+			}
+		}
+		
+		MDR_secret_police_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_secret_police
+			
+			modifier = {
+			    political_power_factor = -0.01
+				consumer_goods_factor = 0.05
+				stability_factor = 0.075
+				resistance_activity = -0.35
+			}
+		}
+		
+		MDR_reogranize_militia_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_reorganize_militia
+			
+			modifier = {
+			    army_org_factor = -0.35
+			}
+		}
+		
+		MDR_underground_human_resistance = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_underground_resistance
+			
+			modifier = {
+			    stability_factor = -0.1
+				war_support_factor = -0.1
+				consumer_goods_factor = 0.2
+			}
+		}
+		
+		MDR_underground_human_resistance_two = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_underground_resistance
+			
+			modifier = {
+			    stability_factor = -0.05
+				war_support_factor = -0.05
+				consumer_goods_factor = 0.15
+			}
+		}
+		
+		MDR_underground_human_resistance_three = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_underground_resistance
+			
+			modifier = {
+			    stability_factor = -0.01
+				war_support_factor = -0.01
+				consumer_goods_factor = 0.1
+			}
+		}
+		
+		MDR_black_market_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_black_market
+			
+			modifier = {
+			    stability_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.1
+			}	
+		}
+		
+		MDR_black_market_idea_two = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_black_market
+			
+			modifier = {
+			    stability_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.1
+				out_of_supply_factor = -0.15
+				supply_node_range = 0.15
+			}	
+		}
+		
+		MDR_guerilla_warfare_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = unknown_idea
+			
+			modifier = {
+			    army_attack_factor = 0.1
+				army_speed_factor = 0.15
+				out_of_supply_factor = -0.2
+				supply_node_range = 0.2
+			}	
+		}
+		
+		MDR_state_welfare = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_state_welfare
+			
+			modifier = {
+			    political_power_factor = -0.02
+				consumer_goods_factor = -0.1
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				research_speed_factor = 0.2
+			}	
+		}
+		
+		MDR_recruiting_volunteers = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = unknown_idea
+			
+			modifier = {
+			    weekly_manpower = 250
+			}	
+		}
+		
+		MDR_engineer_corps = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_engineering_corps
+			
+			modifier = {
+	            army_defence_factor = 0.15
+	            dig_in_speed_factor = 0.15
+				max_dig_in_factor = 0.10
+			}
+		}
+		
+		MDR_centralized_command = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_centralized_command
+			
+			modifier = {
+	            army_defence_factor = 0.15
+				army_attack_factor = 0.15
+				planning_speed = 0.10
+				max_planning_factor = 0.05
+			}
+		}
+		
+		MDR_state_capitalism_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_state_capitalism
+			
+			modifier = {
+			    political_power_factor = 0.07
+	            production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		MDR_state_capitalism_idea_two = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_state_capitalism
+			
+			modifier = {
+	            political_power_factor = 0.1
+	            production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.2
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		MDR_state_capitalism_idea_three = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_state_capitalism
+			
+			modifier = {
+	            political_power_factor = 0.1
+	            production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.2
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.2
+			}
+		}
+		
+		MDR_j_army = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_army
+			
+			modifier = {
+	            army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_org_factor = 0.1
+				army_org_regain = 0.1
+			}
+		}
+		
+		MDR_j_army_two = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_army
+			
+			modifier = {
+	            army_attack_factor = 0.2
+				army_defence_factor = 0.2
+				army_org_factor = 0.2
+				army_org_regain = 0.2
+			}
+		}
+		
+		MDR_j_army_three = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_army
+			
+			modifier = {
+	            army_attack_factor = 0.3
+				army_defence_factor = 0.3
+				army_org_factor = 0.3
+				army_org_regain = 0.3
+			}
+		}
+		
+		MDR_workers_unions = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_workers_unions
+			
+			modifier = {
+	            political_power_factor = 0.08
+				consumer_goods_factor = -0.1
+				stability_factor = 0.15
+				communism_drift = 0.01
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		
+		MDR_order_twotwoseven_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+	            army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_org_factor = -0.05
+			}
+		}
+		
+		MDR_big_preparations = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+	            training_time_factor = -0.75
+				production_speed_buildings_factor = 0.55
+				consumer_goods_factor = -0.55
+				weekly_manpower = 450
+				war_support_weekly = 0.02
+			}
+		}
+		
+		MDR_rapid_deployment_training_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+	            experience_gain_army_factor = 0.75
+			}
+		}
+		
+		MDR_cyn_economy = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+	            political_power_factor = 0.1
+			}
+		}
+		
+		MDR_cyn_economy_two = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+	            political_power_factor = 0.1
+				consumer_goods_factor = -0.25
+				production_speed_buildings_factor = 0.25
+				industrial_capacity_factory = 0.25
+				industrial_capacity_dockyard = 0.25
+				stability_factor = -0.05
+			}
+		}
+		
+		MDR_cyn_economy_three = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+	            political_power_factor = 0.1
+				consumer_goods_factor = -0.45
+				production_speed_buildings_factor = 0.45
+				industrial_capacity_factory = 0.45
+				industrial_capacity_dockyard = 0.45
+				stability_factor = -0.1
+				fascism_drift = 0.01
+			}
+		}
+		
+		MDR_die_or_die_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+	            army_attack_factor = 0.15
+			}
+		}
+		
+		MDR_fake_victory = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+	            army_attack_factor = 0.15
+				war_support_factor = 0.15
+				weekly_manpower = 450
+			}
+		}
+		
+		MDR_the_last_solution_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+	            war_support_weekly = 0.001
+				stability_weekly = -0.001
+				production_speed_buildings_factor = 0.75
+				consumer_goods_factor = -0.75
+				resistance_activity = -0.7
+				resistance_growth = -0.7
+		        compliance_gain = 0.05
+				fascism_drift = 0.01
+			}
+		}
+		
+		MDR_war_is_peace_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+	            war_support_factor = 0.15
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				recruitable_population_factor = 0.15
+			}
+		}
+		
+		MDR_freedom_is_slavery_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+	            stability_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+			}
+		}
+		
+		MDR_ignorance_is_strength_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+			    political_power_factor = 0.15
+	            stability_factor = 0.15
+				research_speed_factor = -0.15
+			}
+		}
+		
+		MDR_fake_promises_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+			    resistance_activity = -0.25
+				resistance_growth = -0.25
+				compliance_gain = 0.15
+			}
+		}
+		
+		MDR_sabotage_groups_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+			    army_attack_factor = 0.1
+				breakthrough_factor = 0.15
+				army_speed_factor = 0.15
+			}
+		}
+		
+		MDR_jcjenson_in_space_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+			    army_attack_factor = 0.1
+				consumer_goods_factor = 0.15
+				production_factory_start_efficiency_factor = 0.5
+				line_change_production_efficiency_factor = 0.3
+				equipment_conversion_speed = 0.5
+			}
+		}
+		
+		MDR_mayor_n = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+			    political_power_factor = 0.05
+				stability_factor = 0.1
+				consumer_goods_factor = -0.2
+				production_speed_buildings_factor = 0.05
+				fascism_drift = 0.01
+			}
+		}
+		
+		MDR_special_defensive_police = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+			    stability_factor = 0.15
+				democratic_drift = -0.01
+				communism_drift = -0.01
+				neutrality_drift = -0.01
+				resistance_activity = -0.75
+				resistance_growth = -0.75
+				compliance_gain = 0.5
+			}
+		}
+		
+		MDR_closed_borders_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+			    consumer_goods_factor = -0.15
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		
+		MDR_closed_borders_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+			    consumer_goods_factor = -0.15
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		
+		MDR_closed_borders_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+			    consumer_goods_factor = -0.15
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		
+		MDR_civil_services_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+			    consumer_goods_factor = -0.15
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				recruitable_population_factor = 0.05
+				political_power_factor = -0.002
+			}
+		}
+		
+		MDR_concetration_camps_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+			    consumer_goods_factor = 0.25
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		MDR_solverism = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+			    political_power_factor = 0.05
+			    consumer_goods_factor = 0.1
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				fascism_drift = 0.01
+			}
+		}
+		
+		MDR_harsh_discipline_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+			    war_support_factor = 0.15
+				army_attack_factor = 0.4
+				army_defence_factor = 0.4
+				army_org_factor = 0.35
+				army_org_regain = 0.35
+				army_speed_factor = 0.3
+			}
+		}
+		
+		MDR_harsh_training_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+				army_attack_factor = 0.4
+				army_defence_factor = 0.4
+				army_org_factor = 0.35
+				army_org_regain = 0.35
+				army_speed_factor = 0.3
+				training_time_factor = 0.5
+			}
+		}
+		
+		MDR_world_war_cabinet_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+				planning_speed = 0.15
+			}
+		}
+		
+		MDR_programming_tessa_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+				research_speed_factor = -0.15
+				consumer_goods_factor = 0.3
+			}
+		}
+		
+		MDR_wartime_drugs_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+				war_support = -0.1
+				stability = -0.1
+				weekly_manpower = -10
+				army_attack_factor = 0.55
+				army_defence_factor = 0.55
+				army_org_factor = -0.3
+				army_speed_factor = 0.55
+				consumer_goods_factor = 0.3
+			}
+		}
+		
+		MDR_stronger_body_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+				war_support = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		MDR_bloody_police_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				compliance_gain = 0.045
+				resistance_activity = -0.45
+				resistance_growth = -0.45
+			}
+		}
+	}
+}	

@@ -1,0 +1,51 @@
+division_template = {
+	name = "Disassembly drone"
+	division_names_group = MDM_DDE_01
+
+	regiments = {
+		murder_drone = { x = 0 y = 0 }
+		murder_drone = { x = 0 y = 1 }
+        murder_drone = { x = 1 y = 0 }
+		murder_drone = { x = 1 y = 1 }
+        murder_drone = { x = 2 y = 0 }
+		murder_drone = { x = 2 y = 1 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+	}
+}	
+	
+units = {
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		name = "N's Group"
+		location = 11617
+		division_template = "Disassembly drone"
+		start_experience_factor = 0.1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		name = "J's Group"
+		location = 11617
+		division_template = "Disassembly drone"
+		start_experience_factor = 0.1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		name = "V's Group"
+		location = 11617
+		division_template = "Disassembly drone"
+		start_experience_factor = 0.1
+	}
+}

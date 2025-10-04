@@ -1,0 +1,39 @@
+state = {
+	id = 826
+	name = "STATE_826"
+
+	history = {
+		owner = MDR
+		victory_points = {
+			11617 3 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			
+
+		}
+		add_core_of = MDR
+		add_core_of = GEO
+		add_core_of = ABK
+		add_core_of = RES
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 2
+				arms_factory = 2
+			    industrial_complex = 1
+			}
+
+		}
+
+	}
+
+	provinces = {
+		672 11599 11617 11647 
+	}
+	manpower = 895569
+	buildings_max_level_factor = 1.000
+	state_category = town
+
+	local_supplies = 0.0 
+}

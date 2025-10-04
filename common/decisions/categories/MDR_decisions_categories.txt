@@ -1,0 +1,156 @@
+MDR_kill_v_category = {
+
+	icon = GFX_decision_spr_political_assassination
+	priority = 50
+	visible_when_empty = no	
+	allowed = {
+		original_tag = MDR
+	}
+
+	visible = {
+	    has_country_flag = MDR_secret_police
+	}
+}
+
+MDR_secret_assasinations_category = {
+
+	icon = GFX_decision_spr_political_assassination
+	priority = 50
+	visible_when_empty = no	
+	allowed = {
+		original_tag = MDR
+	}
+
+	visible = {
+	    has_country_flag = MDR_secret_assasinations
+	}
+}
+
+MDR_focus_on_europe_category = {
+
+	icon = GFX_decision_cat_mdr_as
+	priority = 100
+	visible_when_empty = no	
+	allowed = {
+		original_tag = MDR
+	}
+
+	visible = {
+	    has_country_flag = MDR_focusing_on_europe
+	}
+}
+
+MDR_focus_on_asia_category = {
+
+	icon = GFX_decision_cat_mdr_as
+	priority = 100
+	visible_when_empty = no	
+	allowed = {
+		original_tag = MDR
+	}
+
+	visible = {
+	    has_country_flag = MDR_focusing_on_asia
+	}
+}
+
+MDR_focus_on_sa_category = {
+
+	icon = GFX_decision_cat_mdr_as
+	priority = 100
+	visible_when_empty = no	
+	allowed = {
+		original_tag = MDR
+	}
+
+	visible = {
+	    has_country_flag = MDR_focusing_on_sa
+	}
+}
+
+MDR_focus_on_na_category = {
+
+	icon = GFX_decision_cat_mdr_as
+	priority = 100
+	visible_when_empty = no	
+	allowed = {
+		original_tag = MDR
+	}
+
+	visible = {
+	    has_country_flag = MDR_focusing_on_na
+	}
+}
+
+MDR_destroy_monuments_category = {
+
+	icon = GFX_decision_cat_mdr_destroy_monument
+	priority = 80
+	visible_when_empty = no	
+	allowed = {
+		original_tag = MDR
+	}
+
+	visible = {
+	    has_country_flag = MDR_destroing_monuments
+	}
+}
+
+MDR_hunting_underground_resistance_category = {
+
+	icon = GFX_decision_cat_target_underground_resistance
+	priority = 60
+	visible_when_empty = no	
+	allowed = {
+		original_tag = MDR
+	}
+
+	visible = {
+	    has_country_flag = MDR_hunting_underground_resistance
+	}
+}
+
+MDR_creating_puppets_category = {
+
+	icon = GFX_decision_category_generic_political_actions
+	priority = 150
+	visible_when_empty = no	
+	allowed = {
+		original_tag = MDR
+	}
+
+	visible = {
+	    has_country_flag = MDR_creating_puppets
+	}
+}
+
+MDR_test_our_power_category = {
+
+	icon = GFX_decision_category_military_operation
+	priority = 50
+	visible_when_empty = no
+}
+
+MDR_power_balance_power_balance_decisions = {
+	priority = 9000
+
+	allowed = {
+		original_tag = MDR
+	}
+
+	visible = {
+		has_completed_focus = MDR_cyn_won
+	}
+}
+
+MDR_power_balance_power_balance_uzi_and_doll_decisions = {
+	priority = 9000
+
+	allowed = {
+		original_tag = MDR
+	}
+
+	visible = {
+		has_completed_focus = MDR_cyn_won
+	}
+}

@@ -1,0 +1,17 @@
+characters={
+	
+	PCP_absolute_solver={ #fascist Leader
+		name="Absolute Solver"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_absolute_solver.png"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			traits={ drone_supremacy }
+			expire="5022.8.30.1"
+			id=-1
+		}
+    }
+}	

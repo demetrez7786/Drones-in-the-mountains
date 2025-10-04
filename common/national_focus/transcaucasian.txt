@@ -1,0 +1,1474 @@
+focus_tree = {
+	id = transcaucasian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = RES
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 4000 }
+
+    focus = {
+		id = RES_form_republic
+		icon = GFX_RES_form_republic
+		x = 10
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = elections_happened
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 50
+			add_stability = 0.15
+			hidden_effect = {
+				country_event = { id = transcaucasian.1 }
+			}
+			set_country_flag = player_knows_the_issues
+		}
+	}
+
+	focus = {
+		id = RES_elections
+		icon = GFX_RES_elections
+		x = 3
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    country_event = { id = transcaucasian.13 }
+		}
+	}
+
+	focus = {
+		id = RES_decentralized
+		icon = GFX_RES_decentralized
+		x = 11
+		y = 1
+		prerequisite = { focus = RES_form_republic }
+		mutually_exclusive = { focus = RES_centralized }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = -50
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = RES_form_regional_councils
+		icon = GFX_RES_regional_council
+		x = 11
+		y = 2
+		prerequisite = { focus = RES_decentralized }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_ideas = RES_regional_council
+		}
+	}
+
+	focus = {
+		id = RES_military_independence
+		icon = GFX_RES_independent_military
+		x = 13
+		y = 2
+		prerequisite = { focus = RES_decentralized }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_ideas = RES_military_independence_idea
+		}
+	}
+
+	focus = {
+		id = RES_local_economical_investments
+		icon = GFX_RES_local_investments
+		x = 15
+		y = 2
+		prerequisite = { focus = RES_decentralized }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    229 = {
+			    add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+				add_extra_state_shared_building_slots = 1
+			}
+			230 = {
+			    add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+				add_extra_state_shared_building_slots = 1
+			}
+			231 = {
+			    add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = RES_local_educaton_programs
+		icon = GFX_RES_local_education_programs
+		x = 14
+		y = 3
+		prerequisite = { focus = RES_decentralized }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = RES_tolerate_all_religions
+		icon = GFX_RES_tolaret_all_religion
+		x = 12
+		y = 3
+		prerequisite = { focus = RES_decentralized }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = -20
+			add_stability = 0.15
+			add_war_support = -0.05
+		}
+	}
+
+	focus = {
+		id = RES_centralized
+		icon = GFX_RES_centralized
+		x = 9
+		y = 1
+		prerequisite = { focus = RES_form_republic }
+		mutually_exclusive = { focus = RES_decentralized }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = -50
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = RES_expand_federal_government
+		icon = GFX_RES_expand_federal_government
+		x = 9
+		y = 2
+		prerequisite = { focus = RES_centralized }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_ideas = RES_expanded_federal_government
+		}
+	}
+
+	focus = {
+		id = RES_united_military_command
+		icon = GFX_RES_united_military_command
+		x = 7
+		y = 2
+		prerequisite = { focus = RES_centralized }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_ideas = RES_centralized_command
+		}
+	}
+
+	focus = {
+		id = RES_nationwide_economic_investments
+		icon = GFX_RES_nationwide_economic_investments
+		x = 5
+		y = 2
+		prerequisite = { focus = RES_centralized }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    229 = {
+			    add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+				add_extra_state_shared_building_slots = 1
+			}
+			230 = {
+			    add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+				add_extra_state_shared_building_slots = 1
+			}
+			231 = {
+			    add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = RES_christianity_above_all
+		icon = GFX_RES_christianity_above_all
+		x = 6
+		y = 3
+		prerequisite = { focus = RES_centralized }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 20
+			add_stability = -0.05
+			add_war_support = 0.15
+		}
+	}
+
+	focus = {
+		id = RES_nationwide_education_program
+		icon = GFX_RES_nationwide_education_program
+		x = 8
+		y = 3
+		prerequisite = { focus = RES_centralized }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_war_support = 0.05
+			add_research_slot = 2
+		}
+	}
+
+	focus = {
+		id = RES_centralization_completed
+		icon = GFX_RES_centralization_completed
+		x = 7
+		y = 4
+		prerequisite = { focus = RES_united_military_command }
+		prerequisite = { focus = RES_christianity_above_all }
+		prerequisite = { focus = RES_nationwide_education_program }
+		prerequisite = { focus = RES_nationwide_economic_investments }
+		prerequisite = { focus = RES_expand_federal_government }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = RES_decentralization_completed
+		icon = GFX_RES_decentralization_completed
+		x = 13
+		y = 4
+		prerequisite = { focus = RES_form_regional_councils }
+		prerequisite = { focus = RES_tolerate_all_religions }
+		prerequisite = { focus = RES_military_independence }
+		prerequisite = { focus = RES_local_economical_investments }
+		prerequisite = { focus = RES_local_educaton_programs }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = RES_internal_issues
+		icon = GFX_RES_internal_issues
+		x = 10
+		y = 5
+		prerequisite = { focus = RES_centralization_completed }
+		prerequisite = { focus = RES_decentralization_completed }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = RES_drones_question
+		icon = GFX_RES_drones_question
+		x = 3
+		y = 6
+		prerequisite = { focus = RES_internal_issues }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			country_event = { id = transcaucasian.2 }
+		}
+	}
+
+	focus = {
+		id = RES_police_reforms
+		icon = GFX_RES_reforming_police
+		x = 5
+		y = 6
+		prerequisite = { focus = RES_internal_issues }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = RES_no_room_for_corruption
+		icon = GFX_RES_no_room_for_corruption
+		x = 4
+		y = 7
+		prerequisite = { focus = RES_police_reforms }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = RES_investigation
+				days = 40
+			}
+		}
+	}
+
+	focus = {
+		id = RES_better_equipment
+		icon = GFX_RES_better_equipment
+		x = 6
+		y = 7
+		prerequisite = { focus = RES_police_reforms }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_to_variable = { RES_co_consumer_goods_factor = -0.1 }
+		    add_to_variable = { RES_co_stability_factor = 0.1 }
+			add_to_variable = { RES_co_army_attack_factor = 0.05 }
+		    add_to_variable = { RES_co_army_defence_factor = 0.05 }
+			add_tech_bonus = {
+				name = RES_better_equipment
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = RES_better_equipment
+				bonus = 1
+				uses = 1
+				category = military_police_tech
+			}
+			custom_effect_tooltip = 1_RES_tt
+		}
+	}
+
+	focus = {
+		id = RES_harsh_training
+		icon = GFX_goal_unknown
+		x = 5
+		y = 8
+		prerequisite = { focus = RES_no_room_for_corruption }
+		prerequisite = { focus = RES_better_equipment }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_to_variable = { RES_co_consumer_goods_factor = -0.1 }
+		    add_to_variable = { RES_co_stability_factor = 0.05 }
+			add_to_variable = { RES_co_army_attack_factor = 0.1 }
+		    add_to_variable = { RES_co_army_defence_factor = 0.1 }
+			custom_effect_tooltip = 1_RES_tt
+		}
+	}
+
+	focus = {
+		id = RES_peoples_trust
+		icon = GFX_RES_peoples_trust
+		x = 5
+		y = 9
+		prerequisite = { focus = RES_harsh_training }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.15
+		}
+	}
+
+	focus = {
+		id = RES_hunt_down_gangsters
+		icon = GFX_RES_huntdown_gangsters
+		x = 5
+		y = 10
+		prerequisite = { focus = RES_peoples_trust }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_to_variable = { RES_gp_consumer_goods_factor = -0.05 }
+		    add_to_variable = { RES_gp_stability_factor = 0.05 }
+		}
+	}
+
+	focus = {
+		id = RES_military_reform
+		icon = GFX_RES_military_reform
+		x = 10
+		y = 6
+		prerequisite = { focus = RES_internal_issues }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = RES_aram_manukians_doctrine
+		icon = GFX_RES_Aram_manukians_doctrine
+		x = 10
+		y = 7
+		prerequisite = { focus = RES_military_reform }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_to_variable = { RES_tm_army_attack_factor = 0.05 }
+		    add_to_variable = { RES_tm_army_defence_factor = 0.05 }
+		    add_to_variable = { RES_tm_army_speed_factor = 0.1 }
+		    add_to_variable = { RES_tm_army_org_factor = 0.05 }
+		    add_to_variable = { RES_tm_army_org_regain = 0.05 }
+			add_doctrine_cost_reduction = {
+				name = RES_aram_manukians_doctrine
+				cost_reduction = 0.5
+				uses = 1
+				category = cat_mobile_warfare
+			}
+			army_experience = 50
+			custom_effect_tooltip = 2_MDR_tt
+		}
+	}
+
+	focus = {
+		id = RES_accept_minority
+		icon = GFX_RES_accept_minorities
+		x = 11
+		y = 8
+		prerequisite = { focus = RES_aram_manukians_doctrine }
+		mutually_exclusive = { focus = RES_the_army_of_gaa }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_to_variable = { RES_tm_recruitable_population_factor = 0.1 }
+			add_to_variable = { RES_tm_army_org_factor = -0.1 }
+			add_to_variable = { RES_tm_war_support_factor = 0.1 }
+			add_manpower = 50000
+			custom_effect_tooltip = 2_MDR_tt
+		}
+	}
+
+	focus = {
+		id = RES_the_army_of_gaa
+		icon = GFX_RES_army_of_gaa
+		x = 9
+		y = 8
+		prerequisite = { focus = RES_aram_manukians_doctrine }
+		mutually_exclusive = { focus = RES_accept_minority }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_to_variable = { RES_tm_army_org_factor = 0.1 }
+			add_to_variable = { RES_tm_war_support_factor = 0.05 }
+			custom_effect_tooltip = 2_MDR_tt
+		}
+	}
+
+	focus = {
+		id = RES_modernize_equipment
+		icon = GFX_RES_better_equipment_army
+		x = 10
+		y = 9
+		prerequisite = { focus = RES_the_army_of_gaa }
+		prerequisite = { focus = RES_accept_minority }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_to_variable = { RES_tm_army_attack_factor = 0.1 }
+		    add_to_variable = { RES_tm_army_defence_factor = 0.1 }
+		    add_to_variable = { RES_tm_army_speed_factor = 0.05 }
+		    add_to_variable = { RES_tm_army_org_factor = 0.15 }
+		    add_to_variable = { RES_tm_army_org_regain = 0.15 }
+			custom_effect_tooltip = 2_MDR_tt
+			add_tech_bonus = {
+				name = RES_modernizing_equipment
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = RES_extreme_discipline
+		icon = GFX_goal_unknown
+		x = 10
+		y = 10
+		prerequisite = { focus = RES_modernize_equipment }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_to_variable = { RES_tm_army_attack_factor = 0.05 }
+		    add_to_variable = { RES_tm_army_defence_factor = 0.05 }
+		    add_to_variable = { RES_tm_army_speed_factor = 0.1 }
+		    add_to_variable = { RES_tm_army_org_factor = 0.15 }
+		    add_to_variable = { RES_tm_army_org_regain = 0.15 }
+			add_to_variable = { RES_tm_training_time_factor = 0.05 }
+		    add_to_variable = { RES_tm_war_support_factor = 0.1 }
+			custom_effect_tooltip = 2_MDR_tt
+		}
+	}
+
+	focus = {
+		id = RES_switzerland_of_caucasus
+		icon = GFX_RES_caucasus_switzerland
+		x = 9
+		y = 12
+		prerequisite = { focus = RES_extreme_discipline }
+		prerequisite = { focus = RES_hunt_down_gangsters }
+		prerequisite = { focus = RES_mobilize_economy }
+		mutually_exclusive = { focus = RES_good_old_days }
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.15
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+		}
+	}
+
+	focus = {
+		id = RES_good_old_days
+		icon = GFX_RES_good_old_days
+		x = 11
+		y = 12
+		prerequisite = { focus = RES_extreme_discipline }
+		prerequisite = { focus = RES_hunt_down_gangsters }
+		prerequisite = { focus = RES_mobilize_economy }
+		mutually_exclusive = { focus = RES_switzerland_of_caucasus }
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RES_trabizon
+		icon = GFX_RES_trabizon
+		x = 11
+		y = 13
+		prerequisite = { focus = RES_good_old_days }
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			declare_war_on = {
+			target = TUR
+			type = annex_everything
+		    }
+		}
+	}
+
+	focus = {
+		id = RES_south_azerbaijan
+		icon = GFX_RES_south_azerbaijan
+		x = 11
+		y = 14
+		prerequisite = { focus = RES_trabizon }
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			declare_war_on = {
+			target = PER
+			type = annex_everything
+		    }
+		}
+	}
+
+	focus = {
+		id = RES_economic_reforms
+		icon = GFX_RES_economic_reform
+		x = 15
+		y = 6
+		prerequisite = { focus = RES_internal_issues }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = RES_separatists_question
+		icon = GFX_RES_separatists_question
+		x = 17
+		y = 6
+		prerequisite = { focus = RES_internal_issues }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			country_event = { id = transcaucasian.6 }
+		}
+	}
+
+	focus = {
+		id = RES_control_buisnesses
+		icon = GFX_MDR_state_capitalism
+		x = 15
+		y = 8
+		prerequisite = { focus = RES_sieze_gangsters_property }
+		prerequisite = { focus = RES_foreign_investments }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_to_variable = { RES_te_consumer_goods_factor = -0.1 }
+		    add_to_variable = { RES_te_stability_factor = 0.05 }
+		    add_to_variable = { RES_te_industrial_capacity_factory = 0.05 }
+		    add_to_variable = { RES_te_industrial_capacity_dockyard = 0.05 }
+			custom_effect_tooltip = 3_MDR_tt
+		}
+	}
+
+	focus = {
+		id = RES_sieze_gangsters_property
+		icon = GFX_goal_unknown
+		x = 14
+		y = 7
+		prerequisite = { focus = RES_economic_reforms }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_to_variable = { RES_te_consumer_goods_factor = -0.05 }
+		    add_to_variable = { RES_te_production_speed_buildings_factor = 0.05 }
+		    add_to_variable = { RES_te_stability_factor = 0.05 }
+		    add_to_variable = { RES_te_industrial_capacity_factory = 0.05 }
+		    add_to_variable = { RES_te_industrial_capacity_dockyard = 0.05 }
+			add_to_variable = { RES_gp_consumer_goods_factor = -0.05 }
+		    add_to_variable = { RES_gp_stability_factor = 0.05 }
+			add_offsite_building = { type = industrial_complex level = 2 }
+			custom_effect_tooltip = 3_MDR_tt
+		}
+	}
+
+	focus = {
+		id = RES_foreign_investments
+		icon = GFX_RES_foreign_investments
+		x = 16
+		y = 7
+		prerequisite = { focus = RES_economic_reforms }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_to_variable = { RES_te_consumer_goods_factor = -0.1 }
+		    add_to_variable = { RES_te_stability_factor = 0.05 }
+			add_to_variable = { RES_te_production_speed_buildings_factor = 0.1 }
+		    add_to_variable = { RES_te_industrial_capacity_factory = 0.05 }
+		    add_to_variable = { RES_te_industrial_capacity_dockyard = 0.05 }
+			add_offsite_building = { type = industrial_complex level = 2 }
+			add_offsite_building = { type = arms_factory level = 2 }
+			custom_effect_tooltip = 3_MDR_tt
+		}
+	}
+
+	focus = {
+		id = RES_transcaucasian_bank_reform
+		icon = GFX_RES_bank_reform
+		x = 15
+		y = 9
+		prerequisite = { focus = RES_sieze_gangsters_property }
+		prerequisite = { focus = RES_foreign_investments }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_to_variable = { RES_te_consumer_goods_factor = -0.1 }
+		    add_to_variable = { RES_te_stability_factor = 0.01 }
+			custom_effect_tooltip = 3_MDR_tt
+		}
+	}
+
+	focus = {
+		id = RES_mobilize_economy
+		icon = GFX_RES_Mobilize_Economy
+		x = 15
+		y = 10
+		prerequisite = { focus = RES_transcaucasian_bank_reform }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_ideas = partial_economic_mobilisation
+		}
+	}
+}	

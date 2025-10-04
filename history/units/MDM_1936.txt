@@ -1,0 +1,430 @@
+division_template = {
+	name = "Worker Drones Infantry Division"
+	division_names_group = MDM_INF_01
+
+	regiments = {
+		worker_drone = { x = 0 y = 0 }
+		worker_drone = { x = 0 y = 1 }
+		worker_drone = { x = 0 y = 2 }
+        worker_drone = { x = 1 y = 0 }
+		worker_drone = { x = 1 y = 1 }
+		worker_drone = { x = 1 y = 2 }
+        worker_drone = { x = 2 y = 0 }
+		worker_drone = { x = 2 y = 1 }
+		worker_drone = { x = 2 y = 2 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Railgun Battalions"
+	division_names_group = MDM_AT_01
+
+	regiments = {
+		railgun_brigade = { x = 0 y = 0 }
+		railgun_brigade = { x = 0 y = 1 }
+		railgun_brigade = { x = 0 y = 2 }
+        railgun_brigade = { x = 1 y = 0 }
+		railgun_brigade = { x = 1 y = 1 }
+        railgun_brigade = { x = 2 y = 0 }
+		railgun_brigade = { x = 2 y = 1 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Mechanized Brigades"
+	division_names_group = MDM_INF_03
+
+	regiments = {
+		mechanized_worker_drone = { x = 0 y = 0 }
+		mechanized_worker_drone = { x = 0 y = 1 }
+		mechanized_worker_drone = { x = 0 y = 2 }
+        mechanized_worker_drone = { x = 1 y = 0 }
+		mechanized_worker_drone = { x = 1 y = 1 }
+		mechanized_worker_drone = { x = 1 y = 2 }
+        mechanized_worker_drone = { x = 2 y = 0 }
+		mechanized_worker_drone = { x = 2 y = 1 }
+		mechanized_worker_drone = { x = 2 y = 2 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Humans battalion"
+	division_names_group = MDM_INF_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11617
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 11617
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 772
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 3653
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 3653
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 1599
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 1599
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 1599
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 1599
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 12320
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 12320
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 12320
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 6642
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 6642
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 12441
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 12441
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 12441
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 11674
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 11674
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = 7661
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 21
+		}
+		location = 7661
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = 7661
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 23
+		}
+		location = 6669
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 24
+		}
+		location = 6669
+		division_template = "Worker Drones Infantry Division"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = 4473
+		division_template = "Mechanized Brigades"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 26
+		}
+		location = 4473
+		division_template = "Mechanized Brigades"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 4473
+		division_template = "Mechanized Brigades"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 28
+		}
+		location = 4545
+		division_template = "Mechanized Brigades"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 29
+		}
+		location = 4545
+		division_template = "Mechanized Brigades"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 30
+		}
+		location = 4545
+		division_template = "Mechanized Brigades"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 31
+		}
+		location = 4458
+		division_template = "Railgun Battalions"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 32
+		}
+		location = 4458
+		division_template = "Railgun Battalions"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 33
+		}
+		location = 4458
+		division_template = "Railgun Battalions"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 34
+		}
+		location = 4458
+		division_template = "Railgun Battalions"
+		start_experience_factor = 0.15
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 35
+		}
+		location = 4458
+		division_template = "Railgun Battalions"
+		start_experience_factor = 0.15
+	}
+}	

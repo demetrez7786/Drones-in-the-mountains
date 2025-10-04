@@ -1,0 +1,68 @@
+technologies = {
+
+	#infantry
+	
+	worker_drone_chassie = {
+
+		allow = { always = no }
+		
+		enable_equipments = {
+			worker_drone_equipment0
+			railgun_equipment_0
+		}	
+		
+		enable_subunits = {
+			worker_drone
+			motorized_workerdrone
+			mechanized_workerdrone
+		}
+
+		research_cost = 2
+		start_year = 1946
+		
+		categories = {
+			infantry_weapons
+		}
+	}
+	infantry_weapons_mmd = {
+
+		enable_equipments = {
+			infantry_equipment_md
+		}
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1.5
+		start_year = 1918
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	murder_drone_chassie = {
+
+		allow = { always = no }
+		
+		enable_equipments = {
+			murder_drone_equipment_1
+		}	
+		
+		enable_subunits = {
+			infantry
+			murder_drone
+		}
+
+		research_cost = 2
+		start_year = 1946
+		
+		categories = {
+			infantry_weapons
+		}
+	}
+}

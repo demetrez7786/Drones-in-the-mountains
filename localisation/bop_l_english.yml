@@ -1,0 +1,10 @@
+﻿l_english:
+
+ MDR_power_balance_bop:0 "Power Balance"
+ MDR_power_balance_bop_absolute_solver:0 "Absolute Solver"
+ MDR_power_balance_bop_cyn:0 "Cyn"
+ MDR_power_balance_bop_balanced:0 "Power is Balanced"
+ MDR_power_balance_bop_fully_cyn:0 "Full Power to Cyn"
+ MDR_power_balance_bop_very_cyn:0 "Big Power to Cyn"
+ MDR_power_balance_bop_fully_absolute_solver:0 "Full Power to Absolute Solver"
+ MDR_power_balance_bop_very_absolute_solver:0 "Big Power to Absolute Solver"

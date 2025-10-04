@@ -1,0 +1,94 @@
+ideas = {
+	country = {
+
+		RES_element_of_suprise = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = RES_element_of_suprise
+			
+			modifier = {
+				army_defence_factor = 0.5
+				army_attack_factor = 0.5
+				army_speed_factor = 0.4
+				army_org_factor = -0.2
+				breakthrough_factor = 0.4
+			}
+		}
+		
+		RES_smear_campaign_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_smear_campaign
+			
+			modifier = {
+				stability_factor = -0.35
+				war_support_factor = -0.35
+				weekly_manpower = -40
+				consumer_goods_factor = 0.4
+			}
+		}
+		
+		RES_unexpected_uprising = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = RES_element_of_suprise
+			
+			modifier = {
+				stability_factor = -0.35
+				war_support_factor = -0.35
+				army_attack_factor = -0.4
+				army_defence_factor = -0.4
+			}
+		}
+		
+		RES_fight_for_humanity = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = RES_fight_for_humanity
+			
+			modifier = {
+			    war_support_factor = 0.15
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				out_of_supply_factor = -0.25
+				supply_node_range = 0.25
+			}
+		}
+	}
+}	

@@ -1,0 +1,242 @@
+characters = {
+    
+	RES_tessa={ #democratic Leader too
+		name="Tessa Elliott"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_tessa.png"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ symbol_of_resistance }
+			expire="5022.8.30.1"
+			id=-1
+		}
+		field_marshal = { 
+			traits = { organisational_leader }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+    }
+	
+	RES_noe_zhordania={ #democratic Leader too
+		name="Noe Zhordania"
+		portraits={
+			civilian={
+				large="gfx/leaders/RES/portrait_res_noe_zhordania.png"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={ reformist_menshevik }
+			expire="5022.8.30.1"
+			id=-1
+		}
+    }
+	
+	RES_hovhannes_ajaznuni={ #democratic Leader too
+		name="Hovhannes Kajaznuni"
+		portraits={
+			civilian={
+				large="gfx/leaders/RES/portrait_res_hovhannes_kajaznuni.png"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits={ }
+			expire="5022.8.30.1"
+			id=-1
+		}
+    }
+	
+	RES_fatali_khan_khoyski={ #democratic Leader too
+		name="Fatali Khan Khoyski"
+		portraits={
+			civilian={
+				large="gfx/leaders/RES/portrait_res_fatali_khan_khoyski.png"
+			}
+		}
+		country_leader={
+			ideology=populism
+			traits={ modernist_and_reformer }
+			expire="5022.8.30.1"
+			id=-1
+		}
+    }
+	
+	RES_giorgi_mazniashvili = {
+		name = "Giorgi Mazniashvili"
+		portraits = {
+			army = {
+				large = "gfx/leaders/RES/portrait_res_giorgi_mazniasvhili.png"
+				small = "gfx/interface/ideas/portrait_RES_giorgi_mazniashvili_small.png"
+			}
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = RES_giorgi_mazniashvili
+			allowed = {
+				original_tag = RES
+			}
+			traits = {
+				army_chief_offensive_1
+			}
+			cost = 150
+		}
+	}
+	
+	RES_giorgi_kvinitadze = {
+		name = "Giorgi Kvinitadze"
+		portraits = {
+			army = {
+				large = "gfx/leaders/RES/portrait_res_giorgi_kvinitadze.png"
+			}
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	
+	RES_aram_manukian = {
+		name = "Aram Manukian"
+		portraits = {
+			army = {
+				large = "gfx/leaders/RES/portrait_res_aram_manukian.png"
+				small = "gfx/interface/ideas/portrait_RES_aram_small.png"
+			}
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+		}
+		
+		advisor = {
+			slot = army_chief
+			idea_token = RES_aram_manukian
+			allowed = {
+				original_tag = RES
+			}
+			traits = {
+				army_chief_defensive_1
+			}
+			cost = 150
+		}
+	}
+	
+	RES_huseyn_khan_nakhchivanski = {
+		name = "Huseyn Khan Nakhchivanski"
+		portraits = {
+			army = {
+				large = "gfx/leaders/RES/portrait_res_aram_manukian.png"
+				small = "gfx/interface/ideas/portrait_RES_huseyn_small.png"
+			}
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = RES_huseyn_khan_nakhchivanski
+			ledger = army
+			allowed = {
+				original_tag = RES
+			}
+			traits = {
+				army_cavalry_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+	}
+	
+	RES_callistratus = {
+		name = "Callistratus"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/portrait_RES_callistratus.png"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RES_callistratus
+			allowed  = {
+				original_tag  = RES
+			}
+			traits  = {
+				catholicos_patriarch_of_all_transcaucasia 
+			}
+		}
+	}
+	
+	RES_niko_nikoladze = {
+		name = "Niko Nikoladze"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/portrait_RES_niko_small.png"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RES_niko_nikoladze
+			allowed  = {
+				original_tag  = RES
+			}
+			traits  = {
+				economic_reformer 
+			}
+		}
+	}
+	
+	RES_valiko_jugheil = {
+		name = "Valiko Jugheil"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/portrait_RES_valiko_small.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = RES_valiko_jugheil
+			ledger = army
+			allowed = {
+				original_tag = RES
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+	}
+}	

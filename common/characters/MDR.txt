@@ -1,0 +1,452 @@
+characters={
+	
+	MDR_absolute_solver={ #fascist Leader
+		name="Absolute Solver"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_absolute_solver.png"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			traits={ drone_supremacy }
+			expire="5022.8.30.1"
+			id=-1
+		}
+    }
+	
+	MDR_cyn={ #fascist Leader
+		name="Cyn"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_cyn.png"
+				small = "gfx/interface/ideas/portrait_MDR_cyn_small.png"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ puppet_of_as drone_supremacy }
+			expire="5022.8.30.1"
+			id=-1
+		}
+		
+		advisor={
+			slot = political_advisor
+			idea_token = MDR_cyn
+			allowed  = {
+				original_tag  = MDR
+			}
+			traits  = {
+				manipulator 
+			}	
+		}
+    }
+	
+	MDR_uzi={ #communist Leader
+		name="Uzi"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdv_uzi.png"
+				small = "gfx/interface/ideas/portrait_MDR_uzi_small.png"
+			}
+		}
+		country_leader={
+			ideology=leninism
+			traits={ has_solver drone_supremacy rebellious }
+			expire="5022.8.30.1"
+			id=-1
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+		}
+		
+		advisor={
+			slot = political_advisor
+			idea_token = MDR_uzi
+			allowed  = {
+				original_tag  = MDR
+			}
+			traits  = {
+				rebellious 
+			}	
+		}
+    }
+	
+	MDR_doll={ #communist Leader too
+		name="Doll"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_doll.png"
+				small = "gfx/interface/ideas/portrait_MDR_doll_small.png"
+			}
+		}
+		country_leader={
+			ideology=anti_revisionism
+			traits={ has_solver cannibal }
+			expire="5022.8.30.1"
+			id=-1
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		
+		advisor={
+			slot = political_advisor
+			idea_token = MDR_doll
+			allowed  = {
+				original_tag  = MDR
+			}
+			traits  = {
+				princess_of_terror 
+			}	
+		}
+    }
+	
+	MDR_tessa={ #democratic Leader too
+		name="Tessa Elliott"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_tessa.png"
+				small = "gfx/interface/ideas/portrait_MDR_tessa_small.png"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ }
+			expire="5022.8.30.1"
+			id=-1
+		}
+		field_marshal = { 
+			traits = { organisational_leader }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		
+		advisor={
+			slot = political_advisor
+			idea_token = MDR_tessa
+			allowed  = {
+				original_tag  = MDR
+				NOT = {
+				    has_country_flag = tessa_supported_the_protest
+				}	
+			}
+			traits  = {
+				respected_human 
+			}	
+		}
+    }
+	
+	MDR_v={ #nonaligned
+		name="Serial Designation V"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_V.png"
+				small = "gfx/interface/ideas/portrait_MDR_v_small.png"
+			}
+		}
+		country_leader={
+			ideology=moderatism
+			traits={ }
+			expire="5022.8.30.1"
+			id=-1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MDR_v
+			allowed = {
+				original_tag = MDR
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 150
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+    }
+	
+	MDR_j={ #nonaligned too
+		name="Serial Designation J"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_J.png"
+				small = "gfx/interface/ideas/portrait_MDR_j_small.png"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			traits={ }
+			expire="5022.8.30.1"
+			id=-1
+		}
+		field_marshal = { 
+			traits = { thorough_planner organisational_leader }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MDR_j
+			ledger = army
+			allowed = {
+				original_tag = MDR
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+    }
+	
+	MDR_n={ #also nonaligned
+		name="Serial Designation N"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_N.png"
+				small = "gfx/interface/ideas/portrait_MDR_n_small.png"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={ }
+			expire="5022.8.30.1"
+			id=-1
+		}
+		advisor={
+			slot = air_chief
+			idea_token = MDR_n
+			allowed = {
+				original_tag = MDR
+			}
+			traits = {
+				n_air_chief
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+    }
+	
+	MDR_khan = {
+		name = "Khan Doorman"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MDR/portrait_mdr_khan.png"
+				small = "gfx/interface/ideas/portrait_MDR_khan_small.png"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={ }
+			expire="5022.8.30.1"
+			id=-1
+		}
+		field_marshal = { 
+			traits = { old_guard }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = MDR_khan
+			ledger = army
+			allowed = {
+				original_tag = MDR
+			}
+			traits = {
+				grand_battle_plan_expert
+			}
+		}
+		
+		advisor={
+			slot = political_advisor
+			idea_token = MDR_khan
+			allowed  = {
+				original_tag  = MDR
+			}
+			traits  = {
+				fortification_engineer 
+			}	
+		}
+	}
+	
+	MDR_lizzy = {
+		name = "Lizzy"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MDR/portrait_mdr_lizzy.png"
+				small = "gfx/interface/ideas/portrait_MDR_lizzy_small.png"
+			}
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MDR_lizzy
+			allowed  = {
+				original_tag  = MDR
+			}
+			traits  = {
+				social_girl 
+			}
+		}
+	}
+	
+	MDR_thad = {
+		name = "Thad"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MDR/portrait_mdr_thad.png"
+				small = "gfx/interface/ideas/portrait_MDR_thad_small.png"
+			}
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		
+		advisor={
+			slot = political_advisor
+			idea_token = MDR_khan
+			allowed  = {
+				original_tag  = MDR
+			}
+			traits  = {
+				popular_figurehead3 
+			}	
+		}
+	}
+	
+	MDR_teacher = {
+		name = "Teacher"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MDR/portrait_mdr_teacher.png"
+				small = "gfx/interface/ideas/portrait_MDR_teacher_small.png"
+			}
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MDR_teacher
+			allowed  = {
+				original_tag  = MDR
+			}
+			traits  = {
+				AUS_minister_of_education 
+			}
+		}
+	}
+	
+	MDR_nori = {
+		name = "Nori Doorman"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MDR/portrait_mdr_nori.png"
+				small = "gfx/interface/ideas/portrait_MDR_nori_small.png"
+			}
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MDR_nori
+			allowed  = {
+				original_tag  = MDR
+			}
+			traits  = {
+				uzi_mom 
+			}
+		}
+	}
+	
+	MDR_yeva = {
+		name = "Yeva"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MDR/portrait_mdr_yeva.png"
+				small = "gfx/interface/ideas/portrait_MDR_yeva_small.png"
+			}
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MDR_yeva
+			allowed  = {
+				original_tag  = MDR
+			}
+			traits  = {
+				doll_mom 
+			}
+		}
+	}
+}	

@@ -1,0 +1,129 @@
+ideas = {
+	country = {
+
+		RES_regional_council = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = RES_regional_councils
+			
+			modifier = {
+				political_power_gain = -0.02
+				consumer_goods_factor = -0.05
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		RES_military_independence_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = RES_independent_military
+			
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+		
+		RES_expanded_federal_government = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = RES_expanded_federal_government
+			
+			modifier = {
+				political_power_gain = 0.02
+				consumer_goods_factor = 0.05
+				war_support_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		RES_centralized_command = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = RES_united_military
+			
+			modifier = {
+				army_org_factor = 0.05
+				mobilization_speed = 0.05
+			}
+		}
+		
+		RES_separatists_protest = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = RES_separatists_protests
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.15
+			}
+		}
+		
+		RES_investigation = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = RES_investigation
+			
+			modifier = {
+				consumer_goods_factor = 0.3
+				weekly_manpower = -50
+			}
+		}
+	}
+}	
