@@ -3,8 +3,8 @@ spriteTypes = {
 	### categories
 	
 	spriteType = {
-		name = "GFX_decision_mdr_remind_who_started"
-		texturefile = "gfx/interface/decisions/decision_mdr_remind_who_started.png"
+		name = "GFX_decision_cat_mdr_programming_tessa"
+		texturefile = "gfx/interface/decisions/decision_cat_mdr_programming_tessa.png"
 	}
 	
 	spriteType = {

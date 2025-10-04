@@ -142,7 +142,9 @@
  MDR_invest_into_propaganda:0 "Invest in Propaganda"
 
  MDR_programming_tessa:0 "Programming Tessa"
- MDR_programming_tessa_desc:0 "description \n\n\ §7Progress: [?progress|.01%%+]"
+ MDR_programming_tessa_desc:0 "Its time that we start programming dead humans into drones, and our first test is tessa who betrayed us during the protest, in respons of supporting the protest we killed her. \nNow we can try her body as test subject. \n\n\ §7Progress: [?progress|.01%%+]"
+ MDR_fund_the_program:0 "Fund the Program"
+ MDR_gather_more_drones_to_work:0 "Gather More Drones to Work"
 
  MDR_elections_desc: "description tba \n\n§LInfluences:§!\n §7Cyn/Absolute Solver: [?absSolverPopularity|.1%%+] \n §RCousins Coalition: [?cousinsPopularity|.1%%+] \n §YN/V/J: [?njvPopularity|.1%%+] \n §CKhan: [?khanPopularity|.1%%+]"
  

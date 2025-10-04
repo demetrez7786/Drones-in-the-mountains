@@ -5005,11 +5005,35 @@ MDR_programming_tessa = {
 			}
 		}
 	}
-	MDR_work_on_the_program = {
-		cost = 15
-		days_remove = 15
-		days_re_enable = 90
-		remove_effect = {
+	MDR_fund_the_program = {
+		icon = GFX_decision_generic_research
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+		available = {
+			has_completed_focus = MDR_program_tessa
+		} 
+
+		visible = { 
+			AND = {
+				has_completed_focus = MDR_program_tessa
+				NOT = {
+					has_country_flag = MDR_tessa_is_programed
+				}
+			}
+		}
+
+		cost = 50
+		complete_effect = {
 			add_to_variable = {
 				var = progress
 				value = 5
@@ -5027,24 +5051,37 @@ MDR_programming_tessa = {
 					value = 100
 				}
 			}
-			if = {
-				limit = {
-					check_variable = {
-						var = progress
-						value = 100
-						compare = greater_than_or_equals
-					}
-				}
-				set_country_flag = MDR_tessa_is_programed
-				news_event = news.427
-			}
 		}
 	}
-	MDR_gather_some_drones_to_work = {
+	MDR_gather_more_drones_to_work = {
+		icon = GFX_decision_generic_research
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+		available = {
+			has_completed_focus = MDR_program_tessa
+		} 
+
+		visible = { 
+			AND = {
+				has_completed_focus = MDR_program_tessa
+				NOT = {
+					has_country_flag = MDR_tessa_is_programed
+				}
+			}
+		}
+
 		cost = 50
-		days_remove = 30
-		days_re_enable = 90
-		remove_effect = {
+		complete_effect = {
 			add_to_variable = {
 				var = progress
 				value = 15
@@ -5075,42 +5112,8 @@ MDR_programming_tessa = {
 			}
 		}
 	}
-	MDR_total_brain_reconstruction = {
-		cost = 100
-		days_remove = 60
-		days_re_enable = 90
-		remove_effect = {
-			add_to_variable = {
-				var = progress
-				value = 30
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = progress
-						value = 100
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = progress
-					value = 100
-				}
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = progress
-						value = 100
-						compare = greater_than_or_equals
-					}
-				}
-				set_country_flag = MDR_tessa_is_programed
-				news_event = news.427
-			}
-		}
-	}
 }
+
 MDR_elections = {
 	MDR_promote_unity = {
 		cost = 15
