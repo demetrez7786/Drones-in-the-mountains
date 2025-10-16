@@ -722,3 +722,467 @@ country_event = {
 		set_country_flag = MDR_tessa_is_programed
 	}
 }
+
+# constitution is rewrited
+country_event = {
+	id = drones.28
+	title = drones.28.t
+	desc = drones.28.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.28.a
+		add_political_power = 150
+		add_war_support = 0.1
+		add_stability = 0.1
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.45
+		}
+	}
+}
+
+# courts are reformed
+country_event = {
+	id = drones.29
+	title = drones.29.t
+	desc = drones.29.d
+	picture = GFX_report_event_MDR_court_is_reformed
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.29.a
+		add_political_power = 50
+		add_war_support = 0.1
+		add_stability = 0.1
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+	}
+}
+
+# police is reformed
+country_event = {
+	id = drones.30
+	title = drones.30.t
+	desc = drones.30.d
+	picture = GFX_report_event_RES_police
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.30.a
+		add_political_power = 50
+		add_war_support = 0.15
+		add_stability = 0.15
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+}
+
+# choice our currency
+country_event = {
+	id = drones.31
+	title = drones.31.t
+	desc = drones.31.d
+	picture = GFX_report_event_MDR_currency
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.31.a
+		add_political_power = 50
+		add_stability = 0.05
+		add_ideas = MDR_lari
+	}
+	
+	option = {
+		name = drones.31.b
+		add_political_power = 50
+		add_stability = 0.05
+		add_ideas = MDR_dram
+	}
+	
+	option = {
+		name = drones.31.g
+		add_political_power = 50
+		add_stability = 0.05
+		add_ideas = MDR_manat
+	}
+}
+
+# league of nations threaten us
+country_event = {
+	id = drones.32
+	title = drones.32.t
+	desc = drones.32.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.32.a
+		add_political_power = -150
+		add_ideas = limited_exports
+	}
+	
+	option = {
+		name = drones.32.b
+		add_political_power = 150
+		add_war_support = 0.15
+		add_stability = 0.1
+		hidden_effect = {
+		    country_event = { id = drones.33 }
+		}	
+	}
+}
+
+# league of nations sanctions us
+country_event = {
+	id = drones.33
+	title = drones.33.t
+	desc = drones.33.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.33.a
+		add_dynamic_modifier = { modifier = MDR_sanctions_idea }
+		add_to_variable = { MDR_si_consumer_goods_factor = 0.15 }
+	    add_to_variable = { MDR_si_production_speed_buildings_factor = -0.15 }
+	    add_to_variable = { MDR_si_stability_factor = -0.15 }
+		add_to_variable = { MDR_si_industrial_capacity_factory = -0.15 }
+		add_to_variable = { MDR_si_industrial_capacity_dockyard = -0.15 }
+	}
+}
+
+# N in court
+country_event = {
+	id = drones.34
+	title = drones.34.t
+	desc = drones.34.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.34.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
+	}
+	
+	option = {
+		name = drones.34.b
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.1
+		}
+		add_stability = -0.05
+	}
+	
+	option = {
+		name = drones.34.g
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.2
+		}
+		add_stability = -0.15
+	}
+}
+
+# J in court
+country_event = {
+	id = drones.35
+	title = drones.35.t
+	desc = drones.35.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.35.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
+	}
+	
+	option = {
+		name = drones.35.b
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.1
+		}
+		add_stability = -0.05
+	}
+	
+	option = {
+		name = drones.35.g
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.2
+		}
+		add_stability = -0.15
+	}
+}
+
+# V in court
+country_event = {
+	id = drones.36
+	title = drones.36.t
+	desc = drones.36.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.36.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
+	}
+	
+	option = {
+		name = drones.36.b
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.1
+		}
+		add_stability = -0.05
+	}
+	
+	option = {
+		name = drones.36.g
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.2
+		}
+		add_stability = -0.15
+	}
+}
+
+# Uzi is infected
+country_event = {
+	id = drones.37
+	title = drones.37.t
+	desc = drones.37.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.37.a
+		add_to_variable = {
+			var = Infaction
+			value = 25
+		}
+		set_country_flag = MDR_uzi_is_infected
+		activate_mission = MDR_infections_spreading
+	}
+	
+	option = {
+		name = drones.37.b
+		add_to_variable = {
+			var = Infaction
+			value = 25
+		}
+		set_country_flag = MDR_uzi_is_infected_as
+		activate_mission = MDR_cure_progress
+	}
+}
+
+# hack sucsseded
+country_event = {
+	id = drones.38
+	title = drones.38.t
+	desc = drones.38.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.38.a
+		add_to_variable = {
+			var = Infaction
+			value = -15
+		}
+		add_political_power = 50
+		add_stability = 0.1
+		add_war_support = 0.1
+	}
+}
+
+# hack failed
+country_event = {
+	id = drones.39
+	title = drones.39.t
+	desc = drones.39.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.39.a
+		add_political_power = -20
+		add_stability = -0.1
+		add_war_support = -0.1
+	}
+}
+
+# appoint the head of doctors
+country_event = {
+	id = drones.40
+	title = drones.40.t
+	desc = drones.40.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.40.a
+		add_political_power = -25
+		add_stability = -0.05
+		activate_mission = MDR_cure_progress_alice
+	}
+	
+	option = {
+		name = drones.40.b
+		add_political_power = 25
+		add_stability = 0.05
+		activate_mission = MDR_cure_progress_n
+	}
+}
+
+# absolute solver seeking help about infencting uzi
+country_event = {
+	id = drones.41
+	title = drones.41.t
+	desc = drones.41.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.41.a
+		add_political_power = -25
+		add_stability = -0.05
+		activate_mission = MDR_infection_progress_cyn
+	}
+	
+	option = {
+		name = drones.41.b
+		add_political_power = 25
+		add_stability = 0.05
+		activate_mission = MDR_infection_progress_j
+	}
+}
+
+# hack sucsseded as
+country_event = {
+	id = drones.42
+	title = drones.42.t
+	desc = drones.42.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.42.a
+		add_to_variable = {
+			var = cure
+			value = -15
+		}
+		add_political_power = 50
+		add_stability = 0.1
+		add_war_support = 0.1
+	}
+}
+
+# hack failed as
+country_event = {
+	id = drones.43
+	title = drones.43.t
+	desc = drones.43.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.43.a
+		add_to_variable = {
+			var = cure
+			value = -15
+		}
+		add_political_power = -25
+		add_stability = -0.1
+		add_war_support = -0.1
+	}
+}
+
+# problems
+country_event = {
+	id = drones.44
+	title = drones.44.t
+	desc = drones.44.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.44.a
+		add_dynamic_modifier = { modifier = MDR_paranoia }
+		add_to_variable = { MDR_par_political_power_factor = -0.4 }
+	    add_to_variable = { MDR_par_stability_factor = -0.4 }
+		add_to_variable = { MDR_par_war_support_factor = -0.4 }
+		add_to_variable = { MDR_par_political_advisor_cost_factor = 0.5 }
+	    add_to_variable = { MDR_par_consumer_goods_factor = 0.5 }
+	    add_to_variable = { MDR_par_army_attack_factor = -0.4 }
+		add_to_variable = { MDR_par_army_defence_factor = -0.4 }
+	    add_to_variable = { MDR_par_conscription_factor = -0.4 }
+	    add_to_variable = { MDR_par_communism_drift = -0.01 }
+		add_political_power = -150
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.4
+		}
+	}
+}
+
+# poll result many choiced uzi
+country_event = {
+	id = drones.45
+	title = drones.45.t
+	desc = drones.45.d
+	picture = GFX_report_event_MDR_league_of_nations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.45
+		add_to_variable = { MDR_par_political_power_factor = 0.05 }
+        add_to_variable = { MDR_par_stability_factor = 0.05 }
+	    add_to_variable = { MDR_par_war_support_factor = 0.05 }
+	    add_to_variable = { MDR_par_political_advisor_cost_factor = -0.05 }
+        add_to_variable = { MDR_par_consumer_goods_factor = -0.05 }
+        add_to_variable = { MDR_par_army_attack_factor = 0.05 }
+	    add_to_variable = { MDR_par_army_defence_factor = 0.05 }
+        add_to_variable = { MDR_par_conscription_factor = 0.05 }
+		add_political_power = 60
+		add_war_support = 0.1
+		add_stability = 0.1
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+	}
+}

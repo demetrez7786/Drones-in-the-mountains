@@ -3,6 +3,86 @@ spriteTypes = {
 	### categories
 	
 	spriteType = {
+		name = "GFX_decision_mdr_military_police"
+		texturefile = "gfx/interface/decisions/decision_mdr_military_police.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_discredit_fascists"
+		texturefile = "gfx/interface/decisions/decision_mdr_discredit_fascists.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_anti_fascist_laws"
+		texturefile = "gfx/interface/decisions/decision_mdr_anti_fascist_laws.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_n_cure_progress"
+		texturefile = "gfx/interface/decisions/decision_mdr_n_cure_progress.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_alice_cure_progress"
+		texturefile = "gfx/interface/decisions/decision_mdr_alice_cure_progress.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_more_doctors"
+		texturefile = "gfx/interface/decisions/decision_mdr_more_doctors.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_cat_mdr_curing_uzi"
+		texturefile = "gfx/interface/decisions/decision_cat_mdr_curing_uzi.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_j_helping_as"
+		texturefile = "gfx/interface/decisions/decision_mdr_j_helping_as.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_cyn_helping_as"
+		texturefile = "gfx/interface/decisions/decision_mdr_cyn_helping_as.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_virus"
+		texturefile = "gfx/interface/decisions/decision_mdr_virus.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_hacking"
+		texturefile = "gfx/interface/decisions/decision_mdr_hacking.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_corruption_kaput"
+		texturefile = "gfx/interface/decisions/decision_mdr_corruption_kaput.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_investigation"
+		texturefile = "gfx/interface/decisions/decision_mdr_investigation.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_transparency_law"
+		texturefile = "gfx/interface/decisions/decision_mdr_transparency_law.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_form_anti_corruption_bureau"
+		texturefile = "gfx/interface/decisions/decision_mdr_form_anti_corruption_bureau.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_cat_mdr_corruption"
+		texturefile = "gfx/interface/decisions/decision_cat_mdr_corruption.png"
+	}
+	
+	spriteType = {
 		name = "GFX_decision_cat_mdr_programming_tessa"
 		texturefile = "gfx/interface/decisions/decision_cat_mdr_programming_tessa.png"
 	}

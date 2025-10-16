@@ -3,6 +3,166 @@ spriteTypes = {
 	#### Murder drones icons
 	
 	SpriteType = {
+	name = "GFX_MDR_deal_with_corruption"
+	texturefile = "gfx/interface/goals/MDR_deal_with_corruption.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_consumers_protection_law"
+	texturefile = "gfx/interface/goals/MDR_consumers_protection_law.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_corporation_oversight_bureau"
+	texturefile = "gfx/interface/goals/MDR_corporation_oversight_bureau.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_encourage_private_enterprises"
+	texturefile = "gfx/interface/goals/MDR_encourage_private_enterprises.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_small_investments"
+	texturefile = "gfx/interface/goals/MDR_small_investments.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_domestic_market"
+	texturefile = "gfx/interface/goals/MDR_domestic_market.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_capitalism_succsseded"
+	texturefile = "gfx/interface/goals/MDR_capitalism_succsseded.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_taxes_reforms"
+	texturefile = "gfx/interface/goals/MDR_taxes_reforms.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_trench_doctrine"
+	texturefile = "gfx/interface/goals/MDR_trench_doctrine.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_uzis_guns"
+	texturefile = "gfx/interface/goals/MDR_uzis_guns.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_human_divisions"
+	texturefile = "gfx/interface/goals/MDR_human_divisions.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_depoliticize_the_army"
+	texturefile = "gfx/interface/goals/MDR_depoliticize_the_army.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_army_questions"
+	texturefile = "gfx/interface/goals/MDR_army_questions.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_rights_for_women"
+	texturefile = "gfx/interface/goals/MDR_rights_for_women.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_free_speech"
+	texturefile = "gfx/interface/goals/MDR_free_speech.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_grant_citizenship_to_people"
+	texturefile = "gfx/interface/goals/MDR_grant_citizenship_to_people.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_introduce_civil_services"
+	texturefile = "gfx/interface/goals/MDR_introduce_civil_services.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_people"
+	texturefile = "gfx/interface/goals/MDR_people.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_reform_police"
+	texturefile = "gfx/interface/goals/MDR_reform_police.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_Reform_court"
+	texturefile = "gfx/interface/goals/MDR_Reform_court.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_deal_with_opposition"
+	texturefile = "gfx/interface/goals/MDR_deal_with_opposition.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_ban_solverism"
+	texturefile = "gfx/interface/goals/MDR_ban_solverism.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_allow_opposition_media"
+	texturefile = "gfx/interface/goals/MDR_allow_opposition_media.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_rewriting_constitution_khan"
+	texturefile = "gfx/interface/goals/MDR_rewriting_constitution_khan.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_politics_khan"
+	texturefile = "gfx/interface/goals/MDR_politics_khan.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_no_trades"
+	texturefile = "gfx/interface/goals/MDR_no_trades.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_democracy_process"
+	texturefile = "gfx/interface/goals/MDR_democracy_process.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_expand_economy"
+	texturefile = "gfx/interface/goals/MDR_expand_economy.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_close_the_borders"
+	texturefile = "gfx/interface/goals/MDR_close_the_borders.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_kick_out_ambassadors"
+	texturefile = "gfx/interface/goals/MDR_kick_out_ambassadors.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_isolation_proccess"
+	texturefile = "gfx/interface/goals/MDR_isolation_proccess.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_bunkers_and_democracy_won"
+	texturefile = "gfx/interface/goals/MDR_bunkers_and_democracy_won.png"			
+	}
+	
+	SpriteType = {
 	name = "GFX_MDR_new_ministres"
 	texturefile = "gfx/interface/goals/MDR_new_ministres.png"			
 	}

@@ -40,28 +40,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-            add_political_power = -150
-            add_stability = -0.05
+            add_stability = -0.1
 			country_event = { id = drones.1 }
 			news_event = { id = news.410 }
-			MDR = {
-            	set_variable = {
-            	    var = absSolverPopularity
-            	    value = 40
-            	}
-            	set_variable = {
-            	    var = cousinsPopularity
-            	    value = 25
-            	}
-            	set_variable = {
-            	    var = njvPopularity
-            	    value = 20
-            	}
-            	set_variable = {
-            	    var = khanPopularity
-            	    value = 15
-            	}
-            }
 		}
 	}
 
@@ -2181,12 +2162,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = -100
-			add_timed_idea = {
-				idea = MDR_programming_tessa_idea
-				days = 140
-			}
+			add_ideas = MDR_programming_tessa_idea
 			unlock_decision_category_tooltip = MDR_programming_tessa
-			country_event = { id = drones.27 days = 141 }
+			activate_mission = MDR_passive_work
 		}
 	}
 

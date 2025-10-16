@@ -2,7 +2,7 @@ technologies = {
 
 	#infantry
 	
-	worker_drone_chassie = {
+	worker_drone_tech = {
 
 		allow = { always = no }
 		
@@ -13,39 +13,18 @@ technologies = {
 		
 		enable_subunits = {
 			worker_drone
-			motorized_workerdrone
-			mechanized_workerdrone
+			motorized_worker_drone
+			mechanized_worker_drone
 		}
 
 		research_cost = 2
-		start_year = 1946
+		start_year = 1940
 		
 		categories = {
 			infantry_weapons
 		}
 	}
-	infantry_weapons_mmd = {
-
-		enable_equipments = {
-			infantry_equipment_md
-		}
-		
-		allow = {
-			always = no
-		}
-
-		research_cost = 1.5
-		start_year = 1918
-		
-		categories = {
-			infantry_weapons
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	murder_drone_chassie = {
+	murder_drone_tech = {
 
 		allow = { always = no }
 		

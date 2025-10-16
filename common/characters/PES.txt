@@ -1,0 +1,17 @@
+characters={
+	
+	PES_pesants_council={ #communist Leader
+		name="Pesants Council"
+		portraits={
+			civilian={
+				large="gfx/leaders/PES/portrait_pes_pesants_council.png"
+			}
+		}
+		country_leader={
+			ideology=anarchist_communism
+			traits={ }
+			expire="5022.8.30.1"
+			id=-1
+		}
+    }
+}

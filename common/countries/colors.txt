@@ -78,6 +78,11 @@ SIP = {
 	color_ui = rgb { 255  255  0 }
 }
 
+PES = {
+	color = rgb { 34  177  76 }
+	color_ui = rgb { 92  163  99 }
+}
+
 GER = {
 	color = HSV { 0.1 0.15 0.4 }
 	color_ui = rgb { 138 155 116 }

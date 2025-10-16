@@ -1,6 +1,6 @@
 state={
 	id=1019
-	name="STATE_1019"
+	name="Southern Armenia"
 	provinces={
 		4660 6642 6997 
 	}

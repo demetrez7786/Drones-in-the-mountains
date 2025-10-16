@@ -1,6 +1,6 @@
 state={
 	id=1017
-	name="STATE_1017"
+	name="Western Georgia"
 	provinces={
 		654 772 3653 3656 3658 
 	}

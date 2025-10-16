@@ -4522,11 +4522,17 @@ MDR_power_balance_power_balance_decisions = {
 		days_re_enable = 50
 
 		available = {
-			has_completed_focus = MDR_cyn_won
+			OR = {
+		        has_completed_focus = MDR_cyn_won
+		        has_completed_focus = MDR_absolute_solver_won
+		    }
 		} 
 
 		visible = { 
-			has_completed_focus = MDR_cyn_won
+			OR = {
+		        has_completed_focus = MDR_cyn_won
+		        has_completed_focus = MDR_absolute_solver_won
+		    }
 		}
 
 		cost = 25
@@ -4558,12 +4564,18 @@ MDR_power_balance_power_balance_decisions = {
 
 
 		available = {
-			has_completed_focus = MDR_cyn_won
+			OR = {
+		        has_completed_focus = MDR_cyn_won
+		        has_completed_focus = MDR_absolute_solver_won
+		    }
 			has_war = yes
 		} 
 
 		visible = { 
-			has_completed_focus = MDR_cyn_won
+			OR = {
+		        has_completed_focus = MDR_cyn_won
+		        has_completed_focus = MDR_absolute_solver_won
+		    }
 		}
 
 		cost = 25
@@ -4593,11 +4605,17 @@ MDR_power_balance_power_balance_decisions = {
 		fire_only_once = yes
 
 		available = {
-			has_completed_focus = MDR_cyn_won
+			OR = {
+		        has_completed_focus = MDR_cyn_won
+		        has_completed_focus = MDR_absolute_solver_won
+		    }
 		} 
 
 		visible = { 
-			has_completed_focus = MDR_cyn_won
+			OR = {
+		        has_completed_focus = MDR_cyn_won
+		        has_completed_focus = MDR_absolute_solver_won
+		    }
 		}
 
 		cost = 25
@@ -4638,11 +4656,17 @@ MDR_power_balance_power_balance_decisions = {
 
 
 		available = {
-			has_completed_focus = MDR_cyn_won
+			OR = {
+		        has_completed_focus = MDR_cyn_won
+		        has_completed_focus = MDR_absolute_solver_won
+		    }
 		} 
 
 		visible = { 
-			has_completed_focus = MDR_cyn_won
+			OR = {
+		        has_completed_focus = MDR_cyn_won
+		        has_completed_focus = MDR_absolute_solver_won
+		    }
 		}
 
 		cost = 25
@@ -4672,11 +4696,17 @@ MDR_power_balance_power_balance_decisions = {
 		days_re_enable = 50
 
 		available = {
-			has_completed_focus = MDR_cyn_won
+			OR = {
+		        has_completed_focus = MDR_cyn_won
+		        has_completed_focus = MDR_absolute_solver_won
+		    }
 		} 
 
 		visible = { 
-			has_completed_focus = MDR_cyn_won
+			OR = {
+		        has_completed_focus = MDR_cyn_won
+		        has_completed_focus = MDR_absolute_solver_won
+		    }
 		}
 
 		cost = 25
@@ -4706,11 +4736,17 @@ MDR_power_balance_power_balance_decisions = {
 		fire_only_once = yes
 
 		available = {
-			has_completed_focus = MDR_cyn_won
+			OR = {
+		        has_completed_focus = MDR_cyn_won
+		        has_completed_focus = MDR_absolute_solver_won
+		    }
 		} 
 
 		visible = { 
-			has_completed_focus = MDR_cyn_won
+			OR = {
+		        has_completed_focus = MDR_cyn_won
+		        has_completed_focus = MDR_absolute_solver_won
+		    }
 		}
 
 		cost = 25
@@ -4967,14 +5003,25 @@ MDR_power_balance_power_balance_uzi_and_doll_decisions = {
 }	
 MDR_programming_tessa = {
 	MDR_passive_work = {
+	    icon = GFX_decision_generic_research
 		days_mission_timeout = 7
+		selectable_mission = no
 		is_good = yes
-		days_re_enable = 0
 		allowed = {
-			has_completed_focus = MDR_program_tessa
+			AND = {
+				has_completed_focus = MDR_program_tessa
+				NOT = {
+					has_country_flag = MDR_tessa_is_programed
+				}
+			}
 		}
 		activation = {
-			has_completed_focus = MDR_program_tessa
+			AND = {
+				has_completed_focus = MDR_program_tessa
+				NOT = {
+					has_country_flag = MDR_tessa_is_programed
+				}
+			}
 		}
 		visible = {
 			AND = {
@@ -4992,6 +5039,7 @@ MDR_programming_tessa = {
 				value = 0.03
 				var = progress
 			}
+			activate_mission = MDR_passive_work
 			if = {
 				limit = {
 					check_variable = {
@@ -5005,6 +5053,7 @@ MDR_programming_tessa = {
 			}
 		}
 	}
+	
 	MDR_fund_the_program = {
 		icon = GFX_decision_generic_research
 
@@ -5038,6 +5087,7 @@ MDR_programming_tessa = {
 				var = progress
 				value = 5
 			}
+			custom_effect_tooltip = MDR_small_progress_rising
 			if = {
 				limit = {
 					check_variable = {
@@ -5086,6 +5136,7 @@ MDR_programming_tessa = {
 				var = progress
 				value = 15
 			}
+			custom_effect_tooltip = MDR_medium_progress_rising
 			if = {
 				limit = {
 					check_variable = {
@@ -5099,321 +5150,1829 @@ MDR_programming_tessa = {
 					value = 100
 				}
 			}
-			if = {
-				limit = {
-					check_variable = {
-						var = progress
-						value = 100
-						compare = greater_than_or_equals
-					}
-				}
-				set_country_flag = MDR_tessa_is_programed
-				news_event = news.427
-			}
 		}
 	}
 }
 
-MDR_elections = {
-	MDR_promote_unity = {
-		cost = 15
-		days_remove = 15
-		days_re_enable = 90
-		remove_effect = {
-			add_to_variable = {
-				var = absSolverPopularity
-				value = 5
-				tooltip = minorPlatPopularity
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = absSolverPopularity
-						value = 100
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = absSolverPopularity
-					value = 100
-				}
-			}
-		}
-	}
-	MDR_ukrainian_propaganda = {
-		cost = 50
-		days_remove = 30
-		days_re_enable = 90
-		remove_effect = {
-			add_to_variable = {
-				var = absSolverPopularity
-				value = 15
-				tooltip = mediumPlatPopularity
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = absSolverPopularity
-						value = 100
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = absSolverPopularity
-					value = 100
-				}
-			}
-		}
-	}
-	MDR_ukraine_forever = {
-		cost = 100
-		days_remove = 60
-		days_re_enable = 90
-		remove_effect = {
-			add_to_variable = {
-				var = absSolverPopularity
-				value = 30
-				tooltip = majorPlatPopularity
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = absSolverPopularity
-						value = 100
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = absSolverPopularity
-					value = 100
-				}
-			}
-		}
-	}
-	MDR_organize_strikes = {
-		cost = 15
-		days_remove = 15
-		days_re_enable = 90
-		remove_effect = {
-			add_to_variable = {
-				var = cousinsPopularity
-				value = 5
-				tooltip = minorACPopularity
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = cousinsPopularity
-						value = 100
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = cousinsPopularity
-					value = 100
-				}
-			}
-		}
-	}
-	MDR_spread_some_wealth = {
-		cost = 50
-		days_remove = 30
-		days_re_enable = 90
-		remove_effect = {
-			add_to_variable = {
-				var = cousinsPopularity
-				value = 15
-				tooltip = mediumACPopularity
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = cousinsPopularity
-						value = 100
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = cousinsPopularity
-					value = 100
-				}
-			}
-		}
-	}
-	MDR_nation_wide_unions = {
-		cost = 100
-		days_remove = 60
-		days_re_enable = 90
-		remove_effect = {
-			add_to_variable = {
-				var = cousinsPopularity
-				value = 30
-				tooltip = majorACPopularity
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = cousinsPopularity
-						value = 100
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = cousinsPopularity
-					value = 100
-				}
-			}
-		}
-	}
-	MDR_fund_corporations = {
-		cost = 15
-		days_remove = 15
-		days_re_enable = 90
-		remove_effect = {
-			add_to_variable = {
-				var = njvPopularity
-				value = 5
-				tooltip = minorACapPopularity
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = njvPopularity
-						value = 100
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = njvPopularity
-					value = 100
-				}
-			}
-		}
-	}
-	MDR_chain_businesses = {
-		cost = 50
-		days_remove = 30
-		days_re_enable = 90
-		remove_effect = {
-			add_to_variable = {
-				var = njvPopularity
-				value = 15
-				tooltip = mediumACapPopularity
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = njvPopularity
-						value = 100
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = njvPopularity
-					value = 100
-				}
-			}
-		}
-	}
-	MDR_corporate_conglomerates = {
-		cost = 100
-		days_remove = 60
-		days_re_enable = 90
-		remove_effect = {
-			add_to_variable = {
-				var = njvPopularity
-				value = 30
-				tooltip = majorACapPopularity
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = njvPopularity
-						value = 100
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = njvPopularity
-					value = 100
-				}
-			}
-		}
-	}
-	MDR_local_elections = {
-		cost = 15
-		days_remove = 15
-		days_re_enable = 90
-		remove_effect = {
-			add_to_variable = {
-				var = khanPopularity
-				value = 5
-				tooltip = minorLibPopularity
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = khanPopularity
-						value = 100
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = khanPopularity
-					value = 100
-				}
-			}
-		}
-	}
-	MDR_regional_elections = {
-		cost = 50
-		days_remove = 30
-		days_re_enable = 90
-		remove_effect = {
-			add_to_variable = {
-				var = khanPopularity
-				value = 15
-				tooltip = mediumLibPopularity
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = khanPopularity
-						value = 100
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = khanPopularity
-					value = 100
-				}
-			}
-		}
-	}
-	MDR_strong_leaders = {
-		cost = 100
-		days_remove = 60
-		days_re_enable = 90
-		remove_effect = {
-			add_to_variable = {
-				var = khanPopularity
-				value = 30
-				tooltip = majorLibPopularity
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = khanPopularity
-						value = 100
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = khanPopularity
-					value = 100
-				}
-			}
-		}
-	}
+MDR_dealing_with_corruption = {
+    
+	MDR_form_anti_corruption_bureau = {
+	    icon = GFX_decision_mdr_form_anti_corruption_bureau
 
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+		} 
+
+		visible = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+		}
+
+		cost = 100
+		complete_effect = {
+			add_to_variable = {
+				var = corruption
+				value = -15
+			}
+			add_ideas = MDR_anti_corruption_bureau_idea
+			custom_effect_tooltip = MDR_medium_corruption_decreasing
+		}
+	}
+	
+	MDR_create_transparency_law = {
+	    icon = GFX_decision_mdr_transparency_law
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+			has_idea = MDR_anti_corruption_bureau_idea
+		} 
+
+		visible = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+		}
+
+		cost = 100
+		complete_effect = {
+			add_to_variable = {
+				var = corruption
+				value = -20
+			}
+			custom_effect_tooltip = MDR_medium_corruption_decreasing
+		}
+	}
+	
+	MDR_investigate_police_brigades = {
+	    icon = GFX_decision_mdr_investigation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+			has_idea = MDR_anti_corruption_bureau_idea
+		} 
+
+		visible = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+		}
+
+		cost = 100
+		complete_effect = {
+			add_to_variable = {
+				var = corruption
+				value = -20
+			}
+			custom_effect_tooltip = MDR_medium_corruption_decreasing
+			set_country_flag = MDR_police_briageds_are_invastigated
+		}
+	}
+	
+	MDR_investigate_ngos = {
+	    icon = GFX_decision_mdr_investigation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+			has_idea = MDR_anti_corruption_bureau_idea
+		} 
+
+		visible = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+		}
+
+		cost = 100
+		complete_effect = {
+			add_to_variable = {
+				var = corruption
+				value = -5
+			}
+			custom_effect_tooltip = MDR_small_corruption_decreasing
+			add_popularity = {
+			    ideology = democratic
+				popularity = -0.1
+			}	
+			set_country_flag = MDR_ngos_are_invastigated
+		}
+	}
+	
+	MDR_investigate_judiciary = {
+	    icon = GFX_decision_mdr_investigation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+			has_idea = MDR_anti_corruption_bureau_idea
+		} 
+
+		visible = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+		}
+
+		cost = 100
+		complete_effect = {
+			add_to_variable = {
+				var = corruption
+				value = -5
+			}
+			custom_effect_tooltip = MDR_small_corruption_decreasing	
+			set_country_flag = MDR_judiciary_is_invastigated
+		}
+	}
+	
+	MDR_investigate_local_administrations = {
+	    icon = GFX_decision_mdr_investigation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+			has_idea = MDR_anti_corruption_bureau_idea
+		} 
+
+		visible = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+		}
+
+		cost = 100
+		complete_effect = {
+			add_to_variable = {
+				var = corruption
+				value = -10
+			}
+			custom_effect_tooltip = MDR_small_corruption_decreasing	
+			set_country_flag = MDR_local_administrations_are_invastigated
+		}
+	}
+	
+	MDR_investigate_financial_sectors = {
+	    icon = GFX_decision_mdr_investigation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+			has_idea = MDR_anti_corruption_bureau_idea
+		} 
+
+		visible = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+		}
+
+		cost = 100
+		complete_effect = {
+			add_to_variable = {
+				var = corruption
+				value = -25
+			}
+			custom_effect_tooltip = MDR_small_corruption_decreasing	
+			set_country_flag = MDR_financial_sectors_are_invastigated
+		}
+	}
+	
+	MDR_corruption_kaput = {
+	    icon = GFX_decision_mdr_corruption_kaput
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+			has_idea = MDR_anti_corruption_bureau_idea
+			has_country_flag = MDR_financial_sectors_are_invastigated
+            has_country_flag = MDR_local_administrations_are_invastigated
+			has_country_flag = MDR_judiciary_is_invastigated
+			has_country_flag = MDR_ngos_are_invastigated
+			has_country_flag = MDR_police_briageds_are_invastigated
+			
+		} 
+
+		visible = {
+			has_completed_focus = MDR_deal_with_corruption_khan
+		}
+
+		cost = 100
+		complete_effect = {
+			remove_ideas = MDR_corruption_idea
+		}
+	}
+}	
+
+MDR_deal_with_anti_khan_drones_decision_cat = {
+
+    MDR_agreement_with_uzi = {
+	    icon = GFX_decision_generic_political_discourse
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_deal_with_anti_khan_drones
+		} 
+
+		visible = {
+			has_completed_focus = MDR_deal_with_anti_khan_drones
+		}
+
+		cost = 50
+		complete_effect = {
+			add_stability = 0.15
+			add_popularity = {
+			    ideology = democratic
+			    popularity = 0.1
+		    }
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.1
+		    }
+		}
+	}
+	
+	MDR_arrest_doll = {
+	    icon = GFX_decision_generic_arrest
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_deal_with_anti_khan_drones
+		} 
+
+		visible = {
+			has_completed_focus = MDR_deal_with_anti_khan_drones
+		}
+
+		cost = 50
+		complete_effect = {
+			add_stability = 0.05
+			add_popularity = {
+			    ideology = communism
+			    popularity = -0.2
+		    }
+		}
+	}
+	
+	MDR_exile_cyn_and_absolute_solver = {
+	    icon = GFX_decision_generic_break_treaty
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_deal_with_anti_khan_drones
+		} 
+
+		visible = {
+			has_completed_focus = MDR_deal_with_anti_khan_drones
+		}
+
+		cost = 50
+		complete_effect = {
+			add_stability = 0.15
+			add_war_support = 0.15
+			add_popularity = {
+			    ideology = fascism
+			    popularity = -0.5
+		    }
+		}
+	}
+	
+	MDR_call_disassembly_drones_in_court = {
+	    icon = GFX_decision_generic_political_address
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_deal_with_anti_khan_drones
+		} 
+
+		visible = {
+			has_completed_focus = MDR_deal_with_anti_khan_drones
+		}
+
+		cost = 50
+		complete_effect = {
+			country_event = { id = drones.34 }
+		}
+	}
+}	
+
+MDR_cure_uzi = {
+    
+	MDR_infections_spreading = {
+	    icon = GFX_decision_mdr_virus
+		days_mission_timeout = 7
+		selectable_mission = no
+		is_good = no
+		allowed = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					has_country_flag = MDR_tessa_is_programed
+				}
+			}
+		}
+		activation = {
+			AND = {
+			    has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			add_to_variable = {
+				value = 15
+				var = infection
+			}
+			activate_mission = MDR_infections_spreading
+			if = {
+				limit = {
+					check_variable = {
+						var = infection
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_absolute_solver_took_over_uzi
+			}
+		}
+	}
+	
+	MDR_cure_progress_alice = {
+	    icon = GFX_decision_mdr_alice_cure_progress
+		days_mission_timeout = 3
+		selectable_mission = no
+		is_good = no
+		allowed = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					has_country_flag = MDR_tessa_is_programed
+				}
+			}
+		}
+		activation = {
+			AND = {
+			    has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			add_to_variable = {
+				value = 5
+				var = cure
+			}
+			activate_mission = MDR_cure_progress_alice
+			if = {
+				limit = {
+					check_variable = {
+						var = cure
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_uzi_is_cured
+			}
+		}
+	}
+	
+	MDR_cure_progress_n = {
+	    icon = GFX_decision_mdr_n_cure_progress
+		days_mission_timeout = 7
+		selectable_mission = no
+		is_good = no
+		allowed = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					has_country_flag = MDR_tessa_is_programed
+				}
+			}
+		}
+		activation = {
+			AND = {
+			    has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			add_to_variable = {
+				value = 5
+				var = cure
+			}
+			activate_mission = MDR_cure_progress_n
+			if = {
+				limit = {
+					check_variable = {
+						var = cure
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_uzi_is_cured
+			}
+		}
+	}
+	
+	MDR_appoint_head_of_doctors = {
+	    icon = GFX_decision_generic_decision
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+				    OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+
+		cost = 50
+		complete_effect = {
+			country_event = { id = drones.40 }
+		}
+	}
+	
+	MDR_invest_into_medicine = {
+	    icon = GFX_decision_generic_research
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 10
+
+		available = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = cure
+				value = 5
+			}
+			custom_effect_tooltip = MDR_small_cure_increasing
+			if = {
+				limit = {
+					check_variable = {
+						var = cure
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_uzi_is_cured
+			}
+		}
+	}
+	
+	MDR_bring_more_doctors = {
+	    icon = GFX_decision_mdr_more_doctors
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 10
+
+		available = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = cure
+				value = 10
+			}
+			custom_effect_tooltip = MDR_small_cure_increasing
+			if = {
+				limit = {
+					check_variable = {
+						var = cure
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_uzi_is_cured
+			}
+		}
+	}
+	
+	MDR_isolate_critical_systems = {
+	    icon = GFX_decision_generic_decision
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 10
+
+		available = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_days_mission_timeout = {
+                mission = MDR_infections_spreading
+                days = 3
+            }
+			if = {
+				limit = {
+					check_variable = {
+						var = cure
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_uzi_is_cured
+			}
+		}
+	}
+	
+	MDR_hack_absolute_solvers_system = {
+	    icon = decision_mdr_hacking
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 25
+
+		available = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+				    OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+
+		cost = 50
+		complete_effect = {
+		    random_list = {
+			    50 = {
+			    country_event = { id = drones.38 }
+			    }
+            
+			    50 = {
+			    country_event = { id = drones.39 }
+			    }
+			}	
+			    if = {
+				    limit = {
+					    check_variable = {
+						var = cure
+						value = 100
+						compare = greater_than_or_equals
+					    }
+				    }
+				set_country_flag = MDR_uzi_is_cured
+			    }
+		}
+	}
+	
+	MDR_nationwide_attention_on_her = {
+	    icon = GFX_decision_generic_decision
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+		available = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		
+		days_remove = 45
+		modifier = {
+			political_power_factor = 1
+			consumer_goods_factor = 0.5
+			production_speed_buildings_factor = -0.4
+		}
+
+		cost = 0
+		complete_effect = {
+			add_command_power = -50
+		}
+	}
+}	
+
+MDR_cure_uzi_as_side = {
+
+    MDR_cure_progress = {
+	    icon = GFX_decision_generic_research
+		days_mission_timeout = 7
+		selectable_mission = no
+		is_good = no
+		allowed = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					has_country_flag = MDR_tessa_is_programed
+				}
+			}
+		}
+		activation = {
+			AND = {
+			    has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			add_to_variable = {
+				value = 10
+				var = cure
+			}
+			activate_mission = MDR_cure_progress
+			if = {
+				limit = {
+					check_variable = {
+						var = cure
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_uzi_is_cured
+			}
+		}
+	}
+	
+	MDR_infection_progress_cyn = {
+	    icon = GFX_decision_mdr_cyn_helping_as
+		days_mission_timeout = 7
+		selectable_mission = no
+		is_good = no
+		allowed = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					has_country_flag = MDR_tessa_is_programed
+				}
+			}
+		}
+		activation = {
+			AND = {
+			    has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			add_to_variable = {
+				value = 5
+				var = infection
+			}
+			activate_mission = MDR_infection_progress_cyn
+			if = {
+				limit = {
+					check_variable = {
+						var = infection
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_absolute_solver_took_over_uzi
+			}
+		}
+	}
+	
+	MDR_infection_progress_j = {
+	    icon = GFX_decision_mdr_j_helping_as
+		days_mission_timeout = 3
+		selectable_mission = no
+		is_good = no
+		allowed = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					has_country_flag = MDR_tessa_is_programed
+				}
+			}
+		}
+		activation = {
+			AND = {
+			    has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			add_to_variable = {
+				value = 5
+				var = infection
+			}
+			activate_mission = MDR_infection_progress_j
+			if = {
+				limit = {
+					check_variable = {
+						var = infection
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_absolute_solver_took_over_uzi
+			}
+		}
+	}
+	
+	MDR_seek_help_from = {
+	    icon = GFX_decision_generic_decision
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+				    OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+
+		cost = 50
+		complete_effect = {
+			country_event = { id = drones.41 }
+		}
+	}
+	
+	MDR_program_the_virus = {
+	    icon = GFX_decision_mdr_virus
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 10
+
+		available = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = infection
+				value = 5
+			}
+			custom_effect_tooltip = MDR_small_infection_increasing
+			if = {
+				limit = {
+					check_variable = {
+						var = infection
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_absolute_solver_took_over_uzi
+			}
+		}
+	}
+	
+	MDR_mysteriously_kill_doctors = {
+	    icon = GFX_decision_generic_assassination
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 10
+
+		available = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_days_mission_timeout = {
+                mission = MDR_cure_progress
+                days = 3
+            }
+			custom_effect_tooltip = MDR_small_infection_increasing
+			if = {
+				limit = {
+					check_variable = {
+						var = infection
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_absolute_solver_took_over_uzi
+			}
+		}
+	}
+	
+	MDR_hack_hospitals_system = {
+	    icon = GFX_GFX_decision_mdr_hacking
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 10
+
+		available = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected_as_side
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+
+		cost = 50
+		complete_effect = {
+			random_list = {
+			    50 = {
+			    country_event = { id = drones.42 }
+			    }
+            
+			    50 = {
+			    country_event = { id = drones.43 }
+			    }
+			}	
+			    if = {
+				    limit = {
+					    check_variable = {
+						var = infection
+						value = 100
+						compare = greater_than_or_equals
+					    }
+				    }
+				set_country_flag = MDR_absolute_solver_took_over_uzi
+			    }
+		}
+	}
+	
+	MDR_put_more_efforts_on_her = {
+	    icon = GFX_decision_generic_decision
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 50
+
+		available = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_uzi_is_infected
+				NOT = {
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
+				}
+			}
+		}
+		days_remove = 45
+		modifier = {
+			political_power_factor = 1
+			consumer_goods_factor = 0.5
+			production_speed_buildings_factor = -0.4
+		}
+
+		cost = 0
+		complete_effect = {
+			add_command_power = -50
+		}
+	}
+}
+
+MDR_hunting_fascists = {
+    
+    MDR_arrest_local_leaders = {
+	    icon = GFX_decision_generic_arrest
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_hunting_on_fascists
+		} 
+
+		visible = {
+			has_country_flag = MDR_hunting_on_fascists
+		}
+		days_remove = 15
+		modifier = {
+			political_power_factor = -0.2
+			consumer_goods_factor = 0.05
+		}
+
+		cost = 50
+		complete_effect = {
+			add_stability = 0.05
+			add_popularity = {
+			    ideology = fascism
+			    popularity = -0.1
+		    }
+		}
+	}
+	
+	MDR_anti_fascist_laws = {
+	    icon = GFX_decision_mdr_anti_fascist_laws
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_hunting_on_fascists
+		} 
+
+		visible = {
+			has_country_flag = MDR_hunting_on_fascists
+		}
+		days_remove = 15
+		modifier = {
+			political_power_factor = -0.2
+			consumer_goods_factor = 0.2
+		}
+
+		cost = 50
+		complete_effect = {
+			add_stability = 0.1
+			add_ideas = MDR_anti_fascist_laws_idea
+			add_popularity = {
+			    ideology = fascism
+			    popularity = -0.1
+		    }
+		}
+	}
+	
+	MDR_discredit_fascists = {
+	    icon = GFX_decision_mdr_discredit_fascists
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_hunting_on_fascists
+		} 
+
+		visible = {
+			has_country_flag = MDR_hunting_on_fascists
+		}
+		days_remove = 15
+		modifier = {
+			political_power_factor = -0.2
+			consumer_goods_factor = 0.2
+		}
+
+		cost = 50
+		complete_effect = {
+			add_stability = 0.05
+			add_popularity = {
+			    ideology = fascism
+			    popularity = -0.1
+		    }
+		}
+	}
+	
+	MDR_call_military_police = {
+	    icon = GFX_decision_mdr_military_police
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_hunting_on_fascists
+		} 
+
+		visible = {
+			has_country_flag = MDR_hunting_on_fascists
+		}
+		days_remove = 15
+		modifier = {
+			political_power_factor = -0.2
+			consumer_goods_factor = 0.2
+		}
+
+		cost = 50
+		complete_effect = {
+			add_stability = 0.15
+			add_war_support = 0.15
+			add_manpower = 50000
+			add_popularity = {
+			    ideology = fascism
+			    popularity = -0.1
+		    }
+		}
+	}
+}
+
+MDR_inspecting_all_branches = {
+
+    MDR_inspect_military_branch = {
+	    icon = GFX_decision_mdr_investigation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_inspecting_branches
+		} 
+
+		visible = {
+			has_country_flag = MDR_inspecting_branches
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = inspection
+				value = 20
+			}
+			add_war_support = -0.01
+			add_manpower = -9820
+		}
+	}
+	
+	MDR_inspect_economy_branch = {
+	    icon = GFX_decision_mdr_investigation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_inspecting_branches
+		} 
+
+		visible = {
+			has_country_flag = MDR_inspecting_branches
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = inspection
+				value = 20
+			}
+			add_stability = -0.01
+		}
+	}
+	
+	MDR_inspect_political_party_branch = {
+	    icon = GFX_decision_mdr_investigation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_inspecting_branches
+		} 
+
+		visible = {
+			has_country_flag = MDR_inspecting_branches
+		}
+
+		cost = 50
+		complete_effect = {
+			add_to_variable = {
+				var = inspection
+				value = 20
+			}
+			add_popularity = {
+			    ideology = communism
+				popularity = -0.1
+			}	
+		}
+	}
+	
+	MDR_inspect_police_branch = {
+	    icon = GFX_decision_mdr_investigation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_inspecting_branches
+		} 
+
+		visible = {
+			has_country_flag = MDR_inspecting_branches
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = inspection
+				value = 20
+			}
+		}
+		add_war_support = -0.01
+		add_manpower = -578
+	}
+	
+	MDR_inspect_media_branch = {
+	    icon = GFX_decision_mdr_investigation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_inspecting_branches
+		} 
+
+		visible = {
+			has_country_flag = MDR_inspecting_branches
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = inspection
+				value = 20
+			}
+			add_stability = -0.01
+		}
+	}
+	
+	MDR_inspections_are_over = {
+	    icon = GFX_decision_mdr_investigation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_inspecting_branches
+			check_variable = {
+				var = inspection
+				value = 100
+				compare = greater_than_or_equals
+			}
+		} 
+
+		visible = {
+			has_country_flag = MDR_inspecting_branches
+		}
+
+		cost = 0
+		complete_effect = {
+			add_stability = 0.25
+			add_war_support = 0.25
+			add_political_power = 100
+			add_manpower = 100000
+			add_popularity = {
+			    ideology = communism
+				popularity = 0.2
+			}
+			remove_ideas = MDR_inspections
+			add_to_variable = { MDR_par_political_power_factor = 0.05 }
+	        add_to_variable = { MDR_par_stability_factor = 0.05 }
+		    add_to_variable = { MDR_par_war_support_factor = 0.05 }
+		    add_to_variable = { MDR_par_political_advisor_cost_factor = -0.05 }
+	        add_to_variable = { MDR_par_consumer_goods_factor = -0.05 }
+	        add_to_variable = { MDR_par_army_attack_factor = 0.05 }
+		    add_to_variable = { MDR_par_army_defence_factor = 0.05 }
+	        add_to_variable = { MDR_par_conscription_factor = 0.05 }
+		}
+	}
+}
+
+MDR_n_thad_endgame = {
+
+    MDR_thads_anger = {
+	    icon = GFX_decision_mdr_investigation
+
+		days_mission_timeout = 35
+		selectable_mission = no
+		is_good = no
+		allowed = {
+			has_country_flag = MDR_endgame
+		}
+		activation = {
+			has_country_flag = MDR_endgame
+		}
+		visible = {
+			has_country_flag = MDR_endgame
+		}
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			add_political_power = -20
+			activate_mission = MDR_thads_anger
+			if = {
+				limit = {
+					has_national_spirit = MDR_thads_anger_idea
+				}
+				add_ideas = MDR_thads_anger_idea_two
+			}
+			if = {
+				limit = {
+					has_national_spirit = MDR_thads_anger_idea_two
+				}
+				add_ideas = MDR_thads_anger_idea_three
+			}
+			if = {
+				limit = {
+					has_national_spirit = MDR_thads_anger_idea_three
+				}
+				add_ideas = MDR_thads_anger_idea_four
+			}
+		}
+	}	
+	
+	MDR_ns_anger = {
+	    icon = GFX_decision_mdr_investigation
+
+		days_mission_timeout = 35
+		selectable_mission = no
+		is_good = no
+		allowed = {
+			has_country_flag = MDR_endgame
+		}
+		activation = {
+			has_country_flag = MDR_endgame
+		}
+		visible = {
+			has_country_flag = MDR_endgame
+		}
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			add_political_power = -20
+			activate_mission = MDR_thads_anger
+			if = {
+				limit = {
+					has_national_spirit = MDR_ns_anger_idea
+				}
+				add_ideas = MDR_ns_anger_idea_two
+			}
+			if = {
+				limit = {
+					has_national_spirit = MDR_ns_anger_idea_two
+				}
+				add_ideas = MDR_ns_anger_idea_three
+			}
+			if = {
+				limit = {
+					has_national_spirit = MDR_ns_anger_idea_three
+				}
+				add_ideas = MDR_ns_anger_idea_four
+			}
+		}
+	}	
+}
+
+MDR_pesants_boycot = {
+
+    MDR_pesants_protesting = {
+	    icon = GFX_decision_mdr_investigation
+
+		days_mission_timeout = 365
+		selectable_mission = no
+		is_good = no
+		allowed = {
+			has_completed_focus = MDR_cousins_coalition_won
+		}
+		activation = {
+			has_completed_focus = MDR_cousins_coalition_won
+		}
+		visible = {
+			has_completed_focus = MDR_cousins_coalition_won
+		}
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			add_political_power = -80
+			add_stability = -0.25
+			1020 = { transfer_state_to = PES }
+			229 = { transfer_state_to = PES }
+		}
+	}
 }

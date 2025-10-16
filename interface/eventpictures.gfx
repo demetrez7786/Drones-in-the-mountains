@@ -1,6 +1,21 @@
 spriteTypes = {
 	
 	spriteType = {
+		name = "GFX_report_event_MDR_court_is_reformed"
+		texturefile = "gfx/event_pictures/report_event_MDR_court_is_reformed.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_currency"
+		texturefile = "gfx/event_pictures/report_event_MDR_currency.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_league_of_nations"
+		texturefile = "gfx/event_pictures/report_event_MDR_league_of_nations.png"
+	}
+	
+	spriteType = {
 		name = "GFX_report_event_MDR_sa"
 		texturefile = "gfx/event_pictures/report_event_MDR_sa.png"
 	}

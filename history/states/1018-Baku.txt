@@ -1,6 +1,6 @@
 state={
 	id=1018
-	name="STATE_1018"
+	name="Baku"
 	provinces={
 		1536 4458 4545 7495 7661 
 	}

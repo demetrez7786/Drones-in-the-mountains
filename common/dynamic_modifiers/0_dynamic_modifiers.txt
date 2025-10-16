@@ -54,6 +54,19 @@ MDR_red_army_idea = { #NATIONAL SPIRIT
     army_org_factor = MDR_ra_army_org_factor #0.40
 	training_time_factor = MDR_ra_training_time_factor #0.40
 }
+MDR_khan_army_idea = { #NATIONAL SPIRIT
+    enable = { always = yes }
+    icon = GFX_idea_MDR_red_army
+
+    political_power_gain = MDR_ka_political_power_gain #0.40
+	political_advisor_cost_factor = MDR_ka_political_advisor_cost_factor #0.40
+	army_attack_factor = MDR_ka_army_attack_factor #0.40
+    army_defence_factor = MDR_ka_army_defence_factor #0.40
+    army_org_factor = MDR_ka_army_org_factor #0.40
+	breakthrough_factor = MDR_ka_breakthrough_factor #0.40
+	experience_gain_army_factor = MDR_ka_experience_gain_army_factor #0.40
+	training_time_factor = MDR_ka_training_time_factor #0.40
+}
 MDR_n_economy = { #NATIONAL SPIRIT
     enable = { always = yes }
     icon = GFX_idea_MDR_army
@@ -75,6 +88,28 @@ MDR_uzis_economy_idea = { #NATIONAL SPIRIT
 	industrial_capacity_factory = MDR_un_industrial_capacity_factory
 	industrial_capacity_dockyard = MDR_un_industrial_capacity_dockyard
 }
+MDR_sanctions_idea = { #NATIONAL SPIRIT
+    enable = { always = yes }
+    icon = GFX_idea_MDR_uzis_economy
+
+    consumer_goods_factor = MDR_si_consumer_goods_factor
+	production_speed_buildings_factor = MDR_si_production_speed_buildings_factor
+	stability_factor = MDR_si_stability_factor
+	industrial_capacity_factory = MDR_si_industrial_capacity_factory
+	industrial_capacity_dockyard = MDR_si_industrial_capacity_dockyard
+}
+MDR_capitalism_idea = { #NATIONAL SPIRIT
+    enable = { always = yes }
+    icon = GFX_idea_MDR_uzis_economy
+
+    political_power_gain = MDR_ci_political_power_gain
+	consumer_goods_factor = MDR_ci_consumer_goods_factor
+	production_speed_buildings_factor = MDR_ci_production_speed_buildings_factor
+	stability_factor = MDR_ci_stability_factor
+	industrial_capacity_factory = MDR_ci_industrial_capacity_factory
+	industrial_capacity_dockyard = MDR_ci_industrial_capacity_dockyard
+	research_speed_factor = MDR_ci_research_speed_factor
+}
 MDR_drones_anatomy_idea = { #NATIONAL SPIRIT
     enable = { always = yes }
     icon = GFX_idea_MDR_uzis_economy
@@ -87,6 +122,20 @@ MDR_drones_anatomy_idea = { #NATIONAL SPIRIT
 	army_attack_factor = MDR_dan_army_attack_factor
 	army_defence_factor = MDR_dan_army_defence_factor
 	fascism_drift = MDR_dan_fascism_drift
+}
+MDR_paranoia = { #NATIONAL SPIRIT
+    enable = { always = yes }
+    icon = GFX_idea_MDR_uzis_economy
+
+	political_power_factor = MDR_par_political_power_factor
+	stability_factor = MDR_par_stability_factor
+	war_support_factor = MDR_par_war_support_factor
+	political_advisor_cost_factor = MDR_par_political_advisor_cost_factor
+	consumer_goods_factor = MDR_par_consumer_goods_factor
+	army_attack_factor = MDR_par_army_attack_factor
+	army_defence_factor = MDR_par_army_defence_factor
+	conscription_factor = MDR_par_conscription_factor
+	communism_drift = MDR_par_communism_drift
 }
 RES_gangsters_problems = { #NATIONAL SPIRIT
     enable = { always = yes }

@@ -77,6 +77,38 @@ characters={
 		}
     }
 	
+	MDR_uzis_emergency_government={ #communist Leader
+		name="Emergency Government"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdv_uzi.png"
+				small = "gfx/interface/ideas/portrait_MDR_uzi_small.png"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits={ }
+			expire="5022.8.30.1"
+			id=-1
+		}
+    }
+	
+	MDR_uzi_infected={ #fascist Leader
+		name="Uzi"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdv_uzi.png"
+				small = "gfx/interface/ideas/portrait_MDR_uzi_small.png"
+			}
+		}
+		country_leader={
+			ideology=rexism
+			traits={ puppet_of_as drone_supremacy }
+			expire="5022.8.30.1"
+			id=-1
+		}
+    }
+	
 	MDR_doll={ #communist Leader too
 		name="Doll"
 		portraits={
@@ -271,7 +303,7 @@ characters={
 		}
 		country_leader={
 			ideology=conservatism
-			traits={ }
+			traits={ fortification_engineer }
 			expire="5022.8.30.1"
 			id=-1
 		}
