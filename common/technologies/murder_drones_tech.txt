@@ -1,47 +1,43 @@
 technologies = {
-
-	#infantry
 	
-	worker_drone_tech = {
+	worker_drone_tech = { #Leichttraktor
+	
+		allow = {
+			always = no
+		}
+		
+		show_equipment_icon = yes
 
-		allow = { always = no }
-		
 		enable_equipments = {
-			worker_drone_equipment0
-			railgun_equipment_0
-		}	
-		
+			worker_drone_equipment
+			worker_drone_equipment_0
+			railgun_equipment
+			railgun_equipment_1
+		}
 		enable_subunits = {
 			worker_drone
 			motorized_worker_drone
-			mechanized_worker_drone
-		}
-
-		research_cost = 2
-		start_year = 1940
-		
-		categories = {
-			infantry_weapons
+			# mechanized is not widely used in 1936
+			railgun
+			railgun_brigade
 		}
 	}
-	murder_drone_tech = {
+	
 
-		allow = { always = no }
-		
-		enable_equipments = {
-			murder_drone_equipment_1
-		}	
-		
-		enable_subunits = {
-			infantry
-			murder_drone
+	disassembly_drone_tech = {
+
+		allow = {
+			always = no
 		}
-
-		research_cost = 2
-		start_year = 1946
 		
-		categories = {
-			infantry_weapons
+		show_equipment_icon = yes
+
+		enable_equipments = {
+			disassembly_drone_equipment
+			disassembly_drone_equipment_0
+		}
+		enable_subunits = {
+			disassembly_drone
 		}
 	}
 }
