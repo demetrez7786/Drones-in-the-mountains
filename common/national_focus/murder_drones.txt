@@ -340,8 +340,8 @@ focus_tree = {
 					    puppet_of_as drone_supremacy
 				    }
 			    }
-		    }
-			add_power_balance_value = {
+		    	}
+				add_power_balance_value = {
 				id = MDR_power_balance_bop
 				value = 0.35
 			}
@@ -903,6 +903,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+            hidden_effect = {
+				declare_war_on = {
+				target = ROM
+				type = annex_everything
+		    	}
+			}
             declare_war_on = {
 			target = TUR
 			type = annex_everything
@@ -1007,25 +1013,32 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+			custom_effect_tooltip = Tooltip_MDR_war1
             declare_war_on = {
 			target = AFG
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = BUL
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = GRE
 			type = annex_everything
 		    }
 			declare_war_on = {
 			target = IRQ
 			type = annex_everything
 		    }
-			declare_war_on = {
-			target = YUG
-			type = annex_everything
+			hidden_effect = {
+				declare_war_on = {
+				target = GRE
+				type = annex_everything
+		    	}
+				declare_war_on = {
+				target = BUL
+				type = annex_everything
+		    	}
+				declare_war_on = {
+				target = YUG
+				type = annex_everything
+				}
+				declare_war_on = {
+				target = ROM
+				type = annex_everything
+				}
 		    }
 		}
 	}
@@ -1788,6 +1801,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
+			hidden_effect = {
+				declare_war_on = {
+				target = ROM
+				type = annex_everything
+		    	}
+			}
             declare_war_on = {
 			target = TUR
 			type = annex_everything
@@ -1834,271 +1853,276 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-            1006 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 1006
-			1007 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 1007
-			1005 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 1005
-			1009 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 1009
-			1008 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 1008
-			415 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 415
-			267 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 267
-			292 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 292
-			859 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 859
-			679 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 679
-			856 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 856
-			678 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 678
-			855 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 855
-			857 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 857
-			858 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 858
-			854 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 854
-			971 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 971
-			106 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 106
-			731 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 731
-			48 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 48
-			211 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 211
-			803 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 803
-			77 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 77
-			212 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 212
-			184 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 184
-			801 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 801
-			164 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 164
-			731 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 731
-			187 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 187
-			182 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 182
-			185 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 185
-			184 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 184
-			805 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 805
-			47 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 47
-			186 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 186
-			184 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 184
-			805 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 805
-			47 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 47
-			186 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 186
-			101 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 101
-			388 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 388
-			518 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 518
-			802 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 802
-			163 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 163
-			852 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 852
-			103 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 103
-			970 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 970
-			106 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 106
-			853 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 853
-			803 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 803
-			107 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 107
-			105 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 105
-			108 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 108
-			804 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 804
-			764 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 764
-			736 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 736
-			45 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 45
-			102 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 102
-			102 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 102
-			104 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 104
-			109 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 109
-
-			1010 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 1010
-			675 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 675
-			291 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 291
-			1011 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 1011
-			676 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 676
+			custom_effect_tooltip = Tooltip_MDR_wipe_out_human3.1
+			custom_effect_tooltip = Tooltip_MDR_wipe_out_human3.2
+			custom_effect_tooltip = Tooltip_MDR_wipe_out_human3.3
+			custom_effect_tooltip = Tooltip_MDR_wipe_out_human0
+			hidden_effect = {
+            	1006 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 1006
+				1007 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 1007
+				1005 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 1005
+				1009 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 1009
+				1008 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 1008
+				415 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 415
+				267 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 267
+				292 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 292
+				859 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 859
+				679 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 679
+				856 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 856
+				678 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 678
+				855 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 855
+				857 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 857
+				858 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 858
+				854 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 854
+				971 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 971
+				106 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 106
+				731 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 731
+				48 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 48
+				211 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 211
+				803 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 803
+				77 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 77
+				212 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 212
+				184 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 184
+				801 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 801
+				164 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 164
+				731 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 731
+				187 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 187
+				182 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 182
+				185 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 185
+				184 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 184
+				805 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 805
+				47 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 47
+				186 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 186
+				184 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 184
+				805 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 805
+				47 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 47
+				186 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 186
+				101 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 101
+				388 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 388
+				518 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 518
+				802 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 802
+				163 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 163
+				852 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 852
+				103 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 103
+				970 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 970
+				106 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 106
+				853 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 853
+				803 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 803
+				107 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 107
+				105 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 105
+				108 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 108
+				804 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 804
+				764 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 764
+				736 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 736
+				45 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 45
+				102 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 102
+				102 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 102
+				104 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 104
+				109 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 109
+				1010 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 1010
+				675 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 675
+				291 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 291
+				1011 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 1011
+				676 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 676
+			}
 		}
 	}
 
@@ -2500,254 +2524,258 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-            613 = {
+			custom_effect_tooltip = Tooltip_MDR_wipe_out_human2
+			custom_effect_tooltip = Tooltip_MDR_wipe_out_human0
+			hidden_effect = {
+            	613 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 613
-			620 = {
+		    	}
+				add_state_core = 613
+				620 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 620
-			604 = {
+		    	}
+				add_state_core = 620
+				604 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 604
-			616 = {
+		    	}
+				add_state_core = 604
+				616 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 616
-			610 = {
+		    	}
+				add_state_core = 616
+				610 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 610
-			614 = {
+		    	}
+				add_state_core = 610
+				614 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 614
-			619 = {
+		    	}
+				add_state_core = 614
+				619 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 619
-			605 = {
+		    	}
+				add_state_core = 619
+				605 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 605
-			606 = {
+		    	}
+				add_state_core = 605
+				606 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 606
-			611 = {
+		    	}
+				add_state_core = 606
+				611 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 611
-			622 = {
+		    	}
+				add_state_core = 611
+				622 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 622
-			618 = {
+		    	}
+				add_state_core = 622
+				618 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 618
-			621 = {
+		    	}
+				add_state_core = 618
+				621 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 621
-			603 = {
+		    	}
+				add_state_core = 621
+				603 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 603
-			612 = {
+		    	}
+				add_state_core = 603
+				612 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 612
-			609 = {
+		    	}
+				add_state_core = 612
+				609 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 609
-			602 = {
+		    	}
+				add_state_core = 609
+				602 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 602
-			601 = {
+		    	}
+				add_state_core = 602
+				601 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 601
-			607 = {
+		    	}
+				add_state_core = 601
+				607 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 607
-			283 = {
+		    	}
+				add_state_core = 607
+				283 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 283
-			754 = {
+		    	}
+				add_state_core = 283
+				754 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 754
-			592 = {
+		    	}
+				add_state_core = 754
+				592 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 592
-			594 = {
+		    	}
+				add_state_core = 592
+				594 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 594
-			596 = {
+		    	}
+				add_state_core = 594
+				596 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 596
-			751 = {
+		    	}
+				add_state_core = 596
+				751 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 751
-			755 = {
+		    	}
+				add_state_core = 751
+				755 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 755
-			608 = {
+		    	}
+				add_state_core = 755
+				608 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 608
-			597 = {
+		    	}
+				add_state_core = 608
+				597 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 597
-			599 = {
+		    	}
+				add_state_core = 597
+				599 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 599
-			744 = {
+		    	}
+				add_state_core = 599
+				744 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 744
-			717 = {
+		    	}
+				add_state_core = 744
+				717 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 717
-			753 = {
+		    	}
+				add_state_core = 717
+				753 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 753
-			715 = {
+		    	}
+				add_state_core = 753
+				715 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 715
-			750 = {
+		    	}
+				add_state_core = 715
+				750 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 750
-			743 = {
+		    	}
+				add_state_core = 750
+				743 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 743
-			326 = {
+		    	}
+				add_state_core = 743
+				326 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 326
-			598 = {
+		    	}
+				add_state_core = 326
+				598 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 598
-			325 = {
+		    	}
+				add_state_core = 598
+				325 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 325
-			729 = {
+		    	}
+				add_state_core = 325
+				729 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 729
-			593 = {
+		    	}
+				add_state_core = 729
+				593 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 593
-			714 = {
+		    	}
+				add_state_core = 593
+				714 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 714
-			747 = {
+		    	}
+				add_state_core = 714
+				747 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 747
-			617 = {
+		    	}
+				add_state_core = 747
+				617 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 617
-			761 = {
+		    	}
+				add_state_core = 617
+				761 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 761
-			746 = {
+		    	}
+				add_state_core = 761
+				746 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 746
-			716 = {
+		    	}
+				add_state_core = 746
+				716 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 716
-			287 = {
+		    	}
+				add_state_core = 716
+				287 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 287
-			591 = {
+		    	}
+				add_state_core = 287
+				591 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 591
-			748 = {
+		    	}
+				add_state_core = 591
+				748 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 748
-			600 = {
+		    	}
+				add_state_core = 748
+				600 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 600
-			756 = {
+		    	}
+				add_state_core = 600
+				756 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 756
-			595 = {
+		    	}
+				add_state_core = 756
+				595 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 595
-			759 = {
+		    	}
+				add_state_core = 595
+				759 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 759
-			749 = {
+		    	}
+				add_state_core = 759
+				749 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 749
-			745 = {
+		    	}
+				add_state_core = 749
+				745 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 745
-			760 = {
+		    	}
+				add_state_core = 745
+				760 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 760
-			760 = {
+		    	}
+				add_state_core = 760
+				760 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 760
-			615 = {
+		    	}
+				add_state_core = 760
+				615 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 615
-			328 = {
+		    	}
+				add_state_core = 615
+				328 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 328
-			752 = {
+		    	}
+				add_state_core = 328
+				752 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 752
-			728 = {
+		    	}
+				add_state_core = 752
+				728 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 728
-			524 = {
+		    	}
+				add_state_core = 728
+				524 = {
 			    add_manpower = -50000
-		    }
-			add_state_core = 524
+		    	}
+				add_state_core = 524
+			}
 		}
 	}
 
@@ -2778,354 +2806,360 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-            233 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 233
-			827 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 827
-			828 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 828
-			821 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 821
-			232 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 232
-			235 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 235
-			234 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 234
-			237 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 237
-			218 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 218
-			238 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 238
-			217 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 217
-			245 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 245
-			137 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 137
-			227 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 227
-			200 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 200
-			196 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 196
-			226 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 226
-			197 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 197
-			192 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 192
-			834 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 834
-			203 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 203
-			202 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 202
-			198 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 198
-			199 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 199
-			201 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 201
-			259 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 259
-			221 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 221
-			228 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 228
-			240 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 240
-			265 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 265
-			236 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 236
-			225 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 225
-			220 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 220
-			222 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 222
-			224 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 224
-			241 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 241
-			206 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 206
-			207 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 207
-			204 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 204
-			205 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 205
-			223 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 223
-			219 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 219
-			247 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 247
-			252 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 252
-			195 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 195
-			249 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 249
-			797 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 797
-			799 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 799
-			356 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 356
-			350 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 350
-			354 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 354
-			339 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 339
-			345 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 345
-			344 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 344
-			342 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 342
-			346 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 346
-			343 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 343
-			789 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 789
-			800 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 800
-			49 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 49
-			352 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 352
-			341 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 341
-			340 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 340
-			348 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 348
-			353 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 353
-			347 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 347
-			355 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 355
-			349 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 349
-			1003 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 1003
-			1001 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 1001
-			416 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 416
-			419 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 419
-			417 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 417
-			411 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 411
-			412 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 412
-			421 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 421
-			1000 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 1000
-			412 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 412
-			1000 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 1000
-			410 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 410
-			1002 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 1002
-			266 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 266
-			414 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 414
-			1004 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 1004
-			418 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 418
-			413 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 413
-			420 = {
-			    add_manpower = -50000
-		    }
-			add_state_core = 420
+			custom_effect_tooltip = Tooltip_MDR_wipe_out_human1.1
+			custom_effect_tooltip = Tooltip_MDR_wipe_out_human1.2
+			custom_effect_tooltip = Tooltip_MDR_wipe_out_human1.3
+			custom_effect_tooltip = Tooltip_MDR_wipe_out_human0
+			hidden_effect = {
+            	233 = {
+				    add_manpower = -50000
+		    	}
+				add_state_core = 233
+				827 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 827
+				828 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 828
+				821 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 821
+				232 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 232
+				235 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 235
+				234 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 234
+				237 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 237
+				218 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 218
+				238 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 238
+				217 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 217
+				245 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 245
+				137 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 137
+				227 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 227
+				200 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 200
+				196 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 196
+				226 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 226
+				197 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 197
+				192 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 192
+				834 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 834
+				203 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 203
+				202 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 202
+				198 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 198
+				199 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 199
+				201 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 201
+				259 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 259
+				221 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 221
+				228 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 228
+				240 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 240
+				265 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 265
+				236 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 236
+				225 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 225
+				220 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 220
+				222 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 222
+				224 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 224
+				241 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 241
+				206 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 206
+				207 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 207
+				204 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 204
+				205 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 205
+				223 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 223
+				219 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 219
+				247 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 247
+				252 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 252
+				195 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 195
+				249 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 249
+				797 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 797
+				799 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 799
+				356 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 356
+				350 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 350
+				354 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 354
+				339 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 339
+				345 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 345
+				344 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 344
+				342 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 342
+				346 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 346
+				343 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 343
+				789 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 789
+				800 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 800
+				49 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 49
+				352 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 352
+				341 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 341
+				340 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 340
+				348 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 348
+				353 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 353
+				347 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 347
+				355 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 355
+				349 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 349
+				1003 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 1003
+				1001 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 1001
+				416 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 416
+				419 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 419
+				417 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 417
+				411 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 411
+				412 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 412
+				421 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 421
+				1000 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 1000
+				412 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 412
+				1000 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 1000
+				410 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 410
+				1002 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 1002
+				266 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 266
+				414 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 414
+				1004 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 1004
+				418 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 418
+				413 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 413
+				420 = {
+			    add_manpower = -50000
+		    	}
+				add_state_core = 420
+			}
 		}
 	}
 
