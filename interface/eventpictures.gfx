@@ -1,6 +1,36 @@
 spriteTypes = {
 	
 	spriteType = {
+		name = "GFX_report_event_MDR_poll"
+		texturefile = "gfx/event_pictures/report_event_MDR_poll.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_seeking_help"
+		texturefile = "gfx/event_pictures/report_event_MDR_seeking_help.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_head_of_doctors"
+		texturefile = "gfx/event_pictures/report_event_MDR_head_of_doctors.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_hacking"
+		texturefile = "gfx/event_pictures/report_event_MDR_hacking.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_uzi_infected"
+		texturefile = "gfx/event_pictures/report_event_MDR_uzi_infected.png"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_tessa_is_programmed"
+		texturefile = "gfx/event_pictures/news_event_tessa_is_programmed.png"
+	}
+	
+	spriteType = {
 		name = "GFX_report_event_MDR_court_is_reformed"
 		texturefile = "gfx/event_pictures/report_event_MDR_court_is_reformed.png"
 	}

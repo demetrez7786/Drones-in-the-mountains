@@ -3,6 +3,21 @@ spriteTypes = {
 	### categories
 	
 	spriteType = {
+		name = "GFX_decision_cat_mdr_endgame"
+		texturefile = "gfx/interface/decisions/decision_cat_mdr_endgame.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_mdr_thads_anger"
+		texturefile = "gfx/interface/decisions/decision_mdr_thads_anger.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_ns_anger"
+		texturefile = "gfx/interface/decisions/decision_ns_anger.png"
+	}
+	
+	spriteType = {
 		name = "GFX_decision_mdr_military_police"
 		texturefile = "gfx/interface/decisions/decision_mdr_military_police.png"
 	}

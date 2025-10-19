@@ -116,7 +116,7 @@ spriteTypes = {
 	spriteType = { name = "GFX_unit_mothership_icon_medium"									textureFile = "gfx/interface/counters/divisions_large/unit_mothership_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_guided_missile_icon_medium"								textureFile = "gfx/interface/counters/divisions_large/unit_guided_missile_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_worker_drone_icon_medium"								textureFile = "gfx/interface/counters/divisions_large/unit_worker_drone_icon.dds" noOfFrames = 2 }
-	spriteType = { name = "GFX_unit_murder_drone_icon_medium"								textureFile = "gfx/interface/counters/divisions_large/unit_murder_drone_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_disassembly_drone_icon_medium"							textureFile = "gfx/interface/counters/divisions_large/unit_disassembly_drone_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_motorized_worker_drone_icon_medium"						textureFile = "gfx/interface/counters/divisions_large/unit_motorized_worker_drone_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_mechanized_worker_drone_icon_medium"					textureFile = "gfx/interface/counters/divisions_large/unit_mechanized_worker_drone_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_railgun_icon_medium"									textureFile = "gfx/interface/counters/divisions_large/support_unit_railgun_icon.dds" noOfFrames = 2 }
@@ -220,7 +220,7 @@ spriteTypes = {
 	spriteType = { name = "GFX_unit_sturmtruppe_battalion_icon_medium_white"				textureFile = "gfx/interface/counters/divisions_small/onmap_unit_sturmtruppe_battalion_icon.dds" noOfFrames = 2}
 	spriteType = { name = "GFX_unit_motorized_military_police_icon_medium_white"			textureFile = "gfx/interface/counters/divisions_small/onmap_unit_motorized_military_police_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_worker_drone_icon_medium_white"							textureFile = "gfx/interface/counters/divisions_small/onmap_unit_worker_drone_icon.dds" noOfFrames = 2}
-	spriteType = { name = "GFX_unit_murder_drone_icon_medium_white"							textureFile = "gfx/interface/counters/divisions_small/onmap_unit_murder_drone_icon.dds" noOfFrames = 2}
+	spriteType = { name = "GFX_unit_disassembly_drone_icon_medium_white"					textureFile = "gfx/interface/counters/divisions_small/onmap_unit_disassembly_drone_icon.dds" noOfFrames = 2}
 	spriteType = { name = "GFX_unit_motorized_worker_drone_icon_medium_white"				textureFile = "gfx/interface/counters/divisions_small/onmap_unit_motorized_worker_drone_icon.dds" noOfFrames = 2}
 	spriteType = { name = "GFX_unit_mechanized_worker_drone_icon_medium_white"				textureFile = "gfx/interface/counters/divisions_small/onmap_unit_mechanized_worker_drone_icon.dds" noOfFrames = 2}
 	spriteType = { name = "GFX_unit_railgun_icon_medium_white"								textureFile = "gfx/interface/counters/divisions_small/onmap_unit_railgun_icon.dds" noOfFrames = 2}

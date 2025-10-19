@@ -5942,7 +5942,7 @@ MDR_cure_uzi = {
 	}
 	
 	MDR_hack_absolute_solvers_system = {
-	    icon = decision_mdr_hacking
+	    icon = GFX_decision_mdr_hacking
 
 		ai_will_do = {
 			base = 100
@@ -6064,7 +6064,7 @@ MDR_cure_uzi_as_side = {
 		is_good = no
 		allowed = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected_as_side
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					has_country_flag = MDR_tessa_is_programed
 				}
@@ -6072,7 +6072,7 @@ MDR_cure_uzi_as_side = {
 		}
 		activation = {
 			AND = {
-			    has_country_flag = MDR_uzi_is_infected_as_side
+			    has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6083,7 +6083,7 @@ MDR_cure_uzi_as_side = {
 		}
 		visible = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected_as_side
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6121,7 +6121,7 @@ MDR_cure_uzi_as_side = {
 		is_good = no
 		allowed = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected_as_side
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					has_country_flag = MDR_tessa_is_programed
 				}
@@ -6129,7 +6129,7 @@ MDR_cure_uzi_as_side = {
 		}
 		activation = {
 			AND = {
-			    has_country_flag = MDR_uzi_is_infected_as_side
+			    has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6140,7 +6140,7 @@ MDR_cure_uzi_as_side = {
 		}
 		visible = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected_as_side
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6178,7 +6178,7 @@ MDR_cure_uzi_as_side = {
 		is_good = no
 		allowed = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected_as_side
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					has_country_flag = MDR_tessa_is_programed
 				}
@@ -6186,7 +6186,7 @@ MDR_cure_uzi_as_side = {
 		}
 		activation = {
 			AND = {
-			    has_country_flag = MDR_uzi_is_infected_as_side
+			    has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6197,7 +6197,7 @@ MDR_cure_uzi_as_side = {
 		}
 		visible = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected_as_side
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6243,7 +6243,7 @@ MDR_cure_uzi_as_side = {
 
 		available = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6255,7 +6255,7 @@ MDR_cure_uzi_as_side = {
 
 		visible = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 				    OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6287,7 +6287,7 @@ MDR_cure_uzi_as_side = {
 
 		available = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected_as_side
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6299,7 +6299,7 @@ MDR_cure_uzi_as_side = {
 
 		visible = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6345,7 +6345,7 @@ MDR_cure_uzi_as_side = {
 
 		available = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected_as_side
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6357,7 +6357,7 @@ MDR_cure_uzi_as_side = {
 
 		visible = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6388,7 +6388,7 @@ MDR_cure_uzi_as_side = {
 	}
 	
 	MDR_hack_hospitals_system = {
-	    icon = GFX_GFX_decision_mdr_hacking
+	    icon = GFX_decision_mdr_hacking
 
 		ai_will_do = {
 			base = 100
@@ -6403,7 +6403,7 @@ MDR_cure_uzi_as_side = {
 
 		available = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected_as_side
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6415,7 +6415,7 @@ MDR_cure_uzi_as_side = {
 
 		visible = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6465,7 +6465,7 @@ MDR_cure_uzi_as_side = {
 
 		available = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6477,7 +6477,7 @@ MDR_cure_uzi_as_side = {
 
 		visible = {
 			AND = {
-				has_country_flag = MDR_uzi_is_infected
+				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
 					OR = {
 		                has_country_flag = MDR_uzi_is_cured
@@ -6864,7 +6864,7 @@ MDR_inspecting_all_branches = {
 MDR_n_thad_endgame = {
 
     MDR_thads_anger = {
-	    icon = GFX_decision_mdr_investigation
+	    icon = GFX_decision_mdr_thads_anger
 
 		days_mission_timeout = 35
 		selectable_mission = no
@@ -6906,7 +6906,7 @@ MDR_n_thad_endgame = {
 	}	
 	
 	MDR_ns_anger = {
-	    icon = GFX_decision_mdr_investigation
+	    icon = GFX_decision_ns_anger
 
 		days_mission_timeout = 35
 		selectable_mission = no
@@ -6951,7 +6951,7 @@ MDR_n_thad_endgame = {
 MDR_pesants_boycot = {
 
     MDR_pesants_protesting = {
-	    icon = GFX_decision_mdr_investigation
+	    icon = GFX_decision_POL_looming_peasants_strike
 
 		days_mission_timeout = 365
 		selectable_mission = no

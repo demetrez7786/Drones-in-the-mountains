@@ -81,7 +81,7 @@ characters={
 		name="Emergency Government"
 		portraits={
 			civilian={
-				large="gfx/leaders/MDR/portrait_mdv_uzi.png"
+				large="gfx/leaders/MDR/portrait_mdr_emergency_government.png"
 				small = "gfx/interface/ideas/portrait_MDR_uzi_small.png"
 			}
 		}
@@ -97,7 +97,7 @@ characters={
 		name="Uzi"
 		portraits={
 			civilian={
-				large="gfx/leaders/MDR/portrait_mdv_uzi.png"
+				large="gfx/leaders/MDR/portrait_mdr_infected_uzi.png"
 				small = "gfx/interface/ideas/portrait_MDR_uzi_small.png"
 			}
 		}

@@ -12,7 +12,7 @@ focus_tree = {
 	
 	default = no
 	
-	continuous_focus_position = { x = 50 y = 4000 }
+	continuous_focus_position = { x = 50 y = 4500 }
 
     focus = {
 		id = MDR_cousins_coalition_won
@@ -51,6 +51,7 @@ focus_tree = {
 			remove_power_balance = {
                 id = MDR_power_balance_bop
             }
+			activate_mission = MDR_pesants_protesting
 		}
 	}
 
@@ -382,7 +383,7 @@ focus_tree = {
 
 	focus = {
 		id = MDR_core_all_lands
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_core_our_lands
 		x = 15
 		y = 11
 		prerequisite = { focus = MDR_into_balkans }
@@ -419,7 +420,7 @@ focus_tree = {
 
 	focus = {
 		id = MDR_something_aint_right
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_something_aint_right
 		x = 15
 		y = 12
 		prerequisite = { focus = MDR_core_all_lands }
@@ -444,18 +445,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    every_state = {
-                limit = {
-                    is_controlled_by = MDR
-                }
-                add_core_of = MDR
-            }
+		    country_event = { id = drones.37 days = 10 }
 		}
 	}
 
 	focus = {
 		id = MDR_emergency_government
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_emergency_government
 		x = 15
 		y = 13
 		prerequisite = { focus = MDR_something_aint_right }
@@ -500,7 +496,7 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_fund_the_hospital
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_fund_hospitals
 		x = 14
 		y = 14
 		prerequisite = { focus = MDR_emergency_government }
@@ -536,7 +532,7 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_secret_agreements_with_absolute_solver
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_secret_agreement_with_absolute_solver
 		x = 16
 		y = 14
 		prerequisite = { focus = MDR_emergency_government }
@@ -572,7 +568,7 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_disturb_cure_progress
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_disturb_cure_progress
 		x = 16
 		y = 15
 		prerequisite = { focus = MDR_secret_agreements_with_absolute_solver }
@@ -609,7 +605,7 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_introduce_anti_virus_programs
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_anti_virus_programs
 		x = 14
 		y = 15
 		prerequisite = { focus = MDR_fund_the_hospital }
@@ -645,7 +641,7 @@ focus_tree = {
 
 	focus = {
 		id = MDR_virus_took_over_her
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_virus_took_over_her
 		x = 22
 		y = 16
 
@@ -694,7 +690,7 @@ focus_tree = {
 
 	focus = {
 		id = MDR_virus_is_defeated
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_virus_is_defeated
 		x = 8
 		y = 16
 
@@ -736,10 +732,10 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_nationwide_hunting_on_fascists
-		icon = GFX_MDR_into_balkans
-		x = 6
-		y = 17
-		prerequisite = { focus = MDR_virus_is_defeated }
+		icon = GFX_MDR_hunt_fascists
+		x = 8
+		y = 18
+		prerequisite = { focus = MDR_consolidate_the_power }
 
 		cost = 5
 
@@ -777,7 +773,7 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_consolidate_the_power
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_consolidating_power
 		x = 8
 		y = 17
 		prerequisite = { focus = MDR_virus_is_defeated }
@@ -810,11 +806,719 @@ focus_tree = {
 			}	
 		}
 	}
+
+	focus = {
+		id = MDR_national_speeches
+		icon = GFX_MDR_grand_speech
+		x = 22
+		y = 17
+		prerequisite = { focus = MDR_virus_took_over_her }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 50
+			add_stability = 0.1
+			add_war_support = 0.15
+			add_popularity = {
+			    ideology = fascism
+				popularity = 0.15
+			}	
+		}
+	}
+
+	focus = {
+		id = MDR_crackdown_protests
+		icon = GFX_MDR_crackdown_protest
+		x = 22
+		y = 18
+		prerequisite = { focus = MDR_national_speeches }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    remove_ideas = MDR_communists_protest
+		}
+	}
+
+	focus = {
+		id = MDR_regain_trust
+		icon = GFX_goal_unknown
+		x = 22
+		y = 19
+		prerequisite = { focus = MDR_crackdown_protests }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 50
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MDR_fake_promises_uzi
+		icon = GFX_goal_unknown
+		x = 22
+		y = 20
+		prerequisite = { focus = MDR_regain_trust }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_to_variable = { MDR_lt_political_power_factor = 0.05 }
+	        add_to_variable = { MDR_lt_stability_factor = 0.05 }
+		    add_to_variable = { MDR_lt_war_support_factor = 0.05 }
+		    add_to_variable = { MDR_lt_political_advisor_cost_factor = -0.05 }
+	        add_to_variable = { MDR_lt_consumer_goods_factor = -0.05 }
+	        add_to_variable = { MDR_lt_army_attack_factor = 0.05 }
+		    add_to_variable = { MDR_lt_army_defence_factor = 0.05 }
+	        add_to_variable = { MDR_lt_conscription_factor = 0.05 }
+		}
+	}
+
+	focus = {
+		id = MDR_promote_solverism_uzi
+		icon = GFX_MDR_solverism_above_all
+		x = 24
+		y = 20
+		prerequisite = { focus = MDR_regain_trust }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_to_variable = { MDR_lt_political_power_factor = 0.05 }
+	        add_to_variable = { MDR_lt_stability_factor = 0.05 }
+		    add_to_variable = { MDR_lt_war_support_factor = 0.05 }
+		    add_to_variable = { MDR_lt_political_advisor_cost_factor = -0.05 }
+	        add_to_variable = { MDR_lt_consumer_goods_factor = -0.05 }
+	        add_to_variable = { MDR_lt_army_attack_factor = 0.05 }
+		    add_to_variable = { MDR_lt_army_defence_factor = 0.05 }
+	        add_to_variable = { MDR_lt_conscription_factor = 0.05 }
+			add_ideas = MDR_solverism
+		}
+	}
+
+	focus = {
+		id = MDR_promote_drone_supremacy
+		icon = GFX_MDR_drone_supremacy
+		x = 20
+		y = 20
+		prerequisite = { focus = MDR_regain_trust }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_to_variable = { MDR_lt_political_power_factor = 0.05 }
+	        add_to_variable = { MDR_lt_stability_factor = 0.05 }
+		    add_to_variable = { MDR_lt_war_support_factor = 0.05 }
+		    add_to_variable = { MDR_lt_political_advisor_cost_factor = -0.05 }
+	        add_to_variable = { MDR_lt_consumer_goods_factor = -0.05 }
+	        add_to_variable = { MDR_lt_army_attack_factor = 0.05 }
+		    add_to_variable = { MDR_lt_army_defence_factor = 0.05 }
+	        add_to_variable = { MDR_lt_conscription_factor = 0.05 }
+			add_ideas = MDR_drone_supremacy_idea
+		}
+	}
+
+	focus = {
+		id = MDR_live_propaganda
+		icon = GFX_MDR_live_propaganda
+		x = 21
+		y = 21
+		prerequisite = { focus = MDR_regain_trust }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_to_variable = { MDR_lt_political_power_factor = 0.05 }
+	        add_to_variable = { MDR_lt_stability_factor = 0.05 }
+		    add_to_variable = { MDR_lt_war_support_factor = 0.05 }
+		    add_to_variable = { MDR_lt_political_advisor_cost_factor = -0.05 }
+	        add_to_variable = { MDR_lt_consumer_goods_factor = -0.05 }
+	        add_to_variable = { MDR_lt_army_attack_factor = 0.05 }
+		    add_to_variable = { MDR_lt_army_defence_factor = 0.05 }
+	        add_to_variable = { MDR_lt_conscription_factor = 0.05 }
+			add_ideas = MDR_live_propaganda_idea
+		}
+	}
+
+	focus = {
+		id = MDR_kill_oppositioners_uzi
+		icon = GFX_goal_unknown
+		x = 23
+		y = 21
+		prerequisite = { focus = MDR_regain_trust }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_to_variable = { MDR_lt_political_power_factor = 0.05 }
+	        add_to_variable = { MDR_lt_stability_factor = 0.05 }
+		    add_to_variable = { MDR_lt_war_support_factor = 0.05 }
+		    add_to_variable = { MDR_lt_political_advisor_cost_factor = -0.05 }
+	        add_to_variable = { MDR_lt_consumer_goods_factor = -0.05 }
+	        add_to_variable = { MDR_lt_army_attack_factor = 0.05 }
+		    add_to_variable = { MDR_lt_army_defence_factor = 0.05 }
+	        add_to_variable = { MDR_lt_conscription_factor = 0.05 }
+			add_manpower = -43
+		}
+	}
+
+	focus = {
+		id = MDR_trusted_uzi
+		icon = GFX_MDR_trusted_uzi
+		x = 22
+		y = 22
+		prerequisite = { focus = MDR_fake_promises_uzi }
+		prerequisite = { focus = MDR_promote_drone_supremacy }
+		prerequisite = { focus = MDR_live_propaganda }
+		prerequisite = { focus = MDR_kill_oppositioners_uzi }
+		prerequisite = { focus = MDR_promote_solverism_uzi }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 90
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_popularity = {
+			    ideology = fascism
+				popularity = 0.15
+			}	
+			remove_dynamic_modifier = { modifier = MDR_lost_trust }
+		}
+	}
+
+	focus = {
+		id = MDR_erase_red
+		icon = GFX_MDR_operation_solverism
+		x = 22
+		y = 23
+		prerequisite = { focus = MDR_trusted_uzi }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    declare_war_on = {
+			target = SOV
+			type = annex_everything
+		    }
+		}
+	}
+
+	focus = {
+		id = MDR_kill_all_humans
+		icon = GFX_MDR_wipe_out_humans
+		x = 22
+		y = 24
+		prerequisite = { focus = MDR_erase_red }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    every_state = {
+                limit = {
+                    is_controlled_by = MDR
+                }
+                add_core_of = MDR
+				add_manpower = -50000
+            }
+		}
+	}
+
+	focus = {
+		id = MDR_total_war
+		icon = GFX_MDR_operation_solve_the_earth
+		x = 22
+		y = 25
+		prerequisite = { focus = MDR_kill_all_humans }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = GRE
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BUL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ENG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = FRA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = POL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = HUN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SPR
+				type = annex_everything
+			}
+            declare_war_on = {
+				target = SWI
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ITA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SWE
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LUX
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = HOL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BEL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CZE
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = AUS
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LIT
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = EST
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LAT
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = YUG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ALB
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = NOR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = DEN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = DOM
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = IRE
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = POR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = IRQ
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SAU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = FIN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ARG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BOL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BRA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CHI
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CHL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = COL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = COS
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ECU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ELS
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ETH
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = GUA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = HON
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = IRQ
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = JAP
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = KOR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LIB
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MEX
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MEN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = NEP
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = NIC
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PAN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PHI
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PRU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SIA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SIK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = TIB
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = URG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = VEN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = YUN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PAR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CUB
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = DUM
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = HAI
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = GXC
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PRC
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SHX
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = XSM
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ICE
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LAO
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BHU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			hidden_effect = {
+		    news_event = { id = news.416 }
+		    }
+		}
+	}
 	
 	focus = {
 		id = MDR_purge_the_ministres_uzi
-		icon = GFX_MDR_into_balkans
-		x = 7
+		icon = GFX_goal_unknown
+		x = 6
 		y = 18
 		prerequisite = { focus = MDR_consolidate_the_power }
 
@@ -848,8 +1552,8 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_inspect_all_branches
-		icon = GFX_MDR_into_balkans
-		x = 9
+		icon = GFX_MDR_inspect_all_branches
+		x = 10
 		y = 18
 		prerequisite = { focus = MDR_consolidate_the_power }
 
@@ -881,7 +1585,7 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_survelience_on_mountains
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_survelience_on_mountains
 		x = 7
 		y = 19
 		prerequisite = { focus = MDR_purge_the_ministres_uzi }
@@ -911,7 +1615,7 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_strengthen_border_patrol
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_defend_borders
 		x = 9
 		y = 19
 		prerequisite = { focus = MDR_inspect_all_branches }
@@ -942,7 +1646,7 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_fight_back_paranoia
-		icon = GFX_MDR_into_balkans
+		icon = GFX_goal_unknown
 		x = 8
 		y = 20
 		prerequisite = { focus = MDR_survelience_on_mountains }
@@ -978,7 +1682,7 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_help_from_n_paranoia
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_seek_help_from_N
 		x = 7
 		y = 21
 		prerequisite = { focus = MDR_fight_back_paranoia }
@@ -1013,8 +1717,8 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_ganjas_freedom_law
-		icon = GFX_MDR_into_balkans
-		x = 6
+		icon = GFX_MDR_ganja_freedom_law
+		x = 7
 		y = 22
 		prerequisite = { focus = MDR_help_from_n_paranoia }
 
@@ -1057,8 +1761,8 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_purge_suspicious_generals
-		icon = GFX_MDR_into_balkans
-		x = 6
+		icon = GFX_goal_unknown
+		x = 7
 		y = 23
 		prerequisite = { focus = MDR_ganjas_freedom_law }
 
@@ -1096,8 +1800,8 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_online_safety_act
-		icon = GFX_MDR_into_balkans
-		x = 6
+		icon = GFX_MDR_online_safety_act
+		x = 7
 		y = 24
 		prerequisite = { focus = MDR_purge_suspicious_generals }
 
@@ -1137,7 +1841,7 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_help_from_thad_paranoia
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_help_from_thad
 		x = 9
 		y = 21
 		prerequisite = { focus = MDR_fight_back_paranoia }
@@ -1172,8 +1876,8 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_deliver_national_speeches
-		icon = GFX_MDR_into_balkans
-		x = 10
+		icon = GFX_MDR_deliver_speech
+		x = 9
 		y = 22
 		prerequisite = { focus = MDR_help_from_thad_paranoia }
 
@@ -1214,8 +1918,8 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_public_political_poll
-		icon = GFX_MDR_into_balkans
-		x = 10
+		icon = GFX_MDR_public_polls
+		x = 9
 		y = 23
 		prerequisite = { focus = MDR_deliver_national_speeches }
 
@@ -1245,8 +1949,8 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_reunion_with_council
-		icon = GFX_MDR_into_balkans
-		x = 10
+		icon = GFX_goal_unknown
+		x = 9
 		y = 24
 		prerequisite = { focus = MDR_public_political_poll }
 
@@ -1287,7 +1991,7 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_silence_of_paranoia
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_silence_of_paranoia
 		x = 8
 		y = 25
 		prerequisite = { focus = MDR_online_safety_act }
@@ -1323,7 +2027,7 @@ focus_tree = {
 	
 	focus = {
 		id = MDR_the_last_issue
-		icon = GFX_MDR_into_balkans
+		icon = GFX_MDR_last_issue
 		x = 8
 		y = 26
 		prerequisite = { focus = MDR_silence_of_paranoia }
@@ -1352,6 +2056,461 @@ focus_tree = {
 			set_country_flag = MDR_endgame
 			activate_mission = MDR_thads_anger
 			activate_mission = MDR_ns_anger
+			add_ideas = MDR_thads_anger_idea
+			add_ideas = MDR_ns_anger_idea
+		}
+	}
+
+	focus = {
+		id = MDR_between_two_queens
+		icon = GFX_MDR_neutral_side
+		x = 8
+		y = 27
+		prerequisite = { focus = MDR_the_last_issue }
+		mutually_exclusive = { focus = MDR_white_queen focus = MDR_black_queen }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 20
+			add_stability = 0.05
+			deactivate_mission = MDR_thads_anger
+			deactivate_mission = MDR_ns_anger
+			remove_ideas = MDR_ns_anger_idea
+			remove_ideas = MDR_ns_anger_idea_two
+			remove_ideas = MDR_ns_anger_idea_three
+			remove_ideas = MDR_ns_anger_idea_four
+			remove_ideas = MDR_thads_anger_idea
+			remove_ideas = MDR_thads_anger_idea_two
+			remove_ideas = MDR_thads_anger_idea_three
+			remove_ideas = MDR_thads_anger_idea_four
+		}
+	}
+
+	focus = {
+		id = MDR_drones_equality_act
+		icon = GFX_MDR_equality_act
+		x = 8
+		y = 28
+		prerequisite = { focus = MDR_the_last_issue }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 20
+			add_stability = 0.05
+			add_ideas = MDR_drones_equality_act_idea
+		}
+	}
+
+	focus = {
+		id = MDR_give_n_little_bit_of_power
+		icon = GFX_goal_unknown
+		x = 10
+		y = 28
+		prerequisite = { focus = MDR_black_queen }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 20
+			add_stability = 0.05
+			deactivate_mission = MDR_ns_anger
+			remove_ideas = MDR_ns_anger_idea
+			remove_ideas = MDR_ns_anger_idea_two
+			remove_ideas = MDR_ns_anger_idea_three
+			remove_ideas = MDR_ns_anger_idea_four
+		}
+	}
+
+	focus = {
+		id = MDR_fund_land_forces_uzi
+		icon = GFX_MDR_fund_land_force
+		x = 10
+		y = 29
+		prerequisite = { focus = MDR_give_n_little_bit_of_power }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_equipment_to_stockpile = { 
+				type = infantry_equipment_1
+				amount = 150000
+			}
+			add_equipment_to_stockpile = { 
+				type = artillery_equipment_1
+				amount = 150000
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_promote_thad_as_prime_minister
+		icon = GFX_MDR_thad_prime_minister
+		x = 10
+		y = 30
+		prerequisite = { focus = MDR_fund_land_forces_uzi }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 50
+			add_stability = 0.1
+			add_war_support = 0.15
+			add_ideas = MDR_thad_as_prime_ministry_idea
+		}
+	}
+
+	focus = {
+		id = MDR_kick_thad_out_of_power
+		icon = GFX_goal_unknown
+		x = 6
+		y = 28
+		prerequisite = { focus = MDR_white_queen }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 20
+			add_stability = 0.05
+			deactivate_mission = MDR_thads_anger
+			remove_ideas = MDR_thads_anger_idea
+			remove_ideas = MDR_thads_anger_idea_two
+			remove_ideas = MDR_thads_anger_idea_three
+			remove_ideas = MDR_thads_anger_idea_four
+		}
+	}
+
+	focus = {
+		id = MDR_fund_air_forces_uzi
+		icon = GFX_MDR_fund_air_force_uzi
+		x = 6
+		y = 29
+		prerequisite = { focus = MDR_kick_thad_out_of_power }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_equipment_to_stockpile = { 
+				type = fighter_equipment_1
+				amount = 150000
+			}
+			add_equipment_to_stockpile = { 
+				type = CAS_equipment_1
+				amount = 150000
+			}
+			add_equipment_to_stockpile = { 
+				type = nav_bomber_equipment_1
+				amount = 150000
+			}
+			add_equipment_to_stockpile = { 
+				type = tac_bomber_equipment_1
+				amount = 150000
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_promote_n_as_prime_minister_uzi
+		icon = GFX_MDR_n_prime_minister
+		x = 6
+		y = 30
+		prerequisite = { focus = MDR_fund_air_forces_uzi }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 50
+			add_stability = 0.1
+			add_war_support = 0.15
+			add_ideas = MDR_n_as_prime_ministry_idea
+		}
+	}
+
+	focus = {
+		id = MDR_fund_air_and_land_forces
+		icon = GFX_MDR_fund_both
+		x = 8
+		y = 29
+		prerequisite = { focus = MDR_drones_equality_act }
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_equipment_to_stockpile = { 
+				type = infantry_equipment_1
+				amount = 150000
+			}
+			add_equipment_to_stockpile = { 
+				type = artillery_equipment_1
+				amount = 150000
+			}
+			add_equipment_to_stockpile = { 
+				type = fighter_equipment_1
+				amount = 150000
+			}
+			add_equipment_to_stockpile = { 
+				type = CAS_equipment_1
+				amount = 150000
+			}
+			add_equipment_to_stockpile = { 
+				type = nav_bomber_equipment_1
+				amount = 150000
+			}
+			add_equipment_to_stockpile = { 
+				type = tac_bomber_equipment_1
+				amount = 150000
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_celebrate_total_peace
+		icon = GFX_goal_unknown
+		x = 8
+		y = 30
+		prerequisite = { focus = MDR_fund_air_and_land_forces }
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 320
+			add_stability = 0.45
+			add_war_support = 0.45
+		}
+	}
+
+	focus = {
+		id = MDR_white_queen
+		icon = GFX_MDR_side_with_n
+		x = 6
+		y = 27
+		prerequisite = { focus = MDR_the_last_issue }
+		mutually_exclusive = { focus = MDR_between_two_queens focus = MDR_black_queen }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 10
+			add_stability = 0.025
+			deactivate_mission = MDR_ns_anger
+			remove_ideas = MDR_ns_anger_idea
+			remove_ideas = MDR_ns_anger_idea_two
+			remove_ideas = MDR_ns_anger_idea_three
+			remove_ideas = MDR_ns_anger_idea_four
+		}
+	}
+
+	focus = {
+		id = MDR_black_queen
+		icon = GFX_MDR_side_with_thad
+		x = 10
+		y = 27
+		prerequisite = { focus = MDR_the_last_issue }
+		mutually_exclusive = { focus = MDR_between_two_queens focus = MDR_white_queen}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_political_power = 10
+			add_stability = 0.025
+			deactivate_mission = MDR_thads_anger
+			remove_ideas = MDR_thads_anger_idea
+			remove_ideas = MDR_thads_anger_idea_two
+			remove_ideas = MDR_thads_anger_idea_three
+			remove_ideas = MDR_thads_anger_idea_four
 		}
 	}
 
@@ -1684,6 +2843,40 @@ focus_tree = {
 		completion_reward = {
 		   add_to_variable = { MDR_ue_consumer_goods_factor = -0.1 }
 		   add_to_variable = { MDR_un_stability_factor = 0.1 }
+		   custom_effect_tooltip = MDR_better_economy
+		}
+	}
+
+	focus = {
+		id = MDR_agricultural_reforms
+		icon = GFX_MDR_agricultural_reforms
+		x = 7
+		y = 7
+		prerequisite = { focus = MDR_uzis_economy }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		   add_to_variable = { MDR_ue_consumer_goods_factor = -0.1 }
+		   add_to_variable = { MDR_un_stability_factor = 0.1 }
+		   deactivate_mission = MDR_pesants_protesting
 		}
 	}
 
@@ -1716,6 +2909,7 @@ focus_tree = {
 		completion_reward = {
 		   add_to_variable = { MDR_ue_consumer_goods_factor = -0.05 }
 		   add_to_variable = { MDR_un_stability_factor = 0.05 }
+		   custom_effect_tooltip = MDR_better_economy
 		}
 	}
 
@@ -1750,6 +2944,7 @@ focus_tree = {
 		   add_to_variable = { MDR_ue_consumer_goods_factor = -0.05 }
 		   add_to_variable = { MDR_un_industrial_capacity_factory = 0.1 }
 		   add_to_variable = { MDR_un_industrial_capacity_dockyard = 0.1 }
+		   custom_effect_tooltip = MDR_better_economy
 		}
 	}
 
@@ -1784,6 +2979,7 @@ focus_tree = {
 		   add_to_variable = { MDR_ue_consumer_goods_factor = -0.05 }
 		   add_to_variable = { MDR_un_industrial_capacity_factory = 0.1 }
 		   add_to_variable = { MDR_un_industrial_capacity_dockyard = 0.1 }
+		   custom_effect_tooltip = MDR_better_economy
 		}
 	}
 
@@ -1878,7 +3074,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		   
+		   custom_effect_tooltip = MDR_opens_decisions
 		}
 	}
 

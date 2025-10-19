@@ -3,6 +3,176 @@ spriteTypes = {
 	#### Murder drones icons
 	
 	SpriteType = {
+	name = "GFX_MDR_trusted_uzi"
+	texturefile = "gfx/interface/goals/MDR_trusted_uzi.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_drone_supremacy"
+	texturefile = "gfx/interface/goals/MDR_drone_supremacy.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_live_propaganda"
+	texturefile = "gfx/interface/goals/MDR_live_propaganda.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_crackdown_protest"
+	texturefile = "gfx/interface/goals/MDR_crackdown_protest.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_thad_prime_minister"
+	texturefile = "gfx/interface/goals/MDR_thad_prime_minister.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_n_prime_minister"
+	texturefile = "gfx/interface/goals/MDR_n_prime_minister.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_fund_both"
+	texturefile = "gfx/interface/goals/MDR_fund_both.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_fund_air_force_uzi"
+	texturefile = "gfx/interface/goals/MDR_fund_air_force_uzi.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_equality_act"
+	texturefile = "gfx/interface/goals/MDR_equality_act.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_neutral_side"
+	texturefile = "gfx/interface/goals/MDR_neutral_side.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_side_with_thad"
+	texturefile = "gfx/interface/goals/MDR_side_with_thad.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_side_with_n"
+	texturefile = "gfx/interface/goals/MDR_side_with_n.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_last_issue"
+	texturefile = "gfx/interface/goals/MDR_last_issue.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_silence_of_paranoia"
+	texturefile = "gfx/interface/goals/MDR_silence_of_paranoia.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_online_safety_act"
+	texturefile = "gfx/interface/goals/MDR_online_safety_act.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_ganja_freedom_law"
+	texturefile = "gfx/interface/goals/MDR_ganja_freedom_law.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_deliver_speech"
+	texturefile = "gfx/interface/goals/MDR_deliver_speech.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_help_from_thad"
+	texturefile = "gfx/interface/goals/MDR_help_from_thad.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_public_polls"
+	texturefile = "gfx/interface/goals/MDR_public_polls.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_defend_borders"
+	texturefile = "gfx/interface/goals/MDR_defend_borders.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_survelience_on_mountains"
+	texturefile = "gfx/interface/goals/MDR_survelience_on_mountains.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_inspect_all_branches"
+	texturefile = "gfx/interface/goals/MDR_inspect_all_branches.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_hunt_fascists"
+	texturefile = "gfx/interface/goals/MDR_hunt_fascists.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_consolidating_power"
+	texturefile = "gfx/interface/goals/MDR_consolidating_power.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_virus_took_over_her"
+	texturefile = "gfx/interface/goals/MDR_virus_took_over_her.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_virus_is_defeated"
+	texturefile = "gfx/interface/goals/MDR_virus_is_defeated.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_disturb_cure_progress"
+	texturefile = "gfx/interface/goals/MDR_disturb_cure_progress.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_secret_agreement_with_absolute_solver"
+	texturefile = "gfx/interface/goals/MDR_secret_agreement_with_absolute_solver.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_anti_virus_programs"
+	texturefile = "gfx/interface/goals/MDR_anti_virus_programs.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_fund_hospitals"
+	texturefile = "gfx/interface/goals/MDR_fund_hospitals.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_emergency_government"
+	texturefile = "gfx/interface/goals/MDR_emergency_government.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_something_aint_right"
+	texturefile = "gfx/interface/goals/MDR_something_aint_right.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_core_our_lands"
+	texturefile = "gfx/interface/goals/MDR_core_our_lands.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_agricultural_reforms"
+	texturefile = "gfx/interface/goals/MDR_agricultural_reforms.png"			
+	}
+	
+	SpriteType = {
 	name = "GFX_MDR_deal_with_corruption"
 	texturefile = "gfx/interface/goals/MDR_deal_with_corruption.png"			
 	}

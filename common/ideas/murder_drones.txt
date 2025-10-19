@@ -767,7 +767,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_order_twotwoseven
 			
 			modifier = {
 	            army_attack_factor = 0.1
@@ -788,7 +788,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = unknown_idea
 			
 			modifier = {
 	            training_time_factor = -0.75
@@ -811,7 +811,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = unknown_idea
 			
 			modifier = {
 	            experience_gain_army_factor = 0.75
@@ -1223,6 +1223,54 @@ ideas = {
 				stability_factor = 0.15
 				war_support_factor = 0.15
 				fascism_drift = 0.01
+			}
+		}
+		
+		MDR_drone_supremacy_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				fascism_drift = 0.01
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		
+		MDR_live_propaganda_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				fascism_drift = 0.01
+				consumer_goods_factor = 0.1
+				resistance_activity = -0.45
+				resistance_growth = -0.45
+				compliance_gain = 0.2
 			}
 		}
 		
@@ -1808,7 +1856,7 @@ ideas = {
 			picture = GFX_idea_MDR_order_twotwoseven
 			
 			modifier = {
-				air_accidents_factor = -0.05
+				air_accidents_factor = 0.05
 				air_ace_generation_chance_factor = -0.05
 			}
 		}
@@ -1828,7 +1876,7 @@ ideas = {
 			picture = GFX_idea_MDR_order_twotwoseven
 			
 			modifier = {
-				air_accidents_factor = -0.1
+				air_accidents_factor = 0.1
 				air_ace_generation_chance_factor = -0.1
 			}
 		}
@@ -1848,7 +1896,7 @@ ideas = {
 			picture = GFX_idea_MDR_order_twotwoseven
 			
 			modifier = {
-				air_accidents_factor = -0.15
+				air_accidents_factor = 0.15
 				air_ace_generation_chance_factor = -0.15
 			}
 		}
@@ -1868,8 +1916,100 @@ ideas = {
 			picture = GFX_idea_MDR_order_twotwoseven
 			
 			modifier = {
-				air_accidents_factor = -0.2
+				air_accidents_factor = 0.2
 				air_ace_generation_chance_factor = -0.2
+			}
+		}
+		
+		MDR_communists_protest = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+				political_power_factor = -0.02
+				stability_factor = -0.15
+				war_support_factor = -0.1
+				communism_drift = 0.01
+			}
+		}
+		
+		MDR_drones_equality_act_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+				political_power_factor = -0.02
+				stability_factor = -0.15
+				war_support_factor = -0.1
+				communism_drift = 0.01
+			}
+		}
+		
+		MDR_n_as_prime_ministry_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+				political_power_factor = 0.02
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				communism_drift = 0.01
+				air_accidents_factor = -0.3
+				air_ace_generation_chance_factor = 0.3
+			}
+		}
+		
+		MDR_thad_as_prime_ministry_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_MDR_order_twotwoseven
+			
+			modifier = {
+				political_power_factor = 0.02
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				communism_drift = 0.01
+				army_attack_factor = 0.3
+				army_defence_factor = 0.3
 			}
 		}
 	}

@@ -13870,14 +13870,24 @@ news_event = {
 		trigger = { NOT = { TAG = MDR } }
 	}
 }
-news_event = { #tessa programmed
+#tessa programmed
+news_event = {
 	id = news.427
 	title = news.427.t
 	desc = news.427.d
-
+	picture = GFX_news_event_tessa_is_programmed
+	
+	major = yes
+	
 	is_triggered_only = yes
 	option = {
 		name = news.427.a
+		trigger = { TAG = MDR }
+	}
+	
+	option = {
+		name = news.427.b
+		trigger = { NOT = { TAG = MDR } }
 	}
 }
 

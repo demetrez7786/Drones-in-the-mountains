@@ -36,6 +36,9 @@
  MDR_workers_unions:0 "Workers unions"
  MDR_order_twotwoseven_idea:0 "Order 227"
  MDR_uzis_economy_idea:0 "Uzi's Economy"
+ MDR_big_preparations:0 "Big Preparations"
+ MDR_rapid_deployment_training_idea:0 "Rapid Deployment Training"
+ MDR_cyn_economy:0 "Cyn Economy"
  
  RES_regional_council:0 "Regional Councils"
  RES_military_independence_idea:0 "Independent Military"

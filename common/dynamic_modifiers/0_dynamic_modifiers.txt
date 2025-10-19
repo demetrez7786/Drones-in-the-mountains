@@ -137,6 +137,20 @@ MDR_paranoia = { #NATIONAL SPIRIT
 	conscription_factor = MDR_par_conscription_factor
 	communism_drift = MDR_par_communism_drift
 }
+MDR_lost_trust = { #NATIONAL SPIRIT
+    enable = { always = yes }
+    icon = GFX_idea_MDR_uzis_economy
+
+	political_power_factor = MDR_lt_political_power_factor
+	stability_factor = MDR_lt_stability_factor
+	war_support_factor = MDR_lt_war_support_factor
+	political_advisor_cost_factor = MDR_lt_political_advisor_cost_factor
+	consumer_goods_factor = MDR_lt_consumer_goods_factor
+	army_attack_factor = MDR_lt_army_attack_factor
+	army_defence_factor = MDR_lt_army_defence_factor
+	conscription_factor = MDR_lt_conscription_factor
+	fascism_drift = MDR_lt_fascism_drift
+}
 RES_gangsters_problems = { #NATIONAL SPIRIT
     enable = { always = yes }
     icon = GFX_idea_RES_gangsters_problems

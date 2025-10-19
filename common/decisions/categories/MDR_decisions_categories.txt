@@ -261,7 +261,7 @@ MDR_inspecting_all_branches = {
 MDR_n_thad_endgame = {
 	priority = 999
 	visible_when_empty = no
-	icon = GFX_decision_spr_political_assassination
+	icon = GFX_decision_cat_mdr_endgame
 	allowed = {
 		original_tag = MDR
 	}
@@ -273,7 +273,7 @@ MDR_n_thad_endgame = {
 MDR_pesants_boycot = {
 	priority = 999
 	visible_when_empty = no
-	icon = GFX_decision_spr_political_assassination
+	icon = GFX_decision_category_generic_communist_revolution
 	allowed = {
 		original_tag = MDR
 	}
