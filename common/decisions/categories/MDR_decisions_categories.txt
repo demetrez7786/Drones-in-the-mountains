@@ -157,7 +157,7 @@ MDR_power_balance_power_balance_uzi_and_doll_decisions = {
 	}
 
 	visible = {
-		has_completed_focus = MDR_cyn_won
+		has_completed_focus = MDR_coalition_stays_united
 	}
 }
 MDR_programming_tessa = {

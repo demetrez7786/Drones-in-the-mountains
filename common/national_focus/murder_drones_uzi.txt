@@ -17,7 +17,7 @@ focus_tree = {
     focus = {
 		id = MDR_cousins_coalition_won
 		icon = GFX_MDR_cousins_coalition
-		x = 23
+		x = 41
 		y = 0
 
 		cost = 1
@@ -56,11 +56,48 @@ focus_tree = {
 	}
 
 	focus = {
+		id = MDR_coalition_stays_united
+		icon = GFX_MDR_cousins_coalition
+		x = 59
+		y = 1
+		prerequisite = { focus = MDR_cousins_coalition_won }
+		mutually_exclusive = { focus = MDR_coalition_splits_in_two }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_political_power = 50
+			add_stability = 0.15
+			set_power_balance = {
+                id = MDR_power_balance_doll_and_uzi_bop
+            }
+		}
+	}
+
+	focus = {
 		id = MDR_coalition_splits_in_two
 		icon = GFX_MDR_coalition_splits_in_two
 		x = 23
 		y = 1
 		prerequisite = { focus = MDR_cousins_coalition_won }
+		mutually_exclusive = { focus = MDR_coalition_stays_united }
 
 		cost = 2
 
@@ -366,14 +403,6 @@ focus_tree = {
 			target = GRE
 			type = annex_everything
 		    }
-			declare_war_on = {
-			target = YUG
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = ALB
-			type = annex_everything
-		    }
             declare_war_on = {
 			target = ROM
 			type = annex_everything
@@ -666,6 +695,7 @@ focus_tree = {
 
 		completion_reward = {
 		    retire_character = MDR_absolute_solver
+			retire_character = MDR_cyn
 			add_country_leader_role = {
 			character = MDR_uzi_infected
 			promote_leader = yes		
@@ -685,6 +715,7 @@ focus_tree = {
 			    ideology = fascism
 			    popularity = 0.55
 		    }
+			country_event = { id = drones.45 }
 		}
 	}
 
@@ -2090,8 +2121,8 @@ focus_tree = {
 		completion_reward = {
 		    add_political_power = 20
 			add_stability = 0.05
-			deactivate_mission = MDR_thads_anger
-			deactivate_mission = MDR_ns_anger
+			remove_mission = MDR_thads_anger
+			remove_mission = MDR_ns_anger
 			remove_ideas = MDR_ns_anger_idea
 			remove_ideas = MDR_ns_anger_idea_two
 			remove_ideas = MDR_ns_anger_idea_three
@@ -2163,7 +2194,7 @@ focus_tree = {
 		completion_reward = {
 		    add_political_power = 20
 			add_stability = 0.05
-			deactivate_mission = MDR_ns_anger
+			remove_mission = MDR_ns_anger
 			remove_ideas = MDR_ns_anger_idea
 			remove_ideas = MDR_ns_anger_idea_two
 			remove_ideas = MDR_ns_anger_idea_three
@@ -2269,7 +2300,7 @@ focus_tree = {
 		completion_reward = {
 		    add_political_power = 20
 			add_stability = 0.05
-			deactivate_mission = MDR_thads_anger
+			remove_mission = MDR_thads_anger
 			remove_ideas = MDR_thads_anger_idea
 			remove_ideas = MDR_thads_anger_idea_two
 			remove_ideas = MDR_thads_anger_idea_three
@@ -2469,7 +2500,7 @@ focus_tree = {
 		completion_reward = {
 		    add_political_power = 10
 			add_stability = 0.025
-			deactivate_mission = MDR_ns_anger
+			remove_mission = MDR_ns_anger
 			remove_ideas = MDR_ns_anger_idea
 			remove_ideas = MDR_ns_anger_idea_two
 			remove_ideas = MDR_ns_anger_idea_three
@@ -2506,7 +2537,7 @@ focus_tree = {
 		completion_reward = {
 		    add_political_power = 10
 			add_stability = 0.025
-			deactivate_mission = MDR_thads_anger
+			remove_mission = MDR_thads_anger
 			remove_ideas = MDR_thads_anger_idea
 			remove_ideas = MDR_thads_anger_idea_two
 			remove_ideas = MDR_thads_anger_idea_three
@@ -2876,7 +2907,7 @@ focus_tree = {
 		completion_reward = {
 		   add_to_variable = { MDR_ue_consumer_goods_factor = -0.1 }
 		   add_to_variable = { MDR_un_stability_factor = 0.1 }
-		   deactivate_mission = MDR_pesants_protesting
+		   remove_mission = MDR_pesants_protesting
 		}
 	}
 
@@ -3281,7 +3312,7 @@ focus_tree = {
 		icon = GFX_MDR_political_legitimacy
 		x = 31
 		y = 7
-		prerequisite = { focus = MDR_coalition_splits_in_two }
+		prerequisite = { focus = MDR_doll_leads }
 
 		cost = 5
 
@@ -3419,7 +3450,7 @@ focus_tree = {
 
 	focus = {
 		id = MDR_leviticus
-		icon = GFX_goal_unknown
+		icon = GFX_MDR_leviticus
 		x = 30
 		y = 10
 		prerequisite = { focus = MDR_allow_religion }
@@ -3432,7 +3463,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_flag = wait_for_the_update
+			
 		}
 		
 		bypass = {
@@ -3445,7 +3476,202 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    set_country_flag = MDR_secret_police
+		    add_stability = 0.1
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = MDR_help_from_lizzy
+		icon = GFX_MDR_help_from_lizzy
+		x = 30
+		y = 11
+		prerequisite = { focus = MDR_leviticus }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_stability = 0.1
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = MDR_communist_propaganda
+		icon = GFX_MDR_communist_propaganda
+		x = 30
+		y = 12
+		prerequisite = { focus = MDR_help_from_lizzy }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_ideas = MDR_communist_propaganda_idea
+		}
+	}
+
+	focus = {
+		id = MDR_nightshows
+		icon = GFX_goal_unknown
+		x = 30
+		y = 13
+		prerequisite = { focus = MDR_communist_propaganda }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_ideas = MDR_nightshows_idea
+			add_stability = 0.05
+			add_political_power = 15
+		}
+	}
+
+	focus = {
+		id = MDR_soviet_influence
+		icon = GFX_MDR_soviet_influence
+		x = 31
+		y = 14
+		prerequisite = { focus = MDR_nightshows focus = MDR_balkans }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_stability = 0.1
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = MDR_accept_the_faith
+		icon = GFX_MDR_submit_to_ussr
+		x = 32
+		y = 15
+		prerequisite = { focus = MDR_soviet_influence }
+		mutually_exclusive = { focus = MDR_fight_back_influence }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_stability = 0.1
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = MDR_fight_back_influence
+		icon = GFX_MDR_fight_back_the_ussr
+		x = 30
+		y = 15
+		prerequisite = { focus = MDR_soviet_influence }
+		mutually_exclusive = { focus = MDR_accept_the_faith }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    add_stability = 0.1
+			add_political_power = 25
 		}
 	}
 
@@ -3595,18 +3821,46 @@ focus_tree = {
 			target = GRE
 			type = annex_everything
 		    }
-			declare_war_on = {
-			target = YUG
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = ALB
-			type = annex_everything
-		    }
             declare_war_on = {
 			target = ROM
 			type = annex_everything
 		    }
+		}
+	}
+
+	focus = {
+		id = MDR_core_all_lands_doll
+		icon = GFX_MDR_balkan
+		x = 33
+		y = 14
+		prerequisite = { focus = MDR_balkans }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    every_state = {
+                limit = {
+                    is_controlled_by = MDR
+                }
+                add_core_of = MDR
+            }
 		}
 	}
 
@@ -4103,6 +4357,37 @@ focus_tree = {
                 }
 				add_extra_state_shared_building_slots = 2
 			}
+		}
+	}
+
+	focus = {
+		id = MDR_agricultural_reforms_doll
+		icon = GFX_MDR_agricultural_reforms
+		x = 40
+		y = 4
+		prerequisite = { focus = MDR_one_year_plan }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		    remove_mission = MDR_pesants_protesting
 		}
 	}
 	

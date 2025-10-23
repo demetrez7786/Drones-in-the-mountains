@@ -74,3 +74,5 @@ recruit_character = MDR_lizzy
 recruit_character = MDR_thad
 recruit_character = MDR_teacher
 recruit_character = MDR_yeva
+recruit_character = MDR_uzis_emergency_government
+recruit_character = MDR_uzi_infected

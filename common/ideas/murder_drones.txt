@@ -788,7 +788,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = unknown_idea
+			picture = MDR_preparations
 			
 			modifier = {
 	            training_time_factor = -0.75
@@ -830,7 +830,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_cyn_economy
 			
 			modifier = {
 	            political_power_factor = 0.1
@@ -849,7 +849,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_cyn_economy
 			
 			modifier = {
 	            political_power_factor = 0.1
@@ -873,7 +873,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_cyn_economy
 			
 			modifier = {
 	            political_power_factor = 0.1
@@ -898,7 +898,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_die_or_die
 			
 			modifier = {
 	            army_attack_factor = 0.15
@@ -917,7 +917,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = GFX_idea_unknown
 			
 			modifier = {
 	            army_attack_factor = 0.15
@@ -938,7 +938,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_the_last_solution
 			
 			modifier = {
 	            war_support_weekly = 0.001
@@ -964,7 +964,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_tyranny
 			
 			modifier = {
 	            war_support_factor = 0.15
@@ -986,7 +986,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_tyranny
 			
 			modifier = {
 	            stability_factor = 0.15
@@ -1010,7 +1010,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_tyranny
 			
 			modifier = {
 			    political_power_factor = 0.15
@@ -1031,7 +1031,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = GFX_idea_unknown
 			
 			modifier = {
 			    resistance_activity = -0.25
@@ -1052,7 +1052,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = GFX_idea_unknown
 			
 			modifier = {
 			    army_attack_factor = 0.1
@@ -1096,7 +1096,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = portrait_MDR_n_small
 			
 			modifier = {
 			    political_power_factor = 0.05
@@ -1119,7 +1119,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_special_defensive_police
 			
 			modifier = {
 			    stability_factor = 0.15
@@ -1144,7 +1144,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_closed_borders
 			
 			modifier = {
 			    consumer_goods_factor = -0.15
@@ -1165,7 +1165,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_workers_unions
 			
 			modifier = {
 			    consumer_goods_factor = -0.15
@@ -1191,7 +1191,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_the_last_solution
 			
 			modifier = {
 			    consumer_goods_factor = 0.25
@@ -1215,7 +1215,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_solverism
 			
 			modifier = {
 			    political_power_factor = 0.05
@@ -1238,7 +1238,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = GFX_idea_unknown
 			
 			modifier = {
 				stability_factor = 0.15
@@ -1261,7 +1261,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_live_propaganda
 			
 			modifier = {
 				stability_factor = 0.1
@@ -1286,7 +1286,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_diciplined_army
 			
 			modifier = {
 			    war_support_factor = 0.15
@@ -1310,7 +1310,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_diciplined_army
 			
 			modifier = {
 				army_attack_factor = 0.4
@@ -1334,7 +1334,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_war_cabinet
 			
 			modifier = {
 				army_attack_factor = 0.15
@@ -1357,7 +1357,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = portrait_MDR_tessa_small
 			
 			modifier = {
 				research_speed_factor = -0.15
@@ -1377,7 +1377,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_wartime_drugs
 			
 			modifier = {
 				war_support_factor = -0.1
@@ -1403,7 +1403,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = GFX_idea_unknown
 			
 			modifier = {
 				war_support_factor = 0.1
@@ -1425,7 +1425,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_bloody_police
 			
 			modifier = {
 				army_attack_factor = 0.1
@@ -1448,7 +1448,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_reorganize_militia
 			
 			modifier = {
 				political_power_factor = -0.4
@@ -1468,7 +1468,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_reorganize_militia
 			
 			modifier = {
 				political_power_factor = -0.5
@@ -1488,7 +1488,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_reorganize_militia
 			
 			modifier = {
 				political_power_factor = -0.5
@@ -1508,7 +1508,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_consumer_protection_law
 			
 			modifier = {
 				political_power_factor = 0.05
@@ -1529,7 +1529,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_bbb
 			
 			modifier = {
 				political_power_factor = 0.1
@@ -1550,7 +1550,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_lari
 			
 			modifier = {
 				political_power_factor = 0.1
@@ -1571,7 +1571,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_dram
 			
 			modifier = {
 				political_power_factor = 0.1
@@ -1592,7 +1592,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_manat
 			
 			modifier = {
 				political_power_factor = 0.1
@@ -1613,7 +1613,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_anti_corruption_bureau
 			
 			modifier = {
 				political_power_factor = 0.01
@@ -1633,7 +1633,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = GFX_idea_unknown
 			
 			modifier = {
 				political_power_factor = -0.75
@@ -1658,7 +1658,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_inspections
 			
 			modifier = {
 				political_power_factor = -0.02
@@ -1678,7 +1678,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_closed_borders
 			
 			modifier = {
 				consumer_goods_factor = 0.05
@@ -1700,7 +1700,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_ganjas_freedom_law
 			
 			modifier = {
 				political_power_factor = 0.001
@@ -1726,7 +1726,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_ganjas_freedom_law
 			
 			modifier = {
 				political_power_factor = 0.01
@@ -1933,7 +1933,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_underground_resistance
 			
 			modifier = {
 				political_power_factor = -0.02
@@ -1955,7 +1955,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = MDR_ganjas_freedom_law
 			
 			modifier = {
 				political_power_factor = -0.02
@@ -1977,7 +1977,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = portrait_MDR_n_small
 			
 			modifier = {
 				political_power_factor = 0.02
@@ -2001,7 +2001,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_MDR_order_twotwoseven
+			picture = portrait_MDR_thad_small
 			
 			modifier = {
 				political_power_factor = 0.02
@@ -2010,6 +2010,49 @@ ideas = {
 				communism_drift = 0.01
 				army_attack_factor = 0.3
 				army_defence_factor = 0.3
+			}
+		}
+		
+		MDR_communist_propaganda_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				communism_drift = 0.01
+			}
+		}
+		
+		MDR_nightshows_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.01
+				political_power_factor = 0.002
+				consumer_goods_factor = 0.05
 			}
 		}
 	}

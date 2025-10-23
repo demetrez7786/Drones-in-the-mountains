@@ -2482,13 +2482,13 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_nato_unit_murder_drone_icon_small"
-		texturefile = "gfx/texticons/nato_unit_murder_drone_icon_small.dds"
+		name = "GFX_nato_unit_disassembly_drone_icon_small"
+		texturefile = "gfx/texticons/nato_unit_disassembly_drone_icon_small.dds"
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_unit_murder_drone_icon_small"
-		texturefile = "gfx/texticons/unit_murder_drone_icon_small.dds"
+		name = "GFX_unit_disassembly_drone_icon_small"
+		texturefile = "gfx/texticons/unit_disassembly_drone_icon_small.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}

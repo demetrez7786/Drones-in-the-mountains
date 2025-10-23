@@ -8419,27 +8419,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/sp_surface_ice_composite_runways.dds"
 	}
 	SpriteType = {
-		name = "GFX_worker_drone_equipment0_medium"
+		name = "GFX_worker_drone_equipment_medium"
+		texturefile = "gfx/interface/technologies/worker_drone_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_worker_drone_equipment_0_medium"
 		texturefile = "gfx/interface/technologies/worker_drone_equipment.dds"
 	}	
 	SpriteType = {
-		name = "GFX_murder_drone_equipment_medium"
-		texturefile = "gfx/interface/technologies/murder_drone_equipment.dds"
-	}	
-	SpriteType = {
-		name = "GFX_worker_drone_equipment_1_medium"
-		texturefile = "gfx/interface/technologies/worker_drone_equipment_1.dds"
+		name = "GFX_disassembly_drone_equipment_medium"
+		texturefile = "gfx/interface/technologies/disassembly_drone_equipment.dds"
 	}
 	SpriteType = {
 		name = "GFX_railgun_equipment_medium"
-		texturefile = "gfx/interface/technologies/railgun_equipment_0.dds"
-	}
-	SpriteType = {
-		name = "GFX_helicopterhull_tech_medium"
-		texturefile = "gfx/interface/technologies/ah64_md.dds"
-	}
-	SpriteType = {
-		name = "GFX_infantry_weapons_mmd_medium"
-		texturefile = "gfx/interface/technologies/supergun_equipment.dds"
+		texturefile = "gfx/interface/technologies/railgun_equipment.png"
 	}
 }

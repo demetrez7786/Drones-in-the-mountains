@@ -11,6 +11,126 @@ spriteTypes = {
 	### new tfv nat spirit icons
 	
 	spriteType = {
+		name = "GFX_idea_portrait_MDR_thad_small"
+		texturefile = "gfx/interface/ideas/portrait_MDR_thad_small.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_anti_fascist_laws"
+		texturefile = "gfx/interface/ideas/MDR_anti_fascist_laws.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_ganjas_freedom_law"
+		texturefile = "gfx/interface/ideas/MDR_ganjas_freedom_law.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_inspections"
+		texturefile = "gfx/interface/ideas/MDR_inspections.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_anti_corruption_bureau"
+		texturefile = "gfx/interface/ideas/MDR_anti_corruption_bureau.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_manat"
+		texturefile = "gfx/interface/ideas/MDR_manat.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_dram"
+		texturefile = "gfx/interface/ideas/MDR_dram.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_lari"
+		texturefile = "gfx/interface/ideas/MDR_lari.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_bbb"
+		texturefile = "gfx/interface/ideas/MDR_bbb.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_consumer_protection_law"
+		texturefile = "gfx/interface/ideas/MDR_consumer_protection_law.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_bloody_police"
+		texturefile = "gfx/interface/ideas/MDR_bloody_police.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_wartime_drugs"
+		texturefile = "gfx/interface/ideas/MDR_wartime_drugs.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_portrait_MDR_tessa_small"
+		texturefile = "gfx/interface/ideas/portrait_MDR_tessa_small.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_live_propaganda"
+		texturefile = "gfx/interface/ideas/MDR_live_propaganda.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_solverism"
+		texturefile = "gfx/interface/ideas/MDR_solverism.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_closed_borders"
+		texturefile = "gfx/interface/ideas/MDR_closed_borders.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_special_defensive_police"
+		texturefile = "gfx/interface/ideas/MDR_special_defensive_police.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_portrait_MDR_n_small"
+		texturefile = "gfx/interface/ideas/portrait_MDR_n_small.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_jcjenson"
+		texturefile = "gfx/interface/ideas/MDR_jcjenson.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_the_last_solution"
+		texturefile = "gfx/interface/ideas/MDR_the_last_solution.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_die_or_die"
+		texturefile = "gfx/interface/ideas/MDR_die_or_die.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_cyn_economy"
+		texturefile = "gfx/interface/ideas/MDR_cyn_economy.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_preparations"
+		texturefile = "gfx/interface/ideas/MDR_preparations.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_tyranny"
+		texturefile = "gfx/interface/ideas/MDR_tyranny.png"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_MDR_workers_unions"
 		texturefile = "gfx/interface/ideas/MDR_workers_unions.png"
 	}

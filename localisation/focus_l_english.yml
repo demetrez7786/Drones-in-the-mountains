@@ -296,6 +296,7 @@
  MDR_introduce_anti_virus_programs:0 "Introduce Anti-Virus Programs"
  MDR_disturb_cure_progress:0 "Disturb Cure Progress"
  MDR_agricultural_reforms:0 "Agricultural Reforms"
+ MDR_agricultural_reforms_doll:0 "Agricultural Reforms"
  MDR_virus_is_defeated:0 "Virus is Defeated!"
  MDR_consolidate_the_power:0 "Consolidate the Power"
  MDR_purge_the_ministres_uzi:0 "Purge the Ministres"
@@ -339,6 +340,10 @@
  MDR_erase_red:0 "Erase Red"
  MDR_kill_all_humans:0 "Kill All Humans"
  MDR_total_war:0 "Total War"
+ MDR_coalition_stays_united:0 "Coalition Stays United"
+ MDR_help_from_lizzy:0 "Help From Lizzy"
+ MDR_communist_propaganda:0 "Communist Propaganda"
+ MDR_nightshows:0 "Night shows"
 
  RES_uprising:0 "Uprising!"
  RES_call_for_volunteers:0 "Call for Volunteers"

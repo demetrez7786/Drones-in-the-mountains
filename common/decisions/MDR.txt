@@ -4784,11 +4784,11 @@ MDR_power_balance_power_balance_uzi_and_doll_decisions = {
 		days_re_enable = 50
 
 		available = {
-			has_completed_focus = MDR_cyn_won
+			has_completed_focus = MDR_coalition_stays_united
 		} 
 
 		visible = { 
-			has_completed_focus = MDR_cyn_won
+			has_completed_focus = MDR_coalition_stays_united
 		}
 
 		cost = 25
@@ -4823,11 +4823,11 @@ MDR_power_balance_power_balance_uzi_and_doll_decisions = {
 		days_re_enable = 50
 
 		available = {
-			has_completed_focus = MDR_cyn_won
+			has_completed_focus = MDR_coalition_stays_united
 		} 
 
 		visible = { 
-			has_completed_focus = MDR_cyn_won
+			has_completed_focus = MDR_coalition_stays_united
 		}
 
 		cost = 25
@@ -4861,11 +4861,11 @@ MDR_power_balance_power_balance_uzi_and_doll_decisions = {
 		days_re_enable = 50
 
 		available = {
-			has_completed_focus = MDR_cyn_won
+			has_completed_focus = MDR_coalition_stays_united
 		} 
 
 		visible = { 
-			has_completed_focus = MDR_cyn_won
+			has_completed_focus = MDR_coalition_stays_united
 		}
 
 		cost = 25
@@ -4897,11 +4897,11 @@ MDR_power_balance_power_balance_uzi_and_doll_decisions = {
 		days_re_enable = 50
 
 		available = {
-			has_completed_focus = MDR_cyn_won
+			has_completed_focus = MDR_coalition_stays_united
 		} 
 
 		visible = { 
-			has_completed_focus = MDR_cyn_won
+			has_completed_focus = MDR_coalition_stays_united
 		}
 
 		cost = 25
@@ -4935,11 +4935,11 @@ MDR_power_balance_power_balance_uzi_and_doll_decisions = {
 		days_re_enable = 50
 
 		available = {
-			has_completed_focus = MDR_cyn_won
+			has_completed_focus = MDR_coalition_stays_united
 		} 
 
 		visible = { 
-			has_completed_focus = MDR_cyn_won
+			has_completed_focus = MDR_coalition_stays_united
 		}
 
 		cost = 25
@@ -4957,7 +4957,7 @@ MDR_power_balance_power_balance_uzi_and_doll_decisions = {
 		complete_effect = {
 		    add_popularity = {
 			ideology = communism
-			popularity = 0.2
+			popularity = 0.05
 		    }
 			add_power_balance_value = {
 				id = MDR_power_balance_bop
@@ -4982,11 +4982,11 @@ MDR_power_balance_power_balance_uzi_and_doll_decisions = {
 		days_re_enable = 50
 
 		available = {
-			has_completed_focus = MDR_cyn_won
+			has_completed_focus = MDR_coalition_stays_united
 		} 
 
 		visible = { 
-			has_completed_focus = MDR_cyn_won
+			has_completed_focus = MDR_coalition_stays_united
 		}
 
 		cost = 25
@@ -5023,6 +5023,9 @@ MDR_programming_tessa = {
 				}
 			}
 		}
+		cancel_trigger = {
+			has_country_flag = MDR_tessa_is_programed
+		}
 		visible = {
 			AND = {
 				has_completed_focus = MDR_program_tessa
@@ -5050,6 +5053,7 @@ MDR_programming_tessa = {
 				}
 				set_country_flag = MDR_tessa_is_programed
 				news_event = news.427
+				remove_ideas = MDR_programming_tessa_idea
 			}
 		}
 	}
@@ -5563,7 +5567,10 @@ MDR_cure_uzi = {
 			AND = {
 				has_country_flag = MDR_uzi_is_infected
 				NOT = {
-					has_country_flag = MDR_tessa_is_programed
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
 				}
 			}
 		}
@@ -5577,6 +5584,12 @@ MDR_cure_uzi = {
 		            }
 				}
 			}
+		}
+		cancel_trigger = {
+			OR = {
+		        has_country_flag = MDR_uzi_is_cured
+		        has_country_flag = MDR_absolute_solver_took_over_uzi
+		    }
 		}
 		visible = {
 			AND = {
@@ -5620,7 +5633,10 @@ MDR_cure_uzi = {
 			AND = {
 				has_country_flag = MDR_uzi_is_infected_as_side
 				NOT = {
-					has_country_flag = MDR_tessa_is_programed
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
 				}
 			}
 		}
@@ -5634,6 +5650,12 @@ MDR_cure_uzi = {
 		            }
 				}
 			}
+		}
+		cancel_trigger = {
+			OR = {
+		        has_country_flag = MDR_uzi_is_cured
+		        has_country_flag = MDR_absolute_solver_took_over_uzi
+		    }
 		}
 		visible = {
 			AND = {
@@ -5677,7 +5699,10 @@ MDR_cure_uzi = {
 			AND = {
 				has_country_flag = MDR_uzi_is_infected_as_side
 				NOT = {
-					has_country_flag = MDR_tessa_is_programed
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
 				}
 			}
 		}
@@ -5691,6 +5716,12 @@ MDR_cure_uzi = {
 		            }
 				}
 			}
+		}
+		cancel_trigger = {
+			OR = {
+		        has_country_flag = MDR_uzi_is_cured
+		        has_country_flag = MDR_absolute_solver_took_over_uzi
+		    }
 		}
 		visible = {
 			AND = {
@@ -6066,7 +6097,10 @@ MDR_cure_uzi_as_side = {
 			AND = {
 				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
-					has_country_flag = MDR_tessa_is_programed
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
 				}
 			}
 		}
@@ -6080,6 +6114,12 @@ MDR_cure_uzi_as_side = {
 		            }
 				}
 			}
+		}
+		cancel_trigger = {
+			OR = {
+		        has_country_flag = MDR_uzi_is_cured
+		        has_country_flag = MDR_absolute_solver_took_over_uzi
+		    }
 		}
 		visible = {
 			AND = {
@@ -6123,7 +6163,10 @@ MDR_cure_uzi_as_side = {
 			AND = {
 				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
-					has_country_flag = MDR_tessa_is_programed
+				    OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
 				}
 			}
 		}
@@ -6137,6 +6180,12 @@ MDR_cure_uzi_as_side = {
 		            }
 				}
 			}
+		}
+		cancel_trigger = {
+			OR = {
+		        has_country_flag = MDR_uzi_is_cured
+		        has_country_flag = MDR_absolute_solver_took_over_uzi
+		    }
 		}
 		visible = {
 			AND = {
@@ -6180,7 +6229,10 @@ MDR_cure_uzi_as_side = {
 			AND = {
 				has_country_flag = MDR_uzi_is_infected_as
 				NOT = {
-					has_country_flag = MDR_tessa_is_programed
+					OR = {
+		                has_country_flag = MDR_uzi_is_cured
+		                has_country_flag = MDR_absolute_solver_took_over_uzi
+		            }
 				}
 			}
 		}
@@ -6194,6 +6246,12 @@ MDR_cure_uzi_as_side = {
 		            }
 				}
 			}
+		}
+		cancel_trigger = {
+			OR = {
+		        has_country_flag = MDR_uzi_is_cured
+		        has_country_flag = MDR_absolute_solver_took_over_uzi
+		    }
 		}
 		visible = {
 			AND = {
@@ -6875,6 +6933,13 @@ MDR_n_thad_endgame = {
 		activation = {
 			has_country_flag = MDR_endgame
 		}
+		cancel_trigger = {
+			OR = {
+		        has_comleted_focus = MDR_black_queen
+		        has_comleted_focus = MDR_between_two_queens
+				has_comleted_focus = MDR_kick_thad_out_of_power
+		    }
+		}
 		visible = {
 			has_country_flag = MDR_endgame
 		}
@@ -6916,6 +6981,13 @@ MDR_n_thad_endgame = {
 		}
 		activation = {
 			has_country_flag = MDR_endgame
+		}
+		cancel_trigger = {
+			OR = {
+		        has_comleted_focus = MDR_white_queen
+		        has_comleted_focus = MDR_between_two_queens
+				has_comleted_focus = MDR_give_n_little_bit_of_power
+		    }
 		}
 		visible = {
 			has_country_flag = MDR_endgame
@@ -6961,6 +7033,12 @@ MDR_pesants_boycot = {
 		}
 		activation = {
 			has_completed_focus = MDR_cousins_coalition_won
+		}
+		cancel_trigger = {
+			OR = {
+		        has_comleted_focus = MDR_agricultural_reforms_doll
+		        has_comleted_focus = MDR_agricultural_reforms
+		    }
 		}
 		visible = {
 			has_completed_focus = MDR_cousins_coalition_won

@@ -59,8 +59,10 @@ focus_tree = {
 		}
 
 		available = {
+		    OR = {
 			has_completed_focus = MDR_cyn_won
 			has_completed_focus = MDR_absolute_solver_won
+			}
 		}
 		
 		bypass = {
@@ -340,8 +342,8 @@ focus_tree = {
 					    puppet_of_as drone_supremacy
 				    }
 			    }
-		    	}
-				add_power_balance_value = {
+		    }
+			add_power_balance_value = {
 				id = MDR_power_balance_bop
 				value = 0.35
 			}
