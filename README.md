@@ -7,3 +7,7 @@
  ASSIGNED: Cyn's, Solver's, Doll's
 
  In progress: Solver's, Doll's
+
+ Done: Radio Stations
+
+ Needs Polishing: N/A
