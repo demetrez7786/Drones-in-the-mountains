@@ -1048,6 +1048,7 @@ focus_tree = {
 		}
 
 		available = {
+			has_war = no
 		}
 		
 		bypass = {
@@ -1085,6 +1086,7 @@ focus_tree = {
 		}
 
 		available = {
+			has_war = no
 		}
 		
 		bypass = {
@@ -1906,7 +1908,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_war = no
+			has_war = yes
 		}
 		
 		bypass = {
