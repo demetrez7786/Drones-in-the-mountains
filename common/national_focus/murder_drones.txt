@@ -684,14 +684,44 @@ focus_tree = {
             add_ideas = MDR_concetration_camps_idea
 		}
 	}
+	focus = {
+		id = MDR_drone_update
+		icon = GFX_Goal_unknown
+		x = 39
+		y = 11
+		prerequisite = { focus = MDR_concetration_camps }
+		prerequisite = { focus = MDR_solverism_above_all }
+		
+		cost = 2
 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
 	focus = {
 		id = MDR_take_control_of_all_drones
 		icon = GFX_MDR_take_control_of_all_drones
 		x = 39
-		y = 11
-        prerequisite = { focus = MDR_solverism_above_all }
-		prerequisite = { focus = MDR_concetration_camps }
+		y = 12
+        prerequisite = { focus = MDR_drone_update }
+		
 
 		cost = 5
 
@@ -712,7 +742,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-            add_political_power = 50
+            add_political_power = 100
             add_stability = 0.15
 			add_war_support = 0.15
 			add_popularity = {
@@ -737,16 +767,15 @@ focus_tree = {
 	focus = {
 		id = MDR_solvers_army
 		icon = GFX_MDR_military_branch
-		x = 39
+		x = 45
 		y = 12
-        prerequisite = { focus = MDR_take_control_of_all_drones }
 		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 
-		available = {
+		available = { prerequisite = { MDR_take_control_of_all_drones }
 		}
 		
 		bypass = {
@@ -756,7 +785,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
             army_experience = 50
@@ -767,8 +796,8 @@ focus_tree = {
 	focus = {
 		id = MDR_special_drones
 		icon = GFX_MDR_special_forces
-		x = 39
-		y = 12.8
+		x = 45
+		y = 13.5
         prerequisite = { focus = MDR_solvers_army }
 		cost = 5
 
@@ -797,9 +826,9 @@ focus_tree = {
 	focus = {
 		id = MDR_harsh_discipline_as
 		icon = GFX_goal_unknown
-		x = 41
-		y = 12.5
-        prerequisite = { focus = MDR_solvers_army }
+		x = 45
+		y = 15.3
+        prerequisite = { focus = MDR_focus_on_infantry }
 		cost = 5
 
 		ai_will_do = {
@@ -827,8 +856,10 @@ focus_tree = {
 		id = MDR_harsh_training_as
 		icon = GFX_goal_unknown
 		x = 43
-		y = 12.5
-        prerequisite = { focus = MDR_solvers_army }
+		y = 16.3
+        prerequisite = { focus = MDR_massive_recruitment }
+		prerequisite = { focus = MDR_futuristic_guns }
+		prerequisite = {focus = MDR_harsh_discipline_as}
 		cost = 5
 
 		ai_will_do = {
@@ -855,9 +886,9 @@ focus_tree = {
 	focus = {
 		id = MDR_massive_recruitment
 		icon = GFX_MDR_mobilization
-		x = 37
-		y = 12.5
-        prerequisite = { focus = MDR_solvers_army }
+		x = 43
+		y = 15.3
+        prerequisite = { focus = MDR_focus_on_infantry }
 		cost = 5
 
 		ai_will_do = {
@@ -884,9 +915,9 @@ focus_tree = {
 	focus = {
 		id = MDR_futuristic_guns
 		icon = GFX_MDR_advanced_weapons
-		x = 35
-		y = 12.5
-        prerequisite = { focus = MDR_solvers_army }
+		x = 41
+		y = 15.3
+        prerequisite = { focus = MDR_focus_on_infantry }
 		cost = 5
 
 		ai_will_do = {
@@ -909,25 +940,76 @@ focus_tree = {
             add_ideas = MDR_advanced_weapons_idea
 		}
 	}
-	
+	focus = {
+		id = MDR_focus_on_infantry
+		icon = GFX_goal_unknown
+		x = 43
+		y = 14
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = MDR_solvers_army }
+			search_filters = { FOCUS_FILTER_ARMY_XP }
+	}
+	focus = {
+		id = MDR_jcjenson_airspace_force_wip
+		icon = GFX_MDR_jcjenson
+		x = 48
+		y = 14
+
+		cost = 2
+
+		prerequisite = { focus = MDR_solvers_army}
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	}
+	focus = {
+		id = MDR_repurpose_spaceships_wip
+		icon = GFX_goal_unknown
+		x = 48
+		y = 15.5
+		prerequisite = {focus = MDR_jcjenson_airspace_force_wip}
+		cost = 5
+	}
+	focus = {
+		id = MDR_solver_black_sea_fleet_wip
+		icon = GFX_goal_unknown
+		x = 50
+		y = 14
+		
+		cost = 2
+
+		prerequisite = { focus = MDR_solvers_army }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	}
+	focus = {
+		id = MDR_solver_cross_sea_fleet_wip
+		icon = GFX_goal_unknown
+		x = 50
+		y = 15.5
+		prerequisite = { MDR_solver_black_sea_fleet_wip }
+	    search_filters = { FOCUS_FILTER_ARMY_XP }
+	}
 	focus = {
 		id = MDR_solve_our_neigbhors
 		icon = GFX_MDR_solve_our_neigbhors
 		x = 39
 		y = 13.6
-        prerequisite = { focus = MDR_massive_recruitment }
-		prerequisite = { focus = MDR_special_drones }
-		prerequisite = { focus = MDR_harsh_discipline_as}
-		prerequisite = { focus = MDR_futuristic_guns }
-		prerequisite = { focus = MDR_harsh_training_as}
+
 		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 
-		available = {
+		available = {prerequisite = { focus = MDR_harsh_training_as}
+		prerequisite = { focus = MDR_repurpose_spaceships_wip }
+		prerequisite = { focus = MDR_solver_cross_sea_fleet_wip }
 		}
+		
 		
 		bypass = {
 
@@ -2289,7 +2371,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MDR_jcjenson_in_spacee
+		id = MDR_jcjenson_appliances
 		icon = GFX_MDR_jcjenson
 		x = 35
 		y = 21
