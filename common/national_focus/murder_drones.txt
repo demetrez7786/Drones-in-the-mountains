@@ -984,6 +984,10 @@ focus_tree = {
 
 		prerequisite = { focus = MDR_solvers_army }
 		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			add_offsite_building = { type = dockyard level = 2 }
+		}
 	}
 	focus = {
 		id = MDR_solver_cross_sea_fleet_wip
@@ -992,6 +996,10 @@ focus_tree = {
 		y = 15.5
 		prerequisite = { MDR_solver_black_sea_fleet_wip }
 	    search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			add_offsite_building = { type = dockyard level = 4 }
+		}
 	}
 	focus = {
 		id = MDR_solve_our_neigbhors
@@ -1021,24 +1029,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-            hidden_effect = {
-				declare_war_on = {
-				target = ROM
-				type = annex_everything
-		    	}
-			}
-            declare_war_on = {
-			target = TUR
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = PER
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = SOV
-			type = annex_everything
-		    }
+       create_wargoal = { type = annex_everything target = SOV }
+	   create_wargoal = { type = annex_everything target = PER }
+	   create_wargoal = { type = annex_everything target = TUR }
 		}
 	}
 	
@@ -1067,42 +1060,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-            declare_war_on = {
-			target = CHI
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = PRC
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = GXC
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = SHX
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = XSM
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = MAN
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = MEN
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = SIK
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = TIB
-			type = annex_everything
-		    }
+			create_wargoal = { type = annex_everything target = CHI }
+			create_wargoal = { type = annex_everything target = PRC }
+			create_wargoal = { type = annex_everything target = GXC }
+			create_wargoal = { type = annex_everything target = SHX }
+			create_wargoal = { type = annex_everything target = XSM }
+			create_wargoal = { type = annex_everything target = MAN }
+			create_wargoal = { type = annex_everything target = MEN }
+			create_wargoal = { type = annex_everything target = SIK }
+			create_wargoal = { type = annex_everything target = TIB }
 		}
 	}
 	
@@ -1132,31 +1098,13 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = Tooltip_MDR_war1
-            declare_war_on = {
-			target = AFG
-			type = annex_everything
-		    }
-			declare_war_on = {
-			target = IRQ
-			type = annex_everything
-		    }
+			create_wargoal = { type = annex_everything target = AFG }
+			create_wargoal = { type = annex_everything target = IRQ }
 			hidden_effect = {
-				declare_war_on = {
-				target = GRE
-				type = annex_everything
-		    	}
-				declare_war_on = {
-				target = BUL
-				type = annex_everything
-		    	}
-				declare_war_on = {
-				target = YUG
-				type = annex_everything
-				}
-				declare_war_on = {
-				target = ROM
-				type = annex_everything
-				}
+			create_wargoal = { type = annex_everything target = ROM }
+			create_wargoal = { type = annex_everything target = YUG }
+			create_wargoal = { type = annex_everything target = BUL }
+			create_wargoal = { type = annex_everything target = GRE }
 		    }
 		}
 	}
@@ -2366,7 +2314,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_offsite_building = { type = arms_factory level = 24 }
+			add_offsite_building = { type = arms_factory level = 10 }
+			add_offsite_building = { type = civillian_factory level = 10 }
 		}
 	}
 
