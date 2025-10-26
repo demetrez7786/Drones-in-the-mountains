@@ -3,6 +3,26 @@ spriteTypes = {
 	#### Murder drones icons
 	
 	SpriteType = {
+	name = "GFX_MDR_militia"
+	texturefile = "gfx/interface/goals/MDR_militia.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_emergency_workers"
+	texturefile = "gfx/interface/goals/MDR_emergency_workers.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_air_force"
+	texturefile = "gfx/interface/goals/MDR_air_force.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_soviet_drone_war"
+	texturefile = "gfx/interface/goals/MDR_soviet_drone_war.png"			
+	}
+	
+	SpriteType = {
 	name = "GFX_MDR_leviticus"
 	texturefile = "gfx/interface/goals/MDR_leviticus.png"			
 	}

@@ -1,6 +1,6 @@
 technologies = {
 	
-	worker_drone_tech = { #Leichttraktor
+	worker_drone_tech = {
 	
 		allow = {
 			always = no
