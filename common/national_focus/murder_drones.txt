@@ -614,8 +614,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-            add_political_power = 25
-            add_stability = 0.01
+            add_political_power = 50
+            add_stability = -0.05
 		}
 	}
 
@@ -645,11 +645,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-            add_stability = 0.05
-			add_war_support = 0.05
+            add_stability = 0.10
+			add_war_support = 0.10
 			add_power_balance_value = {
 				id = MDR_power_balance_bop
-				value = -0.15
+				value = -0.10
 			}
 			add_ideas = MDR_solverism
 		}
