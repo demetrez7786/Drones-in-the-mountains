@@ -57,7 +57,7 @@ focus_tree = {
 
 	focus = {
 		id = MDR_coalition_stays_united
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_coalition_stays_united
 		x = 59
 		y = 1
 		prerequisite = { focus = MDR_cousins_coalition_won }
@@ -84,7 +84,7 @@ focus_tree = {
 
 		completion_reward = {
             add_political_power = 50
-			add_stability = 0.15
+			add_stability = -0.15
 			set_power_balance = {
                 id = MDR_power_balance_doll_and_uzi_bop
             }
@@ -93,7 +93,7 @@ focus_tree = {
 
 	focus = {
 		id = MDR_begin_work_for_nation
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_begin_work_for_country
 		x = 59
 		y = 2
 		prerequisite = { focus = MDR_coalition_stays_united }
@@ -124,7 +124,7 @@ focus_tree = {
 
 	focus = {
 		id = MDR_economic_path_du
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_economic_path_du
 		x = 55
 		y = 3
 		prerequisite = { focus = MDR_begin_work_for_nation }
@@ -149,13 +149,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_stability = 0.05
 		}
 	}
 
 	focus = {
 		id = MDR_military_path_du
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_military_path_du
 		x = 63
 		y = 3
 		prerequisite = { focus = MDR_begin_work_for_nation }
@@ -180,13 +180,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_political_power = 25
+			add_war_support = 0.05
 		}
 	}
 
 	focus = {
 		id = MDR_dual_command
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_dual_command
 		x = 63
 		y = 4
 		prerequisite = { focus = MDR_military_path_du }
@@ -211,13 +212,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_ideas = MDR_dual_command_idea
 		}
 	}
 
 	focus = {
 		id = MDR_better_communication_du
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_better_communication
 		x = 63
 		y = 5
 		prerequisite = { focus = MDR_dual_command }
@@ -244,13 +245,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_war_support = 0.05
+			add_tech_bonus = {
+				name = MDR_better_communication_du
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
 		}
 	}
 
 	focus = {
 		id = MDR_coalition_military
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_goal_unknown
 		x = 63
 		y = 6
 		prerequisite = { focus = MDR_better_communication_du }
@@ -275,13 +282,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_political_power = 60
 		}
 	}
 
 	focus = {
 		id = MDR_uzis_railgun
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_uzis_guns
 		x = 61
 		y = 4
 		prerequisite = { focus = MDR_military_path_du }
@@ -306,13 +313,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_equipment_to_stockpile = { 
+				type = railgun_equipment
+				amount = 10000
+			}
 		}
 	}
 
 	focus = {
 		id = MDR_exploit_dual_solvers
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_exploit_dual_solver
 		x = 65
 		y = 4
 		prerequisite = { focus = MDR_military_path_du }
@@ -337,13 +347,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_war_support = 0.15
+			add_stability = 0.15
+			add_political_power = 75
 		}
 	}
 
 	focus = {
 		id = MDR_disassembly_drones_question
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_disassembly_drones_question
 		x = 67
 		y = 4
 		prerequisite = { focus = MDR_military_path_du }
@@ -368,13 +380,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            country_event = { id = drones.52.t }
 		}
 	}
 
 	focus = {
 		id = MDR_mountain_factories
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_mountains_factories
 		x = 53
 		y = 4
 		prerequisite = { focus = MDR_economic_path_du }
@@ -399,13 +411,28 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            826 = {
+			    add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+				add_extra_state_shared_building_slots = 2
+			}
+			1019 = {
+			    add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+				add_extra_state_shared_building_slots = 2
+			}
 		}
 	}
 
 	focus = {
 		id = MDR_workers_council_du
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_workers_council
 		x = 55
 		y = 4
 		prerequisite = { focus = MDR_economic_path_du }
@@ -430,13 +457,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_ideas = MDR_workers_unions
 		}
 	}
 
 	focus = {
 		id = MDR_nationalize_key_industries
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_nationalize_key_industries
 		x = 57
 		y = 4
 		prerequisite = { focus = MDR_economic_path_du }
@@ -461,13 +488,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+			add_offsite_building = { type = arms_factory level = 5 }
+			add_offsite_building = { type = industrial_complex level = 5 }
+			add_war_support = 0.05
 		}
 	}
 
 	focus = {
 		id = MDR_workers_safety_du
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_ensure_workers_safety
 		x = 55
 		y = 5
 		prerequisite = { focus = MDR_workers_council_du }
@@ -494,13 +523,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_political_power = 25
+			add_stability = 0.1
 		}
 	}
 
 	focus = {
 		id = MDR_coalition_of_economy
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_goal_unknown
 		x = 55
 		y = 6
 		prerequisite = { focus = MDR_workers_safety_du } 
@@ -525,13 +555,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_political_power = 60
 		}
 	}
 
 	focus = {
 		id = MDR_dual_power_system
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_coalition_stays_united
 		x = 59
 		y = 5
 		prerequisite = { focus = MDR_begin_work_for_nation }
@@ -557,12 +587,17 @@ focus_tree = {
 
 		completion_reward = {
             add_political_power = 50
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
 		}
 	}
 
 	focus = {
 		id = MDR_research_funding_act
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_research_fund_act
 		x = 58
 		y = 6
 		prerequisite = { focus = MDR_dual_power_system }
@@ -587,13 +622,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_ideas = MDR_research_act_idea
 		}
 	}
 
 	focus = {
 		id = MDR_humans_freedom_act
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_human_freedom_act
 		x = 60
 		y = 6
 		prerequisite = { focus = MDR_dual_power_system }
@@ -618,13 +653,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_remove_ideas = MDR_underground_human_resistance
 		}
 	}
 
 	focus = {
 		id = MDR_form_war_departament
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_goal_unknown
 		x = 59
 		y = 7
 		prerequisite = { focus = MDR_research_funding_act }
@@ -650,13 +685,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_ideas = MDR_war_cabinet_idea
 		}
 	}
 
 	focus = {
 		id = MDR_test_our_power_in_iran_and_iraq
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_test_du
 		x = 59
 		y = 8
 		prerequisite = { focus = MDR_form_war_departament }
@@ -681,13 +716,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            activate_mission = MDR_take_iran_and_iraq_du
 		}
 	}
 
 	focus = {
 		id = MDR_secure_middle_east
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_secure_middle_east
 		x = 59
 		y = 9
 		prerequisite = { focus = MDR_test_our_power_in_iran_and_iraq }
@@ -712,13 +747,20 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            declare_war_on = {
+			target = TUR
+			type = annex_everything
+		    }
+			declare_war_on = {
+			target = SAU
+			type = annex_everything
+		    }
 		}
 	}
 
 	focus = {
 		id = MDR_core_all_lands_du
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_secure_middle_east
 		x = 59
 		y = 10
 		prerequisite = { focus = MDR_secure_middle_east }
@@ -730,7 +772,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			has_war = no
 		}
 		
 		bypass = {
@@ -743,13 +785,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            every_state = {
+                limit = {
+                    is_controlled_by = MDR
+                }
+                add_core_of = MDR
+            }
 		}
 	}
 
 	focus = {
 		id = MDR_spread_separatism_in_ussr
-		icon = GFX_MDR_cousins_coalition
+		icon = GFX_MDR_fund_separatism_in_ussr
 		x = 59
 		y = 11
 		prerequisite = { focus = MDR_core_all_lands_du }
@@ -774,7 +821,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_political_power = 50
+            add_country_flag = MDR_spreading_separatism_in_ussr
 		}
 	}
 
@@ -4308,12 +4355,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    add_stability = 0.05
-			add_political_power = -5
-			add_popularity = {
-                ideology = communism
-				popularity = 0.1
-			}
+		    add_offsite_building = { type = arms_factory level = 5 }
+			add_offsite_building = { type = industrial_complex level = 5 }
+			add_war_support = 0.05
 		}
 	}
 
@@ -6404,7 +6448,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			has_war = no
 		}
 		
 		bypass = {
@@ -6837,6 +6881,13 @@ focus_tree = {
 				}
 			}
 			1019 = {
+			    add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			1020 = {
 			    add_building_construction = {
 					type = infrastructure
 					level = 5

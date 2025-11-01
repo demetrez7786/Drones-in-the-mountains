@@ -1314,3 +1314,70 @@ country_event = {
 		name = drones.51.a
 	}
 }
+
+# disassembly drones question
+country_event = {
+	id = drones.52
+	title = drones.52.t
+	desc = drones.52.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.52.a
+		add_manpower = -500
+		add_war_support = -0.05
+		add_stability = 0.05
+	}
+	
+	option = {
+		name = drones.52.b
+		load_oob = MDM_dolls_dds
+		add_ideas = MDR_disassembly_drones
+	}
+}
+
+# iran and iraq is defeted
+country_event = {
+	id = drones.53
+	title = drones.53.t
+	desc = drones.53.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.53.a
+		add_political_power = 75
+		add_manpower = 50000
+		add_war_support = 0.25
+		add_stability = 0.25
+		add_popularity = {
+		    ideology = communism
+			popularity = 0.15
+		}	
+	}
+}
+
+# iran and iraq defeated us
+country_event = {
+	id = drones.54
+	title = drones.54.t
+	desc = drones.54.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.54.a
+		add_political_power = -75
+		add_manpower = -50000
+		add_war_support = -0.25
+		add_stability = -0.25
+		add_popularity = {
+		    ideology = communism
+			popularity = -0.15
+		}	
+	}
+}

@@ -3,6 +3,86 @@ spriteTypes = {
 	#### Murder drones icons
 	
 	SpriteType = {
+	name = "GFX_MDR_fund_separatism_in_ussr"
+	texturefile = "gfx/interface/goals/MDR_fund_separatism_in_ussr.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_secure_middle_east"
+	texturefile = "gfx/interface/goals/MDR_secure_middle_east.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_test_du"
+	texturefile = "gfx/interface/goals/MDR_test_du.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_human_freedom_act"
+	texturefile = "gfx/interface/goals/MDR_human_freedom_act.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_research_fund_act"
+	texturefile = "gfx/interface/goals/MDR_research_fund_act.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_better_communication"
+	texturefile = "gfx/interface/goals/MDR_better_communication.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_disassembly_drones_question"
+	texturefile = "gfx/interface/goals/MDR_disassembly_drones_question.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_exploit_dual_solver"
+	texturefile = "gfx/interface/goals/MDR_exploit_dual_solver.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_dual_command"
+	texturefile = "gfx/interface/goals/MDR_dual_command.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_military_path_du"
+	texturefile = "gfx/interface/goals/MDR_military_path_du.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_nationalize_key_industries"
+	texturefile = "gfx/interface/goals/MDR_nationalize_key_industries.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_workers_council"
+	texturefile = "gfx/interface/goals/MDR_workers_council.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_mountains_factories"
+	texturefile = "gfx/interface/goals/MDR_mountains_factories.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_economic_path_du"
+	texturefile = "gfx/interface/goals/MDR_economic_path_du.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_begin_work_for_country"
+	texturefile = "gfx/interface/goals/MDR_begin_work_for_country.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_coalition_stays_united"
+	texturefile = "gfx/interface/goals/MDR_coalition_stays_united.png"			
+	}
+	
+	SpriteType = {
 	name = "GFX_MDR_crimea_militia"
 	texturefile = "gfx/interface/goals/MDR_crimea_militia.png"			
 	}

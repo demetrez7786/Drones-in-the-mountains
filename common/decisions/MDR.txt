@@ -170,7 +170,7 @@ MDR_test_our_power_category = {
 		is_good = no
 		selectable_mission = no
 		fire_only_once = yes
-		days_mission_timeout = 45
+		days_mission_timeout = 65
 		
 		#Fail trigger
 		available = {
@@ -204,6 +204,51 @@ MDR_test_our_power_category = {
 			}
 		}
 	}	
+	
+	MDR_take_iran_and_iraq_du = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+		is_good = no
+		selectable_mission = no
+		fire_only_once = yes
+		days_mission_timeout = 120
+		
+		#Fail trigger
+		available = {
+			PER = { 
+				exists = no
+			}
+			IRQ = { 
+				exists = no
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		complete_effect = {
+			country_event = { id = drones.53 }
+		}
+
+		timeout_effect = {
+			country_event = { id = drones.54 }
+			white_peace = PER
+			white_peace = IRQ
+			if = {
+				limit = {
+					MDR = {
+						controls_state = 419
+						controls_state = 1000
+						controls_state = 420
+					}
+				}
+				419 = { transfer_state_to = MDR }
+				1000 = { transfer_state_to = MDR }
+				420 = { transfer_state_to = MDR }
+			}
+		}
+	}
 }	
 
 MDR_focus_on_europe_category = {
@@ -7034,6 +7079,7 @@ MDR_pesants_boycot = {
 		    OR = {
 			has_completed_focus = MDR_agricultural_reforms
 			has_completed_focus = MDR_agricultural_reforms_doll
+			}
 		}
 
 		activation = {

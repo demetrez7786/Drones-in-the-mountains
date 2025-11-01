@@ -2471,5 +2471,46 @@ ideas = {
 				stability_factor = -0.25
 			}
 		}
+		
+		MDR_dual_command_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.05
+				planning_speed = -0.15
+			}
+		}
+		
+		MDR_research_act_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+				research_speed_factor = 0.35
+			}
+		}
 	}
 }	
