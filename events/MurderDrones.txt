@@ -1220,3 +1220,97 @@ country_event = {
 	    add_to_variable = { MDR_lt_fascism_drift = -0.01 }
 	}
 }
+
+# soviet influence
+country_event = {
+	id = drones.47
+	title = drones.47.t
+	desc = drones.47.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.47.a
+	}
+}
+
+# soviet warn us
+country_event = {
+	id = drones.48
+	title = drones.48.t
+	desc = drones.48.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.48.a
+		add_political_power = -25
+		add_stability = -0.05
+		hidden_effect = {
+		    country_event = { id = drones.49 days = 15 }
+		}	
+		custom_effect_tooltip = MDR_warning
+	}
+}
+
+# soviet declared war on us
+country_event = {
+	id = drones.49
+	title = drones.49.t
+	desc = drones.49.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.49.a
+		add_political_power = -50
+		add_stability = -0.3
+		add_war_support = 0.5
+		add_manpower = 50000
+		SOV = {
+		    declare_war_on = {
+			target = MDR
+			type = annex_everything
+		    }
+		}	
+		complete_national_focus = MDR_Soviet_drone_war
+		activate_mission = MDR_soviet_drones_war_mission
+		hidden_effect = {
+		    country_event = { id = drones.50 days = 2 }
+		}	
+	}
+}
+
+# volunteers join the army
+country_event = {
+	id = drones.50
+	title = drones.50.t
+	desc = drones.50.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.50.a
+		add_war_support = 0.15
+		add_manpower = 500000
+		load_oob = MDM_volunteer_units
+	}
+}
+
+# first soviet drones war
+country_event = {
+	id = drones.51
+	title = drones.51.t
+	desc = drones.51.d
+	picture = GFX_report_event_MDR_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.51.a
+	}
+}

@@ -23,6 +23,14 @@ MDR_power_balance_bop = {
 				political_advisor_cost_factor = 1
 				stability_factor = 0.35
 				consumer_goods_factor = -0.35
+				if = {
+					limit = {
+				        MDR_absolute_solver = {
+						    is_country_leader = yes
+						}
+					}
+					add_ideas = MDR_political_deadlock
+				}	
 			}
 		}
 		

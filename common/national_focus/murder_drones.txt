@@ -722,7 +722,6 @@ focus_tree = {
 		y = 12
         prerequisite = { focus = MDR_drone_update }
 		
-
 		cost = 5
 
 		ai_will_do = {
@@ -775,7 +774,8 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = { prerequisite = { MDR_take_control_of_all_drones }
+		available = { 
+		has_completed_focus = MDR_take_control_of_all_drones
 		}
 		
 		bypass = {
@@ -879,7 +879,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-            add_ideas = MDR_harsh_discipline_idea
+            add_ideas = MDR_harsh_training_idea
 		}
 	}
 	
@@ -945,6 +945,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		x = 43
 		y = 14
+		prerequisite = { focus = MDR_solvers_army }
 
 		cost = 2
 
@@ -952,19 +953,50 @@ focus_tree = {
 			factor = 1
 		}
 
-		prerequisite = { focus = MDR_solvers_army }
-			search_filters = { FOCUS_FILTER_ARMY_XP }
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_army_experience = 20
+			add_war_support = 0.05
+		}
 	}
 	focus = {
 		id = MDR_jcjenson_airspace_force_wip
 		icon = GFX_MDR_jcjenson
 		x = 48
 		y = 14
+		prerequisite = { focus = MDR_solvers_army }
+		cost = 5
 
-		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
 
-		prerequisite = { focus = MDR_solvers_army}
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_ideas = MDR_advanced_weapons_idea
+		}
 	}
 	focus = {
 		id = MDR_repurpose_spaceships_wip
@@ -973,20 +1005,54 @@ focus_tree = {
 		y = 15
 		prerequisite = {focus = MDR_jcjenson_airspace_force_wip}
 		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_ideas = MDR_advanced_weapons_idea
+		}
 	}
 	focus = {
 		id = MDR_solver_black_sea_fleet_wip
 		icon = GFX_goal_unknown
 		x = 50
 		y = 14
+		prerequisite = { focus = MDR_solvers_army }
 		
 		cost = 2
 
-		prerequisite = { focus = MDR_solvers_army }
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_offsite_building = { type = dockyard level = 2 }
+            add_ideas = MDR_advanced_weapons_idea
 		}
 	}
 	focus = {
@@ -994,8 +1060,24 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		x = 50
 		y = 15
-		prerequisite = { MDR_solver_black_sea_fleet_wip }
-	    search_filters = { FOCUS_FILTER_ARMY_XP }
+		prerequisite = { focus = MDR_solver_black_sea_fleet_wip }
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_offsite_building = { type = dockyard level = 4 }
@@ -1006,6 +1088,7 @@ focus_tree = {
 		icon = GFX_MDR_solve_our_neigbhors
 		x = 39
 		y = 13
+		prerequisite = { focus = MDR_take_control_of_all_drones }
 
 		cost = 5
 
@@ -1013,9 +1096,10 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {prerequisite = { focus = MDR_harsh_training_as}
-		prerequisite = { focus = MDR_repurpose_spaceships_wip }
-		prerequisite = { focus = MDR_solver_cross_sea_fleet_wip }
+		available = {
+		has_completed_focus = MDR_harsh_training_as
+		has_completed_focus = MDR_repurpose_spaceships_wip 
+		has_completed_focus = MDR_solver_cross_sea_fleet_wip
 		}
 		
 		

@@ -358,6 +358,28 @@ ideas = {
 			}
 		}
 		
+		MDR_secret_police_idea_two = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_secret_police
+			
+			modifier = {
+			    political_power_factor = -0.05
+				consumer_goods_factor = 0.1
+				stability_factor = 0.15
+				resistance_activity = -0.5
+			}
+		}
+		
 		MDR_reogranize_militia_idea = {
 			
 			allowed = {
@@ -2053,6 +2075,400 @@ ideas = {
 				war_support_factor = 0.01
 				political_power_factor = 0.002
 				consumer_goods_factor = 0.05
+			}
+		}
+		
+		MDR_national_restoration_program_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+			    political_power_factor = 0.5
+				political_advisor_cost_factor = -0.5
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				consumer_goods_factor = -0.25
+				repair_speed_factor = 0.4
+				production_speed_buildings_factor = 0.4
+			}
+		}
+		
+		MDR_demilitarization_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+			    conscription = -0.05
+				weekly_manpower = -250
+			}
+		}
+		
+		MDR_veterans_program_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+			    political_power_factor = -0.01
+				consumer_goods_factor = 0.05
+				war_support_factor = 0.1
+			}
+		}
+		
+		MDR_free_healthcare_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+			    political_power_factor = -0.01
+				consumer_goods_factor = 0.1
+				war_support_factor = 0.1
+				stability_factor = 0.1
+				recruitable_population_factor = 0.15
+			}
+		}
+		
+		MDR_free_education_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+			    political_power_factor = -0.01
+				consumer_goods_factor = 0.05
+				stability_factor = 0.15
+				research_speed_factor = 0.2
+			}
+		}
+		
+		MDR_propaganda_for_workers_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+			    consumer_goods_factor = -0.25
+				production_speed_buildings_factor = 0.25
+				communism_drift = 0.01
+			}
+		}
+		
+		MDR_new_censorship_law_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+			    political_power_factor = 0.15
+				stability_factor = 0.15
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		MDR_propaganda_ministry_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+			    political_power_factor = 0.15
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+				weekly_manpower = 250
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		MDR_military_court_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+			    war_support_factor = 0.2
+				stability_factor = 0.1
+				weekly_manpower = -11
+			}
+		}
+		
+		MDR_five_years_plan_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+			    stability_factor = 0.1
+			    consumer_goods_factor = -0.2
+				production_speed_buildings_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.15
+			}
+		}
+		
+		MDR_cpb = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+			    political_power_factor = -0.02
+				consumer_goods_factor = 0.15
+				stability_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		MDR_planned_construction_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.2
+			}
+		}
+		
+		MDR_streamline_the_army_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.25
+				production_factory_max_efficiency_factor = 0.25
+				production_speed_arms_factory_factor = 0.15
+				army_org_factor = 0.1
+			}
+		}
+		
+		MDR_conscription_act_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+				conscription = 0.25
+				war_support_factor = 0.1
+			}
+		}
+		
+		MDR_war_commisariat_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+				war_support_factor = 0.05
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+		
+		MDR_all_frontal_assult_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.3
+				defense_bonus_against = 0.3
+			}
+		}
+		
+		MDR_failed_blitz_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.5
+				defense_bonus_against = 0.5
+			}
+		}
+		
+		MDR_political_deadlock = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = portrait_MDR_thad_small
+			
+			modifier = {
+				political_power_factor = -0.5
+				political_advisor_cost_factor = 0.75
+				war_support_factor = -0.25
+				stability_factor = -0.25
 			}
 		}
 	}

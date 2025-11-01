@@ -184,11 +184,11 @@ MDR_test_our_power_category = {
 		}
 
 		complete_effect = {
-			country_event = drones.17
+			country_event = { id = drones.17 }
 		}
 
 		timeout_effect = {
-			country_event = drones.18
+			country_event = { id = drones.18 }
 			white_peace = PER
 			if = {
 				limit = {
@@ -7023,34 +7023,122 @@ MDR_n_thad_endgame = {
 MDR_pesants_boycot = {
 
     MDR_pesants_protesting = {
-	    icon = GFX_decision_POL_looming_peasants_strike
-
-		days_mission_timeout = 365
-		selectable_mission = no
+		icon = GFX_decision_generic_ignite_civil_war
 		is_good = no
-		allowed = {
-			has_completed_focus = MDR_cousins_coalition_won
-		}
-		activation = {
-			has_completed_focus = MDR_cousins_coalition_won
-		}
-		cancel_trigger = {
-			OR = {
-		        has_comleted_focus = MDR_agricultural_reforms_doll
-		        has_comleted_focus = MDR_agricultural_reforms
-		    }
-		}
-		visible = {
-			has_completed_focus = MDR_cousins_coalition_won
-		}
+		selectable_mission = no
+		fire_only_once = yes
+		days_mission_timeout = 365
+		
+		#Fail trigger
 		available = {
+		    OR = {
+			has_completed_focus = MDR_agricultural_reforms
+			has_completed_focus = MDR_agricultural_reforms_doll
+		}
+
+		activation = {
 			always = no
 		}
+
+		complete_effect = {
+			
+		}
+		
 		timeout_effect = {
 			add_political_power = -80
 			add_stability = -0.25
 			1020 = { transfer_state_to = PES }
 			229 = { transfer_state_to = PES }
+		}
+	}
+}
+
+MDR_soviet_drones_war_cat = {
+
+    MDR_soviet_drones_war_mission = {
+		icon = GFX_decision_generic_ignite_civil_war
+		is_good = no
+		selectable_mission = no
+		fire_only_once = yes
+		days_mission_timeout = 365
+		
+		#Fail trigger
+		available = {
+			MDR = { 
+				exists = no
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+		    complete_national_focus = MDR_soviet_surrender
+			SOV = {
+			    white_peace = MDR
+			}	
+			if = {
+				limit = {
+					MDR = {
+						controls_state = 419
+						controls_state = 1000
+						controls_state = 420
+					}
+				}
+				419 = { transfer_state_to = MDR }
+				1000 = { transfer_state_to = MDR }
+				420 = { transfer_state_to = MDR }
+			}
+		}
+	}
+	
+	MDR_to_stalingrad = {
+		icon = GFX_decision_generic_ignite_civil_war
+		is_good = no
+		selectable_mission = no
+		fire_only_once = yes
+		days_mission_timeout = 100
+		
+		#Fail trigger
+		available = {
+			MDR = {
+			    controls_state = 217
+			}	
+		}
+
+		activation = {
+			always = no
+		}
+
+		complete_effect = {
+			complete_national_focus = MDR_soviet_surrender
+			SOV = {
+			    white_peace = MDR
+			}	
+			if = {
+				limit = {
+					MDR = {
+						controls_state = 419
+						controls_state = 1000
+						controls_state = 420
+					}
+				}
+				419 = { transfer_state_to = MDR }
+				1000 = { transfer_state_to = MDR }
+				420 = { transfer_state_to = MDR }
+			}
+		}
+
+		timeout_effect = {
+		    add_political_power = -50
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_manpower = -5000
 		}
 	}
 }

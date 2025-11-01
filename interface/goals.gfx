@@ -3,6 +3,196 @@ spriteTypes = {
 	#### Murder drones icons
 	
 	SpriteType = {
+	name = "GFX_MDR_crimea_militia"
+	texturefile = "gfx/interface/goals/MDR_crimea_militia.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_operation_failed_blitz"
+	texturefile = "gfx/interface/goals/MDR_operation_failed_blitz.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_all_frontal_assults"
+	texturefile = "gfx/interface/goals/MDR_all_frontal_assults.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_crime_defence"
+	texturefile = "gfx/interface/goals/MDR_crime_defence.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_dnieper_defence"
+	texturefile = "gfx/interface/goals/MDR_dnieper_defence.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_dnieper_militia"
+	texturefile = "gfx/interface/goals/MDR_dnieper_militia.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_rostov_militia"
+	texturefile = "gfx/interface/goals/MDR_rostov_militia.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_don_volga_defence"
+	texturefile = "gfx/interface/goals/MDR_don_volga_defence.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_mobilization_act"
+	texturefile = "gfx/interface/goals/MDR_mobilization_act.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_great_patriotic_war"
+	texturefile = "gfx/interface/goals/MDR_great_patriotic_war.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_Streamline_the_army"
+	texturefile = "gfx/interface/goals/MDR_Streamline_the_army.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_cpb"
+	texturefile = "gfx/interface/goals/MDR_cpb.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_planned_construction"
+	texturefile = "gfx/interface/goals/MDR_planned_construction.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_five_years_plan"
+	texturefile = "gfx/interface/goals/MDR_five_years_plan.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_military_court"
+	texturefile = "gfx/interface/goals/MDR_military_court.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_new_tactics"
+	texturefile = "gfx/interface/goals/MDR_new_tactics.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_modernize_army"
+	texturefile = "gfx/interface/goals/MDR_modernize_army.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_secret_police_two"
+	texturefile = "gfx/interface/goals/MDR_secret_police_two.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_ministry_of_propaganda"
+	texturefile = "gfx/interface/goals/MDR_ministry_of_propaganda.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_new_censorship_law"
+	texturefile = "gfx/interface/goals/MDR_new_censorship_law.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_invite_beria"
+	texturefile = "gfx/interface/goals/MDR_invite_beria.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_propaganda_for_workers"
+	texturefile = "gfx/interface/goals/MDR_propaganda_for_workers.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_free_education"
+	texturefile = "gfx/interface/goals/MDR_free_education.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_improve_education"
+	texturefile = "gfx/interface/goals/MDR_improve_education.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_pay_our_debt_to_workers"
+	texturefile = "gfx/interface/goals/MDR_pay_our_debt_to_workers.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_national_speech_doll"
+	texturefile = "gfx/interface/goals/MDR_national_speech_doll.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_free_healthcare"
+	texturefile = "gfx/interface/goals/MDR_free_healthcare.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_veterans_program"
+	texturefile = "gfx/interface/goals/MDR_veterans_program.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_demilitarization"
+	texturefile = "gfx/interface/goals/MDR_demilitarization.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_national_restoration_program"
+	texturefile = "gfx/interface/goals/MDR_national_restoration_program.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_ussr_surrendered"
+	texturefile = "gfx/interface/goals/MDR_ussr_surrendered.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_fortress_in_mountains"
+	texturefile = "gfx/interface/goals/MDR_fortress_in_mountains.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_anti_air_system"
+	texturefile = "gfx/interface/goals/MDR_anti_air_system.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_to_stalingrad"
+	texturefile = "gfx/interface/goals/MDR_to_stalingrad.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_railgun_battalions"
+	texturefile = "gfx/interface/goals/MDR_railgun_battalions.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_our_own_dd"
+	texturefile = "gfx/interface/goals/MDR_our_own_dd.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_defense"
+	texturefile = "gfx/interface/goals/MDR_defense.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_offensive"
+	texturefile = "gfx/interface/goals/MDR_offensive.png"			
+	}
+	
+	SpriteType = {
 	name = "GFX_MDR_militia"
 	texturefile = "gfx/interface/goals/MDR_militia.png"			
 	}
