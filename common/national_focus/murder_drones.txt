@@ -1013,9 +1013,9 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {prerequisite = { focus = MDR_harsh_training_as}
-		prerequisite = { focus = MDR_repurpose_spaceships_wip }
-		prerequisite = { focus = MDR_solver_cross_sea_fleet_wip }
+		available = { has_completed_focus = {MDR_solver_black_sea_fleet_wip}
+		has_completed_focus = {MDR_harsh_training_as}
+		has_completed_focus = {MDR_repurpose_spaceships_wip}
 		}
 		
 		
