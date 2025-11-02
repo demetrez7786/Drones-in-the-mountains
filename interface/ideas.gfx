@@ -11,6 +11,16 @@ spriteTypes = {
 	### new tfv nat spirit icons
 	
 	spriteType = {
+		name = "GFX_idea_MDR_turkish_law"
+		texturefile = "gfx/interface/ideas/MDR_turkish_law.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_liberty_or_death"
+		texturefile = "gfx/interface/ideas/MDR_liberty_or_death.png"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_portrait_MDR_thad_small"
 		texturefile = "gfx/interface/ideas/portrait_MDR_thad_small.png"
 	}

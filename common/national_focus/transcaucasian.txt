@@ -593,8 +593,7 @@ focus_tree = {
 		icon = GFX_RES_internal_issues
 		x = 10
 		y = 5
-		prerequisite = { focus = RES_centralization_completed }
-		prerequisite = { focus = RES_decentralization_completed }
+		prerequisite = { focus = RES_centralization_completed focus = RES_decentralization_completed }
 
 		cost = 10
 

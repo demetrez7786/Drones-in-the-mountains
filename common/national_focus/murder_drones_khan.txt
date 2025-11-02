@@ -765,7 +765,7 @@ focus_tree = {
 
 		completion_reward = {
             add_equipment_to_stockpile = { 
-				type = railgun_equipment_0
+				type = railgun_equipment
 				amount = 15000
 			}
 			add_to_variable = { political_power_gain = 0.05 }
