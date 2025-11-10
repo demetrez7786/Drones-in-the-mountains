@@ -1478,7 +1478,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MDR_invasions
+		id = MDR_invasions_uzi
 		icon = GFX_MDR_invasions
 		x = 15
 		y = 8
@@ -1486,10 +1486,6 @@ focus_tree = {
 		prerequisite = { focus = MDR_disassembly_drones_brigades }
 
 		cost = 1
-
-		visible = {
-			always = yes
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -1518,7 +1514,7 @@ focus_tree = {
 		icon = GFX_MDR_turkey_and_iran
 		x = 15
 		y = 9
-		prerequisite = { focus = MDR_invasions }
+		prerequisite = { focus = MDR_invasions_uzi }
 
 		cost = 1
 
