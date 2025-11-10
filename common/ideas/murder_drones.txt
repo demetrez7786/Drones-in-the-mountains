@@ -1981,8 +1981,8 @@ ideas = {
 			
 			modifier = {
 				political_power_factor = -0.02
-				stability_factor = -0.15
-				war_support_factor = -0.1
+				stability_factor = 0.15
+				war_support_factor = 0.1
 				communism_drift = 0.01
 			}
 		}
@@ -2047,7 +2047,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_order_twotwoseven
 			
 			modifier = {
 				stability_factor = 0.1
@@ -2068,7 +2068,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_live_propaganda
 			
 			modifier = {
 				stability_factor = 0.05
@@ -2090,7 +2090,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_national_restoration_program
 			
 			modifier = {
 			    political_power_factor = 0.5
@@ -2115,7 +2115,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_demilitarized
 			
 			modifier = {
 			    conscription = -0.05
@@ -2135,7 +2135,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_veteran
 			
 			modifier = {
 			    political_power_factor = -0.01
@@ -2156,7 +2156,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_free_healthcare
 			
 			modifier = {
 			    political_power_factor = -0.01
@@ -2179,7 +2179,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_free_education
 			
 			modifier = {
 			    political_power_factor = -0.01
@@ -2201,7 +2201,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_workers_propaganda
 			
 			modifier = {
 			    consumer_goods_factor = -0.25
@@ -2222,7 +2222,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_tyranny
 			
 			modifier = {
 			    political_power_factor = 0.15
@@ -2243,7 +2243,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_tyranny
 			
 			modifier = {
 			    political_power_factor = 0.15
@@ -2266,7 +2266,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_military_court
 			
 			modifier = {
 			    war_support_factor = 0.2
@@ -2287,7 +2287,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_five_year_plan
 			
 			modifier = {
 			    stability_factor = 0.1
@@ -2311,7 +2311,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_cpb
 			
 			modifier = {
 			    political_power_factor = -0.02
@@ -2335,7 +2335,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_planned_construction
 			
 			modifier = {
 				consumer_goods_factor = 0.1
@@ -2355,7 +2355,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_streamline
 			
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.25
@@ -2377,7 +2377,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_conscription_act
 			
 			modifier = {
 				conscription = 0.25
@@ -2397,7 +2397,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = unknown_idea
 			
 			modifier = {
 				war_support_factor = 0.05
@@ -2441,34 +2441,12 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_attack
 			
 			targeted_modifier = {
 				tag = GER
 				attack_bonus_against = 0.5
 				defense_bonus_against = 0.5
-			}
-		}
-		
-		MDR_political_deadlock = {
-			
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			picture = portrait_MDR_thad_small
-			
-			modifier = {
-				political_power_factor = -0.5
-				political_advisor_cost_factor = 0.75
-				war_support_factor = -0.25
-				stability_factor = -0.25
 			}
 		}
 		
@@ -2484,7 +2462,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_dual_solver
 			
 			modifier = {
 				army_attack_factor = 0.1
@@ -2494,7 +2472,7 @@ ideas = {
 			}
 		}
 		
-		MDR_research_act_idea = {
+		MDR_research_fund_act_idea = {
 			
 			allowed = {
 				always = yes
@@ -2506,10 +2484,75 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = portrait_MDR_thad_small
+			picture = MDR_research
 			
 			modifier = {
 				research_speed_factor = 0.35
+			}
+		}
+		
+		MDR_education_fund_act_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_free_education
+			
+			modifier = {
+				research_speed_factor = 0.2
+				stability_factor = 0.15
+			}
+		}
+		
+		MDR_orthodox_church_against_government = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = idea_yug_orthodox_church_support
+			
+			modifier = {
+			    political_power_factor = -0.15
+				stability_factor = -0.15
+				war_support_factor = -0.2
+			}
+		}
+		
+		MDR_overstretched_administration = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = unknown_idea
+			
+			modifier = {
+			    political_power_factor = -0.05
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				conscription = -0.05
+				recruitable_population_factor = -0.25
+				consumer_goods_factor = 0.15
 			}
 		}
 	}
