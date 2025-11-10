@@ -1447,7 +1447,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MDR_war_cabinet
+		id = MDR_war_cabinet_uzi
 		icon = GFX_MDR_war_cabinet
 		x = 17
 		y = 7
@@ -1478,11 +1478,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MDR_invasions
+		id = MDR_invasions_uzi
 		icon = GFX_MDR_invasions
 		x = 15
 		y = 8
-		prerequisite = { focus = MDR_war_cabinet }
+		prerequisite = { focus = MDR_war_cabinet_uzi }
 		prerequisite = { focus = MDR_disassembly_drones_brigades }
 
 		cost = 1
@@ -1490,6 +1490,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
 		allow_branch = {
 			always = yes
 		}
@@ -1513,7 +1514,7 @@ focus_tree = {
 		icon = GFX_MDR_turkey_and_iran
 		x = 15
 		y = 9
-		prerequisite = { focus = MDR_invasions }
+		prerequisite = { focus = MDR_invasions_uzi }
 
 		cost = 1
 
@@ -4978,8 +4979,9 @@ focus_tree = {
 
 		available = {
 			GER = {
-				at_war_with = SOV
+				has_war_with = SOV
 			}
+			has_completed_focus = MDR_accept_the_faith
 		}
 		
 		bypass = {
@@ -5127,11 +5129,64 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    add_stability = 0.05
-			add_political_power = -5
-			add_popularity = {
-                ideology = communism
-				popularity = 0.1
+		    218 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 9417
+						id = 11559
+						id = 585
+					}
+					instant_build = yes
+				}
+			}
+
+			238 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 11403
+						id = 3464
+						id = 6490
+					}
+					instant_build = yes
+				}
+			}
+
+			217 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 6503
+						id = 9474
+						id = 6527
+						id = 9504
+						id = 3529
+						id = 11474
+						id = 498
+					}
+					instant_build = yes
+				}
+			}
+
+			236 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 3487
+						id = 3461
+						id = 9440
+						id = 11579
+						id = 6620
+						id = 9753
+						id = 757
+					}
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -5163,12 +5218,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    add_stability = 0.05
-			add_political_power = -5
-			add_popularity = {
-                ideology = communism
-				popularity = 0.1
-			}
+		    load_oob = MDM_rostov_militia
 		}
 	}
 
@@ -5199,12 +5249,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    add_stability = 0.05
-			add_political_power = -5
-			add_popularity = {
-                ideology = communism
-				popularity = 0.1
-			}
+		    load_oob = MDM_crimea_militia
 		}
 	}
 
@@ -5235,12 +5280,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    add_stability = 0.05
-			add_political_power = -5
-			add_popularity = {
-                ideology = communism
-				popularity = 0.1
-			}
+		    load_oob = MDM_dnieper_militia
 		}
 	}
 
@@ -5363,11 +5403,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    add_stability = 0.05
-			add_political_power = -5
-			add_popularity = {
-                ideology = communism
-				popularity = 0.1
+		    137 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 3722
+						id = 9680
+						id = 3686
+					}
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -5399,11 +5445,80 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    add_stability = 0.05
-			add_political_power = -5
-			add_popularity = {
-                ideology = communism
-				popularity = 0.1
+		    196 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 721
+						id = 737
+						id = 3573
+					}
+					instant_build = yes
+				}
+			}
+
+			200 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 588
+						id = 11405
+					}
+					instant_build = yes
+				}
+			}
+
+			226 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 11437
+						id = 9463
+						id = 453
+					}
+					instant_build = yes
+				}
+			}
+
+			259 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 6507
+						id = 6495
+					}
+					instant_build = yes
+				}
+			}
+
+			203 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 9491
+						id = 11530
+					}
+					instant_build = yes
+				}
+			}
+
+			202 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 9543
+						id = 11557
+						id = 525
+						id = 489
+					}
+					instant_build = yes
+				}
 			}
 		}
 	}

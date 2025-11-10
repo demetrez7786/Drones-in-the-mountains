@@ -3,6 +3,56 @@ spriteTypes = {
 	#### Murder drones icons
 	
 	SpriteType = {
+	name = "GFX_MDR_new_constitution"
+	texturefile = "gfx/interface/goals/MDR_new_constitution.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_education_funding_act"
+	texturefile = "gfx/interface/goals/MDR_education_funding_act.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_core_all_russian_lands"
+	texturefile = "gfx/interface/goals/MDR_core_all_russian_lands.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_siberian_resources"
+	texturefile = "gfx/interface/goals/MDR_siberian_resources.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_fund_administration"
+	texturefile = "gfx/interface/goals/MDR_fund_administration.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_modern_infastructure"
+	texturefile = "gfx/interface/goals/MDR_modern_infastructure.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_capital_question"
+	texturefile = "gfx/interface/goals/MDR_capital_question.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_state_secularism"
+	texturefile = "gfx/interface/goals/MDR_state_secularism.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_russian_development"
+	texturefile = "gfx/interface/goals/MDR_russian_development.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_moscow_treaty"
+	texturefile = "gfx/interface/goals/MDR_moscow_treaty.png"			
+	}
+	
+	SpriteType = {
 	name = "GFX_MDR_fund_separatism_in_ussr"
 	texturefile = "gfx/interface/goals/MDR_fund_separatism_in_ussr.png"			
 	}
