@@ -1478,7 +1478,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MDR_invasions_uzi
+		id = MDR_invasions
 		icon = GFX_MDR_invasions
 		x = 15
 		y = 8
@@ -1489,6 +1489,9 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+		}
+		allow_branch = {
+			always = yes
 		}
 		
 		bypass = {
@@ -1510,7 +1513,7 @@ focus_tree = {
 		icon = GFX_MDR_turkey_and_iran
 		x = 15
 		y = 9
-		prerequisite = { focus = MDR_invasions_uzi }
+		prerequisite = { focus = MDR_invasions }
 
 		cost = 1
 
