@@ -285,11 +285,52 @@ MDR_pesants_boycot = {
 MDR_soviet_drones_war_cat = {
 	priority = 9999
 	visible_when_empty = no
-	icon = GFX_decision_category_generic_communist_revolution
+	icon = GFX_decision_cat_mdr_separatism_in_ussr
 	allowed = {
 		original_tag = MDR
 	}
 	visible = {
 		has_completed_focus = MDR_Soviet_drone_war
+	}
+}
+
+MDR_separatism_in_russia_cat = {
+	priority = 9999
+	visible_when_empty = no
+	icon = GFX_decision_cat_mdr_separatism_in_ussr
+	allowed = {
+		original_tag = MDR
+	}
+	visible = {
+	    AND = {
+			has_country_flag = MDR_spreading_separatism_in_ussr
+			NOT = {
+				has_country_flag = MDR_separatists_uprised
+			}
+		}
+	}
+}
+
+MDR_parliament = {
+	priority = 1
+	visible_when_empty = yes
+	icon = GFX_decision_cat_mdr_parliament
+	allowed = {
+		original_tag = MDR
+	}
+	visible = {
+		has_country_flag = MDR_parliament
+	}
+}
+
+MDR_siberian_resources_cat = {
+	priority = 999
+	visible_when_empty = no
+	icon = GFX_decision_category_generic_communist_revolution
+	allowed = {
+		original_tag = MDR
+	}
+	visible = {
+		has_country_flag = MDR_grabbing_siberian_resources
 	}
 }

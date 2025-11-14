@@ -88,6 +88,19 @@ focus_tree = {
 			set_power_balance = {
                 id = MDR_power_balance_doll_and_uzi_bop
             }
+			retire_character = MDR_uzi
+			retire_character = MDR_doll
+			add_country_leader_role = {
+			character = MDR_uzi_doll
+			promote_leader = yes		
+			    country_leader = {
+				    expire = "5022.8.30.1"
+				    ideology = marxism
+				    traits = {
+					    dual_solvers
+				    }
+			    }
+		    }
 		}
 	}
 
@@ -222,7 +235,7 @@ focus_tree = {
 		x = 63
 		y = 5
 		prerequisite = { focus = MDR_dual_command }
-		prerequisite = { focus = MDR_uzis_railgun }
+		prerequisite = { focus = MDR_uzis_railgun_du }
 		prerequisite = { focus = MDR_exploit_dual_solvers }
 
 		cost = 7
@@ -287,7 +300,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MDR_uzis_railgun
+		id = MDR_uzis_railgun_du
 		icon = GFX_MDR_uzis_guns
 		x = 61
 		y = 4
@@ -380,7 +393,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            country_event = { id = drones.52.t }
+            country_event = { id = drones.52 }
 		}
 	}
 
@@ -427,6 +440,37 @@ focus_tree = {
                 }
 				add_extra_state_shared_building_slots = 2
 			}
+		}
+	}
+
+	focus = {
+		id = MDR_agricultural_reforms_du
+		icon = GFX_MDR_agricultural_reforms
+		x = 51
+		y = 4
+		prerequisite = { focus = MDR_economic_path_du }
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            remove_mission = MDR_pesants_protesting
 		}
 	}
 
@@ -622,7 +666,76 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_ideas = MDR_research_act_idea
+            add_ideas = MDR_research_fund_act_idea
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = MDR_education_funding_act
+		icon = GFX_MDR_education_funding_act
+		x = 57
+		y = 7
+		prerequisite = { focus = MDR_research_funding_act }
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_ideas = MDR_education_fund_act_idea
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = MDR_new_constitution_du
+		icon = GFX_MDR_new_constitution
+		x = 61
+		y = 7
+		prerequisite = { focus = MDR_research_funding_act }
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_stability = 0.25
+			add_political_power = 75
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
 		}
 	}
 
@@ -653,7 +766,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_remove_ideas = MDR_underground_human_resistance
+            remove_ideas = MDR_underground_human_resistance
 		}
 	}
 
@@ -695,6 +808,8 @@ focus_tree = {
 		x = 59
 		y = 8
 		prerequisite = { focus = MDR_form_war_departament }
+		prerequisite = { focus = MDR_education_funding_act }
+		prerequisite = { focus = MDR_new_constitution_du }
 
 		cost = 2
 
@@ -717,6 +832,14 @@ focus_tree = {
 
 		completion_reward = {
             activate_mission = MDR_take_iran_and_iraq_du
+			declare_war_on = {
+			target = PER
+			type = annex_everything
+		    }
+			declare_war_on = {
+			target = IRQ
+			type = annex_everything
+		    }
 		}
 	}
 
@@ -821,7 +944,329 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-            add_country_flag = MDR_spreading_separatism_in_ussr
+            set_country_flag = MDR_spreading_separatism_in_ussr
+		}
+	}
+
+	focus = {
+		id = MDR_moscow_treaty
+		icon = GFX_MDR_moscow_treaty
+		x = 59
+		y = 12
+		prerequisite = { focus = MDR_spread_separatism_in_ussr }
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			SOV = {
+				exists = no
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            192 = { transfer_state_to = UKR }
+		    834 = { transfer_state_to = UKR }
+		    198 = { transfer_state_to = UKR }
+		    199 = { transfer_state_to = UKR }
+		    201 = { transfer_state_to = UKR }
+		    202 = { transfer_state_to = UKR }
+		    193 = { transfer_state_to = UKR }
+			259 = { transfer_state_to = UKR }
+		    203 = { transfer_state_to = UKR }
+		    197 = { transfer_state_to = UKR }
+		    226 = { transfer_state_to = UKR }
+			196 = { transfer_state_to = UKR }
+		    137 = { transfer_state_to = UKR }
+			225 = { transfer_state_to = UKR }
+			221 = { transfer_state_to = UKR }
+			228 = { transfer_state_to = UKR }
+			227 = { transfer_state_to = UKR }
+			200 = { transfer_state_to = UKR }
+
+			207 = { transfer_state_to = BLR }
+		    206 = { transfer_state_to = BLR }
+			204 = { transfer_state_to = BLR }
+		    194 = { transfer_state_to = BLR }
+			241 = { transfer_state_to = BLR }
+
+			587 = { transfer_state_to = KAZ }
+		    402 = { transfer_state_to = KAZ }
+			881 = { transfer_state_to = KAZ }
+		    404 = { transfer_state_to = KAZ }
+			586 = { transfer_state_to = KAZ }
+		    589 = { transfer_state_to = KAZ }
+			406 = { transfer_state_to = KAZ }
+		    407 = { transfer_state_to = KAZ }
+			583 = { transfer_state_to = KAZ }
+		    590 = { transfer_state_to = KAZ }
+			588 = { transfer_state_to = KAZ }
+
+			MDR = {
+				set_autonomy = {
+					target = UKR
+					autonomy_state = autonomy_puppet
+				}
+			}
+			MDR = {
+				set_autonomy = {
+					target = BLR
+					autonomy_state = autonomy_puppet
+				}
+			}
+			MDR = {
+				set_autonomy = {
+					target = KAZ
+					autonomy_state = autonomy_puppet
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_russian_development
+		icon = GFX_MDR_russian_development
+		x = 59
+		y = 13
+		prerequisite = { focus = MDR_moscow_treaty }
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = MDR_capital_question
+		icon = GFX_MDR_capital_question
+		x = 59
+		y = 14
+		prerequisite = { focus = MDR_russian_development }
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = MDR_modern_infastructure
+		icon = GFX_MDR_modern_infastructure
+		x = 61
+		y = 14
+		prerequisite = { focus = MDR_russian_development }
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            every_state = {
+            limit = {
+                is_core_of = SOV
+            }
+            remove_dynamic_modifier = { modifier = MDR_outdated_infastructure }
+            }
+		}
+	}
+
+	focus = {
+		id = MDR_siberian_resources
+		icon = GFX_MDR_siberian_resources
+		x = 60
+		y = 15
+		prerequisite = { focus = MDR_russian_development }
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            set_country_flag = MDR_grabbing_siberian_resources
+		}
+	}
+
+	focus = {
+		id = MDR_declare_state_secularism
+		icon = GFX_MDR_state_secularism
+		x = 57
+		y = 14
+		prerequisite = { focus = MDR_russian_development }
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            remove_ideas = MDR_orthodox_church_against_government
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = MDR_rise_administration_funds
+		icon = GFX_MDR_fund_administration
+		x = 58
+		y = 15
+		prerequisite = { focus = MDR_russian_development }
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_political_power = -100
+			add_stability = 0.1
+			add_war_support = 0.1
+            remove_ideas = MDR_overstretched_administration
+		}
+	}
+
+	focus = {
+		id = MDR_core_russian_lands
+		icon = GFX_MDR_core_all_russian_lands
+		x = 59
+		y = 16
+		prerequisite = { focus = MDR_capital_question }
+		prerequisite = { focus = MDR_declare_state_secularism }
+		prerequisite = { focus = MDR_rise_administration_funds }
+		prerequisite = { focus = MDR_modern_infastructure }
+		prerequisite = { focus = MDR_siberian_resources }
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            every_state = {
+                limit = {
+                    is_controlled_by = MDR
+                }
+                add_core_of = MDR
+            }
 		}
 	}
 
@@ -1002,7 +1447,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MDR_war_cabinet
+		id = MDR_war_cabinet_uzi
 		icon = GFX_MDR_war_cabinet
 		x = 17
 		y = 7
@@ -1033,11 +1478,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MDR_invasions
+		id = MDR_invasions_uzi
 		icon = GFX_MDR_invasions
 		x = 15
 		y = 8
-		prerequisite = { focus = MDR_war_cabinet }
+		prerequisite = { focus = MDR_war_cabinet_uzi }
 		prerequisite = { focus = MDR_disassembly_drones_brigades }
 
 		cost = 1
@@ -1046,8 +1491,8 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
+		allow_branch = {
+			always = yes
 		}
 		
 		bypass = {
@@ -1069,7 +1514,7 @@ focus_tree = {
 		icon = GFX_MDR_turkey_and_iran
 		x = 15
 		y = 9
-		prerequisite = { focus = MDR_invasions }
+		prerequisite = { focus = MDR_invasions_uzi }
 
 		cost = 1
 
@@ -1441,7 +1886,7 @@ focus_tree = {
 			    ideology = fascism
 			    popularity = 0.55
 		    }
-			country_event = { id = drones.45 }
+			country_event = { id = drones.46 }
 		}
 	}
 
@@ -4534,8 +4979,9 @@ focus_tree = {
 
 		available = {
 			GER = {
-				at_war_with = SOV
+				has_war_with = SOV
 			}
+			has_completed_focus = MDR_accept_the_faith
 		}
 		
 		bypass = {
@@ -4683,11 +5129,64 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    add_stability = 0.05
-			add_political_power = -5
-			add_popularity = {
-                ideology = communism
-				popularity = 0.1
+		    218 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 9417
+						id = 11559
+						id = 585
+					}
+					instant_build = yes
+				}
+			}
+
+			238 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 11403
+						id = 3464
+						id = 6490
+					}
+					instant_build = yes
+				}
+			}
+
+			217 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 6503
+						id = 9474
+						id = 6527
+						id = 9504
+						id = 3529
+						id = 11474
+						id = 498
+					}
+					instant_build = yes
+				}
+			}
+
+			236 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 3487
+						id = 3461
+						id = 9440
+						id = 11579
+						id = 6620
+						id = 9753
+						id = 757
+					}
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -4719,12 +5218,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    add_stability = 0.05
-			add_political_power = -5
-			add_popularity = {
-                ideology = communism
-				popularity = 0.1
-			}
+		    load_oob = MDM_rostov_militia
 		}
 	}
 
@@ -4755,12 +5249,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    add_stability = 0.05
-			add_political_power = -5
-			add_popularity = {
-                ideology = communism
-				popularity = 0.1
-			}
+		    load_oob = MDM_crimea_militia
 		}
 	}
 
@@ -4791,12 +5280,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    add_stability = 0.05
-			add_political_power = -5
-			add_popularity = {
-                ideology = communism
-				popularity = 0.1
-			}
+		    load_oob = MDM_dnieper_militia
 		}
 	}
 
@@ -4919,11 +5403,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    add_stability = 0.05
-			add_political_power = -5
-			add_popularity = {
-                ideology = communism
-				popularity = 0.1
+		    137 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 3722
+						id = 9680
+						id = 3686
+					}
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -4955,11 +5445,80 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		    add_stability = 0.05
-			add_political_power = -5
-			add_popularity = {
-                ideology = communism
-				popularity = 0.1
+		    196 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 721
+						id = 737
+						id = 3573
+					}
+					instant_build = yes
+				}
+			}
+
+			200 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 588
+						id = 11405
+					}
+					instant_build = yes
+				}
+			}
+
+			226 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 11437
+						id = 9463
+						id = 453
+					}
+					instant_build = yes
+				}
+			}
+
+			259 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 6507
+						id = 6495
+					}
+					instant_build = yes
+				}
+			}
+
+			203 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 9491
+						id = 11530
+					}
+					instant_build = yes
+				}
+			}
+
+			202 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 9543
+						id = 11557
+						id = 525
+						id = 489
+					}
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -5089,7 +5648,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_army_experience = 50
+			army_experience = 50
 		}
 	}
 
@@ -5126,7 +5685,7 @@ focus_tree = {
 				uses = 4
 				category = cat_mass_assault
 			}
-			add_army_experience = 50
+			army_experience = 50
 		}
 	}
 
@@ -5162,7 +5721,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MDR_modernize_equipment_doll
+		id = MDR_new_tanks
 		icon = GFX_RES_better_equipment
 		x = 42
 		y = 19
@@ -5190,10 +5749,10 @@ focus_tree = {
 
 		completion_reward = {
 		    add_tech_bonus = {
-				name = MDR_modernize_equipment_doll
+				name = MDR_new_tanks
 				bonus = 1
 				uses = 1
-				category = infantry_weapons
+				category = armor
 			}
 		}
 	}
@@ -5203,7 +5762,7 @@ focus_tree = {
 		icon = GFX_MDR_centralized_command
 		x = 42
 		y = 20
-		prerequisite = { focus = MDR_modernize_equipment_doll }
+		prerequisite = { focus = MDR_new_tanks }
 
 		cost = 5
 
@@ -6012,9 +6571,9 @@ focus_tree = {
 			}
 			add_manpower = 50000
 			add_command_power = 50
-			add_army_experience = 50
-			add_air_experience = 50
-			add_navy_experience = 50
+			army_experience = 50
+			air_experience = 50
+			navy_experience = 50
 		}
 	}
 

@@ -159,6 +159,67 @@ focus_tree = {
 	}
 
 	focus = {
+		id = MDR_v_leads
+		icon = GFX_MDR_v_leads
+		x = 36
+		y = 2
+		prerequisite = { focus = MDR_parliamentary_elections }
+		mutually_exclusive = { focus = MDR_n_leads focus = MDR_j_leads }
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		offset = {
+			x = -6
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = MDR_v_leads
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+					    has_completed_focus = MDR_n_leads
+						has_completed_focus = MDR_j_leads
+					}
+				}
+			}
+		}
+
+		available = {
+			always = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            
+		}
+	}
+
+	focus = {
 		id = MDR_equal_rights_for_all_drones
 		icon = GFX_MDR_equal_rights_for_all_drones
 		x = 0
@@ -1948,67 +2009,6 @@ focus_tree = {
 			target = SAU
 			type = annex_everything
 		    }
-		}
-	}
-
-	focus = {
-		id = MDR_v_leads
-		icon = GFX_MDR_v_leads
-		x = 36
-		y = 2
-		prerequisite = { focus = MDR_parliamentary_elections }
-		mutually_exclusive = { focus = MDR_n_leads focus = MDR_j_leads }
-
-		cost = 1
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		offset = {
-			x = -6
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = MDR_v_leads
-			}
-		}
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-					    has_completed_focus = MDR_n_leads
-						has_completed_focus = MDR_j_leads
-					}
-				}
-			}
-		}
-
-		available = {
-			always = no
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-            
 		}
 	}
 }	

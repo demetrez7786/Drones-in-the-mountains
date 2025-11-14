@@ -40,6 +40,25 @@ set_power_balance = {
     id = MDR_power_balance_bop
 }
 
+# PARLIAMENT
+add_to_variable = {
+	var = cyn_absolute_solver
+	value = 81
+}
+add_to_variable = {
+	var = cousins_coalition
+	value = 38
+}
+add_to_variable = {
+	var = democracy_and_bunkers
+	value = 22
+}
+add_to_variable = {
+	var = disassembly_drones_coalition
+	value = 10
+}
+set_country_flag = MDR_parliament
+
 set_politics = {
 	ruling_party = fascism
 	last_election = "1936.1.1"
@@ -76,3 +95,4 @@ recruit_character = MDR_teacher
 recruit_character = MDR_yeva
 recruit_character = MDR_uzis_emergency_government
 recruit_character = MDR_uzi_infected
+recruit_character = MDR_uzi_doll
