@@ -459,6 +459,9 @@
  MDR_create_the_cpb:0 "Create the CPB"
  MDR_create_the_cpb_desc:0 "CPB Stands for Central Planning Bureau"
  MDR_streamline_the_army:0 "Streamline the Army"
+ MDR_world_war_cabinet:0 "World War Cabinet"
+ MDR_buy_trabizon:0 "But Trabzon"
+ MDR_buy_north_caucasus:0 "But North Caucasus"
 
  RES_uprising:0 "Uprising!"
  RES_call_for_volunteers:0 "Call for Volunteers"

@@ -18,7 +18,7 @@ focus_tree = {
 		id = MDR_murder_drones_coalition_won
 		icon = GFX_MDR_murder_drones_coalition_won
 		x = 30
-		y = 0
+		y = 1
 
 		cost = 1
 
@@ -57,7 +57,7 @@ focus_tree = {
 		id = MDR_parliamentary_elections
 		icon = GFX_MDR_parliamentary_elections
 		x = 30
-		y = 1
+		y = 3
 		prerequisite = { focus = MDR_murder_drones_coalition_won }
 
 		cost = 1
@@ -89,7 +89,7 @@ focus_tree = {
 		id = MDR_n_leads
 		icon = GFX_MDR_n_leads
 		x = 30
-		y = 2
+		y = 5
 		prerequisite = { focus = MDR_parliamentary_elections }
 		mutually_exclusive = { focus = MDR_j_leads focus = MDR_v_leads }
 
@@ -162,7 +162,7 @@ focus_tree = {
 		id = MDR_v_leads
 		icon = GFX_MDR_v_leads
 		x = 36
-		y = 2
+		y = 5
 		prerequisite = { focus = MDR_parliamentary_elections }
 		mutually_exclusive = { focus = MDR_n_leads focus = MDR_j_leads }
 
@@ -223,7 +223,7 @@ focus_tree = {
 		id = MDR_equal_rights_for_all_drones
 		icon = GFX_MDR_equal_rights_for_all_drones
 		x = 0
-		y = 1
+		y = 2
 		prerequisite = { focus = MDR_n_leads }
 		relative_position_id = MDR_n_leads
 
@@ -255,7 +255,7 @@ focus_tree = {
 		id = MDR_black_market
 		icon = GFX_MDR_black_market
 		x = 0
-		y = 1
+		y = 2
 		prerequisite = { focus = MDR_v_leads }
 		relative_position_id = MDR_v_leads
 
@@ -286,7 +286,7 @@ focus_tree = {
 		id = MDR_massacre_traitors
 		icon = GFX_MDR_massacre_traitors
 		x = 2
-		y = 1
+		y = 2
 		prerequisite = { focus = MDR_v_leads }
 		relative_position_id = MDR_v_leads
 
@@ -318,7 +318,7 @@ focus_tree = {
 		id = MDR_increase_security
 		icon = GFX_MDR_increase_security
 		x = 2
-		y = 2
+		y = 4
 		prerequisite = { focus = MDR_massacre_traitors }
 		relative_position_id = MDR_v_leads
 
@@ -353,7 +353,7 @@ focus_tree = {
 		id = MDR_secret_assasinations
 		icon = GFX_MDR_wipe_out_humans
 		x = 2
-		y = 3
+		y = 6
 		prerequisite = { focus = MDR_increase_security }
 		relative_position_id = MDR_v_leads
 
@@ -384,7 +384,7 @@ focus_tree = {
 		id = MDR_guerilla_warfare
 		icon = GFX_goal_unknown
 		x = -2
-		y = 1
+		y = 2
 		prerequisite = { focus = MDR_v_leads }
 		relative_position_id = MDR_v_leads
 
@@ -415,7 +415,7 @@ focus_tree = {
 		id = MDR_recruit_mercenaries
 		icon = GFX_MDR_recruit_mercenaries
 		x = -2
-		y = 2
+		y = 4
 		prerequisite = { focus = MDR_guerilla_warfare }
 		relative_position_id = MDR_v_leads
 
@@ -447,7 +447,7 @@ focus_tree = {
 		id = MDR_urban_battle_training
 		icon = GFX_MDR_urban_battle_training
 		x = -2
-		y = 3
+		y = 6
 		prerequisite = { focus = MDR_recruit_mercenaries }
 		relative_position_id = MDR_v_leads
 
@@ -477,7 +477,7 @@ focus_tree = {
 		id = MDR_underground_trade_networks
 		icon = GFX_MDR_underground_trade_network
 		x = 0
-		y = 2
+		y = 4
 		prerequisite = { focus = MDR_black_market }
 		relative_position_id = MDR_v_leads
 
@@ -509,7 +509,7 @@ focus_tree = {
 		id = MDR_underground_labor_recruitment
 		icon = GFX_MDR_buy_labors
 		x = 0
-		y = 3
+		y = 6
 		prerequisite = { focus = MDR_underground_trade_networks }
 		relative_position_id = MDR_v_leads
 
@@ -540,7 +540,7 @@ focus_tree = {
 		id = MDR_conqure_middle_east
 		icon = GFX_MDR_middle_east_n
 		x = 0
-		y = 4
+		y = 8
 		prerequisite = { focus = MDR_underground_labor_recruitment }
 		prerequisite = { focus = MDR_urban_battle_training }
 		prerequisite = { focus = MDR_secret_assasinations }
@@ -594,7 +594,7 @@ focus_tree = {
 		id = MDR_state_welfare_for_drones
 		icon = GFX_MDR_state_welfare
 		x = 0
-		y = 2
+		y = 4
 		prerequisite = { focus = MDR_equal_rights_for_all_drones }
 		relative_position_id = MDR_n_leads
 
@@ -625,7 +625,7 @@ focus_tree = {
 		id = MDR_peace_to_murder_drones
 		icon = GFX_MDR_peace_to_murder_drones
 		x = 0
-		y = 3
+		y = 6
 		prerequisite = { focus = MDR_state_welfare_for_drones }
 		relative_position_id = MDR_n_leads
 
@@ -686,7 +686,7 @@ focus_tree = {
 		id = MDR_ask_help_from_uzi
 		icon = GFX_MDR_seek_help_from_N
 		x = -3
-		y = 2
+		y = 3
 		prerequisite = { focus = MDR_economy_question }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -726,7 +726,7 @@ focus_tree = {
 		id = MDR_ensure_workers_safety
 		icon = GFX_MDR_ensure_workers_safety
 		x = -2
-		y = 3
+		y = 5
 		prerequisite = { focus = MDR_ask_help_from_uzi }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -761,7 +761,7 @@ focus_tree = {
 		id = MDR_expand_social_programs
 		icon = GFX_goal_unknown
 		x = -2
-		y = 4
+		y = 7
 		prerequisite = { focus = MDR_ensure_workers_safety }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -795,7 +795,7 @@ focus_tree = {
 		id = MDR_open_local_markets
 		icon = GFX_goal_unknown
 		x = -4
-		y = 4
+		y = 7
 		prerequisite = { focus = MDR_legalize_workers_unions }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -829,7 +829,7 @@ focus_tree = {
 		id = MDR_education_for_everyone
 		icon = GFX_goal_unknown
 		x = -3
-		y = 5
+		y = 9
 		prerequisite = { focus = MDR_open_local_markets }
 		prerequisite = { focus = MDR_expand_social_programs }
 		relative_position_id = MDR_peace_to_murder_drones
@@ -864,7 +864,7 @@ focus_tree = {
 		id = MDR_peace_forever
 		icon = GFX_MDR_peace_to_murder_drones
 		x = -1
-		y = 6
+		y = 10
 		prerequisite = { focus = MDR_education_for_everyone }
 		prerequisite = { focus = MDR_centralized_command }
 		mutually_exclusive = { focus = MDR_war }
@@ -897,7 +897,7 @@ focus_tree = {
 		id = MDR_war
 		icon = GFX_MDR_war
 		x = 1
-		y = 6
+		y = 10
 		prerequisite = { focus = MDR_education_for_everyone }
 		prerequisite = { focus = MDR_centralized_command }
 		mutually_exclusive = { focus = MDR_peace_forever }
@@ -929,7 +929,7 @@ focus_tree = {
 		id = MDR_n_middle_east
 		icon = GFX_MDR_middle_east_n
 		x = 1
-		y = 7
+		y = 12
 		prerequisite = { focus = MDR_war }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -981,7 +981,7 @@ focus_tree = {
 		id = MDR_n_afghanistan
 		icon = GFX_MDR_afghanistan_n
 		x = 1
-		y = 8
+		y = 14
 		prerequisite = { focus = MDR_n_middle_east }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -1015,7 +1015,7 @@ focus_tree = {
 		id = MDR_n_balkan
 		icon = GFX_MDR_n_balkans
 		x = 1
-		y = 9
+		y = 16
 		prerequisite = { focus = MDR_n_afghanistan }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -1065,7 +1065,7 @@ focus_tree = {
 		id = MDR_n_soviet_union
 		icon = GFX_MDR_ussr
 		x = 1
-		y = 10
+		y = 18
 		prerequisite = { focus = MDR_n_balkan }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -1099,7 +1099,7 @@ focus_tree = {
 		id = MDR_legalize_workers_unions
 		icon = GFX_MDR_legalize_workers_unions
 		x = -4
-		y = 3
+		y = 5
 		prerequisite = { focus = MDR_ask_help_from_uzi }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -1164,7 +1164,7 @@ focus_tree = {
 		id = MDR_ask_help_from_khan
 		icon = GFX_MDR_seek_help_from_khan
 		x = 3
-		y = 2
+		y = 3
 		prerequisite = { focus = MDR_expand_wdf }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -1200,7 +1200,7 @@ focus_tree = {
 		id = MDR_workers_militia
 		icon = GFX_goal_unknown
 		x = 4
-		y = 3
+		y = 5
 		prerequisite = { focus = MDR_ask_help_from_khan }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -1231,7 +1231,7 @@ focus_tree = {
 		id = MDR_drone_engineering_corps
 		icon = GFX_MDR_engineering_corps
 		x = 4
-		y = 4
+		y = 7
 		prerequisite = { focus = MDR_workers_militia }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -1262,7 +1262,7 @@ focus_tree = {
 		id = MDR_fortify_mountains
 		icon = GFX_MDR_fortifications
 		x = 2
-		y = 3
+		y = 5
 		prerequisite = { focus = MDR_ask_help_from_khan }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -1365,7 +1365,7 @@ focus_tree = {
 		id = MDR_volunteers_recruitment_offices
 		icon = GFX_goal_unknown
 		x = 2
-		y = 4
+		y = 7
 		prerequisite = { focus = MDR_fortify_mountains }
 		relative_position_id = MDR_peace_to_murder_drones
 
@@ -1396,7 +1396,7 @@ focus_tree = {
 		id = MDR_centralized_command
 		icon = GFX_MDR_centralized_command
 		x = 3
-		y = 5
+		y = 9
 		prerequisite = { focus = MDR_volunteers_recruitment_offices }
 		prerequisite = { focus = MDR_drone_engineering_corps }
 		relative_position_id = MDR_peace_to_murder_drones
@@ -1428,7 +1428,7 @@ focus_tree = {
 		id = MDR_j_leads
 		icon = GFX_MDR_j_leads
 		x = 24
-		y = 2
+		y = 5
 		prerequisite = { focus = MDR_parliamentary_elections }
 		mutually_exclusive = { focus = MDR_n_leads focus = MDR_v_leads }
 
@@ -1500,7 +1500,7 @@ focus_tree = {
 		id = MDR_state_capitalism
 		icon = GFX_MDR_state_capitalism
 		x = 0
-		y = 1
+		y = 2
 		prerequisite = { focus = MDR_j_leads }
 		relative_position_id = MDR_j_leads
 
@@ -1531,7 +1531,7 @@ focus_tree = {
 		id = MDR_seize_companies_assets
 		icon = GFX_MDR_sieze_companies_assets
 		x = 0
-		y = 2
+		y = 4
 		prerequisite = { focus = MDR_state_capitalism }
 		relative_position_id = MDR_j_leads
 
@@ -1563,7 +1563,7 @@ focus_tree = {
 		id = MDR_strategic_resources_consolidation
 		icon = GFX_goal_unknown
 		x = 0
-		y = 3
+		y = 6
 		prerequisite = { focus = MDR_seize_companies_assets }
 		relative_position_id = MDR_j_leads
 
@@ -1595,7 +1595,7 @@ focus_tree = {
 		id = MDR_extreme_discipline
 		icon = GFX_goal_unknown
 		x = 2
-		y = 1
+		y = 2
 		prerequisite = { focus = MDR_j_leads }
 		relative_position_id = MDR_j_leads
 
@@ -1626,7 +1626,7 @@ focus_tree = {
 		id = MDR_achive_goals_at_all_cost
 		icon = GFX_goal_unknown
 		x = 2
-		y = 2
+		y = 4
 		prerequisite = { focus = MDR_extreme_discipline }
 		relative_position_id = MDR_j_leads
 
@@ -1658,7 +1658,7 @@ focus_tree = {
 		id = MDR_no_time_for_mourn
 		icon = GFX_goal_unknown
 		x = 2
-		y = 3
+		y = 6
 		prerequisite = { focus = MDR_achive_goals_at_all_cost }
 		relative_position_id = MDR_j_leads
 
@@ -1690,7 +1690,7 @@ focus_tree = {
 		id = MDR_help_from_cyn
 		icon = GFX_MDR_cyn_won
 		x = -2
-		y = 1
+		y = 2
 		prerequisite = { focus = MDR_j_leads }
 		relative_position_id = MDR_j_leads
 
@@ -1730,7 +1730,7 @@ focus_tree = {
 		id = MDR_crackdown_opposition_media
 		icon = GFX_MDR_crackdown_media
 		x = -2
-		y = 2
+		y = 4
 		prerequisite = { focus = MDR_help_from_cyn }
 		relative_position_id = MDR_j_leads
 
@@ -1766,7 +1766,7 @@ focus_tree = {
 		id = MDR_form_paramilitary_groups
 		icon = GFX_MDR_paramilitary_group
 		x = -2
-		y = 3
+		y = 6
 		prerequisite = { focus = MDR_crackdown_opposition_media }
 		relative_position_id = MDR_j_leads
 
@@ -1798,7 +1798,7 @@ focus_tree = {
 		id = MDR_test_our_power
 		icon = GFX_MDR_test
 		x = 0
-		y = 4
+		y = 8
 		prerequisite = { focus = MDR_form_paramilitary_groups }
 		prerequisite = { focus = MDR_strategic_resources_consolidation }
 		prerequisite = { focus = MDR_no_time_for_mourn }
@@ -1838,7 +1838,7 @@ focus_tree = {
 		id = MDR_success
 		icon = GFX_MDR_victory
 		x = 0
-		y = 5
+		y = 10
 		prerequisite = { focus = MDR_test_our_power }
 		relative_position_id = MDR_j_leads
 
@@ -1869,7 +1869,7 @@ focus_tree = {
 		id = MDR_failure
 		icon = GFX_MDR_failure
 		x = -3
-		y = 5
+		y = 10
 		prerequisite = { focus = MDR_test_our_power }
 		relative_position_id = MDR_j_leads
 
@@ -1900,7 +1900,7 @@ focus_tree = {
 		id = MDR_buy_trabizon
 		icon = GFX_MDR_MDR_buy_trabizon
 		x = -3
-		y = 6
+		y = 12
 		prerequisite = { focus = MDR_failure }
 		relative_position_id = MDR_j_leads
 
@@ -1911,7 +1911,6 @@ focus_tree = {
 		}
 
 		available = {
-			always = no
 		}
 		
 		bypass = {
@@ -1934,7 +1933,7 @@ focus_tree = {
 		id = MDR_buy_north_caucasus
 		icon = GFX_MDR_buy_north_caucasus
 		x = -3
-		y = 7
+		y = 14
 		prerequisite = { focus = MDR_buy_trabizon }
 		relative_position_id = MDR_j_leads
 
@@ -1945,7 +1944,6 @@ focus_tree = {
 		}
 
 		available = {
-			always = no
 		}
 		
 		bypass = {
@@ -1968,7 +1966,7 @@ focus_tree = {
 		id = MDR_real_war
 		icon = GFX_MDR_middle_east_n
 		x = 0
-		y = 6
+		y = 12
 		prerequisite = { focus = MDR_success }
 		relative_position_id = MDR_j_leads
 

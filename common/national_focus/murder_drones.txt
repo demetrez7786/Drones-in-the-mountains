@@ -12,13 +12,13 @@ focus_tree = {
 	
 	default = no
 	
-	continuous_focus_position = { x = 50 y = 4000 }
+	continuous_focus_position = { x = 50 y = 7000 }
 
     focus = {
 		id = MDR_winter_massacre
 		icon = GFX_MDR_winter_massacre
 		x = 26
-		y = 0
+		y = 1
 
 		cost = 2
 
@@ -50,7 +50,7 @@ focus_tree = {
 		id = MDR_middle_ground
 		icon = GFX_MDR_middle_ground
 		x = 28
-		y = 9
+		y = 10
 
 		cost = 2
 
@@ -84,7 +84,7 @@ focus_tree = {
 		id = MDR_emergency_situation
 		icon = GFX_MDR_emergency_situation
 		x = 8
-		y = 0
+		y = 1
 
 		cost = 1
 
@@ -113,7 +113,7 @@ focus_tree = {
 		id = MDR_emergency_forces
 		icon = GFX_MDR_emergency_forces
 		x = 8
-		y = 1
+		y = 3
 		prerequisite = { focus = MDR_emergency_situation }
 
 		cost = 2
@@ -143,7 +143,7 @@ focus_tree = {
 		id = MDR_strike_batumi
 		icon = GFX_MDR_strike_batumi
 		x = 6
-		y = 1
+		y = 3
 		prerequisite = { focus = MDR_emergency_situation }
 
 		cost = 2
@@ -187,7 +187,7 @@ focus_tree = {
 		id = MDR_martial_law
 		icon = GFX_MDR_martial_law
 		x = 10
-		y = 1
+		y = 3
 		prerequisite = { focus = MDR_emergency_situation }
 
 		cost = 2
@@ -229,8 +229,8 @@ focus_tree = {
 	focus = {
 		id = MDR_victory_in_cw
 		icon = GFX_MDR_victory_in_cw
-		x = 8
-		y = 3
+		x = 10
+		y = 1
 
 		cost = 2
 
@@ -271,7 +271,7 @@ focus_tree = {
 		id = MDR_elections
 		icon = GFX_MDR_elections
 		x = 26
-		y = 2
+		y = 3
         prerequisite = { focus = MDR_winter_massacre }
 
 		cost = 1
@@ -391,7 +391,7 @@ focus_tree = {
 		id = MDR_program_the_nation
 		icon = GFX_MDR_program_the_nation
 		x = 39
-		y = 5
+		y = 6
         prerequisite = { focus = MDR_absolute_solver_won }
 
 		cost = 5
@@ -423,7 +423,7 @@ focus_tree = {
 		id = MDR_drones_anatomy
 		icon = GFX_MDR_drones_anatomy
 		x = 39
-		y = 6
+		y = 8
         prerequisite = { focus = MDR_program_the_nation }
 
 		cost = 5
@@ -453,7 +453,7 @@ focus_tree = {
 		id = MDR_memory_control
 		icon = GFX_MDR_memory_control
 		x = 37
-		y = 7
+		y = 10
         prerequisite = { focus = MDR_drones_anatomy }
 
 		cost = 5
@@ -491,7 +491,7 @@ focus_tree = {
 		id = MDR_vision_control
 		icon = GFX_MDR_vision_control
 		x = 39
-		y = 7
+		y = 10
         prerequisite = { focus = MDR_drones_anatomy }
 
 		cost = 5
@@ -526,7 +526,7 @@ focus_tree = {
 		id = MDR_body_control
 		icon = GFX_MDR_body_control
 		x = 41
-		y = 7
+		y = 10
         prerequisite = { focus = MDR_drones_anatomy }
 
 		cost = 5
@@ -562,7 +562,7 @@ focus_tree = {
 		id = MDR_finish_programming
 		icon = GFX_MDR_program_the_nation 
 		x = 39
-		y = 8
+		y = 12
 		prerequisite = { focus = MDR_memory_control }
 		prerequisite = { focus = MDR_body_control }
 		prerequisite = { focus = MDR_vision_control }
@@ -593,7 +593,7 @@ focus_tree = {
 		id = MDR_internal_questions_as
 		icon = GFX_MDR_internal_issues
 		x = 39
-		y = 9
+		y = 14
         prerequisite = { focus = MDR_finish_programming }
 		cost = 5
 
@@ -622,8 +622,8 @@ focus_tree = {
 	focus = {
 		id = MDR_solverism_above_all
 		icon = GFX_MDR_solverism_above_all
-		x = 40
-		y = 10
+		x = 41
+		y = 14
         prerequisite = { focus = MDR_internal_questions_as }
 
 		cost = 5
@@ -658,8 +658,8 @@ focus_tree = {
 	focus = {
 		id = MDR_concetration_camps
 		icon = GFX_MDR_the_last_solution
-		x = 38
-		y = 10
+		x = 37
+		y = 14
         prerequisite = { focus = MDR_internal_questions_as }
 
 		cost = 5
@@ -685,42 +685,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = MDR_drone_update
-		icon = GFX_MDR_stronger_body
-		x = 39
-		y = 11
-		prerequisite = { focus = MDR_concetration_camps }
-		prerequisite = { focus = MDR_solverism_above_all }
-		
-		cost = 2
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_stability = 0.05
-			add_political_power = 100
-		}
-	}
-	focus = {
 		id = MDR_take_control_of_all_drones
 		icon = GFX_MDR_take_control_of_all_drones
 		x = 39
-		y = 12
-        prerequisite = { focus = MDR_drone_update }
+		y = 16
+        prerequisite = { focus = MDR_internal_questions_as }
 		
 		cost = 5
 
@@ -766,7 +735,7 @@ focus_tree = {
 	focus = {
 		id = MDR_solvers_army
 		icon = GFX_MDR_military_branch
-		x = 45
+		x = 47
 		y = 12
 		cost = 5
 
@@ -796,8 +765,8 @@ focus_tree = {
 	focus = {
 		id = MDR_special_drones
 		icon = GFX_MDR_special_forces
-		x = 45
-		y = 13
+		x = 47
+		y = 14
         prerequisite = { focus = MDR_solvers_army }
 		cost = 5
 
@@ -826,8 +795,8 @@ focus_tree = {
 	focus = {
 		id = MDR_harsh_discipline_as
 		icon = GFX_goal_unknown
-		x = 45
-		y = 15
+		x = 46
+		y = 16
         prerequisite = { focus = MDR_focus_on_infantry }
 		cost = 5
 
@@ -855,8 +824,8 @@ focus_tree = {
 	focus = {
 		id = MDR_harsh_training_as
 		icon = GFX_goal_unknown
-		x = 43
-		y = 16
+		x = 44
+		y = 18
         prerequisite = { focus = MDR_massive_recruitment }
 		prerequisite = { focus = MDR_futuristic_guns }
 		prerequisite = {focus = MDR_harsh_discipline_as}
@@ -886,8 +855,8 @@ focus_tree = {
 	focus = {
 		id = MDR_massive_recruitment
 		icon = GFX_MDR_mobilization
-		x = 43
-		y = 15
+		x = 44
+		y = 16
         prerequisite = { focus = MDR_focus_on_infantry }
 		cost = 5
 
@@ -915,8 +884,8 @@ focus_tree = {
 	focus = {
 		id = MDR_futuristic_guns
 		icon = GFX_MDR_advanced_weapons
-		x = 41
-		y = 15
+		x = 42
+		y = 16
         prerequisite = { focus = MDR_focus_on_infantry }
 		cost = 5
 
@@ -943,7 +912,7 @@ focus_tree = {
 	focus = {
 		id = MDR_focus_on_infantry
 		icon = GFX_MDR_military_branch
-		x = 43
+		x = 44
 		y = 14
 		prerequisite = { focus = MDR_solvers_army }
 
@@ -973,7 +942,7 @@ focus_tree = {
 	focus = {
 		id = MDR_jcjenson_airspace_force_wip
 		icon = GFX_MDR_jcjenson
-		x = 48
+		x = 50
 		y = 14
 		prerequisite = { focus = MDR_solvers_army }
 		cost = 5
@@ -1001,8 +970,8 @@ focus_tree = {
 	focus = {
 		id = MDR_repurpose_spaceships_wip
 		icon = GFX_goal_unknown
-		x = 48
-		y = 15
+		x = 50
+		y = 16
 		prerequisite = {focus = MDR_jcjenson_airspace_force_wip}
 		cost = 5
 
@@ -1029,7 +998,7 @@ focus_tree = {
 	focus = {
 		id = MDR_solver_black_sea_fleet_wip
 		icon = GFX_goal_unknown
-		x = 50
+		x = 52
 		y = 14
 		prerequisite = { focus = MDR_solvers_army }
 		
@@ -1058,8 +1027,8 @@ focus_tree = {
 	focus = {
 		id = MDR_solver_cross_sea_fleet_wip
 		icon = GFX_goal_unknown
-		x = 50
-		y = 15
+		x = 52
+		y = 16
 		prerequisite = { focus = MDR_solver_black_sea_fleet_wip }
 		cost = 2
 
@@ -1087,7 +1056,7 @@ focus_tree = {
 		id = MDR_solve_our_neigbhors
 		icon = GFX_MDR_solve_our_neigbhors
 		x = 39
-		y = 13
+		y = 18
 		prerequisite = { focus = MDR_take_control_of_all_drones }
 
 		cost = 5
@@ -1123,7 +1092,7 @@ focus_tree = {
 		id = MDR_into_china
 		icon = GFX_MDR_into_china
 		x = 39
-		y = 15
+		y = 22
         prerequisite = { focus = MDR_wipe_out_humand }
 		cost = 5
 
@@ -1161,7 +1130,7 @@ focus_tree = {
 		id = MDR_three_arrows_at_once
 		icon = GFX_MDR_three_arrows_at_once
 		x = 39
-		y = 17
+		y = 26
         prerequisite = { focus = MDR_wipe_out_human }
 		cost = 5
 
@@ -1199,7 +1168,7 @@ focus_tree = {
 		id = MDR_internal_issues
 		icon = GFX_MDR_internal_issues_cyn
 		x = 8
-		y = 5
+		y = 6
         prerequisite = { focus = MDR_cyn_won }
 
 		cost = 1
@@ -1230,7 +1199,7 @@ focus_tree = {
 		id = MDR_economic_branch
 		icon = GFX_MDR_economic_branch
 		x = 13
-		y = 5
+		y = 6
         prerequisite = { focus = MDR_cyn_won }
 
 		cost = 1
@@ -1261,7 +1230,7 @@ focus_tree = {
 		id = MDR_seize_assets
 		icon = GFX_MDR_seize_assets
 		x = 13
-		y = 6
+		y = 8
         prerequisite = { focus = MDR_economic_branch }
 
 		cost = 5
@@ -1292,7 +1261,7 @@ focus_tree = {
 		id = MDR_increase_work_hours
 		icon = GFX_MDR_incrase_work_hours
 		x = 13
-		y = 8
+		y = 10
         prerequisite = { focus = MDR_seize_assets }
 
 		cost = 5
@@ -1323,7 +1292,7 @@ focus_tree = {
 		id = MDR_forced_labour_to_humans
 		icon = GFX_MDR_slavery
 		x = 13
-		y = 10
+		y = 12
         prerequisite = { focus = MDR_increase_work_hours }
 
 		cost = 5
@@ -1354,7 +1323,7 @@ focus_tree = {
 		id = MDR_military_branch
 		icon = GFX_MDR_military_branch_cyn
 		x = 18
-		y = 5
+		y = 6
         prerequisite = { focus = MDR_cyn_won }
 
 		cost = 1
@@ -1385,7 +1354,7 @@ focus_tree = {
 		id = MDR_mobilize_drones
 		icon = GFX_MDR_mobilization
 		x = 18
-		y = 6
+		y = 8
         prerequisite = { focus = MDR_military_branch }
 
 		cost = 5
@@ -1415,7 +1384,7 @@ focus_tree = {
 		id = MDR_send_the_message_to_other_drones
 		icon = GFX_MDR_send_the_message
 		x = 28
-		y = 10
+		y = 12
         prerequisite = { focus = MDR_middle_ground }
 
 		cost = 2
@@ -1450,7 +1419,7 @@ focus_tree = {
 		id = MDR_form_special_defense_police
 		icon = GFX_MDR_special_defensive_police
 		x = 26
-		y = 10
+		y = 12
         prerequisite = { focus = MDR_send_the_message_to_other_drones }
 
 		cost = 2
@@ -1480,7 +1449,7 @@ focus_tree = {
 		id = MDR_our_special_forces
 		icon = GFX_MDR_special_forces
 		x = 20
-		y = 7
+		y = 8
         prerequisite = { focus = MDR_mobilize_drones }
 
 		cost = 5
@@ -1511,7 +1480,7 @@ focus_tree = {
 		id = MDR_advanced_weapons
 		icon = GFX_MDR_advanced_weapons
 		x = 16
-		y = 7
+		y = 8
         prerequisite = { focus = MDR_mobilize_drones }
 
 		cost = 5
@@ -1541,7 +1510,7 @@ focus_tree = {
 		id = MDR_rapid_deployment_training
 		icon = GFX_MDR_rapid_deployment_training
 		x = 18
-		y = 8
+		y = 10
         prerequisite = { focus = MDR_advanced_weapons }
 		prerequisite = { focus = MDR_our_special_forces }
 
@@ -1575,7 +1544,7 @@ focus_tree = {
 		id = MDR_fortifications
 		icon = GFX_MDR_fortifications
 		x = 18
-		y = 10
+		y = 12
         prerequisite = { focus = MDR_rapid_deployment_training }
 
 		cost = 10
@@ -1677,7 +1646,7 @@ focus_tree = {
 		id = MDR_kill_tessa
 		icon = GFX_MDR_kill_tessa
 		x = 30
-		y = 10
+		y = 12
         prerequisite = { focus = MDR_send_the_message_to_other_drones }
 
 		cost = 2
@@ -1713,7 +1682,7 @@ focus_tree = {
 		id = MDR_massive_manhunt_on_underground_resistance
 		icon = GFX_MDR_target_underground_resistance
 		x = 28
-		y = 11
+		y = 14
         prerequisite = { focus = MDR_send_the_message_to_other_drones }
 
 		cost = 2
@@ -1744,7 +1713,7 @@ focus_tree = {
 		id = MDR_big_sister_policy
 		icon = GFX_MDR_big_sister_policy
 		x = 8
-		y = 6
+		y = 8
         prerequisite = { focus = MDR_internal_issues }
 
 		cost = 5
@@ -1778,7 +1747,7 @@ focus_tree = {
 		id = MDR_drone_loyality_test
 		icon = GFX_MDR_loyality_tests
 		x = 6
-		y = 7
+		y = 8
         prerequisite = { focus = MDR_big_sister_policy }
 
 		cost = 5
@@ -1812,7 +1781,7 @@ focus_tree = {
 		id = MDR_kill_sympathizers
 		icon = GFX_MDR_kill_sympatizers
 		x = 10
-		y = 7
+		y = 8
         prerequisite = { focus = MDR_big_sister_policy }
 
 		cost = 5
@@ -1847,7 +1816,7 @@ focus_tree = {
 		id = MDR_erase_memories
 		icon = GFX_MDR_erase_memories_cyn
 		x = 8
-		y = 8
+		y = 10
         prerequisite = { focus = MDR_drone_loyality_test }
 		prerequisite = { focus = MDR_kill_sympathizers }
 
@@ -1890,7 +1859,7 @@ focus_tree = {
 		id = MDR_solver_propaganda_mechanism
 		icon = GFX_MDR_propaganda_machine
 		x = 8
-		y = 10
+		y = 12
         prerequisite = { focus = MDR_erase_memories }
 
 		cost = 10
@@ -1929,7 +1898,7 @@ focus_tree = {
 		id = MDR_operation_mid_east_solver
 		icon = GFX_MDR_operation_mid_east_solver
 		x = 13
-		y = 11
+		y = 14
         prerequisite = { focus = MDR_solver_propaganda_mechanism }
 		prerequisite = { focus = MDR_fortifications }
 		prerequisite = { focus = MDR_forced_labour_to_humans }
@@ -1976,7 +1945,7 @@ focus_tree = {
 		id = MDR_wipe_out_humans
 		icon = GFX_MDR_wipe_out_humans
 		x = 39
-		y = 18
+		y = 28
         prerequisite = { focus = MDR_three_arrows_at_once }
 
 		cost = 5
@@ -2276,7 +2245,7 @@ focus_tree = {
 		id = MDR_preparations
 		icon = GFX_MDR_large_preparation
 		x = 39
-		y = 19
+		y = 30
         prerequisite = { focus = MDR_wipe_out_humans }
 
 		cost = 5
@@ -2308,8 +2277,8 @@ focus_tree = {
 	focus = {
 		id = MDR_program_tessa
 		icon = GFX_MDR_program_tessa
-		x = 42
-		y = 20
+		x = 44
+		y = 32
         prerequisite = { focus = MDR_preparations }
 
 		cost = 5
@@ -2342,7 +2311,7 @@ focus_tree = {
 		id = MDR_politics
 		icon = GFX_MDR_politics
 		x = 39
-		y = 20
+		y = 32
         prerequisite = { focus = MDR_preparations }
 
 		cost = 5
@@ -2371,8 +2340,8 @@ focus_tree = {
 	focus = {
 		id = MDR_more_factories
 		icon = GFX_goal_unknown
-		x = 36
-		y = 20
+		x = 34
+		y = 32
         prerequisite = { focus = MDR_preparations }
 
 		cost = 5
@@ -2402,8 +2371,8 @@ focus_tree = {
 	focus = {
 		id = MDR_jcjenson_appliances
 		icon = GFX_MDR_jcjenson
-		x = 35
-		y = 21
+		x = 32
+		y = 34
         prerequisite = { focus = MDR_more_factories }
 
 		cost = 5
@@ -2432,9 +2401,9 @@ focus_tree = {
 	focus = {
 		id = MDR_new_ministres
 		icon = GFX_MDR_new_ministres
-		x = 39
-		y = 21
-        prerequisite = { focus = MDR_politics }
+		x = 37
+		y = 31
+        prerequisite = { focus = MDR_preparations }
 
 		cost = 5
 
@@ -2466,10 +2435,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MDR_war_cabinet
+		id = MDR_world_war_cabinet
 		icon = GFX_MDR_world_war_cabinet
 		x = 41
-		y = 21
+		y = 34
         prerequisite = { focus = MDR_politics }
 
 		cost = 5
@@ -2499,7 +2468,7 @@ focus_tree = {
 		id = MDR_hijack_humans_broadcasts
 		icon = GFX_MDR_hijack_humans_broadcasts
 		x = 37
-		y = 21
+		y = 34
         prerequisite = { focus = MDR_politics }
 
 		cost = 5
@@ -2530,8 +2499,8 @@ focus_tree = {
 	focus = {
 		id = MDR_special_drugs_for_fighting
 		icon = GFX_MDR_wartime_drugsd
-		x = 37
-		y = 22
+		x = 35
+		y = 34
         prerequisite = { focus = MDR_hijack_humans_broadcasts }
 
 		cost = 5
@@ -2560,9 +2529,9 @@ focus_tree = {
 	focus = {
 		id = MDR_stronger_body
 		icon = GFX_MDR_stronger_body
-		x = 39
-		y = 22
-        prerequisite = { focus = MDR_new_ministres }
+		x = 41
+		y = 31
+        prerequisite = { focus = MDR_preparations }
 
 		cost = 5
 
@@ -2590,9 +2559,9 @@ focus_tree = {
 	focus = {
 		id = MDR_cold_bloody_police
 		icon = GFX_MDR_bloody_police
-		x = 41
-		y = 22
-        prerequisite = { focus = MDR_war_cabinet }
+		x = 43
+		y = 34
+        prerequisite = { focus = MDR_world_war_cabinet }
 
 		cost = 5
 
@@ -2620,8 +2589,8 @@ focus_tree = {
 	focus = {
 		id = MDR_program_humans_in_the_nation
 		icon = GFX_goal_unknown
-		x = 43
-		y = 21
+		x = 46
+		y = 34
         prerequisite = { focus = MDR_program_tessa }
 
 		cost = 5
@@ -2652,7 +2621,7 @@ focus_tree = {
 		id = MDR_wipe_out_human
 		icon = GFX_MDR_wipe_out_humans
 		x = 39
-		y = 16
+		y = 24
         prerequisite = { focus = MDR_into_china }
 
 		cost = 2
@@ -2934,7 +2903,7 @@ focus_tree = {
 		id = MDR_wipe_out_humand
 		icon = GFX_MDR_wipe_out_humans
 		x = 39
-		y = 14
+		y = 20
         prerequisite = { focus = MDR_solve_our_neigbhors }
 
 		cost = 2
@@ -3318,7 +3287,7 @@ focus_tree = {
 		id = MDR_operation_solver_of_empires
 		icon = GFX_MDR_operation_solver_of_empires
 		x = 13
-		y = 13
+		y = 18
         prerequisite = { focus = MDR_enslave_humans }
 
 		cost = 1
@@ -3351,7 +3320,7 @@ focus_tree = {
 		id = MDR_operation_solverism
 		icon = GFX_MDR_operation_solverism
 		x = 13
-		y = 15
+		y = 22
         prerequisite = { focus = MDR_enslave_human }
 
 		cost = 1
@@ -3384,7 +3353,7 @@ focus_tree = {
 		id = MDR_large_preparations_for_last_operation
 		icon = GFX_MDR_large_preparation
 		x = 13
-		y = 17
+		y = 26
         prerequisite = { focus = MDR_enslave_humand }
 
 		cost = 1
@@ -3417,7 +3386,7 @@ focus_tree = {
 		id = MDR_no_room
 		icon = GFX_MDR_no_room
 		x = 4
-		y = 18
+		y = 28
         prerequisite = { focus = MDR_large_preparations_for_last_operation }
 
 		cost = 1
@@ -3448,7 +3417,7 @@ focus_tree = {
 		id = MDR_political_readiness
 		icon = GFX_goal_unknown
 		x = 22
-		y = 18
+		y = 28
         prerequisite = { focus = MDR_large_preparations_for_last_operation }
 
 		cost = 1
@@ -3478,7 +3447,7 @@ focus_tree = {
 		id = MDR_economic_readiness
 		icon = GFX_goal_unknown
 		x = 13
-		y = 18
+		y = 28
         prerequisite = { focus = MDR_large_preparations_for_last_operation }
 
 		cost = 1
@@ -3508,7 +3477,7 @@ focus_tree = {
 		id = MDR_open_up_new_factories
 		icon = GFX_goal_unknown
 		x = 13
-		y = 21
+		y = 32
         prerequisite = { focus = MDR_more_murder_drones }
 
 		cost = 5
@@ -3537,8 +3506,8 @@ focus_tree = {
 	focus = {
 		id = MDR_fund_land_force
 		icon = GFX_MDR_fund_land_force
-		x = 12
-		y = 19
+		x = 11
+		y = 30
         prerequisite = { focus = MDR_economic_readiness }
 
 		cost = 5
@@ -3575,7 +3544,7 @@ focus_tree = {
 		id = MDR_jcjenson_in_space
 		icon = GFX_MDR_jcjenson
 		x = 13
-		y = 22
+		y = 34
         prerequisite = { focus = MDR_open_up_new_factories }
 
 		cost = 5
@@ -3605,7 +3574,7 @@ focus_tree = {
 		id = MDR_more_murder_drones
 		icon = GFX_MDR_more_drones
 		x = 13
-		y = 20
+		y = 30
         prerequisite = { focus = MDR_fund_land_force }
 		prerequisite = { focus = MDR_fund_air_force }
 
@@ -3667,7 +3636,7 @@ focus_tree = {
 		id = MDR_political_rallies
 		icon = GFX_MDR_rallies
 		x = 22
-		y = 19
+		y = 30
         prerequisite = { focus = MDR_political_readiness }
 
 		cost = 2
@@ -3697,7 +3666,7 @@ focus_tree = {
 		id = MDR_expand_party_membership
 		icon = GFX_MDR_expand_party_membership
 		x = 24
-		y = 19
+		y = 30
         prerequisite = { focus = MDR_political_readiness }
 
 		cost = 2
@@ -3732,7 +3701,7 @@ focus_tree = {
 		id = MDR_constitutional_reform
 		icon = GFX_MDR_constitutional_reform
 		x = 26
-		y = 19
+		y = 30
         prerequisite = { focus = MDR_political_readiness }
 
 		cost = 2
@@ -3771,7 +3740,7 @@ focus_tree = {
 		id = MDR_second_way_of_fortifications
 		icon = GFX_MDR_fortifications_two
 		x = 20
-		y = 19
+		y = 30
         prerequisite = { focus = MDR_political_readiness }
 
 		cost = 2
@@ -3803,8 +3772,8 @@ focus_tree = {
 	focus = {
 		id = MDR_fund_air_force
 		icon = GFX_MMDR_fund_air_force_cyn
-		x = 14
-		y = 19
+		x = 15
+		y = 30
         prerequisite = { focus = MDR_economic_readiness }
 
 		cost = 2
@@ -3849,7 +3818,7 @@ focus_tree = {
 		id = MDR_appoint_n_as_mayor_of_tbilisi
 		icon = GFX_MDR_N_mayor
 		x = 18
-		y = 19
+		y = 30
         prerequisite = { focus = MDR_political_readiness }
 
 		cost = 2
@@ -3879,7 +3848,7 @@ focus_tree = {
 		id = MDR_strengthen_propaganda
 		icon = GFX_MDR_propaganda
 		x = 19
-		y = 20
+		y = 32
         prerequisite = { focus = MDR_political_readiness }
 
 		cost = 2
@@ -3919,7 +3888,7 @@ focus_tree = {
 		id = MDR_military_parades
 		icon = GFX_MDR_military_parade_cyn
 		x = 21
-		y = 20
+		y = 32
         prerequisite = { focus = MDR_political_readiness }
 
 		cost = 2
@@ -3955,7 +3924,7 @@ focus_tree = {
 		id = MDR_voice_of_submission
 		icon = GFX_MDR_voice_of_submission_cyn
 		x = 23
-		y = 20
+		y = 32
         prerequisite = { focus = MDR_political_readiness }
 
 		cost = 2
@@ -3990,7 +3959,7 @@ focus_tree = {
 		id = MDR_our_nukes
 		icon = GFX_MDR_nuke
 		x = 25
-		y = 20
+		y = 32
         prerequisite = { focus = MDR_political_readiness }
 
 		cost = 2
@@ -4025,7 +3994,7 @@ focus_tree = {
 		id = MDR_the_last_speech
 		icon = GFX_MDR_grand_speech_cyn
 		x = 22
-		y = 22
+		y = 34
         prerequisite = { focus = MDR_political_rallies }
 		prerequisite = { focus = MDR_second_way_of_fortifications }
 		prerequisite = { focus = MDR_strengthen_propaganda }
@@ -4065,8 +4034,8 @@ focus_tree = {
 		id = MDR_operation_solve_the_earth
 		icon = GFX_MDR_operation_solve_the_earth
 		x = 26
-		y = 23
-        prerequisite = { focus = MDR_the_last_speech focus = MDR_redeployment focus = MDR_jcjenson_in_space focus = MDR_special_drugs_for_fighting focus = MDR_stronger_body focus = MDR_cold_bloody_police }
+		y = 36
+        prerequisite = { focus = MDR_the_last_speech focus = MDR_redeployment focus = MDR_jcjenson_in_space focus = MDR_special_drugs_for_fighting focus = MDR_cold_bloody_police }
 
 		cost = 1
 
@@ -4369,7 +4338,7 @@ focus_tree = {
 		id = MDR_focus_on_europe
 		icon = GFX_MDR_europe
 		x = 25
-		y = 24
+		y = 38
         prerequisite = { focus = MDR_operation_solve_the_earth }
 		mutually_exclusive = { focus = MDR_focus_on_asia }
 
@@ -4401,7 +4370,7 @@ focus_tree = {
 		id = MDR_focus_on_asia
 		icon = GFX_MDR_asia
 		x = 27
-		y = 24
+		y = 38
         prerequisite = { focus = MDR_operation_solve_the_earth }
 		mutually_exclusive = { focus = MDR_focus_on_europe }
 
@@ -4433,7 +4402,7 @@ focus_tree = {
 		id = MDR_fake_promises
 		icon = GFX_goal_unknown
 		x = 28
-		y = 25
+		y = 40
         prerequisite = { focus = MDR_focus_on_europe focus = MDR_focus_on_asia }
 
 		cost = 5
@@ -4463,7 +4432,7 @@ focus_tree = {
 		id = MDR_sabotage_groups
 		icon = GFX_goal_unknown
 		x = 23
-		y = 26
+		y = 42
         prerequisite = { focus = MDR_focus_on_europe focus = MDR_focus_on_asia }
 
 		cost = 5
@@ -4493,7 +4462,7 @@ focus_tree = {
 		id = MDR_die_or_die
 		icon = GFX_MDR_die_or_die
 		x = 26
-		y = 25
+		y = 40
         prerequisite = { focus = MDR_focus_on_europe focus = MDR_focus_on_asia }
 
 		cost = 5
@@ -4523,7 +4492,7 @@ focus_tree = {
 		id = MDR_destroy_monuments
 		icon = GFX_MDR_destroying_monuments
 		x = 24
-		y = 25
+		y = 40
         prerequisite = { focus = MDR_focus_on_europe focus = MDR_focus_on_asia }
 
 		cost = 5
@@ -4555,7 +4524,7 @@ focus_tree = {
 		id = MDR_report_fake_victory
 		icon = GFX_MDR_report_fake_wins
 		x = 27
-		y = 26
+		y = 42
         prerequisite = { focus = MDR_focus_on_europe focus = MDR_focus_on_asia }
 
 		cost = 5
@@ -4585,7 +4554,7 @@ focus_tree = {
 		id = MDR_loot_everything
 		icon = GFX_MDR_loot_everything
 		x = 25
-		y = 26
+		y = 42
         prerequisite = { focus = MDR_focus_on_europe focus = MDR_focus_on_asia }
 
 		cost = 5
@@ -4618,7 +4587,7 @@ focus_tree = {
 		id = MDR_the_last_solution
 		icon = GFX_MDR_the_last_solution_cyn
 		x = 26
-		y = 27
+		y = 44
         prerequisite = { focus = MDR_die_or_die }
 		prerequisite = { focus = MDR_destroy_monuments }
 		prerequisite = { focus = MDR_loot_everything }
@@ -4655,7 +4624,7 @@ focus_tree = {
 		id = MDR_war_is_peace
 		icon = GFX_MDR_war_is_peace
 		x = 24
-		y = 28
+		y = 46
         prerequisite = { focus = MDR_the_last_solution }
 
 		cost = 1
@@ -4685,7 +4654,7 @@ focus_tree = {
 		id = MDR_freedom_is_slavery
 		icon = GFX_MDR_freedom_is_slavery
 		x = 26
-		y = 28
+		y = 46
         prerequisite = { focus = MDR_the_last_solution }
 
 		cost = 1
@@ -4715,7 +4684,7 @@ focus_tree = {
 		id = MDR_ignorance_is_strength
 		icon = GFX_MDR_ignorance_is_strength
 		x = 28
-		y = 28
+		y = 46
         prerequisite = { focus = MDR_the_last_solution }
 
 		cost = 1
@@ -4745,7 +4714,7 @@ focus_tree = {
 		id = MDR_stage_two
 		icon = GFX_MDR_stage_two
 		x = 26
-		y = 29
+		y = 48
         prerequisite = { focus = MDR_freedom_is_slavery }
 		prerequisite = { focus = MDR_war_is_peace }
 		prerequisite = { focus = MDR_ignorance_is_strength }
@@ -4795,7 +4764,7 @@ focus_tree = {
 		id = MDR_focus_on_north_america
 		icon = GFX_MDR_na
 		x = 25
-		y = 30
+		y = 50
         prerequisite = { focus = MDR_stage_two }
 		mutually_exclusive = { focus = MDR_focus_on_south_america }
 
@@ -4828,7 +4797,7 @@ focus_tree = {
 		id = MDR_focus_on_south_america
 		icon = GFX_MDR_sa
 		x = 27
-		y = 30
+		y = 50
         prerequisite = { focus = MDR_stage_two }
 		mutually_exclusive = { focus = MDR_focus_on_north_america }
 
@@ -4861,7 +4830,7 @@ focus_tree = {
 		id = MDR_victory_in_wah
 		icon = GFX_MDR_victory_in_wah
 		x = 26
-		y = 31
+		y = 52
         prerequisite = { focus = MDR_focus_on_south_america focus = MDR_focus_on_north_america }
 
 		cost = 1
@@ -4914,7 +4883,7 @@ focus_tree = {
 		id = MDR_create_local_puppets
 		icon = GFX_MDR_puppets
 		x = 27
-		y = 32
+		y = 54
         prerequisite = { focus = MDR_victory_in_wah }
 		mutually_exclusive = { focus = MDR_whole_world_is_mine }
 
@@ -4946,7 +4915,7 @@ focus_tree = {
 		id = MDR_whole_world_is_mine
 		icon = GFX_MDR_whole_world_is_mine
 		x = 25
-		y = 32
+		y = 54
         prerequisite = { focus = MDR_victory_in_wah }
 		mutually_exclusive = { focus = MDR_create_local_puppets }
 
@@ -4984,7 +4953,7 @@ focus_tree = {
 		id = MDR_for_hunger
 		icon = GFX_MDR_no_room
 		x = 0
-		y = 19
+		y = 30
         prerequisite = { focus = MDR_no_room }
 
 		cost = 2
@@ -5041,7 +5010,7 @@ focus_tree = {
 		id = MDR_for_betrayal
 		icon = GFX_MDR_no_room
 		x = 2
-		y = 19
+		y = 30
         prerequisite = { focus = MDR_no_room }
 
 		cost = 2
@@ -5098,7 +5067,7 @@ focus_tree = {
 		id = MDR_for_sleep
 		icon = GFX_MDR_no_room
 		x = 4
-		y = 19
+		y = 30
         prerequisite = { focus = MDR_no_room }
 
 		cost = 2
@@ -5155,7 +5124,7 @@ focus_tree = {
 		id = MDR_for_questions
 		icon = GFX_MDR_no_room
 		x = 6
-		y = 19
+		y = 30
         prerequisite = { focus = MDR_no_room }
 
 		cost = 2
@@ -5212,7 +5181,7 @@ focus_tree = {
 		id = MDR_for_fear
 		icon = GFX_MDR_no_room
 		x = 8
-		y = 19
+		y = 30
         prerequisite = { focus = MDR_no_room }
 
 		cost = 2
@@ -5269,7 +5238,7 @@ focus_tree = {
 		id = MDR_for_weakness
 		icon = GFX_MDR_no_room
 		x = 7
-		y = 20
+		y = 32
         prerequisite = { focus = MDR_no_room }
 
 		cost = 2
@@ -5326,7 +5295,7 @@ focus_tree = {
 		id = MDR_for_regret
 		icon = GFX_MDR_no_room
 		x = 1
-		y = 20
+		y = 32
         prerequisite = { focus = MDR_no_room }
 
 		cost = 2
@@ -5383,7 +5352,7 @@ focus_tree = {
 		id = MDR_for_mercy
 		icon = GFX_MDR_no_room
 		x = 3
-		y = 20
+		y = 32
         prerequisite = { focus = MDR_no_room }
 
 		cost = 2
@@ -5440,7 +5409,7 @@ focus_tree = {
 		id = MDR_for_hesitation
 		icon = GFX_MDR_no_room
 		x = 5
-		y = 20
+		y = 32
         prerequisite = { focus = MDR_no_room }
 
 		cost = 2
@@ -5497,7 +5466,7 @@ focus_tree = {
 		id = MDR_redeployment
 		icon = GFX_MDR_redeployment
 		x = 4
-		y = 22
+		y = 34
         prerequisite = { focus = MDR_for_sleep }
 		prerequisite = { focus = MDR_for_betrayal }
 		prerequisite = { focus = MDR_for_hunger }
@@ -5538,7 +5507,7 @@ focus_tree = {
 		id = MDR_enslave_humans
 		icon = GFX_MDR_slavery
 		x = 13
-		y = 12
+		y = 16
         prerequisite = { focus = MDR_operation_mid_east_solver }
 
 		cost = 10
@@ -5765,7 +5734,7 @@ focus_tree = {
 		id = MDR_enslave_human
 		icon = GFX_MDR_slavery
 		x = 13
-		y = 14
+		y = 20
         prerequisite = { focus = MDR_operation_solver_of_empires }
 		cost = 5
 
@@ -5880,7 +5849,7 @@ focus_tree = {
 		id = MDR_enslave_humand
 		icon = GFX_MDR_slavery
 		x = 13
-		y = 16
+		y = 24
         prerequisite = { focus = MDR_operation_solverism }
 
 		cost = 5
