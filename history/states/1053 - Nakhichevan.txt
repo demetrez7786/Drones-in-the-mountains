@@ -1,14 +1,14 @@
 state={
-	id=1022
-	name="Karabakh"
+	id=1053
+	name="Nakhichevan"
 	provinces={
-		13376 13377
+		6997
 	}
 	
 	history = {
 		owner = MDR
 		victory_points = {
-			13376 1
+			6997 2
 		}
 		buildings = {
 			infrastructure = 2
@@ -21,7 +21,7 @@ state={
 
 	}
 	
-	manpower=147308 	
+	manpower=126696	
 	buildings_max_level_factor=1.000
 	state_category=rural
 	local_supplies=0.000

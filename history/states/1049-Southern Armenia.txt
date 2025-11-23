@@ -1,27 +1,23 @@
 state={
-	id=1021
-	name="South Ossetia"
+	id=1049
+	name="Zanzegur"
 	provinces={
-		1530 9626
+		4660 6642  
 	}
 	
-	history = {
+	history={
 		owner = MDR
-		victory_points = {
-			9626 1
-		}
 		buildings = {
-			infrastructure = 2
-
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
 		}
 		add_core_of = MDR
-		add_core_of = GEO
-		add_core_of = NOA
+		add_core_of = ARM
 		add_core_of = RES
-
 	}
 	
-	manpower=106118	
+	manpower=184969
 	buildings_max_level_factor=1.000
 	state_category=rural
 	local_supplies=0.000

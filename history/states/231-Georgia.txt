@@ -1,27 +1,44 @@
-state={
-	id=231
-	name="STATE_231"
-	provinces={
-		1599 6669 6671 9702 
-	}
-	
+state = {
+	id = 231
+	name = "STATE_231"
+
 	history = {
 		owner = MDR
 		victory_points = {
-			1599 15 
+			1599 15
+		}
+		victory_points = {
+			3653 3 
 		}
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 3
 			arms_factory = 2
+			3653 = {
+				naval_base = 2
+				coastal_bunker = 1
+
+			}
 
 		}
+		add_core_of = SOV
 		add_core_of = MDR
 		add_core_of = GEO
 		add_core_of = RES
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 2
+
+			}
+
+		}
 
 	}
-	
+
+	provinces = {
+		1599 6669 6671 9702 
+	}
+
 	manpower=4223175
 	buildings_max_level_factor=1.000
 	state_category=large_city

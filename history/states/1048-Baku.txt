@@ -1,24 +1,28 @@
 state={
-	id=1019
-	name="Zanzegur"
+	id=1048
+	name="Baku"
 	provinces={
-		4660 6642  
+		1536 4458 4545 7495 7661 
 	}
 	
 	history={
 		owner = MDR
+		victory_points = {
+			7661 10 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
-			arms_factory = 1
+			industrial_complex = 2
+			air_base = 3
 		}
 		add_core_of = MDR
-		add_core_of = ARM
+		add_core_of = AZR
 		add_core_of = RES
+
 	}
 	
-	manpower=184969
+	manpower=1881049
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=large_town
 	local_supplies=0.000
 }
