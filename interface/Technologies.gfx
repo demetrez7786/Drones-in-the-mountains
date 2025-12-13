@@ -8419,19 +8419,75 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/sp_surface_ice_composite_runways.dds"
 	}
 	SpriteType = {
+		name = "GFX_worker_drone_tech_medium"
+		texturefile = "gfx/interface/technologies/worker_drone_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_worker_drone_tech_0_medium"
+		texturefile = "gfx/interface/technologies/worker_drone_equipment1.png"
+	}
+	SpriteType = {
+		name = "GFX_worker_drone_tech_1_medium"
+		texturefile = "gfx/interface/technologies/worker_drone_equipment2.png"
+	}
+	SpriteType = {
 		name = "GFX_worker_drone_equipment_medium"
 		texturefile = "gfx/interface/technologies/worker_drone_equipment.dds"
 	}
 	SpriteType = {
 		name = "GFX_worker_drone_equipment_0_medium"
-		texturefile = "gfx/interface/technologies/worker_drone_equipment.dds"
+		texturefile = "gfx/interface/technologies/worker_drone_equipment1.png"
 	}	
 	SpriteType = {
 		name = "GFX_disassembly_drone_equipment_medium"
 		texturefile = "gfx/interface/technologies/disassembly_drone_equipment.dds"
 	}
 	SpriteType = {
-		name = "GFX_railgun_equipment_medium"
-		texturefile = "gfx/interface/technologies/railgun_equipment.png"
+		name = "GFX_disassembly_drone_tech_medium"
+		texturefile = "gfx/interface/technologies/disassembly_drone_equipment.dds"
 	}
+	SpriteType = {
+		name = "GFX_disassembly_drone_tech_0_medium"
+		texturefile = "gfx/interface/technologies/disassembly_drone_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_disassembly_drone_tech_1_medium"
+		texturefile = "gfx/interface/technologies/disassembly_drone_equipment2.png"
+	}
+	SpriteType = {
+		name = "GFX_railgun_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/railgun_equipment_0.png"
+	}
+	SpriteType = {
+		name = "GFX_railgun_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/railgun_equipment_update.png"
+	}
+	SpriteType = {
+		name = "GFX_railgun_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/railgun_equipment_update2.png"
+	}
+	SpriteType = {
+		name = "GFX_motorized_drones_tech_medium"
+		texturefile = "gfx/interface/technologies/bus_equipment.png"
+	}	
+	SpriteType = {
+		name = "GFX_motorized_drones_tech_1_medium"
+		texturefile = "gfx/interface/technologies/bus_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_motorized_drones_equipment_medium"
+		texturefile = "gfx/interface/technologies/bus_equipment.png"
+	}
+	SpriteType = {
+		name = "GFX_motorized_drones_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/bus_equipment_1.png"
+	}	
+	SpriteType = {
+		name = "GFX_mechanized_drones_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/bus_equipment_2.png"
+	}	
+	SpriteType = {
+		name = "GFX_mechanized_drones_tech_1_medium"
+		texturefile = "gfx/interface/technologies/bus_equipment_2.png"
+	}	
 }

@@ -27,7 +27,7 @@ sub_units = {
 		combat_width = 1
 
 		need = {
-			railgun_equipment_1 = 50
+			railgun_equipment_update = 50
 		}
 		manpower = 500
 		max_organisation = 0

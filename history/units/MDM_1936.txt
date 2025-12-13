@@ -21,7 +21,7 @@ division_template = {
 
 division_template = {
 	name = "Railgun Battalions"
-	division_names_group = MDM_AT_01
+	division_names_group = USA_INF_01
 
 	regiments = {
 		railgun_brigade = { x = 0 y = 0 }
@@ -35,7 +35,6 @@ division_template = {
 	support = {
        	engineer = { x = 0 y = 0 }
        	artillery = { x = 0 y = 1 }
-		railgun = { x = 0 y = 2 }
 	}
 }
 

@@ -492,14 +492,4 @@ spriteTypes = {
 		name = "GFX_bop_MDR_cyn_side"
 		texturefile = "gfx/interface/bop/bop_MDR_cyn_side.png"
 	}
-	
-	spriteType = {
-		name = "GFX_bop_MDR_uzi_side"
-		texturefile = "gfx/interface/bop/bop_MDR_uzi_side.png"
-	}
-	
-	spriteType = {
-		name = "GFX_bop_MDR_doll_side"
-		texturefile = "gfx/interface/bop/bop_MDR_doll_side.png"
-	}
 

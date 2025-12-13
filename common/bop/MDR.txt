@@ -22,7 +22,7 @@ MDR_power_balance_bop = {
 			modifier = {
 				political_advisor_cost_factor = 1
 				stability_factor = 0.35
-				consumer_goods_factor = -0.35	
+				consumer_goods_factor = -0.35
 			}
 		}
 		
@@ -72,7 +72,7 @@ MDR_power_balance_doll_and_uzi_bop = {
 	decision_category = MDR_power_balance_power_balance_uzi_and_doll_decisions
 
 	range = { #Balanced Range, neither Councils nor Cantons
-		id = MDR_power_balance_bop_balanced_doll_uzi
+		id = MDR_power_balance_bop_balanced 
 		min = -0.25
 		max = 0.25
 		modifier = {
@@ -81,7 +81,7 @@ MDR_power_balance_doll_and_uzi_bop = {
 
 	side = {
 		id = MDR_power_balance_bop_uzi
-		icon = GFX_bop_MDR_uzi_side
+		icon = GFX_bop_SWI_centralization_canton_side
 		range = {
 			id = MDR_power_balance_bop_fully_uzi
 			min = 0.75
@@ -107,7 +107,7 @@ MDR_power_balance_doll_and_uzi_bop = {
 
 	side = {
 		id = MDR_power_balance_bop_doll
-		icon = GFX_bop_MDR_doll_side
+		icon = GFX_bop_SWI_centralization_council_side
 		range = {
 			id = MDR_power_balance_bop_fully_doll
 			min = -1

@@ -6,8 +6,7 @@ state={
 	
 	state_category = megalopolis
 	resources={
-		steel = 16 # was: 28
-		coal = 16 # initial distribution
+		steel=16 # was: 28
 	}
 
 	history={

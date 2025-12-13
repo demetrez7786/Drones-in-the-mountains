@@ -2,12 +2,7 @@
 state = {
 	id = 536
 	name = "STATE_536"
-	manpower = 3012000 # was 2812000
-
-	resources = {
-		steel = 18 #Took half of Tohoku's steel
-		coal = 10 #initial distribution
-	}
+	manpower = 2812000
 	
 	state_category = rural
 
@@ -15,8 +10,6 @@ state = {
 
 		owner = JAP
 		add_core_of = JAP
-		add_core_of = EZO
-		add_core_of = ANU
 
 		buildings = {
 			infrastructure = 2

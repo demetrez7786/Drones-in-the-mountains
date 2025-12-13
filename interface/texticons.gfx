@@ -2525,4 +2525,10 @@ spriteTypes = {
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
+	spriteType = {
+		name = "unit_category_railgun_icon_small"
+		texturefile = "gfx/texticons/unit_railgun_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
 }

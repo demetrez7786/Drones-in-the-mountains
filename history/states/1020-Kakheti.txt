@@ -1,0 +1,29 @@
+state={
+	id=1020
+	name="Kakheti"
+	provinces={
+		4534 4605 6436 12309 
+	}
+	
+	history = {
+		owner = MDR
+		victory_points = {
+			12309 5
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+		add_core_of = MDR
+		add_core_of = GEO
+		add_core_of = RES
+
+	}
+	
+	manpower=306216
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

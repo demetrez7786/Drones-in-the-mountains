@@ -1,0 +1,115 @@
+technologies = {
+
+	@1918 = 0
+	@1924 = 1
+	@1936 = 2
+	@1938 = 4
+	@1939 = 6
+	@1940 = 8
+	@1941 = 10
+	@1942 = 12
+	@1943 = 14
+	@1944 = 16
+	@1945 = 18
+	@1946 = 20
+	
+	motorized_drones_tech = {
+	
+		show_equipment_icon = yes
+		
+		path = {
+			leads_to_tech = motorized_drones_tech_1
+			research_cost_coeff = 1
+		}
+		
+		enable_equipments = {
+			motorized_drones_equipment 
+		}	
+		
+		enable_subunits = {
+			motorized_drone
+		}
+		
+		research_cost = 1
+		start_year = 1918
+		folder = {
+			name = murder_drones_motorized_folder
+			position = { x = 0 y = @1918 }
+		}
+		
+		categories = {
+			motorized_drones_equipment
+		}
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	motorized_drones_tech_1 = {
+	
+		show_equipment_icon = yes
+		
+		path = {
+			leads_to_tech = mechanized_drones_tech_1
+			research_cost_coeff = 1
+		}
+		
+		enable_equipments = {
+			motorized_drones_equipment_1
+		}	
+		
+		research_cost = 1.5
+		start_year = 1936
+		folder = {
+			name = murder_drones_motorized_folder
+			position = { x = 0 y = @1938 }
+		}
+		
+		categories = {
+			motorized_drones_equipment
+		}
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+		}
+	}
+	
+	mechanized_drones_tech_1 = {
+	
+		show_equipment_icon = yes
+		
+		enable_equipments = {
+			mechanized_drones_equipment_1
+		}	
+		
+		research_cost = 1
+		start_year = 1942
+		folder = {
+			name = murder_drones_motorized_folder
+			position = { x = 0 y = @1942 }
+		}
+		
+		categories = {
+			motorized_drones_equipment
+		}
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+
+}

@@ -3,7 +3,6 @@ on_actions = {
 		effect = {
 			MDR = {
 				clr_country_flag = MDR_tessa_is_programed
-				country_event = { id = drones.57 days = 1 }
 			}
 		}
 	}

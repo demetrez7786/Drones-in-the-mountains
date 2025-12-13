@@ -151,13 +151,6 @@ MDR_lost_trust = { #NATIONAL SPIRIT
 	conscription_factor = MDR_lt_conscription_factor
 	fascism_drift = MDR_lt_fascism_drift
 }
-MDR_outdated_infastructure = {
-	enable = { always = yes }
-
-	icon = GFX_modifiers_tur_kurdish_agitation
-	
-	army_speed_factor = -0.45
-}
 RES_gangsters_problems = { #NATIONAL SPIRIT
     enable = { always = yes }
     icon = GFX_idea_RES_gangsters_problems

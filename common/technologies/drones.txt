@@ -1,0 +1,473 @@
+technologies = {
+
+	@1918 = 0
+	@1924 = 1
+	@1936 = 2
+	@1938 = 4
+	@1939 = 6
+	@1940 = 8
+	@1941 = 10
+	@1942 = 12
+	@1943 = 14
+	@1944 = 16
+	@1945 = 18
+	@1946 = 20
+	
+	worker_drone_tech = { 
+		
+		show_equipment_icon = yes
+		
+		path = {
+			leads_to_tech = worker_drone_tech_0 
+			research_cost_coeff = 1
+		}
+
+
+		enable_equipments = {
+			worker_drone_equipment
+		}
+		enable_subunits = {
+			worker_drone
+		}
+		
+		research_cost = 1
+		start_year = 1918
+		folder = {
+			name = murder_drones_folder
+			position = { x = 0 y = @1918 }
+		}
+		
+		categories = {
+			murder_drones_equipment			
+		}
+		
+		ai_will_do = {
+			base = 2
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 10
+				tag = CHI
+
+				OR = {
+					date > 1937.1.1
+					JAP = { is_ai = no }
+				}
+			}
+
+			modifier = {
+				factor = 10
+				date > 1936.1.3
+			}
+		}
+		
+	}
+	
+	worker_drone_tech_0 = { 
+		
+		
+		path = {
+			leads_to_tech = worker_drone_tech_1
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			worker_drone_equipment_0
+		}
+		
+		research_cost = 2
+		start_year = 1938
+		folder = {
+			name = murder_drones_folder
+			position = { x = 0 y = @1938 }
+		}
+		
+		categories = {
+			murder_drones_equipment			
+		}
+		
+		ai_will_do = {
+			base = 2
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 10
+				tag = CHI
+
+				OR = {
+					date > 1937.1.1
+					JAP = { is_ai = no }
+				}
+			}
+
+			modifier = {
+				factor = 10
+				date > 1936.1.3
+			}
+		}
+		
+	}
+	
+	worker_drone_tech_1 = { 
+	
+
+		enable_equipments = {
+			worker_drone_equipment_1
+		}
+		
+		research_cost = 2
+		start_year = 1941
+		folder = {
+			name = murder_drones_folder
+			position = { x = 0 y = @1941 }
+		}
+		
+		categories = {
+			murder_drones_equipment			
+		}
+		
+		ai_will_do = {
+			base = 2
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 10
+				tag = CHI
+
+				OR = {
+					date > 1937.1.1
+					JAP = { is_ai = no }
+				}
+			}
+
+			modifier = {
+				factor = 10
+				date > 1936.1.3
+			}
+		}
+		
+	}
+	
+
+	disassembly_drone_tech = {
+			
+		show_equipment_icon = yes
+		
+		path = {
+			leads_to_tech = disassembly_drone_tech_0
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			disassembly_drone_equipment
+		}
+		enable_subunits = {
+			disassembly_drone
+		}
+		
+		research_cost = 1.5
+		start_year = 1936
+		folder = {
+			name = murder_drones_folder
+			position = { x = 4 y = @1936 }
+		}
+		
+		categories = {
+			murder_drones_equipment			
+		}
+		
+		ai_will_do = {
+			base = 2
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 10
+				tag = CHI
+
+				OR = {
+					date > 1937.1.1
+					JAP = { is_ai = no }
+				}
+			}
+
+			modifier = {
+				factor = 10
+				date > 1936.1.3
+			}
+		}
+		
+		
+	}
+	
+	disassembly_drone_tech_0 = {
+		
+		
+		path = {
+			leads_to_tech = disassembly_drone_tech_1
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			disassembly_drone_equipment_0
+		}
+		
+		research_cost = 1.5
+		start_year = 1939
+		folder = {
+			name = murder_drones_folder
+			position = { x = 4 y = @1939 }
+		}
+		
+		categories = {
+			murder_drones_equipment			
+		}
+		
+		ai_will_do = {
+			base = 2
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 10
+				tag = CHI
+
+				OR = {
+					date > 1937.1.1
+					JAP = { is_ai = no }
+				}
+			}
+
+			modifier = {
+				factor = 10
+				date > 1936.1.3
+			}
+		}
+		
+		
+	}
+	
+	disassembly_drone_tech_1 = {
+	
+
+		enable_equipments = {
+			disassembly_drone_equipment_1
+		}
+		
+		research_cost = 1.5
+		start_year = 1942
+		folder = {
+			name = murder_drones_folder
+			position = { x = 4 y = @1942 }
+		}
+		
+		categories = {
+			murder_drones_equipment			
+		}
+		
+		ai_will_do = {
+			base = 2
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 10
+				tag = CHI
+
+				OR = {
+					date > 1937.1.1
+					JAP = { is_ai = no }
+				}
+			}
+
+			modifier = {
+				factor = 10
+				date > 1936.1.3
+			}
+		}
+		
+		
+	}
+	
+	
+	railgun_equipment_0 = {
+		
+		enable_equipments = {
+			railgun_equipment_0
+		}
+		
+		enable_subunits = {
+			railgun
+			railgun_brigade
+		}
+		
+	
+		category_railgun = {
+			defense = 0.1
+			breakthrough = 0.1
+		}
+		
+		path = {
+			leads_to_tech = railgun_equipment_1
+			research_cost_coeff = 1
+		}
+		
+		
+		research_cost = 1.5
+		start_year = 1936
+		folder = {
+			name = murder_drones_folder
+			position = { x = 2 y = @1936 }
+		}
+		
+
+		categories = {
+			murder_drones_equipment
+		}
+
+		ai_will_do = {
+			base = 2
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 10
+				tag = CHI
+
+				OR = {
+					date > 1937.1.1
+					JAP = { is_ai = no }
+				}
+			}
+
+			modifier = {
+				factor = 10
+				date > 1936.1.3
+			}
+		}
+	}
+	
+	railgun_equipment_1 = {
+	
+		enable_equipments = {
+			railgun_equipment_1
+		}
+		
+		category_railgun = {
+			defense = 0.05
+		}
+		
+		path = {
+			leads_to_tech = railgun_equipment_2
+			research_cost_coeff = 1
+		}
+		
+		
+		research_cost = 1.5
+		start_year = 1941
+		folder = {
+			name = murder_drones_folder
+			position = { x = 2 y = @1939 }
+		}
+		
+
+		categories = {
+			murder_drones_equipment
+		}
+
+		ai_will_do = {
+			base = 2
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 10
+				tag = CHI
+
+				OR = {
+					date > 1937.1.1
+					JAP = { is_ai = no }
+				}
+			}
+
+			modifier = {
+				factor = 10
+				date > 1936.1.3
+			}
+		}
+	}
+	
+	railgun_equipment_2 = {
+	
+		
+		enable_equipments = {
+			railgun_equipment_2
+		}
+		
+		
+		research_cost = 1.5
+		start_year = 1942
+		folder = {
+			name = murder_drones_folder
+			position = { x = 2 y = @1942 }
+		}
+		
+
+		categories = {
+			murder_drones_equipment
+		}
+
+		ai_will_do = {
+			base = 2
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 10
+				tag = CHI
+
+				OR = {
+					date > 1937.1.1
+					JAP = { is_ai = no }
+				}
+			}
+
+			modifier = {
+				factor = 10
+				date > 1936.1.3
+			}
+		}
+	}
+	
+
+}

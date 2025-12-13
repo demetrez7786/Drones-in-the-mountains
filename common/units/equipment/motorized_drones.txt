@@ -1,0 +1,90 @@
+equipments = {
+	
+	motorized_drones_equipment = {
+		year = 1918
+
+		archetype = motorized_equipment
+		priority = 30
+		maximum_speed = 20
+		reliability = 2
+		breakthrough = 20
+		fuel_consumption = 0.1
+		
+		build_cost_ic = 2.5
+		resources = {
+			oil = 2
+			rubber = 1
+			steel = 1
+		}
+		
+		supply_truck = yes
+	}
+	
+	motorized_drones_equipment_1 = {
+		year = 1936
+
+		archetype = motorized_equipment
+		priority = 30
+		maximum_speed = 20
+		reliability = 2
+		breakthrough = 20
+	    fuel_consumption = 0.2 
+		
+		build_cost_ic = 2.5
+		resources = {
+			oil = 2
+			rubber = 1
+			steel = 1
+		}
+		
+		supply_truck = yes
+	}
+	
+    mechanized_drones_equipment_1 = {
+    
+		archetype = motorized_equipment
+		maximum_speed = 30.0          
+		defense = 90.0               
+		breakthrough = 60.0        
+		hardness = 1.0             
+		armor = 100.0                 
+		piercing = 100.0                
+		reliability = 2            
+	    fuel_consumption = 0.4     
+		
+		production_cost = 100.0       
+			
+		resources = {
+			steel = 3
+			tungsten = 1             
+		}
+		
+		year = 1939
+	}
+    mechanized_drones_equipment_2 = {
+    
+		archetype = motorized_equipment
+		maximum_speed = 50.0          
+		defense = 100.0               
+		breakthrough = 80.0        
+		hardness = 2.0             
+		armor = 120.0                 
+		piercing = 150.0                
+		reliability = 2            
+	    fuel_consumption = 0.5   
+		
+		production_cost = 120.0   
+		
+		resources = {
+			steel = 4
+			tungsten = 2
+			chromium = 1    
+		}
+		
+		year = 1942
+		
+		parent = mechanized_drones_equipment_1
+
+	}
+	
+}

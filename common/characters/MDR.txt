@@ -77,46 +77,17 @@ characters={
 		}
     }
 	
-	MDR_uzi_two={ #communist Leader
-		name="Uzi"
-		portraits={
-			civilian={
-				large="gfx/leaders/MDR/portrait_mdr_cured_uzi.png"
-			}
-		}
-		country_leader={
-			ideology=anarchist_communism
-			traits={ has_solver drone_supremacy rebellious }
-			expire="5022.8.30.1"
-			id=-1
-		}
-    }
-	
 	MDR_uzis_emergency_government={ #communist Leader
 		name="Emergency Government"
 		portraits={
 			civilian={
 				large="gfx/leaders/MDR/portrait_mdr_emergency_government.png"
+				small = "gfx/interface/ideas/portrait_MDR_uzi_small.png"
 			}
 		}
 		country_leader={
 			ideology=stalinism
 			traits={ }
-			expire="5022.8.30.1"
-			id=-1
-		}
-    }
-	
-	MDR_uzi_doll={ #communist Leader
-		name="Uzi-Doll"
-		portraits={
-			civilian={
-				large="gfx/leaders/MDR/portrait_mdr_uzi_doll.png"
-			}
-		}
-		country_leader={
-			ideology=marxism
-			traits={ dual_solvers }
 			expire="5022.8.30.1"
 			id=-1
 		}
