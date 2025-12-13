@@ -170,7 +170,7 @@ MDR_test_our_power_category = {
 		is_good = no
 		selectable_mission = no
 		fire_only_once = yes
-		days_mission_timeout = 45
+		days_mission_timeout = 65
 		
 		#Fail trigger
 		available = {
@@ -184,11 +184,11 @@ MDR_test_our_power_category = {
 		}
 
 		complete_effect = {
-			country_event = drones.17
+			country_event = { id = drones.17 }
 		}
 
 		timeout_effect = {
-			country_event = drones.18
+			country_event = { id = drones.18 }
 			white_peace = PER
 			if = {
 				limit = {
@@ -204,6 +204,51 @@ MDR_test_our_power_category = {
 			}
 		}
 	}	
+	
+	MDR_take_iran_and_iraq_du = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+		is_good = no
+		selectable_mission = no
+		fire_only_once = yes
+		days_mission_timeout = 120
+		
+		#Fail trigger
+		available = {
+			PER = { 
+				exists = no
+			}
+			IRQ = { 
+				exists = no
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		complete_effect = {
+			country_event = { id = drones.53 }
+		}
+
+		timeout_effect = {
+			country_event = { id = drones.54 }
+			white_peace = PER
+			white_peace = IRQ
+			if = {
+				limit = {
+					MDR = {
+						controls_state = 419
+						controls_state = 1000
+						controls_state = 420
+					}
+				}
+				419 = { transfer_state_to = MDR }
+				1000 = { transfer_state_to = MDR }
+				420 = { transfer_state_to = MDR }
+			}
+		}
+	}
 }	
 
 MDR_focus_on_europe_category = {
@@ -3282,6 +3327,134 @@ MDR_hunting_underground_resistance_category = {
 
 		complete_effect = {
 			remove_ideas = MDR_underground_human_resistance_three
+		}
+	}
+}	
+
+MDR_war_on_terrorism_category = {
+    
+	MDR_reprogramm_absolute_solvers_hosts_in_samegrelo = {
+
+		icon = GFX_decision_generic_trucks
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_hunting_absolute_solver
+		} 
+
+		visible = { 
+			has_country_flag = MDR_hunting_absolute_solver
+		}
+
+		cost = 250
+		
+		days_remove = 80
+		modifier = {
+			civilian_factory_use = 5
+			weekly_manpower = -25
+			consumer_goods_factor = 0.35
+		}
+
+		complete_effect = {
+			set_country_flag = MDR_hosts_are_reprogrammed
+			add_stability = 0.15
+			add_political_power = 50
+			add_manpower = 5000
+		}
+	}
+	
+	MDR_clean_their_bases_in_south_ossetia = {
+
+		icon = GFX_decision_generic_army_support
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_hunting_absolute_solver
+			has_country_flag = MDR_hosts_are_reprogrammed
+		} 
+
+		visible = { 
+			has_country_flag = MDR_hunting_absolute_solver
+			
+		}
+
+		cost = 250
+		
+		days_remove = 80
+		modifier = {
+			civilian_factory_use = 5
+			weekly_manpower = -25
+			consumer_goods_factor = 0.35
+		}
+
+		complete_effect = {
+			set_country_flag = MDR_bases_removed
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 25
+		}
+	}
+	
+	MDR_operation_neptune_spear = {
+
+		icon = GFX_decision_generic_operation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_hunting_absolute_solver
+			has_country_flag = MDR_bases_removed
+		} 
+
+		visible = { 
+			has_country_flag = MDR_hunting_absolute_solver
+		}
+
+		cost = 250
+		
+		days_remove = 80
+		modifier = {
+			civilian_factory_use = 5
+			weekly_manpower = -25
+			consumer_goods_factor = 0.35
+		}
+
+		complete_effect = {
+			add_popularity = {
+			    ideology = democratic
+				popularity = 0.35
+			}
+            add_political_power = 100
+			add_manpower = -1
+			add_stability = 0.35
+			add_war_support = 0.35
+			add_command_power = 25
 		}
 	}
 }	
@@ -6834,9 +7007,9 @@ MDR_inspecting_all_branches = {
 				var = inspection
 				value = 20
 			}
+			add_war_support = -0.01
+		    add_manpower = -578
 		}
-		add_war_support = -0.01
-		add_manpower = -578
 	}
 	
 	MDR_inspect_media_branch = {
@@ -6935,9 +7108,9 @@ MDR_n_thad_endgame = {
 		}
 		cancel_trigger = {
 			OR = {
-		        has_comleted_focus = MDR_black_queen
-		        has_comleted_focus = MDR_between_two_queens
-				has_comleted_focus = MDR_kick_thad_out_of_power
+		        has_completed_focus = MDR_black_queen
+		        has_completed_focus = MDR_between_two_queens
+				has_completed_focus = MDR_kick_thad_out_of_power
 		    }
 		}
 		visible = {
@@ -6984,9 +7157,9 @@ MDR_n_thad_endgame = {
 		}
 		cancel_trigger = {
 			OR = {
-		        has_comleted_focus = MDR_white_queen
-		        has_comleted_focus = MDR_between_two_queens
-				has_comleted_focus = MDR_give_n_little_bit_of_power
+		        has_completed_focus = MDR_white_queen
+		        has_completed_focus = MDR_between_two_queens
+				has_completed_focus = MDR_give_n_little_bit_of_power
 		    }
 		}
 		visible = {
@@ -7023,34 +7196,1793 @@ MDR_n_thad_endgame = {
 MDR_pesants_boycot = {
 
     MDR_pesants_protesting = {
-	    icon = GFX_decision_POL_looming_peasants_strike
-
+		icon = GFX_decision_generic_ignite_civil_war
+		is_good = no
+		selectable_mission = no
+		fire_only_once = yes
 		days_mission_timeout = 365
+		
+		#Fail trigger
+		available = {
+		    OR = {
+			has_completed_focus = MDR_agricultural_reforms
+			has_completed_focus = MDR_agricultural_reforms_doll
+			has_completed_focus = MDR_agricultural_reforms_du
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		complete_effect = {
+			
+		}
+		
+		timeout_effect = {
+			add_political_power = -80
+			add_stability = -0.25
+			1050 = { transfer_state_to = PES }
+			229 = { transfer_state_to = PES }
+		}
+	}
+}
+
+MDR_soviet_drones_war_cat = {
+
+    MDR_soviet_drones_war_mission = {
+		icon = GFX_decision_generic_ignite_civil_war
+		is_good = no
+		selectable_mission = no
+		fire_only_once = yes
+		days_mission_timeout = 365
+		
+		#Fail trigger
+		available = {
+			MDR = { 
+				exists = no
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+		    complete_national_focus = MDR_soviet_surrender
+			SOV = {
+			    white_peace = MDR
+			}	
+			821 = { set_demilitarized_zone = yes }
+			232 = { set_demilitarized_zone = yes }
+			235 = { set_demilitarized_zone = yes }
+			828 = { set_demilitarized_zone = yes }
+			827 = { set_demilitarized_zone = yes }
+			233 = { set_dimilitarized_zone = yes }
+			234 = { set_demilitarized_zone = yes }
+		}
+	}
+	
+	MDR_to_stalingrad = {
+		icon = GFX_decision_generic_ignite_civil_war
+		is_good = no
+		selectable_mission = no
+		fire_only_once = yes
+		days_mission_timeout = 100
+		
+		#Fail trigger
+		available = {
+			MDR = {
+			    controls_state = 217
+			}	
+		}
+
+		activation = {
+			always = no
+		}
+
+		complete_effect = {
+			complete_national_focus = MDR_soviet_surrender
+			SOV = {
+			    white_peace = MDR
+			}	
+			821 = { set_demilitarized_zone = yes }
+			232 = { set_demilitarized_zone = yes }
+			235 = { set_demilitarized_zone = yes }
+			828 = { set_demilitarized_zone = yes }
+			827 = { set_demilitarized_zone = yes }
+			233 = { set_dimilitarized_zone = yes }
+			234 = { set_demilitarized_zone = yes }
+		}
+
+		timeout_effect = {
+		    add_political_power = -50
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_manpower = -5000
+		}
+	}
+}
+
+MDR_separatism_in_russia_cat = {
+
+    MDR_send_guns_to_ukrainians = {
+	    icon = GFX_decision_mdr_ukrainian_symbol
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 10
+
+		available = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_ukrainians_are_ready
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_ukrainians_are_ready
+				}
+			}
+		}
+
+		cost = 10
+		complete_effect = {
+			add_to_variable = {
+				var = ukraine_separatism
+				value = 5
+			}
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = -150
+			}
+			UKR = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = 150
+			}
+			}
+			custom_effect_tooltip = MDR_small_separatism_increasing
+			if = {
+				limit = {
+					check_variable = {
+						var = ukraine_separatism
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_ukrainians_are_ready
+			}
+		}
+	}
+	
+	MDR_send_guns_to_belarusians = {
+	    icon = GFX_decision_mdr_belarussian
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 10
+
+		available = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_belarusians_are_ready
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_belarusians_are_ready
+				}
+			}
+		}
+
+		cost = 10
+		complete_effect = {
+			add_to_variable = {
+				var = belarus_separatism
+				value = 5
+			}
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = -150
+			}
+			BLR = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = 150
+			}
+			}
+			custom_effect_tooltip = MDR_small_separatism_increasing
+			if = {
+				limit = {
+					check_variable = {
+						var = belarus_separatism
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_belarusians_are_ready
+			}
+		}
+	}
+	
+	MDR_send_guns_to_kazakhstanis = {
+	    icon = GFX_decision_mdr_kazakhstani_symbol
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 10
+
+		available = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_kazakhstanis_are_ready
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_kazakhstanis_are_ready
+				}
+			}
+		}
+
+		cost = 10
+		complete_effect = {
+			add_to_variable = {
+				var = kazakhstan_separatism
+				value = 5
+			}
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = -150
+			}
+			KAZ = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = 150
+			}
+			}
+			custom_effect_tooltip = MDR_small_separatism_increasing
+			if = {
+				limit = {
+					check_variable = {
+						var = kazakhstan_separatism
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_kazakhstanis_are_ready
+			}
+		}
+	}
+	
+	MDR_national_propaganda_in_ukraine = {
+	    icon = GFX_decision_mdr_ukrainian_symbol
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 15
+
+		available = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_ukrainians_are_ready
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_ukrainians_are_ready
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = ukraine_separatism
+				value = 15
+			}
+			UKR = {
+			    add_war_support = 0.1
+				add_manpower = 250
+			}	
+			custom_effect_tooltip = MDR_medium_separatism_increasing
+			if = {
+				limit = {
+					check_variable = {
+						var = ukraine_separatism
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_ukrainians_are_ready
+			}
+		}
+	}
+	
+	MDR_national_propaganda_in_belarus = {
+	    icon = GFX_decision_mdr_belarussian
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 15
+
+		available = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_belarusians_are_ready
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_belarusians_are_ready
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = belarus_separatism
+				value = 15
+			}
+			BLR = {
+			    add_war_support = 0.1
+				add_manpower = 250
+			}	
+			custom_effect_tooltip = MDR_medium_separatism_increasing
+			if = {
+				limit = {
+					check_variable = {
+						var = belarus_separatism
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_belarusians_are_ready
+			}
+		}
+	}
+	
+	MDR_national_propaganda_in_kazakhstan = {
+	    icon = GFX_decision_mdr_kazakhstani_symbol
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 15
+
+		available = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_kazakhstanis_are_ready
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_kazakhstanis_are_ready
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = kazakhstan_separatism
+				value = 15
+			}
+			KAZ = {
+			    add_war_support = 0.1
+				add_manpower = 250
+			}	
+			custom_effect_tooltip = MDR_medium_separatism_increasing
+			if = {
+				limit = {
+					check_variable = {
+						var = kazakhstan_separatism
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_kazakhstanis_are_ready
+			}
+		}
+	}
+	
+	MDR_bribe_locals_in_ukraine = {
+	    icon = GFX_decision_mdr_ukrainian_symbol
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_ukrainians_are_ready
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_ukrainians_are_ready
+				}
+			}
+		}
+
+		cost = 80
+		complete_effect = {
+			add_to_variable = {
+				var = ukraine_separatism
+				value = 30
+			}
+			custom_effect_tooltip = MDR_high_separatism_increasing
+			if = {
+				limit = {
+					check_variable = {
+						var = ukraine_separatism
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_ukrainians_are_ready
+			}
+		}
+	}
+	
+	MDR_bribe_locals_in_belarus = {
+	    icon = GFX_decision_mdr_belarussian
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_belarusians_are_ready
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_belarusians_are_ready
+				}
+			}
+		}
+
+		cost = 80
+		complete_effect = {
+			add_to_variable = {
+				var = belarus_separatism
+				value = 30
+			}
+			custom_effect_tooltip = MDR_high_separatism_increasing
+			if = {
+				limit = {
+					check_variable = {
+						var = belarus_separatism
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_belarusians_are_ready
+			}
+		}
+	}
+	
+	MDR_bribe_locals_in_kazakhstan = {
+	    icon = GFX_decision_mdr_kazakhstani_symbol
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_kazakhstanis_are_ready
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_spreading_separatism_in_ussr
+				NOT = {
+					has_country_flag = MDR_kazakhstanis_are_ready
+				}
+			}
+		}
+
+		cost = 80
+		complete_effect = {
+			add_to_variable = {
+				var = kazakhstan_separatism
+				value = 30
+			}
+			custom_effect_tooltip = MDR_high_separatism_increasing
+			if = {
+				limit = {
+					check_variable = {
+						var = kazakhstan_separatism
+						value = 100
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = MDR_kazakhstanis_are_ready
+			}
+		}
+	}
+	
+	MDR_uprising = {
+	    icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+		    has_country_flag = MDR_spreading_separatism_in_ussr
+			has_country_flag = MDR_kazakhstanis_are_ready
+			has_country_flag = MDR_belarusians_are_ready
+			has_country_flag = MDR_ukrainians_are_ready
+		} 
+
+		visible = {
+			has_country_flag = MDR_spreading_separatism_in_ussr
+		}
+
+		cost = 80
+		complete_effect = {
+			192 = { transfer_state_to = UKR }
+		    834 = { transfer_state_to = UKR }
+		    198 = { transfer_state_to = UKR }
+		    199 = { transfer_state_to = UKR }
+		    201 = { transfer_state_to = UKR }
+		    202 = { transfer_state_to = UKR }
+		    193 = { transfer_state_to = UKR }
+			259 = { transfer_state_to = UKR }
+		    203 = { transfer_state_to = UKR }
+		    197 = { transfer_state_to = UKR }
+		    226 = { transfer_state_to = UKR }
+			196 = { transfer_state_to = UKR }
+		    137 = { transfer_state_to = UKR }
+			207 = { transfer_state_to = BLR }
+		    206 = { transfer_state_to = BLR }
+			204 = { transfer_state_to = BLR }
+		    194 = { transfer_state_to = BLR }
+			587 = { transfer_state_to = KAZ }
+		    402 = { transfer_state_to = KAZ }
+			881 = { transfer_state_to = KAZ }
+		    404 = { transfer_state_to = KAZ }
+			586 = { transfer_state_to = KAZ }
+		    589 = { transfer_state_to = KAZ }
+			set_country_flag = MDR_separatists_uprised
+			hidden_effect = {
+			    SOV = {
+				    country_event = { id = drones.55 }
+				}
+			}
+		}
+	}
+}
+
+MDR_summon_death_angels = {
+
+    MDR_summon_death_angels_decision = {
+	    icon = GFX_decision_mdr_cult_expansion
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 30
+
+		available = {
+		    has_completed_focus = MDR_create_more_death_angels
+		} 
+
+		visible = {
+			has_completed_focus = MDR_create_more_death_angels
+		}
+
+		cost = 20
+		complete_effect = {
+			capital_scope = {
+				create_unit = { 
+					division = "division_template = \"V Disassembly Drone\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+				}
+				create_unit = { 
+					division = "division_template = \"V Disassembly Drone\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+				}
+				create_unit = { 
+					division = "division_template = \"V Disassembly Drone\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+				}
+				create_unit = { 
+					division = "division_template = \"V Disassembly Drone\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+				}
+				create_unit = { 
+					division = "division_template = \"V Disassembly Drone\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+				}
+				create_unit = { 
+					division = "division_template = \"V Disassembly Drone\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+				}
+				create_unit = { 
+					division = "division_template = \"V Disassembly Drone\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+				}
+				create_unit = { 
+					division = "division_template = \"V Disassembly Drone\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+				}
+				create_unit = { 
+					division = "division_template = \"V Disassembly Drone\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+				}
+				create_unit = { 
+					division = "division_template = \"V Disassembly Drone\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+				}
+			}	
+		}
+	}
+}
+
+MDR_summon_guns_and_das_cat = {
+
+    MDR_summon_guns = {
+	    icon = GFX_decision_mdr_cult_expansion
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 30
+
+		available = {
+		    has_completed_focus = MDR_summon_weapons
+		} 
+
+		visible = {
+			has_completed_focus = MDR_summon_weapons
+		}
+
+		cost = 20
+		complete_effect = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_1
+				amount = 15000
+			}
+			add_equipment_to_stockpile = { 
+				type = disassembly_drone_equipment
+				amount = 15000
+			}
+		}
+	}
+	
+	MDR_summon_manpower = {
+	    icon = GFX_decision_mdr_cult_expansion
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 30
+
+		available = {
+		    has_completed_focus = MDR_summon_weapons
+		} 
+
+		visible = {
+			has_completed_focus = MDR_summon_weapons
+		}
+
+		cost = 20
+		complete_effect = {
+			add_manpower = 500000
+		}
+	}
+}
+
+MDR_fight_for_cyn = {
+
+    MDR_destroy_solvers_programs = {
+	    icon = GFX_decision_mdr_hacking
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 15
+
+		available = {
+			AND = {
+				has_country_flag = MDR_fight_for_cyn_has_begun
+				NOT = {
+					has_country_flag = MDR_solver_is_defeated
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_fight_for_cyn_has_begun
+				NOT = {
+					has_country_flag = MDR_solver_is_defeated
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = absolute_solver_influence
+				value = -25
+			}
+			custom_effect_tooltip = MDR_medium_influence_decreasing
+			if = {
+				limit = {
+					check_variable = { absolute_solver_influence = 0 }
+				}
+				set_country_flag = MDR_solver_is_defeated
+			}
+		}
+	}
+	
+	MDR_solve_solvers_virus = {
+	    icon = GFX_decision_mdr_hacking
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 25
+
+		available = {
+			AND = {
+				has_country_flag = MDR_fight_for_cyn_has_begun
+				NOT = {
+					has_country_flag = MDR_solver_is_defeated
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_fight_for_cyn_has_begun
+				NOT = {
+					has_country_flag = MDR_solver_is_defeated
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = absolute_solver_influence
+				value = -25
+			}
+			custom_effect_tooltip = MDR_medium_influence_decreasing
+			if = {
+				limit = {
+					check_variable = { absolute_solver_influence = 0 }
+				}
+				set_country_flag = MDR_solver_is_defeated
+			}
+		}
+	}
+	
+	MDR_attack_absolute_solver = {
+	    icon = GFX_decision_mdr_hacking
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 25
+
+		available = {
+			AND = {
+				has_country_flag = MDR_fight_for_cyn_has_begun
+				NOT = {
+					has_country_flag = MDR_solver_is_defeated
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_fight_for_cyn_has_begun
+				NOT = {
+					has_country_flag = MDR_solver_is_defeated
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = absolute_solver_influence
+				value = -25
+			}
+			custom_effect_tooltip = MDR_medium_influence_decreasing
+			if = {
+				limit = {
+					check_variable = { absolute_solver_influence = 0 }
+				}
+				set_country_flag = MDR_solver_is_defeated
+			}
+		}
+	}
+	
+	MDR_cyn_is_free = {
+	    icon = GFX_decision_mdr_cyn_helping_as
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = MDR_solver_is_defeated
+		} 
+
+		visible = {
+			has_country_flag = MDR_fight_for_cyn_has_begun
+		}
+
+		cost = 0
+		complete_effect = {
+		    set_politics = { 
+			ruling_party = democratic
+			elections_allowed = no
+		    }
+		    add_popularity = {
+			    ideology = democratic
+			    popularity = 0.65
+		    }
+			set_country_flag = MDR_battle_is_over
+			retire_character = MDR_tessa
+			retire_character = MDR_khan
+			add_country_leader_role = {
+		    character = MDR_cyn_democratic
+		    promote_leader = yes
+		    country_leader = {
+			    expire = "5022.8.30.1"
+			    ideology = populism
+			    traits = { 
+				    
+				}
+	        }
+		    }
+		    load_focus_tree = murder_drones_democratic_cyn_focus
+			remove_power_balance = {
+                id = MDR_power_balance_bop
+            }
+		}
+	}
+}
+
+MDR_protest_cat = {
+    
+	MDR_protest_momentum_rising = {
+	    icon = GFX_decision_mdr_protest
+		days_mission_timeout = 7
 		selectable_mission = no
 		is_good = no
 		allowed = {
-			has_completed_focus = MDR_cousins_coalition_won
+			AND = {
+				has_country_flag = MDR_protest_got_radical
+				NOT = {
+		            has_country_flag = MDR_protest_is_over
+				}
+			}
 		}
 		activation = {
-			has_completed_focus = MDR_cousins_coalition_won
+			AND = {
+				has_country_flag = MDR_protest_got_radical
+				NOT = {
+		            has_country_flag = MDR_protest_is_over
+				}
+			}
 		}
 		cancel_trigger = {
-			OR = {
-		        has_comleted_focus = MDR_agricultural_reforms_doll
-		        has_comleted_focus = MDR_agricultural_reforms
-		    }
+			has_country_flag = MDR_protest_is_over
 		}
 		visible = {
-			has_completed_focus = MDR_cousins_coalition_won
+			AND = {
+				has_country_flag = MDR_protest_got_radical
+				NOT = {
+		            has_country_flag = MDR_protest_is_over
+				}
+			}
 		}
 		available = {
 			always = no
 		}
 		timeout_effect = {
-			add_political_power = -80
-			add_stability = -0.25
-			1020 = { transfer_state_to = PES }
-			229 = { transfer_state_to = PES }
+			random_list = {
+			    25 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = 7
+		            }
+			    }
+            
+			    25 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = 3
+		            }
+			    }
+				
+				25 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = 10
+		            }
+			    }
+				
+				25 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = 5
+		            }
+			    }
+			}	
+			activate_mission = MDR_protest_momentum_rising
+			if = {
+				limit = {
+					check_variable = { protest_momentum > 100 }
+				}
+				set_variable = {
+			        var = protest_momentum
+			        value = 100
+		        }
+			}	
+		}
+	}
+	
+	MDR_counter_opposition_fake_news = {
+	    icon = GFX_decision_mdr_counter_disinformation
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 10
+
+		available = {
+			AND = {
+				has_completed_focus = MDR_counter_opposition_media
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_completed_focus = MDR_counter_opposition_media
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = protest_momentum
+				value = -10
+			}
+			custom_effect_tooltip = MDR_protest_momentum_decreasing
+			if = {
+				limit = {
+					OR = {
+					check_variable = { protest_momentum = 0 }
+					check_variable = { protest_momentum > 0 }
+					}
+				}
+				set_country_flag = MDR_protest_is_over
+				complete_national_focus = MDR_aftermath_of_protest
+			}
+		}
+	}
+	
+	MDR_introduce_transparency_laws_n = {
+	    icon = GFX_decision_mdr_transparency_law
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_completed_focus = MDR_transparency_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_completed_focus = MDR_transparency_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = protest_momentum
+				value = -20
+			}
+			custom_effect_tooltip = MDR_protest_momentum_decreasing
+			if = {
+				limit = {
+					OR = {
+					check_variable = { protest_momentum = 0 }
+					check_variable = { protest_momentum > 0 }
+					}
+				}
+				set_country_flag = MDR_protest_is_over
+				complete_national_focus = MDR_aftermath_of_protest
+			}
+		}
+	}
+	
+	MDR_raid_tv_imedi_office = {
+	    icon = GFX_decision_mdr_raid_tv_imedi
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_completed_focus = MDR_raid_opposition_media
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_completed_focus = MDR_raid_opposition_media
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		}
+
+		cost = 10
+		complete_effect = {
+			random_list = {
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = 15
+		            }
+			    }
+            
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = -15
+		            }
+			    }
+			}	
+			custom_effect_tooltip = MDR_warning_protest
+			if = {
+				limit = {
+					OR = {
+					check_variable = { protest_momentum = 0 }
+					check_variable = { protest_momentum > 0 }
+					}
+				}
+				set_country_flag = MDR_protest_is_over
+				complete_national_focus = MDR_aftermath_of_protest
+			}
+		}
+	}
+	
+	MDR_raid_rustavi_two_office = {
+	    icon = GFX_decision_mdr_raid_rustavi_twoo
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_completed_focus = MDR_transparency_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_completed_focus = MDR_transparency_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		}
+
+		cost = 10
+		complete_effect = {
+			random_list = {
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = 15
+		            }
+			    }
+            
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = -15
+		            }
+			    }
+			}	
+			custom_effect_tooltip = MDR_warning_protest
+			if = {
+				limit = {
+					OR = {
+					check_variable = { protest_momentum = 0 }
+					check_variable = { protest_momentum > 0 }
+					}
+				}
+				set_country_flag = MDR_protest_is_over
+				complete_national_focus = MDR_aftermath_of_protest
+			}
+		}
+	}
+	
+	MDR_raid_post_tv_office = {
+	    icon = GFX_decision_mdr_raid_post_tv
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_completed_focus = MDR_transparency_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_completed_focus = MDR_transparency_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		}
+
+		cost = 10
+		complete_effect = {
+			random_list = {
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = 15
+		            }
+			    }
+            
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = -15
+		            }
+			    }
+			}	
+			custom_effect_tooltip = MDR_warning_protest
+			if = {
+				limit = {
+					OR = {
+					check_variable = { protest_momentum = 0 }
+					check_variable = { protest_momentum > 0 }
+					}
+				}
+				set_country_flag = MDR_protest_is_over
+				complete_national_focus = MDR_aftermath_of_protest
+			}
+		}
+	}
+	
+	MDR_ban_face_covering_tools = {
+	    icon = GFX_decision_mdr_transparency_law
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_completed_focus = MDR_anti_protest_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_completed_focus = MDR_anti_protest_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		}
+
+		cost = 10
+		complete_effect = {
+			random_list = {
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = 15
+		            }
+			    }
+            
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = -15
+		            }
+			    }
+			}	
+			custom_effect_tooltip = MDR_warning_protest
+			if = {
+				limit = {
+					OR = {
+					check_variable = { protest_momentum = 0 }
+					check_variable = { protest_momentum > 0 }
+					}
+				}
+				set_country_flag = MDR_protest_is_over
+				complete_national_focus = MDR_aftermath_of_protest
+			}
+		}
+	}
+	
+	MDR_ban_tents = {
+	    icon = GFX_decision_mdr_transparency_law
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_completed_focus = MDR_anti_protest_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_completed_focus = MDR_anti_protest_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		}
+
+		cost = 10
+		complete_effect = {
+			random_list = {
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = 15
+		            }
+			    }
+            
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = -15
+		            }
+			    }
+			}	
+			custom_effect_tooltip = MDR_warning_protest
+			if = {
+				limit = {
+					OR = {
+					check_variable = { protest_momentum = 0 }
+					check_variable = { protest_momentum > 0 }
+					}
+				}
+				set_country_flag = MDR_protest_is_over
+				complete_national_focus = MDR_aftermath_of_protest
+			}
+		}
+	}
+	
+	MDR_no_punishment_to_police = {
+	    icon = GFX_decision_mdr_transparency_law
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_completed_focus = MDR_anti_protest_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_completed_focus = MDR_anti_protest_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		}
+
+		cost = 10
+		complete_effect = {
+			random_list = {
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = 15
+		            }
+			    }
+            
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = -15
+		            }
+			    }
+			}	
+			custom_effect_tooltip = MDR_warning_protest
+			if = {
+				limit = {
+					OR = {
+					check_variable = { protest_momentum = 0 }
+					check_variable = { protest_momentum > 0 }
+					}
+				}
+				set_country_flag = MDR_protest_is_over
+				complete_national_focus = MDR_aftermath_of_protest
+			}
+		}
+	}
+	
+	MDR_hunt_suspected_ngos = {
+	    icon = GFX_decision_mdr_transparency_law
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_completed_focus = MDR_anti_protest_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_completed_focus = MDR_anti_protest_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		}
+
+		cost = 10
+		complete_effect = {
+			random_list = {
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = 15
+		            }
+			    }
+            
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = -15
+		            }
+			    }
+			}	
+			custom_effect_tooltip = MDR_warning_protest
+			if = {
+				limit = {
+					OR = {
+					check_variable = { protest_momentum = 0 }
+					check_variable = { protest_momentum > 0 }
+					}
+				}
+				set_country_flag = MDR_protest_is_over
+				complete_national_focus = MDR_aftermath_of_protest
+			}
+		}
+	}
+	
+	MDR_silence_religious_officials = {
+	    icon = GFX_decision_mdr_transparency_law
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_completed_focus = MDR_anti_protest_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_completed_focus = MDR_anti_protest_laws
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		}
+
+		cost = 10
+		complete_effect = {
+			random_list = {
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = 15
+		            }
+			    }
+            
+			    50 = {
+			        add_to_variable = {
+			            var = protest_momentum
+			            value = -15
+		            }
+			    }
+			}	
+			custom_effect_tooltip = MDR_warning_protest
+			if = {
+				limit = {
+					OR = {
+					check_variable = { protest_momentum = 0 }
+					check_variable = { protest_momentum > 0 }
+					}
+				}
+				set_country_flag = MDR_protest_is_over
+				complete_national_focus = MDR_aftermath_of_protest
+			}
+		}
+	}
+	
+	MDR_call_military_police = {
+	    icon = GFX_decision_mdr_military_police
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 25
+
+		available = {
+			AND = {
+				has_completed_focus = MDR_crush_protest
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_completed_focus = MDR_crush_protest
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = protest_momentum
+				value = -65
+			}
+			custom_effect_tooltip = MDR_protest_momentum_decreasing
+			if = {
+				limit = {
+				    OR = {
+					check_variable = { protest_momentum = 0 }
+					check_variable = { protest_momentum > 0 }
+					}
+				}
+				set_country_flag = MDR_protest_is_over
+				complete_national_focus = MDR_aftermath_of_protest
+			}
+		}
+	}
+	
+	MDR_retake_few_districts = {
+	    icon = GFX_decision_mdr_military_police
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = no
+		days_re_enable = 25
+
+		available = {
+			AND = {
+				has_completed_focus = MDR_controlled_cleansing_operation
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_completed_focus = MDR_controlled_cleansing_operation
+				NOT = {
+					has_country_flag = MDR_protest_is_over
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = protest_momentum
+				value = -65
+			}
+			custom_effect_tooltip = MDR_protest_momentum_decreasing
+			if = {
+				limit = {
+				    OR = {
+					check_variable = { protest_momentum = 0 }
+					check_variable = { protest_momentum > 0 }
+					}
+				}
+				set_country_flag = MDR_protest_is_over
+				complete_national_focus = MDR_aftermath_of_protest
+			}
 		}
 	}
 }

@@ -6,9 +6,6 @@ set_research_slots = 5
 
 # Starting tech
 set_technology = {
-	motorized_drones_tech = 1
-	paratroopers = 1
-	railgun_equipment_0 = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_recon = 1
@@ -32,7 +29,7 @@ set_technology = {
 	naval_bomber1 = 1
 	tactical_bomber1 = 1
 	worker_drone_tech = 1
-	murder_drone_tech = 1
+	disassembly_drone_tech = 1
 	nukes = 1
 	early_transport_plane = 1
 	early_fighter = 1
@@ -42,6 +39,25 @@ set_technology = {
 set_power_balance = {
     id = MDR_power_balance_bop
 }
+
+# PARLIAMENT
+add_to_variable = {
+	var = cyn_absolute_solver
+	value = 81
+}
+add_to_variable = {
+	var = cousins_coalition
+	value = 38
+}
+add_to_variable = {
+	var = democracy_and_bunkers
+	value = 22
+}
+add_to_variable = {
+	var = disassembly_drones_coalition
+	value = 10
+}
+set_country_flag = MDR_parliament
 
 set_politics = {
 	ruling_party = fascism
@@ -79,3 +95,9 @@ recruit_character = MDR_teacher
 recruit_character = MDR_yeva
 recruit_character = MDR_uzis_emergency_government
 recruit_character = MDR_uzi_infected
+recruit_character = MDR_uzi_doll
+recruit_character = MDR_uzi_two
+recruit_character = MDR_doll_two
+recruit_character = MDR_v_sadistic
+recruit_character = MDR_cyn_democratic
+recruit_character = MDR_n_fascist

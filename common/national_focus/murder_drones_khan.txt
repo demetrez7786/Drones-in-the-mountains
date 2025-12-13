@@ -18,7 +18,7 @@ focus_tree = {
 		id = MDR_democracy_and_bunkers_won
 		icon = GFX_MDR_bunkers_and_democracy_won
 		x = 15
-		y = 0
+		y = 1
 
 		cost = 1
 
@@ -70,7 +70,7 @@ focus_tree = {
 		id = MDR_deal_with_sanctions
 		icon = GFX_MDR_dealing_with_sanctions
 		x = 23
-		y = 0
+		y = 1
 
 		cost = 1
 
@@ -102,7 +102,7 @@ focus_tree = {
 		id = MDR_capitalism
 		icon = GFX_goal_unknown
 		x = 32
-		y = 0
+		y = 1
 
 		cost = 1
 
@@ -134,7 +134,7 @@ focus_tree = {
 		id = MDR_tax_reforms
 		icon = GFX_MDR_taxes_reforms
 		x = 32
-		y = 1
+		y = 3
 		prerequisite = { focus = MDR_capitalism }
 
 		cost = 5
@@ -164,6 +164,7 @@ focus_tree = {
 			add_to_variable = { MDR_ci_industrial_capacity_factory = 0.15 }
 			add_to_variable = { MDR_ci_industrial_capacity_dockyard = 0.15 }
 			add_to_variable = { MDR_ci_research_speed_factor = 0.02 }
+			custom_effect_tooltip = 3_MDR_tt
 		}
 	}
 	
@@ -171,7 +172,7 @@ focus_tree = {
 		id = MDR_small_investment_programs
 		icon = GFX_MDR_small_investments
 		x = 30
-		y = 1
+		y = 3
 		prerequisite = { focus = MDR_capitalism }
 
 		cost = 5
@@ -200,6 +201,7 @@ focus_tree = {
 			add_to_variable = { MDR_ci_industrial_capacity_factory = 0.15 }
 			add_to_variable = { MDR_ci_industrial_capacity_dockyard = 0.15 }
 			add_to_variable = { MDR_ci_research_speed_factor = 0.02 }
+			custom_effect_tooltip = 3_MDR_tt
 		}
 	}
 	
@@ -207,7 +209,7 @@ focus_tree = {
 		id = MDR_develop_domestic_markets
 		icon = GFX_MDR_domestic_market
 		x = 34
-		y = 1
+		y = 3
 		prerequisite = { focus = MDR_capitalism }
 
 		cost = 5
@@ -236,6 +238,7 @@ focus_tree = {
 			add_to_variable = { MDR_ci_industrial_capacity_factory = 0.15 }
 			add_to_variable = { MDR_ci_industrial_capacity_dockyard = 0.15 }
 			add_to_variable = { MDR_ci_research_speed_factor = 0.02 }
+			custom_effect_tooltip = 3_MDR_tt
 		}
 	}
 	
@@ -243,7 +246,7 @@ focus_tree = {
 		id = MDR_encourage_private_enterprises
 		icon = GFX_MDR_encourage_private_enterprises
 		x = 32
-		y = 2
+		y = 5
 		prerequisite = { focus = MDR_tax_reforms }
 		prerequisite = { focus = MDR_small_investment_programs }
 		prerequisite = { focus = MDR_develop_domestic_markets }
@@ -274,6 +277,7 @@ focus_tree = {
 			add_to_variable = { MDR_ci_industrial_capacity_factory = 0.15 }
 			add_to_variable = { MDR_ci_industrial_capacity_dockyard = 0.15 }
 			add_to_variable = { MDR_ci_research_speed_factor = 0.02 }
+			custom_effect_tooltip = 3_MDR_tt
 		}
 	}
 	
@@ -281,7 +285,7 @@ focus_tree = {
 		id = MDR_corporate_oversight_bureau
 		icon = GFX_MDR_corporation_oversight_bureau
 		x = 32
-		y = 3
+		y = 7
 		prerequisite = { focus = MDR_encourage_private_enterprises }
 
 		cost = 5
@@ -311,6 +315,7 @@ focus_tree = {
 			add_to_variable = { MDR_ci_industrial_capacity_factory = 0.15 }
 			add_to_variable = { MDR_ci_industrial_capacity_dockyard = 0.15 }
 			add_to_variable = { MDR_ci_research_speed_factor = 0.02 }
+			custom_effect_tooltip = 3_MDR_tt
 		}
 	}
 	
@@ -318,7 +323,7 @@ focus_tree = {
 		id = MDR_consumer_protection_laws
 		icon = GFX_MDR_consumers_protection_law
 		x = 33
-		y = 4
+		y = 9
 		prerequisite = { focus = MDR_corporate_oversight_bureau }
 
 		cost = 5
@@ -348,6 +353,7 @@ focus_tree = {
 			add_to_variable = { MDR_ci_industrial_capacity_factory = 0.15 }
 			add_to_variable = { MDR_ci_industrial_capacity_dockyard = 0.15 }
 			add_to_variable = { MDR_ci_research_speed_factor = 0.02 }
+			custom_effect_tooltip = 3_MDR_tt
 		}
 	}
 	
@@ -355,7 +361,7 @@ focus_tree = {
 		id = MDR_encourage_private_banking
 		icon = GFX_goal_unknown
 		x = 31
-		y = 4
+		y = 9
 		prerequisite = { focus = MDR_corporate_oversight_bureau }
 
 		cost = 5
@@ -384,6 +390,7 @@ focus_tree = {
 			add_to_variable = { MDR_ci_industrial_capacity_factory = 0.15 }
 			add_to_variable = { MDR_ci_industrial_capacity_dockyard = 0.15 }
 			add_to_variable = { MDR_ci_research_speed_factor = 0.02 }
+			custom_effect_tooltip = 3_MDR_tt
 		}
 	}
 	
@@ -391,7 +398,7 @@ focus_tree = {
 		id = MDR_capitalism_is_completed
 		icon = GFX_MDR_capitalism_succsseded
 		x = 32
-		y = 5
+		y = 11
 		prerequisite = { focus = MDR_encourage_private_banking }
 		prerequisite = { focus = MDR_consumer_protection_laws }
 
@@ -424,7 +431,7 @@ focus_tree = {
 		id = MDR_create_our_own_currency
 		icon = GFX_MDR_new_currency
 		x = 23
-		y = 1
+		y = 3
 		prerequisite = { focus = MDR_deal_with_sanctions }
 
 		cost = 5
@@ -455,7 +462,7 @@ focus_tree = {
 		id = MDR_create_our_own_companies
 		icon = GFX_MDR_our_own_companies
 		x = 25
-		y = 2
+		y = 5
 		prerequisite = { focus = MDR_create_our_own_currency }
 
 		cost = 5
@@ -490,7 +497,7 @@ focus_tree = {
 		id = MDR_nationalize_leftover_assets
 		icon = GFX_MDR_nationalize_leftover_assets
 		x = 23
-		y = 2
+		y = 5
 		prerequisite = { focus = MDR_create_our_own_currency }
 
 		cost = 5
@@ -527,7 +534,7 @@ focus_tree = {
 		id = MDR_encourage_domestic_production
 		icon = GFX_MDR_domestic_production
 		x = 21
-		y = 2
+		y = 5
 		prerequisite = { focus = MDR_create_our_own_currency }
 
 		cost = 5
@@ -555,6 +562,7 @@ focus_tree = {
 		    add_to_variable = { MDR_si_stability_factor = 0.05 }
 			add_to_variable = { MDR_si_industrial_capacity_factory = 0.05 }
 			add_to_variable = { MDR_si_industrial_capacity_dockyard = 0.05 }
+			custom_effect_tooltip = sanctions_MDR_tt
 		}
 	}
 
@@ -562,7 +570,7 @@ focus_tree = {
 		id = MDR_sanctions_are_not_working
 		icon = GFX_MDR_sanctions_not_working
 		x = 23
-		y = 3
+		y = 7
 		prerequisite = { focus = MDR_nationalize_leftover_assets }
 		prerequisite = { focus = MDR_encourage_domestic_production }
 		prerequisite = { focus = MDR_create_our_own_companies }
@@ -596,7 +604,7 @@ focus_tree = {
 		id = MDR_army_question
 		icon = GFX_MDR_army_questions
 		x = 6
-		y = 0
+		y = 1
 
 		cost = 1
 
@@ -627,7 +635,7 @@ focus_tree = {
 		id = MDR_depoliticize_the_army
 		icon = GFX_MDR_depoliticize_the_army
 		x = 6
-		y = 1
+		y = 3
 		prerequisite = { focus = MDR_army_question }
 
 		cost = 5
@@ -658,6 +666,7 @@ focus_tree = {
 			add_to_variable = { breakthrough_factor = 0.05 }
 			add_to_variable = { experience_gain_army_factor = 0.02 }
 			add_to_variable = { training_time_factor = -0.03 }
+			custom_effect_tooltip = 2_MDR_tt
 		}
 	}
 
@@ -665,7 +674,7 @@ focus_tree = {
 		id = MDR_bring_back_basic_training
 		icon = GFX_goal_unknown
 		x = 4
-		y = 1
+		y = 3
 		prerequisite = { focus = MDR_army_question }
 
 		cost = 5
@@ -696,6 +705,7 @@ focus_tree = {
 			add_to_variable = { breakthrough_factor = 0.05 }
 			add_to_variable = { experience_gain_army_factor = 0.02 }
 			add_to_variable = { training_time_factor = -0.03 }
+			custom_effect_tooltip = 2_MDR_tt
 		}
 	}
 
@@ -703,7 +713,7 @@ focus_tree = {
 		id = MDR_introduce_human_divisions
 		icon = GFX_MDR_human_divisions
 		x = 8
-		y = 1
+		y = 3
 		prerequisite = { focus = MDR_army_question }
 
 		cost = 5
@@ -735,6 +745,7 @@ focus_tree = {
 			add_to_variable = { breakthrough_factor = 0.05 }
 			add_to_variable = { experience_gain_army_factor = 0.02 }
 			add_to_variable = { training_time_factor = -0.03 }
+			custom_effect_tooltip = 2_MDR_tt
 		}
 	}
 
@@ -742,7 +753,7 @@ focus_tree = {
 		id = MDR_uzis_guns
 		icon = GFX_MDR_uzis_guns
 		x = 7
-		y = 2
+		y = 5
 		prerequisite = { focus = MDR_army_question }
 
 		cost = 5
@@ -765,7 +776,7 @@ focus_tree = {
 
 		completion_reward = {
             add_equipment_to_stockpile = { 
-				type = railgun_equipment_0
+				type = railgun_equipment
 				amount = 15000
 			}
 			add_to_variable = { political_power_gain = 0.05 }
@@ -776,6 +787,7 @@ focus_tree = {
 			add_to_variable = { breakthrough_factor = 0.05 }
 			add_to_variable = { experience_gain_army_factor = 0.02 }
 			add_to_variable = { training_time_factor = -0.03 }
+			custom_effect_tooltip = 2_MDR_tt
 		}
 	}
 
@@ -783,7 +795,7 @@ focus_tree = {
 		id = MDR_standartize_command_structure
 		icon = GFX_MDR_centralized_command
 		x = 5
-		y = 2
+		y = 5
 		prerequisite = { focus = MDR_army_question }
 
 		cost = 5
@@ -814,6 +826,7 @@ focus_tree = {
 			add_to_variable = { breakthrough_factor = 0.05 }
 			add_to_variable = { experience_gain_army_factor = 0.02 }
 			add_to_variable = { training_time_factor = -0.03 }
+			custom_effect_tooltip = 2_MDR_tt
 		}
 	}
 
@@ -821,13 +834,12 @@ focus_tree = {
 		id = MDR_engineer_corps_khan
 		icon = GFX_MDR_engineering_corps
 		x = 6
-		y = 3
-		prerequisite = { focus = MDR_depoliticze_the_army }
+		y = 7
+		prerequisite = { focus = MDR_depoliticize_the_army }
 		prerequisite = { focus = MDR_bring_back_basic_training }
 		prerequisite = { focus = MDR_introduce_human_divisions }
 		prerequisite = { focus = MDR_uzis_guns }
 		prerequisite = { focus = MDR_standartize_command_structure }
-		prerequisite = { focus = MDR_depoliticize_the_army }
 
 		cost = 5
 
@@ -857,6 +869,7 @@ focus_tree = {
 			add_to_variable = { breakthrough_factor = 0.05 }
 			add_to_variable = { experience_gain_army_factor = 0.02 }
 			add_to_variable = { training_time_factor = -0.03 }
+			custom_effect_tooltip = 2_MDR_tt
 		}
 	}
 
@@ -864,7 +877,7 @@ focus_tree = {
 		id = MDR_trench_doctrine
 		icon = GFX_MDR_trench_doctrine
 		x = 6
-		y = 4
+		y = 9
 		prerequisite = { focus = MDR_engineer_corps_khan }
 
 		cost = 5
@@ -899,7 +912,7 @@ focus_tree = {
 		id = MDR_isolation_process
 		icon = GFX_MDR_isolation_proccess
 		x = 15
-		y = 1
+		y = 3
 		prerequisite = { focus = MDR_democracy_and_bunkers_won }
 
 		cost = 1
@@ -931,7 +944,7 @@ focus_tree = {
 		id = MDR_bunkers_for_everyone
 		icon = GFX_MDR_fortifications
 		x = 17
-		y = 7
+		y = 13
 		prerequisite = { focus = MDR_people }
 
 		cost = 5
@@ -1034,7 +1047,7 @@ focus_tree = {
 		id = MDR_deal_with_anti_khan_drones
 		icon = GFX_MDR_deal_with_opposition
 		x = 9
-		y = 7
+		y = 13
 		prerequisite = { focus = MDR_politics_khan }
 
 		cost = 5
@@ -1066,7 +1079,7 @@ focus_tree = {
 		id = MDR_allow_opposition_media
 		icon = GFX_MDR_allow_opposition_media
 		x = 9
-		y = 8
+		y = 15
 		prerequisite = { focus = MDR_deal_with_anti_khan_drones }
 
 		cost = 5
@@ -1102,7 +1115,7 @@ focus_tree = {
 		id = MDR_expand_wdf_khan
 		icon = GFX_MDR_expand_wdf
 		x = 14
-		y = 4
+		y = 7
 		prerequisite = { focus = MDR_kick_out_ambassadors }
         prerequisite = { focus = MDR_close_the_borders }
 		prerequisite = { focus = MDR_no_trades }
@@ -1136,7 +1149,7 @@ focus_tree = {
 		id = MDR_deal_with_economy
 		icon = GFX_MDR_expand_economy
 		x = 16
-		y = 4
+		y = 7
 		prerequisite = { focus = MDR_kick_out_ambassadors }
         prerequisite = { focus = MDR_close_the_borders }
 		prerequisite = { focus = MDR_no_trades }
@@ -1170,7 +1183,7 @@ focus_tree = {
 		id = MDR_introduce_civil_services
 		icon = GFX_MDR_introduce_civil_services
 		x = 21
-		y = 7
+		y = 13
 		prerequisite = { focus = MDR_people }
 
 		cost = 5
@@ -1204,7 +1217,7 @@ focus_tree = {
 		id = MDR_no_trades
 		icon = GFX_MDR_no_trades
 		x = 17
-		y = 2
+		y = 5
 		prerequisite = { focus = MDR_isolation_process }
 
 		cost = 5
@@ -1240,7 +1253,7 @@ focus_tree = {
 		id = MDR_kick_out_ambassadors
 		icon = GFX_MDR_kick_out_ambassadors
 		x = 13
-		y = 2
+		y = 5
 		prerequisite = { focus = MDR_isolation_process }
 
 		cost = 5
@@ -1272,7 +1285,7 @@ focus_tree = {
 		id = MDR_close_the_borders
 		icon = GFX_MDR_close_the_borders
 		x = 15
-		y = 2
+		y = 5
 		prerequisite = { focus = MDR_isolation_process }
 
 		cost = 5
@@ -1306,7 +1319,7 @@ focus_tree = {
 		id = MDR_democracy_proccess
 		icon = GFX_MDR_democracy_process
 		x = 15
-		y = 5
+		y = 9
 		prerequisite = { focus = MDR_expand_wdf_khan }
 		prerequisite = { focus = MDR_deal_with_economy }
 
@@ -1339,7 +1352,7 @@ focus_tree = {
 		id = MDR_politics_khan
 		icon = GFX_MDR_politics_khan
 		x = 11
-		y = 6
+		y = 11
 		prerequisite = { focus = MDR_democracy_proccess }
 
 		cost = 1
@@ -1372,7 +1385,7 @@ focus_tree = {
 		id = MDR_rewrite_constitution_khan
 		icon = GFX_MDR_rewriting_constitution_khan
 		x = 11
-		y = 7
+		y = 13
 		prerequisite = { focus = MDR_politics_khan }
 
 		cost = 5
@@ -1397,7 +1410,7 @@ focus_tree = {
 		completion_reward = {
             add_political_power = 25
 			add_stability = 0.05
-			add_timed_ideas = {
+			add_timed_idea = {
 				idea = MDR_rewriting_constitution_idea
 				days = 50
 			}
@@ -1413,7 +1426,7 @@ focus_tree = {
 		id = MDR_reform_courts
 		icon = GFX_MDR_Reform_court
 		x = 13
-		y = 7
+		y = 13
 		prerequisite = { focus = MDR_politics_khan }
 
 		cost = 5
@@ -1437,7 +1450,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.05
-			add_timed_ideas = {
+			add_timed_idea = {
 				idea = MDR_reforming_courts_idea
 				days = 50
 			}
@@ -1453,7 +1466,7 @@ focus_tree = {
 		id = MDR_reform_police
 		icon = GFX_MDR_reform_police
 		x = 13
-		y = 8
+		y = 15
 		prerequisite = { focus = MDR_reform_courts }
 
 		cost = 5
@@ -1477,7 +1490,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.05
-			add_timed_ideas = {
+			add_timed_idea = {
 				idea = MDR_reforming_police_idea
 				days = 50
 			}
@@ -1493,7 +1506,7 @@ focus_tree = {
 		id = MDR_ban_solverism
 		icon = GFX_MDR_ban_solverism
 		x = 11
-		y = 8
+		y = 15
 		prerequisite = { focus = MDR_rewrite_constitution_khan }
 
 		cost = 5
@@ -1530,7 +1543,7 @@ focus_tree = {
 		id = MDR_deal_with_corruption_khan
 		icon = GFX_MDR_deal_with_corruption
 		x = 11
-		y = 9
+		y = 17
 		prerequisite = { focus = MDR_ban_solverism }
 		prerequisite = { focus = MDR_allow_opposition_media }
 		prerequisite = { focus = MDR_reform_police }
@@ -1569,7 +1582,7 @@ focus_tree = {
 		id = MDR_people
 		icon = GFX_MDR_people
 		x = 19
-		y = 6
+		y = 11
 		prerequisite = { focus = MDR_democracy_proccess }
 
 		cost = 1
@@ -1601,7 +1614,7 @@ focus_tree = {
 		id = MDR_grant_citizenship_to_humans
 		icon = GFX_MDR_grant_citizenship_to_people
 		x = 19
-		y = 7
+		y = 13
 		prerequisite = { focus = MDR_people }
 
 		cost = 5
@@ -1635,7 +1648,7 @@ focus_tree = {
 		id = MDR_introduce_welfare_khan
 		icon = GFX_MDR_state_welfare
 		x = 19
-		y = 8
+		y = 15
 		prerequisite = { focus = MDR_grant_citizenship_to_humans }
 
 		cost = 5
@@ -1668,7 +1681,7 @@ focus_tree = {
 		id = MDR_freedom_of_speech
 		icon = GFX_MDR_free_speech
 		x = 21
-		y = 8
+		y = 15
 		prerequisite = { focus = MDR_introduce_civil_services }
 
 		cost = 5
@@ -1704,7 +1717,7 @@ focus_tree = {
 		id = MDR_grant_rights_to_women
 		icon = GFX_MDR_rights_for_women
 		x = 17
-		y = 8
+		y = 15
 		prerequisite = { focus = MDR_bunkers_for_everyone }
 
 		cost = 5
@@ -1740,7 +1753,7 @@ focus_tree = {
 		id = MDR_even_more_advanced_socity
 		icon = GFX_goal_unknown
 		x = 19
-		y = 9
+		y = 17
 		prerequisite = { focus = MDR_grant_rights_to_women }
 		prerequisite = { focus = MDR_introduce_welfare_khan }
 		prerequisite = { focus = MDR_freedom_of_speech }

@@ -1,0 +1,668 @@
+focus_tree = {
+	id = murder_drones_democratic_cyn_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 30
+			tag = MDR
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 7000 }
+
+    focus = {
+		id = MDR_light_in_shadow
+		icon = GFX_MDR_light_in_shadows
+		x = 26
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_stability = 0.1
+		}
+	}
+
+    focus = {
+		id = MDR_apologize_for_previous_actions
+		icon = GFX_MDR_apologize
+		x = 26
+		y = 3
+        prerequisite = { focus = MDR_light_in_shadow }
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_stability = 0.15
+			add_war_support = 0.05
+			add_political_power = 500
+		}
+	}
+
+    focus = {
+		id = MDR_realpolitiks
+		icon = GFX_MDR_realpolitiks
+		x = 26
+		y = 5
+        prerequisite = { focus = MDR_apologize_for_previous_actions }
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_political_power = 25
+			add_ideas = MDR_realpolitiks_idea
+		}
+	}
+
+    focus = {
+		id = MDR_internal_politics_cyn_cyn
+		icon = GFX_MDR_internal_politics
+		x = 28
+		y = 7
+        prerequisite = { focus = MDR_realpolitiks }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            
+		}
+	}
+
+    focus = {
+		id = MDR_end_tyranny_tools
+		icon = GFX_MDR_end_tyranny_tools
+		x = 28
+		y = 9
+        prerequisite = { focus = MDR_internal_politics_cyn_cyn }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            remove_ideas = MDR_loyality_tests
+			remove_ideas = MDR_propaganda_mechanism
+			remove_ideas = MDR_big_sister_policy_idea_three
+		}
+	}
+
+    focus = {
+		id = MDR_democratic_rights
+		icon = GFX_MDR_democracy_process
+		x = 28
+		y = 11
+        prerequisite = { focus = MDR_end_tyranny_tools }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_ideas = MDR_democratic_rights_idea
+		}
+	}
+
+    focus = {
+		id = MDR_economy_cyn_cyn
+		icon = GFX_MDR_strengthen_the_economy
+		x = 24
+		y = 7
+        prerequisite = { focus = MDR_realpolitiks }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            
+		}
+	}
+
+    focus = {
+		id = MDR_abolish_slavery
+		icon = GFX_MDR_abolish_slavery
+		x = 24
+		y = 9
+        prerequisite = { focus = MDR_economy_cyn_cyn }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_ideas = MDR_cyn_economy_four
+			remove_ideas = MDR_cyn_economy_three
+		}
+	}
+
+    focus = {
+		id = MDR_expansion_cyn
+		icon = GFX_MDR_expansion
+		x = 18
+		y = 8
+        prerequisite = { focus = MDR_economy_cyn_cyn }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            
+		}
+	}
+
+    focus = {
+		id = MDR_build_infastructure_cyn
+		icon = GFX_MDR_infastructure
+		x = 18
+		y = 10
+        prerequisite = { focus = MDR_expansion_cyn }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            230 = {
+			    add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			229 = {
+			    add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			231 = {
+			    add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			826 = {
+			    add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			1047 = {
+			    add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			1048 = {
+			    add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			1049 = {
+			    add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			1050 = {
+			    add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+    focus = {
+		id = MDR_bank_reforms_cyn
+		icon = GFX_RES_bank_reform
+		x = 16
+		y = 10
+        prerequisite = { focus = MDR_expansion_cyn }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_political_power = 150
+			add_stability = 0.15
+		}
+	}
+
+    focus = {
+		id = MDR_expand_factories_cyn
+		icon = GFX_MDR_factory
+		x = 20
+		y = 10
+        prerequisite = { focus = MDR_expansion_cyn }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            229 = {
+			    add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+				add_extra_state_shared_building_slots = 1
+			}
+			230 = {
+			    add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+				add_extra_state_shared_building_slots = 1
+			}
+			231 = {
+			    add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+    focus = {
+		id = MDR_reduce_working_hours
+		icon = GFX_MDR_reduce_work_hours
+		x = 24
+		y = 11
+        prerequisite = { focus = MDR_abolish_slavery }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_ideas = MDR_cyn_economy_five
+			remove_ideas = MDR_cyn_economy_four
+		}
+	}
+
+    focus = {
+		id = MDR_international_politics
+		icon = GFX_MDR_international_politics
+		x = 26
+		y = 13
+        prerequisite = { focus = MDR_reduce_working_hours }
+        prerequisite = { focus = MDR_democratic_rights }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            
+		}
+	}
+
+    focus = {
+		id = MDR_reopen_trades
+		icon = GFX_goal_unknown
+		x = 24
+		y = 15
+        prerequisite = { focus = MDR_international_politics }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_ideas = free_trade
+		}
+	}
+
+    focus = {
+		id = MDR_ask_for_recognition
+		icon = GFX_goal_unknown
+		x = 26
+		y = 15
+        prerequisite = { focus = MDR_international_politics }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            
+		}
+	}
+
+    focus = {
+		id = MDR_open_borders
+		icon = GFX_goal_unknown
+		x = 28
+		y = 15
+        prerequisite = { focus = MDR_international_politics }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_ideas = MDR_open_borders_idea
+		}
+	}
+
+    focus = {
+		id = MDR_war_on_terrorism
+		icon = GFX_MDR_war_on_terrorism
+		x = 26
+		y = 17
+        prerequisite = { focus = MDR_ask_for_recognition }
+        prerequisite = { focus = MDR_reopen_trades }
+        prerequisite = { focus = MDR_open_borders }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            set_country_flag = MDR_hunting_absolute_solver
+            custom_effect_tooltip = MDR_opens_decisions
+		}
+	}
+}    

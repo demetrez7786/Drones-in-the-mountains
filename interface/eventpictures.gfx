@@ -1,6 +1,71 @@
 spriteTypes = {
 	
 	spriteType = {
+		name = "GFX_report_event_MDR_car_ride"
+		texturefile = "gfx/event_pictures/report_event_MDR_car_ride.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_battle_of_tbilisi"
+		texturefile = "gfx/event_pictures/report_event_MDR_battle_of_tbilisi.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_anti_corporation_protest"
+		texturefile = "gfx/event_pictures/report_event_MDR_anti_corporation_protest.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_separatists_took_initative"
+		texturefile = "gfx/event_pictures/report_event_MDR_separatists_took_initative.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_exposed_cracks"
+		texturefile = "gfx/event_pictures/report_event_MDR_exposed_cracks.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_capital_question"
+		texturefile = "gfx/event_pictures/report_event_MDR_capital_question.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_iran_and_iraq_is_defeated"
+		texturefile = "gfx/event_pictures/report_event_MDR_iran_and_iraq_is_defeated.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_iran_and_iraq_defeated_us"
+		texturefile = "gfx/event_pictures/report_event_MDR_iran_and_iraq_defeated_us.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_first_soviet_drones_war"
+		texturefile = "gfx/event_pictures/report_event_MDR_first_soviet_drones_war.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_volunteers"
+		texturefile = "gfx/event_pictures/report_event_MDR_volunteers.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_second_soviet_drones_war"
+		texturefile = "gfx/event_pictures/report_event_MDR_second_soviet_drones_war.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_soviet_warning"
+		texturefile = "gfx/event_pictures/report_event_MDR_soviet_warning.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_soviet_influence"
+		texturefile = "gfx/event_pictures/report_event_MDR_soviet_influence.png"
+	}
+	
+	spriteType = {
 		name = "GFX_report_event_MDR_poll"
 		texturefile = "gfx/event_pictures/report_event_MDR_poll.png"
 	}

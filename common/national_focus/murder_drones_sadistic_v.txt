@@ -1,0 +1,913 @@
+focus_tree = {
+	id = murder_drones_sadistic_v_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = MDR
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 4000 }
+	
+	focus = {
+		id = MDR_philosophy_of_death
+		icon = GFX_MDR_philosophy_of_death
+		x = 10
+		y = 1
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_political_power = 100
+			add_ideas = MDR_philosophy_of_death_idea
+		}
+	}
+
+	focus = {
+		id = MDR_deal_with_solver_v
+		icon = GFX_MDR_secret_agreement_with_absolute_solver
+		x = 10
+		y = 3
+		prerequisite = { focus = MDR_philosophy_of_death }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            country_event = { id = drones.71 }
+		}
+	}
+
+	focus = {
+		id = MDR_cement_our_dominance
+		icon = GFX_MDR_cement_our_dominance
+		x = 10
+		y = 5
+		prerequisite = { focus = MDR_deal_with_solver_v }
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_stability = 0.1
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = MDR_summon_death_angels
+		icon = GFX_MDR_our_own_dd
+		x = 4
+		y = 7
+		prerequisite = { focus = MDR_cement_our_dominance }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            load_oob = MDR_death_angels
+			delete_unit_template_and_units = {
+				division_template = "Worker Drones Infantry Division"
+				disband = yes #if yes, will refund equipment/manpower.
+			}
+			delete_unit_template_and_units = {
+				division_template = "Railgun Battalions"
+				disband = yes #if yes, will refund equipment/manpower.
+			}
+			delete_unit_template_and_units = {
+				division_template = "Motorized Brigades"
+				disband = yes #if yes, will refund equipment/manpower.
+			}
+			delete_unit_template_and_units = {
+				division_template = "Humans battalion"
+				disband = yes #if yes, will refund equipment/manpower.
+			}
+			delete_unit_template_and_units = {
+				division_template = "Disassembly Drones"
+				disband = yes #if yes, will refund equipment/manpower.
+			}
+			add_ideas = MDR_death_angels_idea
+		}
+	}
+
+	focus = {
+		id = MDR_spread_sentiment_of_doom
+		icon = GFX_MDR_sentiment_of_doom
+		x = 10
+		y = 7
+		prerequisite = { focus = MDR_cement_our_dominance }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            remove_ideas = MDR_philosophy_of_death_idea
+			add_ideas = MDR_philosophy_of_death_idea_two
+		}
+	}
+
+	focus = {
+		id = MDR_absolute_order
+		icon = GFX_MDR_absolute_order
+		x = 10
+		y = 9
+		prerequisite = { focus = MDR_spread_sentiment_of_doom }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_political_power = 10000
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_prepare_final_solution
+		icon = GFX_MDR_redeployment
+		x = 10
+		y = 11
+		prerequisite = { focus = MDR_absolute_order }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_timed_idea = {
+				idea = MDR_redeployment_idea
+				days = 50
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_the_final_solution_v
+		icon = GFX_MDR_the_last_solution
+		x = 10
+		y = 13
+		prerequisite = { focus = MDR_prepare_final_solution }
+		prerequisite = { focus = MDR_neurally_link_death_angels }
+		prerequisite = { focus = MDR_civilians_stay_at_home }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_ideas = MDR_the_last_solution_idea
+			add_stability = 1
+			add_war_support = 1
+			add_manpower = -100000000
+		}
+	}
+
+	focus = {
+		id = MDR_the_great_cleansing
+		icon = GFX_MDR_wipe_out_humans
+		x = 10
+		y = 15
+		prerequisite = { focus = MDR_the_final_solution_v }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = GRE
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BUL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ENG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = FRA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = POL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = HUN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SPR
+				type = annex_everything
+			}
+            declare_war_on = {
+				target = SWI
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ITA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SWE
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LUX
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = HOL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SAU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BEL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CZE
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = AUS
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LIT
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = EST
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LAT
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = YUG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ALB
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = NOR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = DEN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = DOM
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = IRE
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = POR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = FIN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ARG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BOL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BRA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CHI
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CHL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = COL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = COS
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ECU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ELS
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ETH
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = GUA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = HON
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = IRQ
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = JAP
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = KOR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LIB
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MEX
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MEN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = NEP
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = NIC
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PAN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PHI
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PRU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SIA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SIK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = TIB
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = URG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = VEN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = YUN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PAR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CUB
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = DUM
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = HAI
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = GXC
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PRC
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SHX
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = XSM
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ICE
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LAO
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BHU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = TUR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PER
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = IRQ
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = YEM
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SAU
+				type = annex_everything
+			}
+			hidden_effect = {
+		    news_event = { id = news.416 }
+		    }
+		}
+	}
+
+	focus = {
+		id = MDR_create_more_death_angels
+		icon = GFX_MDR_more_drones
+		x = 10
+		y = 17
+		prerequisite = { focus = MDR_the_great_cleansing }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            custom_effect_tooltip = MDR_opens_decisions
+		}
+	}
+
+	focus = {
+		id = MDR_crossing_to_america
+		icon = GFX_MDR_stage_two
+		x = 10
+		y = 19
+		prerequisite = { focus = MDR_create_more_death_angels }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_ideas = MDR_crossing_to_america_idea
+		}
+	}
+
+	focus = {
+		id = MDR_extinction_of_all_life
+		icon = GFX_MDR_operation_solve_the_earth
+		x = 10
+		y = 21
+		prerequisite = { focus = MDR_crossing_to_america }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            country_event = { id = drones.72 }
+		}
+	}
+
+	focus = {
+		id = MDR_curropt_jcjenson
+		icon = GFX_MDR_curropt_jcjenson
+		x = 16
+		y = 7
+		prerequisite = { focus = MDR_cement_our_dominance }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_ideas = MDR_curropted_jcjenson
+		}
+	}
+
+	focus = {
+		id = MDR_summon_weapons
+		icon = GFX_MDR_summon_weapons
+		x = 16
+		y = 9
+		prerequisite = { focus = MDR_curropt_jcjenson }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_equipment_to_stockpile = { 
+				type = infantry_equipment_1
+				amount = 150000
+			}
+			add_equipment_to_stockpile = { 
+				type = disassembly_drone_equipment
+				amount = 150000
+			}
+			custom_effect_tooltip = MDR_opens_decisions
+		}
+	}
+
+	focus = {
+		id = MDR_civilians_stay_at_home
+		icon = GFX_MDR_stay_at_home
+		x = 16
+		y = 11
+		prerequisite = { focus = MDR_summon_weapons }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_ideas = MDR_stay_at_home
+		}
+	}
+
+	focus = {
+		id = MDR_give_our_angels_solver
+		icon = GFX_MDR_give_our_das_solver
+		x = 4
+		y = 9
+		prerequisite = { focus = MDR_summon_death_angels }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			remove_ideas = MDR_death_angels_idea
+			add_ideas = MDR_death_angels_idea_two
+		}
+	}
+
+	focus = {
+		id = MDR_create_band_dronmstein
+		icon = GFX_MDR_dronmstein
+		x = 2
+		y = 9
+		prerequisite = { focus = MDR_summon_death_angels }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_ideas = MDR_dronmstein
+		}
+	}
+
+	focus = {
+		id = MDR_neurally_link_death_angels
+		icon = GFX_goal_unknown
+		x = 4
+		y = 11
+		prerequisite = { focus = MDR_give_our_angels_solver }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			remove_ideas = MDR_death_angels_idea_two
+			add_ideas = MDR_death_angels_idea_three
+		}
+	}
+}	

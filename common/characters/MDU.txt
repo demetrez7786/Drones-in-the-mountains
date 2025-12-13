@@ -1,0 +1,37 @@
+characters={
+
+    MDU_uzi={ #communist Leader
+		name="Uzi"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdv_uzi.png"
+				small = "gfx/interface/ideas/portrait_MDR_uzi_small.png"
+			}
+		}
+		country_leader={
+			ideology=leninism
+			traits={ has_solver drone_supremacy rebellious }
+			expire="5022.8.30.1"
+			id=-1
+		}
+		corps_commander = {
+			traits = { combined_arms_expert }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+		}
+		
+		advisor={
+			slot = political_advisor
+			idea_token = MDR_uzi
+			allowed  = {
+				original_tag  = MDU
+			}
+			traits  = {
+				rebellious 
+			}	
+		}
+    }
+}

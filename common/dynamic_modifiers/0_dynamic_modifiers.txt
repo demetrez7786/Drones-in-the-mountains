@@ -151,6 +151,26 @@ MDR_lost_trust = { #NATIONAL SPIRIT
 	conscription_factor = MDR_lt_conscription_factor
 	fascism_drift = MDR_lt_fascism_drift
 }
+MDR_csd = { #NATIONAL SPIRIT
+    enable = { always = yes }
+    icon = GFX_idea_MDR_uzis_economy
+
+	political_power_factor = MDR_csd_political_power_factor
+	stability_factor = MDR_csd_stability_factor
+	war_support_factor = MDR_csd_war_support_factor
+	consumer_goods_factor = MDR_lt_consumer_goods_factor
+	army_attack_factor = MDR_lt_army_attack_factor
+	army_defence_factor = MDR_lt_army_defence_factor
+	compliance_gain = MDR_csd_compliance_gain
+	resistance_growth = MDR_csd_resistance_growth
+}
+MDR_outdated_infastructure = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_tur_kurdish_agitation
+	
+	army_speed_factor = -0.45
+}
 RES_gangsters_problems = { #NATIONAL SPIRIT
     enable = { always = yes }
     icon = GFX_idea_RES_gangsters_problems

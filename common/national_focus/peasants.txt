@@ -1,0 +1,50 @@
+focus_tree = {
+	id = peasants_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 30
+			tag = MDR
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 7000 }
+
+    focus = {
+		id = MDR_overthrow_the_government
+		icon = GFX_MDR_overthrow_the_government
+		x = 3
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            declare_war_on = {
+				target = MDR
+				type = annex_everything
+			}
+			load_oob = PES_peasants
+		}
+	}
+}	

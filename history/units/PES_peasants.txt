@@ -1,0 +1,82 @@
+division_template = {
+	name = "Peasants"
+	division_names_group = PES_INF_01
+
+	regiments = {
+		worker_drone = { x = 0 y = 0 }
+		worker_drone = { x = 0 y = 1 }
+		worker_drone = { x = 0 y = 2 }
+        worker_drone = { x = 1 y = 0 }
+		worker_drone = { x = 1 y = 1 }
+	}
+	
+	support = {
+	}
+}
+
+units = {
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12309
+		division_template = "Peasants"
+		start_experience_factor = 0.15
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 12309
+		division_template = "Peasants"
+		start_experience_factor = 0.15
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 12309
+		division_template = "Peasants"
+		start_experience_factor = 0.15
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 12309
+		division_template = "Peasants"
+		start_experience_factor = 0.15
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 12309
+		division_template = "Peasants"
+		start_experience_factor = 0.15
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 12309
+		division_template = "Peasants"
+		start_experience_factor = 0.15
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 12309
+		division_template = "Peasants"
+		start_experience_factor = 0.15
+	}
+}	

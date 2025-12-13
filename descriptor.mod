@@ -1,11 +1,13 @@
-version="0.1"
+version="0.4.2"
 tags={
 	"Alternative History"
 	"Events"
 	"Gameplay"
+	"Historical"
 	"National Focuses"
+	"Technologies"
 }
-name="Murder drones"
 picture="thumbnail.png"
-supported_version="1.16.10"
-remote_file_id="3561615285"
+name="Murder Drones : DitM"
+supported_version="1.17.*"
+remote_file_id="3589826410"

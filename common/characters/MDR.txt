@@ -42,6 +42,21 @@ characters={
 		}
     }
 	
+	MDR_cyn_democratic={ #fascist Leader
+		name="Cyn"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_cyn.png"
+			}
+		}
+		country_leader={
+			ideology=populism
+			traits={ }
+			expire="5022.8.30.1"
+			id=-1
+		}
+    }
+	
 	MDR_uzi={ #communist Leader
 		name="Uzi"
 		portraits={
@@ -77,17 +92,46 @@ characters={
 		}
     }
 	
+	MDR_uzi_two={ #communist Leader
+		name="Uzi"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_cured_uzi.png"
+			}
+		}
+		country_leader={
+			ideology=anarchist_communism
+			traits={ has_solver drone_supremacy rebellious }
+			expire="5022.8.30.1"
+			id=-1
+		}
+    }
+	
 	MDR_uzis_emergency_government={ #communist Leader
 		name="Emergency Government"
 		portraits={
 			civilian={
 				large="gfx/leaders/MDR/portrait_mdr_emergency_government.png"
-				small = "gfx/interface/ideas/portrait_MDR_uzi_small.png"
 			}
 		}
 		country_leader={
 			ideology=stalinism
 			traits={ }
+			expire="5022.8.30.1"
+			id=-1
+		}
+    }
+	
+	MDR_uzi_doll={ #communist Leader
+		name="Uzi-Doll"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_uzi_doll.png"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			traits={ dual_solvers }
 			expire="5022.8.30.1"
 			id=-1
 		}
@@ -141,6 +185,21 @@ characters={
 			traits  = {
 				princess_of_terror 
 			}	
+		}
+    }
+	
+	MDR_doll_two={ #communist Leader too
+		name="Doll"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_doll.png"
+			}
+		}
+		country_leader={
+			ideology=anti_revisionism_two
+			traits={ has_solver cannibal }
+			expire="5022.8.30.1"
+			id=-1
 		}
     }
 	
@@ -217,6 +276,21 @@ characters={
 		}
     }
 	
+	MDR_v_sadistic={ #nonaligned
+		name="Serial Designation V"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_MDR_sadistic_v.png"
+			}
+		}
+		country_leader={
+			ideology=falangism
+			traits={ puppet_of_as }
+			expire="5022.8.30.1"
+			id=-1
+		}
+    }
+	
 	MDR_j={ #nonaligned too
 		name="Serial Designation J"
 		portraits={
@@ -290,6 +364,21 @@ characters={
 			defense_skill = 3
 			planning_skill = 3
 			logistics_skill = 3
+		}
+    }
+	
+	MDR_n_fascist={ #also nonaligned
+		name="Serial Designation N"
+		portraits={
+			civilian={
+				large="gfx/leaders/MDR/portrait_mdr_N.png"
+			}
+		}
+		country_leader={
+			ideology=gen_nazism
+			traits={ drone_supremacy }
+			expire="5022.8.30.1"
+			id=-1
 		}
     }
 	
