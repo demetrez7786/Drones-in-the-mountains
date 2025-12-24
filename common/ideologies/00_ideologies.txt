@@ -146,6 +146,9 @@ ideologies = {
 
 			nazism = {
 			}
+			
+			nazism_two = {
+			}
 
 			gen_nazism = {
 			}
@@ -221,6 +224,9 @@ ideologies = {
 			}
 
 			centrism = {
+			}
+			
+			centrism_two = {
 			}
 
 			japan_militarism_ideology = {

@@ -101,3 +101,6 @@ recruit_character = MDR_doll_two
 recruit_character = MDR_v_sadistic
 recruit_character = MDR_cyn_democratic
 recruit_character = MDR_n_fascist
+recruit_character = MDR_j_nazi
+recruit_character = MDR_n_v
+recruit_character = MDR_n_v_j

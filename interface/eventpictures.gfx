@@ -1,6 +1,26 @@
 spriteTypes = {
 	
 	spriteType = {
+		name = "GFX_report_event_MDR_church_question"
+		texturefile = "gfx/event_pictures/report_event_MDR_church_question.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_radical_protest"
+		texturefile = "gfx/event_pictures/report_event_MDR_radical_protest.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_v"
+		texturefile = "gfx/event_pictures/report_event_MDR_v.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MDR_parliament"
+		texturefile = "gfx/event_pictures/report_event_MDR_parliament.png"
+	}
+	
+	spriteType = {
 		name = "GFX_report_event_MDR_car_ride"
 		texturefile = "gfx/event_pictures/report_event_MDR_car_ride.png"
 	}

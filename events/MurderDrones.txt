@@ -163,7 +163,7 @@ country_event = {
 	}
 	option = {
 		name = drones.6.b
-		custom_effect_tooltip = MDR_no_content_for_now_wait_for_the_next_update
+		load_focus_tree = murder_drones_tessas_focus
 	}
 	option = {
 		name = drones.6.g
@@ -1834,7 +1834,7 @@ country_event = {
 	id = drones.68
 	title = drones.68.t
 	desc = drones.68.d
-	picture = GFX_report_event_MDR_anti_corporation_protest
+	picture = GFX_report_event_MDR_elections
 	
 	is_triggered_only = yes
 	
@@ -1880,7 +1880,7 @@ country_event = {
 	id = drones.69
 	title = drones.69.t
 	desc = drones.69.d
-	picture = GFX_report_event_MDR_news
+	picture = GFX_report_event_MDR_parliament
 	
 	is_triggered_only = yes
 	
@@ -2004,7 +2004,7 @@ country_event = {
 	id = drones.74
 	title = drones.74.t
 	desc = drones.74.d
-	picture = GFX_report_event_MDR_anti_corporation_protest
+	picture = GFX_report_event_MDR_parliament
 	
 	is_triggered_only = yes
 	
@@ -2031,7 +2031,7 @@ country_event = {
 	id = drones.75
 	title = drones.75.t
 	desc = drones.75.d
-	picture = GFX_report_event_MDR_anti_corporation_protest
+	picture = GFX_report_event_MDR_poll
 	
 	is_triggered_only = yes
 	
@@ -2060,7 +2060,7 @@ country_event = {
 	id = drones.76
 	title = drones.76.t
 	desc = drones.76.d
-	picture = GFX_report_event_MDR_anti_corporation_protest
+	picture = GFX_report_event_MDR_failure
 	
 	is_triggered_only = yes
 	
@@ -2081,7 +2081,7 @@ country_event = {
 	id = drones.77
 	title = drones.77.t
 	desc = drones.77.d
-	picture = GFX_report_event_MDR_anti_corporation_protest
+	picture = GFX_report_event_MDR_radical_protest
 	
 	is_triggered_only = yes
 	
@@ -2102,12 +2102,12 @@ country_event = {
 	}
 }
 
-# protest got radical
+# how to crackdown protest
 country_event = {
 	id = drones.78
 	title = drones.78.t
 	desc = drones.78.d
-	picture = GFX_report_event_MDR_anti_corporation_protest
+	picture = GFX_report_event_RES_police
 	
 	is_triggered_only = yes
 	
@@ -2131,7 +2131,7 @@ country_event = {
 	id = drones.79
 	title = drones.79.t
 	desc = drones.79.d
-	picture = GFX_report_event_MDR_anti_corporation_protest
+	picture = GFX_report_event_MDR_church_question
 	
 	is_triggered_only = yes
 	
@@ -2294,6 +2294,11 @@ country_event = {
 	option = {
 		name = drones.84.a
 		set_country_flag = MDR_control_j
+		add_to_variable = {
+	       var = j_delusion
+	       value = 65
+	    }
+		custom_effect_tooltip = MDR_opens_decisions
 	}
 }
 
@@ -2351,7 +2356,7 @@ country_event = {
 	id = drones.88
 	title = drones.88.t
 	desc = drones.88.d
-	picture = GFX_report_event_MDR_anti_corporation_protest
+	picture = GFX_report_event_MDR_coup
 	
 	is_triggered_only = yes
 	
@@ -2404,6 +2409,1350 @@ country_event = {
 		declare_war_on = {
 		target = PER
 		type = annex_everything
+		}
+	}
+}
+
+# murder drones wants us to join their faction
+country_event = {
+	id = drones.90
+	title = drones.90.t
+	desc = drones.90.d
+	picture = GFX_report_event_MDR_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.90.a
+		MDR = {
+			add_to_faction = ROOT
+		}
+	}
+}
+
+# problems
+country_event = {
+	id = drones.91
+	title = drones.91.t
+	desc = drones.91.d
+	picture = GFX_report_event_MDR_hacking
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.91.a
+		add_dynamic_modifier = { modifier = MDR_economic_issues }
+		add_to_variable = { MDR_ei_stability_factor = -0.15 }
+	    add_to_variable = { MDR_ei_consumer_goods_factor = 0.25 }
+	    add_to_variable = { MDR_ei_production_speed_buildings_factor = -0.15 }
+		add_to_variable = { MDR_ei_industrial_capacity_factory = -0.15 }
+		add_to_variable = { MDR_ei_industrial_capacity_dockyard = -0.15 }
+		add_to_variable = { MDR_ei_research_speed_factor = -0.25 }
+		add_dynamic_modifier = { modifier = MDR_military_weakness }
+		add_to_variable = { MDR_mw_army_attack_factor = -0.25 }
+	    add_to_variable = { MDR_mw_army_defence_factor = -0.25 }
+	    add_to_variable = { MDR_mw_army_org_factor = -0.15 }
+		add_to_variable = { MDR_mw_naval_coordination = -0.15 }
+		add_to_variable = { MDR_mw_air_accidents_factor = 0.25 }
+		add_to_variable = { MDR_mw_air_ace_generation_chance_factor = -0.15 }
+		add_dynamic_modifier = { modifier = MDR_corruption }
+		add_to_variable = { MDR_c_political_power_factor = 0.1 }
+	    add_to_variable = { MDR_c_stability_factor = -0.25 }
+	    add_to_variable = { MDR_c_war_support_factor = -0.25 }
+		add_to_variable = { MDR_c_consumer_goods_factor = 0.35 }
+		add_dynamic_modifier = { modifier = MDR_weak_police }
+		add_to_variable = { MDR_wp_political_power_factor = 0.1 }
+	    add_to_variable = { MDR_wp_stability_factor = -0.25 }
+		add_dynamic_modifier = { modifier = MDR_unloyal_party }
+		add_to_variable = { MDR_up_political_power_factor = -0.05 }
+	    add_to_variable = { MDR_up_stability_factor = -0.1 }
+		add_to_variable = { MDR_up_war_support_factor = -0.1 }
+	}
+}
+
+# workers rights question
+country_event = {
+	id = drones.92
+	title = drones.92.t
+	desc = drones.92.d
+	picture = GFX_report_event_MDR_hacking
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.92.a
+		custom_effect_tooltip = MDR_this_option_will_rise_j_influence
+		custom_effect_tooltip = MDR_this_option_will_rise_v_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 5
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 3
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 3
+			    }
+		    }
+	    }	
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}	
+	}
+	
+	option = {
+		name = drones.92.b
+		add_to_variable = { MDR_ei_production_speed_buildings_factor = 0.05 }
+		add_to_variable = { MDR_ei_industrial_capacity_factory = 0.05 }
+		add_to_variable = { MDR_ei_industrial_capacity_dockyard = 0.05 }
+		add_to_variable = { MDR_ei_research_speed_factor = 0.1 }
+		custom_effect_tooltip = MDR_this_option_will_rise_n_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 3
+			    }
+		    }
+	    }	
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}	
+	}
+}
+
+# education reforms
+country_event = {
+	id = drones.93
+	title = drones.93.t
+	desc = drones.93.d
+	picture = GFX_report_event_MDR_hacking
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.93.a
+		add_political_power = 75
+		custom_effect_tooltip = MDR_this_option_will_rise_j_influence
+		custom_effect_tooltip = MDR_this_option_will_rise_v_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 5
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 3
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 3
+			    }
+		    }
+	    }
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}	
+	}
+	
+	option = {
+		name = drones.93.b
+		add_stability = 0.05
+		custom_effect_tooltip = MDR_this_option_will_rise_n_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 3
+			    }
+		    }
+	    }	
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}	
+	}
+}
+
+# land reforms
+country_event = {
+	id = drones.94
+	title = drones.94.t
+	desc = drones.94.d
+	picture = GFX_report_event_MDR_hacking
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.94.a
+		add_political_power = 75
+		custom_effect_tooltip = MDR_this_option_will_rise_j_influence
+		custom_effect_tooltip = MDR_this_option_will_rise_v_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 5
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 3
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 3
+			    }
+		    }
+	    }
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}	
+	}
+	
+	option = {
+		name = drones.94.b
+		add_stability = 0.05
+		custom_effect_tooltip = MDR_this_option_will_rise_n_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 3
+			    }
+		    }
+	    }	
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}
+	}
+}
+
+# political reforms
+country_event = {
+	id = drones.95
+	title = drones.95.t
+	desc = drones.95.d
+	picture = GFX_report_event_MDR_hacking
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.95.a
+		add_political_power = 75
+		add_stability = 0.15
+		add_war_support = 0.1
+		custom_effect_tooltip = MDR_this_option_will_rise_j_influence
+		custom_effect_tooltip = MDR_this_option_will_rise_v_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 5
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 3
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 3
+			    }
+		    }
+	    }
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}
+	}
+	
+	option = {
+		name = drones.95.b
+		add_political_power = 25
+		add_stability = -0.1
+		add_war_support = -0.05
+		add_popularity = {
+		    ideology = neutrality
+			popularity = 0.25
+		}	
+		custom_effect_tooltip = MDR_this_option_will_rise_n_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 3
+			    }
+		    }
+	    }	
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}
+	}
+}
+
+# religious reforms
+country_event = {
+	id = drones.96
+	title = drones.96.t
+	desc = drones.96.d
+	picture = GFX_report_event_MDR_hacking
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.96.a
+		add_political_power = 75
+		add_stability = -0.15
+		add_war_support = -0.1
+		custom_effect_tooltip = MDR_this_option_will_rise_v_influence
+		random_list = {
+			50 = {
+				add_to_variable = {
+				    var = v_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+				add_to_variable = {
+				    var = v_influence
+				    value = 3
+			    }
+		    }
+	    }
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}
+	}
+	
+	option = {
+		name = drones.96.b
+		add_popularity = {
+		    ideology = neutrality
+			popularity = 0.1
+		}	
+		custom_effect_tooltip = MDR_this_option_will_rise_j_influence
+		random_list = {
+			50 = {
+				add_to_variable = {
+				    var = j_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+				add_to_variable = {
+				    var = j_influence
+				    value = 3
+			    }
+		    }
+	    }
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}
+	}
+	
+	option = {
+		name = drones.96.g
+		add_political_power = 25
+		add_stability = 0.15
+		add_war_support = 0.1
+		add_popularity = {
+		    ideology = neutrality
+			popularity = 0.25
+		}	
+		custom_effect_tooltip = MDR_this_option_will_rise_n_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 3
+			    }
+		    }
+	    }	
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}
+	}
+}
+
+# media reforms
+country_event = {
+	id = drones.97
+	title = drones.97.t
+	desc = drones.97.d
+	picture = GFX_report_event_MDR_hacking
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.97.a
+		add_political_power = 75
+		add_stability = 0.1
+		add_war_support = -0.1
+		custom_effect_tooltip = MDR_this_option_will_rise_j_influence
+		custom_effect_tooltip = MDR_this_option_will_rise_v_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 5
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 3
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 3
+			    }
+		    }
+	    }
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}
+	}
+	
+	option = {
+		name = drones.97.b
+		add_political_power = 25
+		add_stability = -0.1
+		add_popularity = {
+		    ideology = neutrality
+			popularity = 0.1
+		}	
+		custom_effect_tooltip = MDR_this_option_will_rise_n_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 3
+			    }
+		    }
+	    }	
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}
+	}
+}
+
+# humans question
+country_event = {
+	id = drones.98
+	title = drones.98.t
+	desc = drones.98.d
+	picture = GFX_report_event_MDR_hacking
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.98.a
+		set_country_flag = MDR_hunting_underground_resistance
+		custom_effect_tooltip = MDR_opens_decisions
+		custom_effect_tooltip = MDR_this_option_will_rise_j_influence
+		custom_effect_tooltip = MDR_this_option_will_rise_v_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 5
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 3
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 3
+			    }
+		    }
+	    }
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}
+	}
+	
+	option = {
+		name = drones.98.b
+		remove_ideas = MDR_underground_human_resistance
+		custom_effect_tooltip = MDR_this_option_will_rise_n_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 3
+			    }
+		    }
+	    }	
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}
+	}
+}
+
+# constitution question
+country_event = {
+	id = drones.99
+	title = drones.99.t
+	desc = drones.99.d
+	picture = GFX_report_event_MDR_hacking
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drones.99.a
+		add_stability = 0.45
+		add_political_power = 100
+		add_popularity = {
+		    ideology = neutrality
+			popularity = -0.45
+		}
+		custom_effect_tooltip = MDR_this_option_will_rise_j_influence
+		custom_effect_tooltip = MDR_this_option_will_rise_v_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 5
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = j_influence
+				    value = 3
+			    }
+				add_to_variable = {
+				    var = v_influence
+				    value = 3
+			    }
+		    }
+	    }
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
+		}
+	}
+	
+	option = {
+		name = drones.99.b
+		add_stability = 0.25
+		add_political_power = -100
+		add_popularity = {
+		    ideology = neutrality
+			popularity = 0.45
+		}	
+		custom_effect_tooltip = MDR_this_option_will_rise_n_influence
+		random_list = {
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 5
+			    }
+			}
+            
+			50 = {
+			    add_to_variable = {
+				    var = n_influence
+				    value = 3
+			    }
+		    }
+	    }	
+		if = {
+			limit = {
+				check_variable = { j_influence > 100 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { v_influence > 100 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence > 100 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 100
+            }
+			limit = {
+				check_variable = { n_influence < 0 }
+			}
+			set_variable = {
+		        var = n_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { j_influence < 0 }
+			}
+			set_variable = {
+		        var = j_influence
+		       value = 0
+            }
+			limit = {
+				check_variable = { v_influence < 0 }
+			}
+			set_variable = {
+		        var = v_influence
+		       value = 0
+            }
 		}
 	}
 }

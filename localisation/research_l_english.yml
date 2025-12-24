@@ -1348,3 +1348,7 @@ disassembly_drone_tech_1_desc:0 "The ultimate expression of corporate-sanctioned
 
 motorized_drones_tech:0 "Motorized Combat Platforms"
 motorized_drones_tech_short:0 "Bus-Drones"
+motorized_drones_tech_1:0 "Motorized Combat Platforms"
+motorized_drones_tech_1_short:0 "Bus-Drones"
+mechanized_drones_tech_1:0 "Mechanized Combat Platforms"
+mechanized_drones_tech_1:0 "Mechanized-Bus-Drones"

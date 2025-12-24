@@ -90,7 +90,7 @@ MDR_uzis_economy_idea = { #NATIONAL SPIRIT
 }
 MDR_sanctions_idea = { #NATIONAL SPIRIT
     enable = { always = yes }
-    icon = GFX_idea_MDR_uzis_economy
+    icon = GFX_idea_MDR_sanctions
 
     consumer_goods_factor = MDR_si_consumer_goods_factor
 	production_speed_buildings_factor = MDR_si_production_speed_buildings_factor
@@ -100,7 +100,7 @@ MDR_sanctions_idea = { #NATIONAL SPIRIT
 }
 MDR_capitalism_idea = { #NATIONAL SPIRIT
     enable = { always = yes }
-    icon = GFX_idea_MDR_uzis_economy
+    icon = GFX_idea_MDR_capitalism
 
     political_power_gain = MDR_ci_political_power_gain
 	consumer_goods_factor = MDR_ci_consumer_goods_factor
@@ -112,7 +112,7 @@ MDR_capitalism_idea = { #NATIONAL SPIRIT
 }
 MDR_drones_anatomy_idea = { #NATIONAL SPIRIT
     enable = { always = yes }
-    icon = GFX_idea_MDR_uzis_economy
+    icon = unknown_idea
 
 	production_speed_buildings_factor = MDR_dan_production_speed_buildings_factor
 	stability_factor = MDR_dan_stability_factor
@@ -125,7 +125,7 @@ MDR_drones_anatomy_idea = { #NATIONAL SPIRIT
 }
 MDR_paranoia = { #NATIONAL SPIRIT
     enable = { always = yes }
-    icon = GFX_idea_MDR_uzis_economy
+    icon = unknown_idea
 
 	political_power_factor = MDR_par_political_power_factor
 	stability_factor = MDR_par_stability_factor
@@ -139,7 +139,7 @@ MDR_paranoia = { #NATIONAL SPIRIT
 }
 MDR_lost_trust = { #NATIONAL SPIRIT
     enable = { always = yes }
-    icon = GFX_idea_MDR_uzis_economy
+    icon = unknown_idea
 
 	political_power_factor = MDR_lt_political_power_factor
 	stability_factor = MDR_lt_stability_factor
@@ -153,16 +153,62 @@ MDR_lost_trust = { #NATIONAL SPIRIT
 }
 MDR_csd = { #NATIONAL SPIRIT
     enable = { always = yes }
-    icon = GFX_idea_MDR_uzis_economy
+    icon = GFX_idea_MDR_csd
 
 	political_power_factor = MDR_csd_political_power_factor
 	stability_factor = MDR_csd_stability_factor
 	war_support_factor = MDR_csd_war_support_factor
-	consumer_goods_factor = MDR_lt_consumer_goods_factor
-	army_attack_factor = MDR_lt_army_attack_factor
-	army_defence_factor = MDR_lt_army_defence_factor
+	consumer_goods_factor = MDR_csd_consumer_goods_factor
+	army_attack_factor = MDR_csd_army_attack_factor
+	army_defence_factor = MDR_csd_army_defence_factor
 	compliance_gain = MDR_csd_compliance_gain
 	resistance_growth = MDR_csd_resistance_growth
+}
+MDR_economic_issues = { #NATIONAL SPIRIT
+    enable = { always = yes }
+    icon = unknown_idea
+
+	stability_factor = MDR_ei_stability_factor
+	consumer_goods_factor = MDR_ei_consumer_goods_factor
+	production_speed_buildings_factor = MDR_ei_production_speed_buildings_factor
+	industrial_capacity_factory = MDR_ei_industrial_capacity_factory
+	industrial_capacity_dockyard = MDR_ei_industrial_capacity_dockyard
+	research_speed_factor = MDR_ei_research_speed_factor
+}
+MDR_military_weakness = { #NATIONAL SPIRIT
+    enable = { always = yes }
+    icon = unknown_idea
+
+	army_attack_factor = MDR_mw_army_attack_factor #0.40
+    army_defence_factor = MDR_mw_army_defence_factor #0.40
+    army_org_factor = MDR_mw_army_org_factor #0.40
+	naval_coordination = MDR_mw_naval_coordination
+	air_accidents_factor = MDR_mw_air_accidents_factor
+	air_ace_generation_chance_factor = MDR_mw_air_ace_generation_chance_factor
+}
+MDR_corruption = { #NATIONAL SPIRIT
+    enable = { always = yes }
+    icon = GFX_idea_MDR_planned_construction
+
+	political_power_factor = MDR_c_political_power_factor
+	stability_factor = MDR_c_stability_factor
+	war_support_factor = MDR_c_war_support_factor
+	consumer_goods_factor = MDR_c_consumer_goods_factor
+}
+MDR_weak_police = { #NATIONAL SPIRIT
+    enable = { always = yes }
+    icon = GFX_idea_RES_police
+
+	political_power_factor = MDR_wp_political_power_factor
+	stability_factor = MDR_wp_stability_factor
+}
+MDR_unloyal_party = { #NATIONAL SPIRIT
+    enable = { always = yes }
+    icon = GFX_idea_MDR_disassembly_drones
+
+	political_power_factor = MDR_up_political_power_factor
+	stability_factor = MDR_up_stability_factor
+	war_support_factor = MDR_up_war_support_factor
 }
 MDR_outdated_infastructure = {
 	enable = { always = yes }
@@ -171,6 +217,9 @@ MDR_outdated_infastructure = {
 	
 	army_speed_factor = -0.45
 }
+
+
+
 RES_gangsters_problems = { #NATIONAL SPIRIT
     enable = { always = yes }
     icon = GFX_idea_RES_gangsters_problems

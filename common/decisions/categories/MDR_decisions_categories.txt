@@ -326,7 +326,7 @@ MDR_separatism_in_russia_cat = {
 }
 
 MDR_parliament = {
-	priority = 1
+	priority = 999
 	visible_when_empty = yes
 	icon = GFX_decision_cat_mdr_parliament
 	allowed = {
@@ -334,6 +334,18 @@ MDR_parliament = {
 	}
 	visible = {
 		has_country_flag = MDR_parliament
+	}
+}
+
+MDR_coalition_influence = {
+	priority = 999
+	visible_when_empty = yes
+	icon = GFX_decision_cat_mdr_parliament
+	allowed = {
+		original_tag = MDR
+	}
+	visible = {
+		has_completed_focus = MDR_strength_is_in_unity
 	}
 }
 
@@ -398,7 +410,34 @@ MDR_protest_cat = {
 	visible = {
 		has_country_flag = MDR_protest_got_radical
 		NOT = {
-		    has_country_flag = MDR_battle_is_over
+		    has_country_flag = MDR_protest_is_over
 		}	
+	}
+}
+
+MDR_j_delusion = {
+	priority = 9999
+	visible_when_empty = yes
+	icon = GFX_decision_mdr_j_helping_as
+	allowed = {
+		original_tag = MDR
+	}
+	visible = {
+		has_country_flag = MDR_control_j
+		NOT = {
+		    has_country_flag = MDR_j_is_controlled
+		}	
+	}
+}
+
+MDR_annexing_nations = {
+	priority = 9999
+	visible_when_empty = no
+	icon = GFX_decision_mdr_j_helping_as
+	allowed = {
+		original_tag = MDR
+	}
+	visible = {
+		has_completed_focus = MDR_annex_them
 	}
 }

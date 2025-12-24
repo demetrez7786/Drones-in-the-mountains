@@ -1,0 +1,254 @@
+focus_tree = {
+	id = murder_drones_tessas_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = MDR
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 4000 }
+
+    focus = {
+		id = MDR_first_human_leader
+		icon = GFX_MDR_first_human_leader
+		x = 15
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            set_politics = { 
+			ruling_party = democratic
+			elections_allowed = no
+		    }
+		    add_popularity = {
+			    ideology = democratic
+			    popularity = 0.55
+		    }
+			remove_power_balance = {
+                id = MDR_power_balance_bop
+            }
+		}
+	}
+
+    focus = {
+		id = MDR_return_assets_to_humans
+		icon = GFX_MDR_return_assets_to_humans
+		x = 14
+		y = 7
+        prerequisite = { focus = MDR_aveng }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+            add_political_power = 75
+			add_stability = 0.1
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_hunt_down_drones
+		icon = GFX_RES_huntdown_gangsters
+		x = 16
+		y = 7
+        prerequisite = { focus = MDR_aveng }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+            add_manpower = -50000
+			add_stability = 0.15
+			add_war_support = 0.15
+		}
+	}
+
+    focus = {
+		id = MDR_aveng
+		icon = GFX_MDR_aveng
+		x = 15
+		y = 3
+        prerequisite = { focus = MDR_first_human_leader }
+        mutually_exclusive = { focus = MDR_equal_nation }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+            add_war_support = 0.5
+			add_stability = 0.5
+		}
+	}
+
+    focus = {
+		id = MDR_slavery_for_drones
+		icon = GFX_MDR_slavery
+		x = 17
+		y = 5
+        prerequisite = { focus = MDR_aveng }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+            add_ideas = MDR_slavery_for_drones_idea
+		}
+	}
+
+    focus = {
+		id = MDR_school_only_for_humans
+		icon = GFX_goal_unknown
+		x = 15
+		y = 5
+        prerequisite = { focus = MDR_aveng }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+            add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = MDR_strip_all_rights_from_drones
+		icon = GFX_goal_unknown
+		x = 13
+		y = 5
+        prerequisite = { focus = MDR_aveng }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_political_power = -75
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+}    

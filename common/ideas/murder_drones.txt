@@ -2615,7 +2615,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = unknown_idea
+			picture = MDR_attack
 			
 			modifier = {
 			    army_attack_factor = 0.1
@@ -2637,7 +2637,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = unknown_idea
+			picture = RES_independent_military
 			
 			modifier = {
 			    army_attack_factor = 0.05
@@ -2659,7 +2659,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = unknown_idea
+			picture = MDR_advanced_translator
 			
 			modifier = {
 			    compliance_gain = 0.05
@@ -2682,7 +2682,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = unknown_idea
+			picture = MDR_order_twotwoseven
 			
 			modifier = {
 			    conscription = 0.1
@@ -2749,7 +2749,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = unknown_idea
+			picture = MDR_jcjenson
 			
 			modifier = {
 			    political_power_factor = 0.1
@@ -2777,7 +2777,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = unknown_idea
+			picture = MDR_jcjenson
 			
 			modifier = {
 			    political_power_factor = 0.05
@@ -2804,7 +2804,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = unknown_idea
+			picture = MDR_underground_resistance
 			
 			modifier = {
 			    political_power_factor = -0.05
@@ -2826,7 +2826,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = unknown_idea
+			picture = MDR_royal_marriage
 			
 			modifier = {
 			    political_power_factor = 0.05
@@ -2848,7 +2848,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = unknown_idea
+			picture = MDR_philosophy_of_death
 			
 			modifier = {
 			    compliance_gain = 0.015
@@ -2868,7 +2868,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = unknown_idea
+			picture = MDR_philosophy_of_death
 			
 			modifier = {
 			    political_power_factor = -0.002
@@ -2988,7 +2988,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = MDR_state_capitalism
 			
 			modifier = {
 			    political_power_factor = 0.15
@@ -3011,7 +3011,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = unknown_idea
 			
 			modifier = {
 			    consumer_goods_factor = 1
@@ -3034,7 +3034,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = unknown_idea
 			
 			modifier = {
 			    naval_invasion_capacity = 35
@@ -3054,7 +3054,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = MDR_realpolitiks
 			
 			modifier = {
 			    political_power_factor = 0.25
@@ -3073,7 +3073,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = unknown_idea
 			
 			modifier = {
 			    political_power_factor = -0.25
@@ -3094,7 +3094,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = unknown_idea
 			
 			modifier = {
 			    consumer_goods_factor = -0.15
@@ -3115,7 +3115,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = MDR_nationalist_youth
 			
 			modifier = {
 				war_support_factor = 0.1
@@ -3136,7 +3136,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = MDR_rural_sectors_ministry
 			
 			modifier = {
 			    political_power_factor = -0.025
@@ -3158,7 +3158,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = MDR_reorganize_militia
 			
 			modifier = {
 			    conscription = 0.25
@@ -3179,7 +3179,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = MDR_brain_controlling_chips
 			
 			modifier = {
 			    consumer_goods_factor = -0.2
@@ -3201,7 +3201,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = unknown_idea
 			
 			modifier = {
 			    consumer_goods_factor = -0.2
@@ -3221,7 +3221,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = MDR_streamline
 			
 			modifier = {
 			    consumer_goods_factor = -0.25
@@ -3244,7 +3244,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = unknown_idea
 			
 			modifier = {
 			    army_org_factor = 0.2
@@ -3267,7 +3267,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = MDR_disassembly_drones
+			picture = MDR_solverism
 			
 			modifier = {
 			    army_org_factor = 0.1
@@ -3295,6 +3295,220 @@ ideas = {
 			    army_speed_factor = 0.35
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
+			}
+		}
+		
+		MDR_partisan_warfare_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = unknown_idea
+			
+			modifier = {
+			    army_speed_factor = 0.15
+				army_attack_factor = 0.2
+				supply_node_range = 0.4
+				training_time_factor = -0.25
+				weekly_manpower = 500
+			}
+		}
+		
+		MDR_elite_infantry_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = unknown_idea
+			
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				army_org_factor = 0.2
+				army_org_regain = 0.2
+				training_time_factor = 0.15
+			}
+		}
+		
+		MDR_artillery_batteries_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_artillery_battery
+			
+			modifier = {
+				army_artillery_defence_factor = 0.15
+				army_artillery_attack_factor = 0.15
+			}
+		}
+		
+		MDR_german_style_training_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = unknown_idea
+			
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_org_factor = 0.1
+				army_org_regain = 0.1
+				training_time_factor = 0.2
+			}
+		}
+		
+		MDR_monarchist_propaganda_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_monarchist_propaganda
+			
+			modifier = {
+				neutrality_drift = 0.01
+			}
+		}
+		
+		MDR_automated_production_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = unknown_idea
+			
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		
+		MDR_construction_brigades_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_construction_brigades
+			
+			modifier = {
+				consumer_goods_factor = -0.45
+				production_speed_buildings_factor = 0.35
+			}
+		}
+		
+		MDR_slavery_for_drones_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = unknown_idea
+			
+			modifier = {
+				consumer_goods_factor = -0.45
+				production_speed_buildings_factor = 0.35
+				production_factory_efficiency_gain_factor = 0.35
+				production_factory_max_efficiency_factor = 0.35
+				production_factory_start_efficiency_factor = 0.35
+			}
+		}
+		
+		MDR_integration_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = unknown_idea
+			
+			modifier = {
+				compliance_gain = 0.6
+				stability_weekly = 0.01
+			}
+		}
+		
+		MDR_minority_rights_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = MDR_minority_rights
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.05
 			}
 		}
 	}

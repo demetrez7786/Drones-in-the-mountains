@@ -37,7 +37,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
             add_political_power = 100
@@ -69,7 +69,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
             country_event = { id = drones.71 }
@@ -100,7 +100,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
             add_stability = 0.1
@@ -111,7 +111,7 @@ focus_tree = {
 	focus = {
 		id = MDR_summon_death_angels
 		icon = GFX_MDR_our_own_dd
-		x = 4
+		x = 6
 		y = 7
 		prerequisite = { focus = MDR_cement_our_dominance }
 
@@ -184,7 +184,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
             remove_ideas = MDR_philosophy_of_death_idea
@@ -216,7 +216,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
             add_political_power = 10000
@@ -287,7 +287,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
             add_ideas = MDR_the_last_solution_idea
@@ -320,7 +320,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
             declare_war_on = {
@@ -708,7 +708,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
             country_event = { id = drones.72 }
@@ -718,7 +718,7 @@ focus_tree = {
 	focus = {
 		id = MDR_curropt_jcjenson
 		icon = GFX_MDR_curropt_jcjenson
-		x = 16
+		x = 14
 		y = 7
 		prerequisite = { focus = MDR_cement_our_dominance }
 
@@ -739,7 +739,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
             add_ideas = MDR_curropted_jcjenson
@@ -749,7 +749,7 @@ focus_tree = {
 	focus = {
 		id = MDR_summon_weapons
 		icon = GFX_MDR_summon_weapons
-		x = 16
+		x = 14
 		y = 9
 		prerequisite = { focus = MDR_curropt_jcjenson }
 
@@ -788,7 +788,7 @@ focus_tree = {
 	focus = {
 		id = MDR_civilians_stay_at_home
 		icon = GFX_MDR_stay_at_home
-		x = 16
+		x = 14
 		y = 11
 		prerequisite = { focus = MDR_summon_weapons }
 
@@ -809,7 +809,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
             add_ideas = MDR_stay_at_home
@@ -819,7 +819,7 @@ focus_tree = {
 	focus = {
 		id = MDR_give_our_angels_solver
 		icon = GFX_MDR_give_our_das_solver
-		x = 4
+		x = 6
 		y = 9
 		prerequisite = { focus = MDR_summon_death_angels }
 
@@ -851,7 +851,7 @@ focus_tree = {
 	focus = {
 		id = MDR_create_band_dronmstein
 		icon = GFX_MDR_dronmstein
-		x = 2
+		x = 4
 		y = 9
 		prerequisite = { focus = MDR_summon_death_angels }
 
@@ -872,7 +872,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
 			add_ideas = MDR_dronmstein
@@ -882,7 +882,7 @@ focus_tree = {
 	focus = {
 		id = MDR_neurally_link_death_angels
 		icon = GFX_goal_unknown
-		x = 4
+		x = 6
 		y = 11
 		prerequisite = { focus = MDR_give_our_angels_solver }
 

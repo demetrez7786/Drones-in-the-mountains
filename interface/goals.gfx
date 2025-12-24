@@ -3,6 +3,291 @@ spriteTypes = {
 	#### Murder drones icons
 	
 	SpriteType = {
+	name = "GFX_MDR_drones_settlement_programs"
+	texturefile = "gfx/interface/goals/MDR_drones_settlement_programs.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_minority_rights"
+	texturefile = "gfx/interface/goals/MDR_minority_rights.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_talks_with_iran"
+	texturefile = "gfx/interface/goals/MDR_talks_with_iran.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_talks_with_the_ussr"
+	texturefile = "gfx/interface/goals/MDR_talks_with_the_ussr.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_return_assets_to_humans"
+	texturefile = "gfx/interface/goals/MDR_return_assets_to_humans.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_aveng"
+	texturefile = "gfx/interface/goals/MDR_aveng.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_first_human_leader"
+	texturefile = "gfx/interface/goals/MDR_first_human_leader.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_chaos_in_the_usa"
+	texturefile = "gfx/interface/goals/MDR_chaos_in_the_usa.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_chaos_in_france"
+	texturefile = "gfx/interface/goals/MDR_chaos_in_france.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_chaos_in_the_uk"
+	texturefile = "gfx/interface/goals/MDR_chaos_in_the_uk.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_chaos_in_germany"
+	texturefile = "gfx/interface/goals/MDR_chaos_in_germany.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_chaos_in_the_ussr"
+	texturefile = "gfx/interface/goals/MDR_chaos_in_the_ussr.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_chaos_in_turkey"
+	texturefile = "gfx/interface/goals/MDR_chaos_in_turkey.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_form_anti_corruption_bureau"
+	texturefile = "gfx/interface/goals/MDR_form_anti_corruption_bureau.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_rise_money_for_mps"
+	texturefile = "gfx/interface/goals/MDR_rise_money_for_mps.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_new_constitution_jnv"
+	texturefile = "gfx/interface/goals/MDR_new_constitution_jnv.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_party_loyality"
+	texturefile = "gfx/interface/goals/MDR_party_loyality.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_police_simulator"
+	texturefile = "gfx/interface/goals/MDR_police_simulator.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_fire_police"
+	texturefile = "gfx/interface/goals/MDR_fire_police.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_humans_question"
+	texturefile = "gfx/interface/goals/MDR_humans_question.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_religious_reforms_question"
+	texturefile = "gfx/interface/goals/MDR_religious_reforms_question.png"
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_media_reforms_question"
+	texturefile = "gfx/interface/goals/MDR_media_reforms_question.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_political_reforms_question"
+	texturefile = "gfx/interface/goals/MDR_political_reforms_question.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_land_reforms_question"
+	texturefile = "gfx/interface/goals/MDR_land_reforms_question.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_education_reforms_question"
+	texturefile = "gfx/interface/goals/MDR_education_reforms_question.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_reforms_questions"
+	texturefile = "gfx/interface/goals/MDR_reforms_questions.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_political_legitimacy_jnv"
+	texturefile = "gfx/interface/goals/MDR_political_legitimacy_jnv.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_military_reforms_completed"
+	texturefile = "gfx/interface/goals/MDR_military_reforms_completed.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_v_in_navy"
+	texturefile = "gfx/interface/goals/MDR_v_in_navy.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_j_in_army"
+	texturefile = "gfx/interface/goals/MDR_j_in_army.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_n_in_airforce"
+	texturefile = "gfx/interface/goals/MDR_n_in_airforce.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_restore_turist_places"
+	texturefile = "gfx/interface/goals/MDR_restore_turist_places.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_tour_around_country"
+	texturefile = "gfx/interface/goals/MDR_tour_around_country.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_abolish_csd"
+	texturefile = "gfx/interface/goals/MDR_abolish_csd.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_abolish_secret_police"
+	texturefile = "gfx/interface/goals/MDR_abolish_secret_police.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_reduce_surveillance"
+	texturefile = "gfx/interface/goals/MDR_reduce_surveillance.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_construction_brigades"
+	texturefile = "gfx/interface/goals/MDR_construction_brigades.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_techology_not_slavery"
+	texturefile = "gfx/interface/goals/MDR_techology_not_slavery.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_monarchist_propaganda"
+	texturefile = "gfx/interface/goals/MDR_monarchist_propaganda.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_declare_monarchy"
+	texturefile = "gfx/interface/goals/MDR_declare_monarchy.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_shukshin_of_drones"
+	texturefile = "gfx/interface/goals/MDR_shukshin_of_drones.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_ask_yugoslavia"
+	texturefile = "gfx/interface/goals/MDR_ask_yugoslavia.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_ask_romania"
+	texturefile = "gfx/interface/goals/MDR_ask_romania.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_ask_bulgaria"
+	texturefile = "gfx/interface/goals/MDR_ask_bulgaria.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_ask_greece"
+	texturefile = "gfx/interface/goals/MDR_ask_greece.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_talks_in_balkans"
+	texturefile = "gfx/interface/goals/MDR_talks_in_balkans.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_ask_afghanistan"
+	texturefile = "gfx/interface/goals/MDR_ask_afghanistan.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_ask_saudi_arabia"
+	texturefile = "gfx/interface/goals/MDR_ask_saudi_arabia.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_ask_iran"
+	texturefile = "gfx/interface/goals/MDR_ask_iran.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_ask_turkey"
+	texturefile = "gfx/interface/goals/MDR_ask_turkey.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_talks_in_middle_east"
+	texturefile = "gfx/interface/goals/MDR_talks_in_middle_east.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_corrupt_buisnesses"
+	texturefile = "gfx/interface/goals/MDR_corrupt_buisnesses.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_join_axis"
+	texturefile = "gfx/interface/goals/MDR_join_axis.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_elite_infantry"
+	texturefile = "gfx/interface/goals/MDR_elite_infantry.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_partisan_warfare"
+	texturefile = "gfx/interface/goals/MDR_partisan_warfare.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_j_is_hungry"
+	texturefile = "gfx/interface/goals/MDR_j_is_hungry.png"			
+	}
+	
+	SpriteType = {
+	name = "GFX_MDR_true_colours"
+	texturefile = "gfx/interface/goals/MDR_true_colours.png"			
+	}
+	
+	SpriteType = {
 	name = "GFX_MDR_buy_azerbaijan"
 	texturefile = "gfx/interface/goals/MDR_buy_azerbaijan.png"			
 	}

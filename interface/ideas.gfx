@@ -11,6 +11,76 @@ spriteTypes = {
 	### new tfv nat spirit icons
 	
 	spriteType = {
+		name = "GFX_idea_MDR_csd"
+		texturefile = "gfx/interface/ideas/MDR_csd.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_capitalism"
+		texturefile = "gfx/interface/ideas/MDR_capitalism.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_sanctions"
+		texturefile = "gfx/interface/ideas/MDR_sanctions.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_minority_rights"
+		texturefile = "gfx/interface/ideas/MDR_minority_rights.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_construction_brigades"
+		texturefile = "gfx/interface/ideas/MDR_construction_brigades.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_monarchist_propaganda"
+		texturefile = "gfx/interface/ideas/MDR_monarchist_propaganda.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_artillery_battery"
+		texturefile = "gfx/interface/ideas/MDR_artillery_battery.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_brain_controlling_chips"
+		texturefile = "gfx/interface/ideas/MDR_brain_controlling_chips.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_rural_sectors_ministry"
+		texturefile = "gfx/interface/ideas/MDR_rural_sectors_ministry.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_nationalist_youth"
+		texturefile = "gfx/interface/ideas/MDR_nationalist_youth.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_realpolitiks"
+		texturefile = "gfx/interface/ideas/MDR_realpolitiks.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_philosophy_of_death"
+		texturefile = "gfx/interface/ideas/MDR_philosophy_of_death.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_royal_marriage"
+		texturefile = "gfx/interface/ideas/MDR_royal_marriage.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MDR_advanced_translator"
+		texturefile = "gfx/interface/ideas/MDR_advanced_translator.png"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_MDR_dual_solver"
 		texturefile = "gfx/interface/ideas/MDR_dual_solver.png"
 	}

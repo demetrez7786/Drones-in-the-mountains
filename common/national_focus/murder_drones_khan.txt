@@ -37,7 +37,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
             set_politics = { 
@@ -932,7 +932,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
             add_political_power = 50
@@ -1067,7 +1067,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
             set_country_flag = MDR_dealing_with_opposition
@@ -1137,7 +1137,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
             army_experience = 50
@@ -1171,7 +1171,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
             add_political_power = 50
@@ -1203,7 +1203,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
             add_political_power = 80
@@ -1305,7 +1305,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
             add_political_power = -50
@@ -1340,7 +1340,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
             add_political_power = 50
@@ -1372,7 +1372,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
             add_political_power = 50
@@ -1405,7 +1405,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
             add_political_power = 25
@@ -1446,7 +1446,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
 			add_stability = 0.05
@@ -1486,7 +1486,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
 			add_stability = 0.05
@@ -1526,7 +1526,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
             add_political_power = 60
@@ -1565,16 +1565,448 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-		    MDR = {
-            	set_variable = {
-            	    var = corruption
-            	    value = 100
-            	}
+            set_variable = {
+            	var = corruption
+            	value = 100
             }
 			custom_effect_tooltip = MDR_opens_decisions
+		}
+	}
+
+	focus = {
+		id = MDR_time_for_expansion
+		icon = GFX_MDR_looking_outwards
+		x = 15
+		y = 18
+		prerequisite = { focus = MDR_deal_with_corruption_khan }
+		prerequisite = { focus = MDR_even_more_advanced_socity }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+		    add_political_power = 10
+			add_war_support = 0.05
+			create_faction = Collective_Security_Treaty_Organization
+		}
+	}
+
+	focus = {
+		id = MDR_talks_in_middle_east
+		icon = GFX_MDR_talks_in_middle_east
+		x = 15
+		y = 20
+		prerequisite = { focus = MDR_time_for_expansion }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+		    add_political_power = 10
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = MDR_ask_turkey
+		icon = GFX_MDR_ask_turkey
+		x = 12
+		y = 22
+		prerequisite = { focus = MDR_talks_in_middle_east }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		    TUR = {
+                country_event = { id = drones.90 }
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_ask_iran
+		icon = GFX_MDR_ask_iran
+		x = 14
+		y = 22
+		prerequisite = { focus = MDR_talks_in_middle_east }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		    PER = {
+                country_event = { id = drones.90 }
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_ask_saudi_arabia
+		icon = GFX_MDR_ask_saudi_arabia
+		x = 18
+		y = 22
+		prerequisite = { focus = MDR_talks_in_middle_east }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		    SAU = {
+                country_event = { id = drones.90 }
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_ask_afghanistan
+		icon = GFX_MDR_ask_afghanistan
+		x = 16
+		y = 22
+		prerequisite = { focus = MDR_talks_in_middle_east }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		    AFG = {
+                country_event = { id = drones.90 }
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_talks_in_balkan
+		icon = GFX_MDR_talks_in_balkans
+		x = 15
+		y = 24
+		prerequisite = { focus = MDR_ask_afghanistan }
+		prerequisite = { focus = MDR_ask_iran }
+		prerequisite = { focus = MDR_ask_turkey }
+		prerequisite = { focus = MDR_ask_saudi_arabia }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		    add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = MDR_ask_bulgaria
+		icon = GFX_MDR_ask_bulgaria
+		x = 14
+		y = 26
+		prerequisite = { focus = MDR_talks_in_balkan }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		    BUL = {
+                country_event = { id = drones.90 }
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_ask_greece
+		icon = GFX_MDR_ask_greece
+		x = 12
+		y = 26
+		prerequisite = { focus = MDR_talks_in_balkan }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		    GRE = {
+                country_event = { id = drones.90 }
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_ask_romania
+		icon = GFX_MDR_ask_romania
+		x = 16
+		y = 26
+		prerequisite = { focus = MDR_talks_in_balkan }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		    ROM = {
+                country_event = { id = drones.90 }
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_ask_yugoslavia
+		icon = GFX_MDR_ask_yugoslavia
+		x = 18
+		y = 26
+		prerequisite = { focus = MDR_talks_in_balkan }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		    YUG = {
+                country_event = { id = drones.90 }
+			}
+		}
+	}
+
+	focus = {
+		id = MDR_annex_them
+		icon = GFX_goal_unknown
+		x = 15
+		y = 28
+		prerequisite = { focus = MDR_ask_greece }
+		prerequisite = { focus = MDR_ask_bulgaria }
+		prerequisite = { focus = MDR_ask_romania }
+		prerequisite = { focus = MDR_ask_yugoslavia }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+		    custom_effect_tooltip = MDR_opens_decisions
+		}
+	}
+
+	focus = {
+		id = MDR_shukshin_of_drones
+		icon = GFX_MDR_shukshin_of_drones
+		x = 15
+		y = 30
+		prerequisite = { focus = MDR_annex_them }
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		    add_country_leader_trait = shukshin_of_drones_trait
+			every_state = {
+                limit = {
+                    is_controlled_by = MDR
+                }
+                add_core_of = MDR
+            }
 		}
 	}
 
@@ -1602,7 +2034,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
             add_political_power = 50
@@ -1634,13 +2066,14 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
             add_political_power = 50
 			add_manpower = 500000
 			add_stability = 0.05
 			add_war_support = 0.05
+			remove_ideas = MDR_underground_human_resistance
 		}
 	}
 
@@ -1668,7 +2101,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
             add_political_power = 50
@@ -1737,7 +2170,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
             add_political_power = -50

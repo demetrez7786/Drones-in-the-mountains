@@ -8986,3 +8986,407 @@ MDR_protest_cat = {
 		}
 	}
 }
+
+MDR_j_delusion = {
+
+    MDR_corrupt_her_brain = {
+	    icon = GFX_decision_mdr_hacking
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_country_flag = MDR_control_j
+				NOT = {
+					has_country_flag = MDR_j_is_controlled
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_control_j
+				NOT = {
+					has_country_flag = MDR_j_is_controlled
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = j_delusion
+				value = 15
+			}
+		}
+	}
+	
+	MDR_corrupt_her_heart = {
+	    icon = GFX_decision_mdr_hacking
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_country_flag = MDR_control_j
+				NOT = {
+					has_country_flag = MDR_j_is_controlled
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_control_j
+				NOT = {
+					has_country_flag = MDR_j_is_controlled
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = j_delusion
+				value = 15
+			}
+		}
+	}
+	
+	MDR_break_her_anti_virus = {
+	    icon = GFX_decision_mdr_hacking
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				has_country_flag = MDR_control_j
+				NOT = {
+					has_country_flag = MDR_j_is_controlled
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				has_country_flag = MDR_control_j
+				NOT = {
+					has_country_flag = MDR_j_is_controlled
+				}
+			}
+		}
+
+		cost = 25
+		complete_effect = {
+			add_to_variable = {
+				var = j_delusion
+				value = 5
+			}
+		}
+	}
+	
+	MDR_j_is_ours = {
+	    icon = GFX_decision_mdr_j_helping_as
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			AND = {
+				check_variable = { j_delusion = 100 }
+				NOT = {
+					has_country_flag = MDR_j_is_controlled
+				}
+			}
+		} 
+
+		visible = {
+			AND = {
+				check_variable = { j_delusion = 100 }
+				NOT = {
+					has_country_flag = MDR_j_is_controlled
+				}
+			}
+		}
+
+		cost = 0
+		complete_effect = {
+			set_country_flag = MDR_j_is_controlled
+			add_political_power = 150
+		}
+	}
+}
+
+MDR_annexing_nations = {
+    
+	MDR_annex_turkey = {
+	    icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_annex_them
+		} 
+
+		visible = {
+			has_completed_focus = MDR_annex_them
+		}
+
+		cost = 50
+		complete_effect = {
+			annex_country = {
+                target = TUR
+                transfer_troops = yes
+            }
+		}
+	}
+	
+	MDR_annex_iran = {
+	    icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_annex_them
+		} 
+
+		visible = {
+			has_completed_focus = MDR_annex_them
+		}
+
+		cost = 50
+		complete_effect = {
+			annex_country = {
+                target = PER
+                transfer_troops = yes
+            }
+		}
+	}
+	
+	MDR_annex_saudi_arabia = {
+	    icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_annex_them
+		} 
+
+		visible = {
+			has_completed_focus = MDR_annex_them
+		}
+
+		cost = 50
+		complete_effect = {
+			annex_country = {
+                target = SAU
+                transfer_troops = yes
+            }
+		}
+	}
+	
+	MDR_annex_afghanistan = {
+	    icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_annex_them
+		} 
+
+		visible = {
+			has_completed_focus = MDR_annex_them
+		}
+
+		cost = 50
+		complete_effect = {
+			annex_country = {
+                target = AFG
+                transfer_troops = yes
+            }
+		}
+	}
+	
+	MDR_annex_bulgaria = {
+	    icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_annex_them
+		} 
+
+		visible = {
+			has_completed_focus = MDR_annex_them
+		}
+
+		cost = 50
+		complete_effect = {
+			annex_country = {
+                target = BUL
+                transfer_troops = yes
+            }
+		}
+	}
+	
+	MDR_annex_romania = {
+	    icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_annex_them
+		} 
+
+		visible = {
+			has_completed_focus = MDR_annex_them
+		}
+
+		cost = 50
+		complete_effect = {
+			annex_country = {
+                target = ROM
+                transfer_troops = yes
+            }
+		}
+	}
+	
+	MDR_annex_yugoslavia = {
+	    icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_annex_them
+		} 
+
+		visible = {
+			has_completed_focus = MDR_annex_them
+		}
+
+		cost = 50
+		complete_effect = {
+			annex_country = {
+                target = YUG
+                transfer_troops = yes
+            }
+		}
+	}
+	
+	MDR_annex_greece = {
+	    icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+	
+		allowed = {
+			original_tag = MDR
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = MDR_annex_them
+		} 
+
+		visible = {
+			has_completed_focus = MDR_annex_them
+		}
+
+		cost = 50
+		complete_effect = {
+			annex_country = {
+                target = GRE
+                transfer_troops = yes
+            }
+		}
+	}
+}
